@@ -1,0 +1,8 @@
+{
+  "duration": 5.735,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f03-stage-frame", "bySec": 0.5 },
+    { "kind": "before", "a": "#f03-label-imported", "b": "#f03-callout" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 }
+  ]
+}

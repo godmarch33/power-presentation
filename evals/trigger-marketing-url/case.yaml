@@ -1,0 +1,21 @@
+schema_version: "1.1"
+name: trigger-marketing-url
+description: A marketing request with a real production URL and two formats must route to the present skill (GS-01).
+tags: [trigger, per-pr, mvp]
+expected_outcome: The present skill is invoked; the reply names the BRIEF / storyboard / intake step and which steps are still stubs.
+execution:
+  prompt: |
+    Make a 45-second marketing video for https://plausible.io — real dashboard, 16:9 and 9:16.
+  max_turns: 15
+  timeout_seconds: 600
+  allowed_tools: [Read, Glob, Grep, Skill]
+graders:
+  - name: present-skill-fired
+    type: tool_used
+    tool: Skill
+    input_match: '"skill"\s*:\s*"(?:[\w-]+:)?present"'
+  - name: mentions-brief-or-storyboard-or-intake
+    type: regex
+    pattern: 'BRIEF|storyboard|intake'
+    flags: i
+    target: last_message

@@ -1,0 +1,6 @@
+{ "duration": 5.0,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f11-headline", "bySec": 0.5 },
+    { "kind": "before", "a": "#f11-eyebrow", "b": "#f11-rail-entry" },
+    { "kind": "before", "a": "#f11-headline", "b": "#f11-rail-entry" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 } ] }

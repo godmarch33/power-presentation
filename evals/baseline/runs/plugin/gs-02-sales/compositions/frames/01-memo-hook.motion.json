@@ -1,0 +1,9 @@
+{
+  "duration": 3.407,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f01-memo-card", "bySec": 0.5 },
+    { "kind": "before", "a": "#f01-accent-rule", "b": "#f01-re-inner" },
+    { "kind": "before", "a": "#f01-company", "b": "#f01-re-inner" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 }
+  ]
+}

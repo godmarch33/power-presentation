@@ -1,0 +1,977 @@
+{
+ "composition": "/tmp/claude-1000/-home-dmytrogr-Documents-power-presentation/47d3583d-7ae9-4ab5-99ba-53a3fca63886/scratchpad/sg",
+ "duration": 14.7,
+ "totalTweens": 101,
+ "mappedTweens": 41,
+ "skippedMicroTweens": 60,
+ "tweens": [
+  {
+   "index": 1,
+   "selector": "#short_mag_cut_frame",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x",
+    "y",
+    "width",
+    "height"
+   ],
+   "start": 0,
+   "end": 0.8,
+   "duration": 0.8,
+   "ease": "power2.out",
+   "flags": [
+    "offscreen"
+   ],
+   "summary": "#short_mag_cut_frame animates x+y+width+height over 0.80s (power2.out). moves 1137px right. ends at (477, 1200) 960\u00d7840px. FLAGS: offscreen."
+  },
+  {
+   "index": 2,
+   "selector": "div.grid-line",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "width"
+   ],
+   "start": 0.2,
+   "end": 0.6,
+   "duration": 0.4,
+   "ease": "power4.out",
+   "flags": [
+    "collision"
+   ],
+   "summary": "div.grid-line animates width over 0.40s (power4.out). width 0\u21921200px. ends at (160, 360) 1200\u00d712px. Overlaps another animated element."
+  },
+  {
+   "index": 3,
+   "selector": "div.grid-line",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "width"
+   ],
+   "start": 0.2,
+   "end": 0.6,
+   "duration": 0.4,
+   "ease": "power4.out",
+   "flags": [
+    "collision"
+   ],
+   "summary": "div.grid-line animates width over 0.40s (power4.out). width 0\u21921200px. ends at (160, 360) 1200\u00d712px. Overlaps another animated element."
+  },
+  {
+   "index": 4,
+   "selector": "div.grid-line",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "width"
+   ],
+   "start": 0.2,
+   "end": 0.6,
+   "duration": 0.4,
+   "ease": "power4.out",
+   "flags": [
+    "collision"
+   ],
+   "summary": "div.grid-line animates width over 0.40s (power4.out). width 0\u21921200px. ends at (160, 360) 1200\u00d712px. Overlaps another animated element."
+  },
+  {
+   "index": 5,
+   "selector": "h1.title",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x"
+   ],
+   "start": 0.5,
+   "end": 0.7,
+   "duration": 0.2,
+   "ease": "power2.inOut",
+   "flags": [
+    "offscreen",
+    "paced-fast",
+    "collision"
+   ],
+   "summary": "h1.title animates x over 0.20s (power2.inOut). moves 1727px right. ends at (127, 411) 1760\u00d7162px. FLAGS: offscreen, paced-fast. Overlaps another animated element."
+  },
+  {
+   "index": 6,
+   "selector": "h1.title",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x"
+   ],
+   "start": 0.5,
+   "end": 0.7,
+   "duration": 0.2,
+   "ease": "power2.inOut",
+   "flags": [
+    "offscreen",
+    "paced-fast",
+    "collision"
+   ],
+   "summary": "h1.title animates x over 0.20s (power2.inOut). moves 1727px right. ends at (127, 411) 1760\u00d7162px. FLAGS: offscreen, paced-fast. Overlaps another animated element."
+  },
+  {
+   "index": 7,
+   "selector": "h1.title",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x"
+   ],
+   "start": 0.5,
+   "end": 0.7,
+   "duration": 0.2,
+   "ease": "power2.inOut",
+   "flags": [
+    "offscreen",
+    "paced-fast",
+    "collision"
+   ],
+   "summary": "h1.title animates x over 0.20s (power2.inOut). moves 1727px right. ends at (127, 411) 1760\u00d7162px. FLAGS: offscreen, paced-fast. Overlaps another animated element."
+  },
+  {
+   "index": 8,
+   "selector": "h2.subtitle",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x"
+   ],
+   "start": 0.6,
+   "end": 0.8,
+   "duration": 0.2,
+   "ease": "power2.inOut",
+   "flags": [
+    "offscreen",
+    "collision"
+   ],
+   "summary": "h2.subtitle animates x over 0.20s (power2.inOut). moves 1729px right. ends at (129, 593) 1760\u00d777px. FLAGS: offscreen. Overlaps another animated element."
+  },
+  {
+   "index": 9,
+   "selector": "h2.subtitle",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x"
+   ],
+   "start": 0.6,
+   "end": 0.8,
+   "duration": 0.2,
+   "ease": "power2.inOut",
+   "flags": [
+    "offscreen",
+    "collision"
+   ],
+   "summary": "h2.subtitle animates x over 0.20s (power2.inOut). moves 1729px right. ends at (129, 593) 1760\u00d777px. FLAGS: offscreen. Overlaps another animated element."
+  },
+  {
+   "index": 10,
+   "selector": "h2.subtitle",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x"
+   ],
+   "start": 0.6,
+   "end": 0.8,
+   "duration": 0.2,
+   "ease": "power2.inOut",
+   "flags": [
+    "offscreen",
+    "collision"
+   ],
+   "summary": "h2.subtitle animates x over 0.20s (power2.inOut). moves 1729px right. ends at (129, 593) 1760\u00d777px. FLAGS: offscreen. Overlaps another animated element."
+  },
+  {
+   "index": 11,
+   "selector": "div.text-wrapper",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x"
+   ],
+   "start": 0.7,
+   "end": 1.86,
+   "duration": 1.16,
+   "ease": "none",
+   "flags": [
+    "collision"
+   ],
+   "summary": "div.text-wrapper animates x over 1.16s (none). moves 25px right. ends at (187, 411) 1760\u00d7259px. Overlaps another animated element."
+  },
+  {
+   "index": 12,
+   "selector": "div.text-wrapper",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x"
+   ],
+   "start": 0.7,
+   "end": 1.86,
+   "duration": 1.16,
+   "ease": "none",
+   "flags": [
+    "collision"
+   ],
+   "summary": "div.text-wrapper animates x over 1.16s (none). moves 25px right. ends at (187, 411) 1760\u00d7259px. Overlaps another animated element."
+  },
+  {
+   "index": 13,
+   "selector": "div.text-wrapper",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x"
+   ],
+   "start": 0.7,
+   "end": 1.86,
+   "duration": 1.16,
+   "ease": "none",
+   "flags": [
+    "collision"
+   ],
+   "summary": "div.text-wrapper animates x over 1.16s (none). moves 25px right. ends at (187, 411) 1760\u00d7259px. Overlaps another animated element."
+  },
+  {
+   "index": 14,
+   "selector": "#stat1",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x",
+    "opacity"
+   ],
+   "start": 1.86,
+   "end": 2.11,
+   "duration": 0.25,
+   "ease": "power2.out",
+   "flags": [
+    "collision"
+   ],
+   "summary": "#stat1 animates x+opacity over 0.25s (power2.out). moves 184px right. fades in. ends at (241, 263) 627\u00d7347px. Overlaps another animated element."
+  },
+  {
+   "index": 15,
+   "selector": "#stat1",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x",
+    "opacity"
+   ],
+   "start": 1.86,
+   "end": 2.11,
+   "duration": 0.25,
+   "ease": "power2.out",
+   "flags": [
+    "collision"
+   ],
+   "summary": "#stat1 animates x+opacity over 0.25s (power2.out). moves 184px right. fades in. ends at (241, 263) 627\u00d7347px. Overlaps another animated element."
+  },
+  {
+   "index": 16,
+   "selector": "#short_mag_cut_frame",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x",
+    "y",
+    "width",
+    "height"
+   ],
+   "start": 1.86,
+   "end": 2.11,
+   "duration": 0.25,
+   "ease": "expo.out",
+   "flags": [
+    "offscreen"
+   ],
+   "summary": "#short_mag_cut_frame animates x+y+width+height over 0.25s (expo.out). moves 499px right. width 920\u2192720px. height 820\u2192720px. ends at (1080, 1200) 720\u00d7720px. FLAGS: offscreen."
+  },
+  {
+   "index": 17,
+   "selector": "#stat1",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x",
+    "opacity"
+   ],
+   "start": 1.86,
+   "end": 2.11,
+   "duration": 0.25,
+   "ease": "power2.out",
+   "flags": [
+    "collision"
+   ],
+   "summary": "#stat1 animates x+opacity over 0.25s (power2.out). moves 184px right. fades in. ends at (241, 263) 627\u00d7347px. Overlaps another animated element."
+  },
+  {
+   "index": 18,
+   "selector": "#stat1",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x",
+    "opacity"
+   ],
+   "start": 4.25,
+   "end": 4.5,
+   "duration": 0.25,
+   "ease": "power2.in",
+   "flags": [
+    "collision"
+   ],
+   "summary": "#stat1 animates x+opacity over 0.25s (power2.in). moves 130px right. opacity 1.0\u21920.3. ends at (372, 263) 627\u00d7347px. Overlaps another animated element."
+  },
+  {
+   "index": 19,
+   "selector": "#stat1",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x",
+    "opacity"
+   ],
+   "start": 4.25,
+   "end": 4.5,
+   "duration": 0.25,
+   "ease": "power2.in",
+   "flags": [
+    "collision"
+   ],
+   "summary": "#stat1 animates x+opacity over 0.25s (power2.in). moves 130px right. opacity 1.0\u21920.3. ends at (372, 263) 627\u00d7347px. Overlaps another animated element."
+  },
+  {
+   "index": 20,
+   "selector": "#stat1",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x",
+    "opacity"
+   ],
+   "start": 4.25,
+   "end": 4.5,
+   "duration": 0.25,
+   "ease": "power2.in",
+   "flags": [
+    "collision"
+   ],
+   "summary": "#stat1 animates x+opacity over 0.25s (power2.in). moves 130px right. opacity 1.0\u21920.3. ends at (372, 263) 627\u00d7347px. Overlaps another animated element."
+  },
+  {
+   "index": 21,
+   "selector": "#stat2",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "y",
+    "opacity"
+   ],
+   "start": 4.68,
+   "end": 4.93,
+   "duration": 0.25,
+   "ease": "power2.out",
+   "flags": [
+    "collision"
+   ],
+   "summary": "#stat2 animates y+opacity over 0.25s (power2.out). moves 155px up. opacity 0.2\u21921.0. ends at (242, 264) 627\u00d7347px. Overlaps another animated element."
+  },
+  {
+   "index": 22,
+   "selector": "#stat2",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "y",
+    "opacity"
+   ],
+   "start": 4.68,
+   "end": 4.93,
+   "duration": 0.25,
+   "ease": "power2.out",
+   "flags": [
+    "collision"
+   ],
+   "summary": "#stat2 animates y+opacity over 0.25s (power2.out). moves 155px up. opacity 0.2\u21921.0. ends at (242, 264) 627\u00d7347px. Overlaps another animated element."
+  },
+  {
+   "index": 23,
+   "selector": "#short_mag_cut_frame",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x",
+    "y",
+    "width",
+    "height"
+   ],
+   "start": 4.68,
+   "end": 4.93,
+   "duration": 0.25,
+   "ease": "expo.out",
+   "flags": [
+    "offscreen"
+   ],
+   "summary": "#short_mag_cut_frame animates x+y+width+height over 0.25s (expo.out). moves 35px up. width 745\u2192780px. height 745\u2192780px. ends at (1080, 1140) 780\u00d7780px. FLAGS: offscreen."
+  },
+  {
+   "index": 24,
+   "selector": "#stat2",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "y",
+    "opacity"
+   ],
+   "start": 4.68,
+   "end": 4.93,
+   "duration": 0.25,
+   "ease": "power2.out",
+   "flags": [
+    "collision"
+   ],
+   "summary": "#stat2 animates y+opacity over 0.25s (power2.out). moves 155px up. opacity 0.2\u21921.0. ends at (242, 264) 627\u00d7347px. Overlaps another animated element."
+  },
+  {
+   "index": 25,
+   "selector": "div.progress-bar",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "width"
+   ],
+   "start": 4.93,
+   "end": 8.35,
+   "duration": 3.42,
+   "ease": "none",
+   "flags": [
+    "paced-slow",
+    "collision"
+   ],
+   "summary": "div.progress-bar animates width over 3.42s (none). width 26\u2192302px. ends at (294, 490) 302\u00d724px. FLAGS: paced-slow. Overlaps another animated element."
+  },
+  {
+   "index": 26,
+   "selector": "div.progress-bar",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "width"
+   ],
+   "start": 4.93,
+   "end": 8.35,
+   "duration": 3.42,
+   "ease": "none",
+   "flags": [
+    "paced-slow",
+    "collision"
+   ],
+   "summary": "div.progress-bar animates width over 3.42s (none). width 26\u2192302px. ends at (294, 490) 302\u00d724px. FLAGS: paced-slow. Overlaps another animated element."
+  },
+  {
+   "index": 27,
+   "selector": "div.progress-bar",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "width"
+   ],
+   "start": 4.93,
+   "end": 8.35,
+   "duration": 3.42,
+   "ease": "none",
+   "flags": [
+    "paced-slow",
+    "collision"
+   ],
+   "summary": "div.progress-bar animates width over 3.42s (none). width 26\u2192302px. ends at (294, 490) 302\u00d724px. FLAGS: paced-slow. Overlaps another animated element."
+  },
+  {
+   "index": 28,
+   "selector": "#stat2",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "y",
+    "opacity"
+   ],
+   "start": 8.35,
+   "end": 8.6,
+   "duration": 0.25,
+   "ease": "power2.in",
+   "flags": [
+    "collision"
+   ],
+   "summary": "#stat2 animates y+opacity over 0.25s (power2.in). moves 130px up. opacity 1.0\u21920.3. ends at (242, 133) 627\u00d7347px. Overlaps another animated element."
+  },
+  {
+   "index": 29,
+   "selector": "#stat2",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "y",
+    "opacity"
+   ],
+   "start": 8.35,
+   "end": 8.6,
+   "duration": 0.25,
+   "ease": "power2.in",
+   "flags": [
+    "collision"
+   ],
+   "summary": "#stat2 animates y+opacity over 0.25s (power2.in). moves 130px up. opacity 1.0\u21920.3. ends at (242, 133) 627\u00d7347px. Overlaps another animated element."
+  },
+  {
+   "index": 30,
+   "selector": "#stat2",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "y",
+    "opacity"
+   ],
+   "start": 8.35,
+   "end": 8.6,
+   "duration": 0.25,
+   "ease": "power2.in",
+   "flags": [
+    "collision"
+   ],
+   "summary": "#stat2 animates y+opacity over 0.25s (power2.in). moves 130px up. opacity 1.0\u21920.3. ends at (242, 133) 627\u00d7347px. Overlaps another animated element."
+  },
+  {
+   "index": 31,
+   "selector": "#stat3",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x",
+    "opacity"
+   ],
+   "start": 8.88,
+   "end": 9.13,
+   "duration": 0.25,
+   "ease": "power2.out",
+   "flags": [
+    "collision"
+   ],
+   "summary": "#stat3 animates x+opacity over 0.25s (power2.out). moves 156px left. opacity 0.2\u21921.0. ends at (1050, 263) 788\u00d7347px. Overlaps another animated element."
+  },
+  {
+   "index": 32,
+   "selector": "#stat3",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x",
+    "opacity"
+   ],
+   "start": 8.88,
+   "end": 9.13,
+   "duration": 0.25,
+   "ease": "power2.out",
+   "flags": [
+    "collision"
+   ],
+   "summary": "#stat3 animates x+opacity over 0.25s (power2.out). moves 156px left. opacity 0.2\u21921.0. ends at (1050, 263) 788\u00d7347px. Overlaps another animated element."
+  },
+  {
+   "index": 33,
+   "selector": "#short_mag_cut_frame",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x",
+    "y",
+    "width",
+    "height"
+   ],
+   "start": 8.88,
+   "end": 9.13,
+   "duration": 0.25,
+   "ease": "expo.out",
+   "flags": [
+    "offscreen"
+   ],
+   "summary": "#short_mag_cut_frame animates x+y+width+height over 0.25s (expo.out). moves 35px down and 554px left. width 755\u2192720px. height 755\u2192720px. ends at (120, 1200) 720\u00d7720px. FLAGS: offscreen."
+  },
+  {
+   "index": 34,
+   "selector": "#stat3",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x",
+    "opacity"
+   ],
+   "start": 8.88,
+   "end": 9.13,
+   "duration": 0.25,
+   "ease": "power2.out",
+   "flags": [
+    "collision"
+   ],
+   "summary": "#stat3 animates x+opacity over 0.25s (power2.out). moves 156px left. opacity 0.2\u21921.0. ends at (1050, 263) 788\u00d7347px. Overlaps another animated element."
+  },
+  {
+   "index": 35,
+   "selector": "div.block.gold",
+   "driver": "target",
+   "targets": 4,
+   "props": [
+    "scale"
+   ],
+   "start": 9.13,
+   "end": 9.73,
+   "duration": 0.6,
+   "ease": "back.out(1.7)",
+   "flags": [
+    "collision"
+   ],
+   "summary": "div.block.gold animates scale over 0.60s (back.out(1.7)). moves 23px up and 22px left. scales. width 42\u219286px. height 42\u219286px. ends at (1100, 488) 86\u00d786px. Overlaps another animated element."
+  },
+  {
+   "index": 36,
+   "selector": "div.block.gold",
+   "driver": "target",
+   "targets": 4,
+   "props": [
+    "scale"
+   ],
+   "start": 9.13,
+   "end": 9.73,
+   "duration": 0.6,
+   "ease": "back.out(1.7)",
+   "flags": [
+    "collision"
+   ],
+   "summary": "div.block.gold animates scale over 0.60s (back.out(1.7)). moves 23px up and 22px left. scales. width 42\u219286px. height 42\u219286px. ends at (1100, 488) 86\u00d786px. Overlaps another animated element."
+  },
+  {
+   "index": 37,
+   "selector": "div.block.gold",
+   "driver": "target",
+   "targets": 4,
+   "props": [
+    "scale"
+   ],
+   "start": 9.13,
+   "end": 9.73,
+   "duration": 0.6,
+   "ease": "back.out(1.7)",
+   "flags": [
+    "collision"
+   ],
+   "summary": "div.block.gold animates scale over 0.60s (back.out(1.7)). moves 23px up and 22px left. scales. width 42\u219286px. height 42\u219286px. ends at (1100, 488) 86\u00d786px. Overlaps another animated element."
+  },
+  {
+   "index": 38,
+   "selector": "#stat3",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x",
+    "opacity"
+   ],
+   "start": 13.95,
+   "end": 14.2,
+   "duration": 0.25,
+   "ease": "power2.in",
+   "flags": [
+    "collision"
+   ],
+   "summary": "#stat3 animates x+opacity over 0.25s (power2.in). moves 130px left. opacity 1.0\u21920.3. ends at (920, 263) 788\u00d7347px. Overlaps another animated element."
+  },
+  {
+   "index": 39,
+   "selector": "#stat3",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x",
+    "opacity"
+   ],
+   "start": 13.95,
+   "end": 14.2,
+   "duration": 0.25,
+   "ease": "power2.in",
+   "flags": [
+    "collision"
+   ],
+   "summary": "#stat3 animates x+opacity over 0.25s (power2.in). moves 130px left. opacity 1.0\u21920.3. ends at (920, 263) 788\u00d7347px. Overlaps another animated element."
+  },
+  {
+   "index": 40,
+   "selector": "#stat3",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x",
+    "opacity"
+   ],
+   "start": 13.95,
+   "end": 14.2,
+   "duration": 0.25,
+   "ease": "power2.in",
+   "flags": [
+    "collision"
+   ],
+   "summary": "#stat3 animates x+opacity over 0.25s (power2.in). moves 130px left. opacity 1.0\u21920.3. ends at (920, 263) 788\u00d7347px. Overlaps another animated element."
+  },
+  {
+   "index": 41,
+   "selector": "#short_mag_cut_frame",
+   "driver": "target",
+   "targets": 1,
+   "props": [
+    "x",
+    "y",
+    "width",
+    "height"
+   ],
+   "start": 14.2,
+   "end": 14.7,
+   "duration": 0.5,
+   "ease": "expo.out",
+   "flags": [
+    "offscreen"
+   ],
+   "summary": "#short_mag_cut_frame animates x+y+width+height over 0.50s (expo.out). moves 38px up and 76px right. width 985\u21921440px. height 753\u2192810px. ends at (240, 1140) 1440\u00d7810px. FLAGS: offscreen."
+  }
+ ],
+ "staggers": [
+  {
+   "elements": [
+    "div.grid-line",
+    "div.grid-line",
+    "div.grid-line"
+   ],
+   "props": [
+    "width"
+   ],
+   "count": 3,
+   "intervals": [
+    0,
+    0
+   ],
+   "avgInterval": 0,
+   "consistent": false,
+   "note": "3 elements stagger with uneven intervals (0ms, 0ms)"
+  },
+  {
+   "elements": [
+    "h1.title",
+    "h1.title",
+    "h1.title",
+    "h2.subtitle",
+    "h2.subtitle",
+    "h2.subtitle"
+   ],
+   "props": [
+    "x"
+   ],
+   "count": 6,
+   "intervals": [
+    0,
+    0,
+    0.1,
+    0,
+    0
+   ],
+   "avgInterval": 0.02,
+   "consistent": false,
+   "note": "6 elements stagger with uneven intervals (0ms, 0ms, 100ms, 0ms, 0ms)"
+  },
+  {
+   "elements": [
+    "div.text-wrapper",
+    "div.text-wrapper",
+    "div.text-wrapper"
+   ],
+   "props": [
+    "x"
+   ],
+   "count": 3,
+   "intervals": [
+    0,
+    0
+   ],
+   "avgInterval": 0,
+   "consistent": false,
+   "note": "3 elements stagger with uneven intervals (0ms, 0ms)"
+  },
+  {
+   "elements": [
+    "#stat1",
+    "#stat1",
+    "#stat1"
+   ],
+   "props": [
+    "x",
+    "opacity"
+   ],
+   "count": 3,
+   "intervals": [
+    0,
+    0
+   ],
+   "avgInterval": 0,
+   "consistent": false,
+   "note": "3 elements stagger with uneven intervals (0ms, 0ms)"
+  },
+  {
+   "elements": [
+    "#stat1",
+    "#stat1",
+    "#stat1"
+   ],
+   "props": [
+    "x",
+    "opacity"
+   ],
+   "count": 3,
+   "intervals": [
+    0,
+    0
+   ],
+   "avgInterval": 0,
+   "consistent": false,
+   "note": "3 elements stagger with uneven intervals (0ms, 0ms)"
+  },
+  {
+   "elements": [
+    "#stat2",
+    "#stat2",
+    "#stat2"
+   ],
+   "props": [
+    "y",
+    "opacity"
+   ],
+   "count": 3,
+   "intervals": [
+    0,
+    0
+   ],
+   "avgInterval": 0,
+   "consistent": false,
+   "note": "3 elements stagger with uneven intervals (0ms, 0ms)"
+  },
+  {
+   "elements": [
+    "div.progress-bar",
+    "div.progress-bar",
+    "div.progress-bar"
+   ],
+   "props": [
+    "width"
+   ],
+   "count": 3,
+   "intervals": [
+    0,
+    0
+   ],
+   "avgInterval": 0,
+   "consistent": false,
+   "note": "3 elements stagger with uneven intervals (0ms, 0ms)"
+  },
+  {
+   "elements": [
+    "#stat2",
+    "#stat2",
+    "#stat2"
+   ],
+   "props": [
+    "y",
+    "opacity"
+   ],
+   "count": 3,
+   "intervals": [
+    0,
+    0
+   ],
+   "avgInterval": 0,
+   "consistent": false,
+   "note": "3 elements stagger with uneven intervals (0ms, 0ms)"
+  },
+  {
+   "elements": [
+    "#stat3",
+    "#stat3",
+    "#stat3"
+   ],
+   "props": [
+    "x",
+    "opacity"
+   ],
+   "count": 3,
+   "intervals": [
+    0,
+    0
+   ],
+   "avgInterval": 0,
+   "consistent": false,
+   "note": "3 elements stagger with uneven intervals (0ms, 0ms)"
+  },
+  {
+   "elements": [
+    "div.block.gold",
+    "div.block.gold",
+    "div.block.gold"
+   ],
+   "props": [
+    "scale"
+   ],
+   "count": 3,
+   "intervals": [
+    0,
+    0
+   ],
+   "avgInterval": 0,
+   "consistent": false,
+   "note": "3 elements stagger with uneven intervals (0ms, 0ms)"
+  },
+  {
+   "elements": [
+    "#stat3",
+    "#stat3",
+    "#stat3"
+   ],
+   "props": [
+    "x",
+    "opacity"
+   ],
+   "count": 3,
+   "intervals": [
+    0,
+    0
+   ],
+   "avgInterval": 0,
+   "consistent": false,
+   "note": "3 elements stagger with uneven intervals (0ms, 0ms)"
+  }
+ ],
+ "deadZones": [
+  {
+   "start": 2.5,
+   "end": 4,
+   "duration": 1.5,
+   "note": "No animation for 1.5s. Intentional hold or missing entrance?"
+  },
+  {
+   "start": 10,
+   "end": 13.5,
+   "duration": 3.5,
+   "note": "No animation for 3.5s. Intentional hold or missing entrance?"
+  }
+ ]
+}

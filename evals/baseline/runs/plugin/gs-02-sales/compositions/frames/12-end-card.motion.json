@@ -1,0 +1,6 @@
+{ "duration": 3.5,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f12-cta", "bySec": 0.5 },
+    { "kind": "before", "a": "#f12-wordmark", "b": "#f12-tagline" },
+    { "kind": "before", "a": "#f12-tagline", "b": "#f12-credit" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 } ] }

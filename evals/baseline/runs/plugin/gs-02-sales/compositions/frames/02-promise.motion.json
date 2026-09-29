@@ -1,0 +1,8 @@
+{
+  "duration": 1.637,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f02-headline", "bySec": 0.5 },
+    { "kind": "before", "a": "#f02-headline", "b": "#f02-strike" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "duration": 5.99,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f10-line1", "bySec": 0.5 },
+    { "kind": "before", "a": "#f10-line1", "b": "#f10-line2" },
+    { "kind": "before", "a": "#f10-line2", "b": "#f10-attribution" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 }
+  ]
+}

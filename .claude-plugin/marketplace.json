@@ -1,0 +1,16 @@
+{
+  "name": "power-presentation",
+  "owner": { "name": "Dmytro Hryshchenko" },
+  "metadata": {
+    "description": "power-presentation — /present makes product videos for marketing, sales and investors on top of HyperFrames; every file of a run goes to power-presentation-out/ in the project."
+  },
+  "plugins": [
+    {
+      "name": "power-presentation",
+      "source": "./",
+      "description": "/present — wow-effect product presentation videos for marketing, sales and investors on top of HyperFrames: prod-first capture, non-UI products (CLI/API/SDK/data/mocks/docs), 14 QA gates, English only.",
+      "version": "0.3.1",
+      "license": "MIT"
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+<template>
+<style>
+  #root {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    container-type: size;
+    overflow: hidden;
+  }
+
+  #root .clip { position: absolute; inset: 0; }
+
+  .f13-ground {
+    background: #FAF9F5;
+  }
+
+  .f13-lockup {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 26cqh;
+    box-sizing: border-box;
+  }
+
+  .f13-wordmark {
+    font-family: "EB Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 7.3cqw;
+    line-height: 1.02;
+    letter-spacing: -0.022em;
+    color: #141413;
+    opacity: 0;
+    text-align: center;
+  }
+
+  .f13-tagline {
+    margin-top: 2.4cqh;
+    font-family: "EB Garamond", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 4.6cqw;
+    line-height: 1.06;
+    letter-spacing: -0.018em;
+    color: #141413;
+    text-align: center;
+    opacity: 0;
+  }
+
+  .f13-cta-row {
+    margin-top: 3.4cqh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .f13-cta {
+    background: #CC785C;
+    border-radius: 8px;
+    padding: 1.8cqh 3.4cqw;
+    opacity: 0;
+  }
+
+  .f13-cta-text {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 2.3cqw;
+    line-height: 1.0;
+    color: #141413;
+    white-space: nowrap;
+  }
+
+  .f13-command {
+    margin-top: 2cqh;
+    display: flex;
+    align-items: baseline;
+  }
+
+  .f13-command-text {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 400;
+    font-size: 2.1cqw;
+    line-height: 1.6;
+    color: #141413;
+    white-space: nowrap;
+    display: inline-block;
+    clip-path: inset(0 100% 0 0);
+  }
+
+  .f13-caret {
+    display: inline-block;
+    width: 0.55cqw;
+    height: 1.9cqw;
+    margin-left: 0.3cqw;
+    background: #141413;
+    opacity: 0;
+  }
+
+  @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+  @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+  @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+  @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+  @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+  @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+  @font-face { font-family: "EB Garamond"; src: url("assets/fonts/EBGaramond-400-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: block; }
+  @font-face { font-family: "EB Garamond"; src: url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+  @font-face { font-family: "EB Garamond"; src: url("assets/fonts/EBGaramond-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+</style>
+
+<div id="root" data-composition-id="13-end-card" data-width="1920" data-height="1080">
+  <div class="clip f13-ground" id="f13-ground" data-start="0" data-duration="3.483" data-track-index="0"></div>
+
+  <div class="f13-lockup">
+    <div class="f13-wordmark" id="f13-wordmark">Acme Jobs</div>
+    <div class="f13-tagline" id="f13-tagline">Three commands, no dashboard:<br>file in, JSON out.</div>
+    <div class="f13-cta-row">
+      <div class="f13-cta" id="f13-cta">
+        <span class="f13-cta-text" data-var-text="cta_label">Submit my first job</span>
+      </div>
+      <div class="f13-command" id="f13-command">
+        <span class="f13-command-text" id="f13-command-text">acmejobs submit --file report.csv</span><span class="f13-caret" id="f13-caret"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/vendor/gsap@3.14.2/gsap.min.js"></script>
+<script>
+  (function () {
+    var root = document.querySelector('[data-composition-id="13-end-card"]');
+    if (!root) return;
+
+    var wordmark = root.querySelector('#f13-wordmark');
+    var tagline = root.querySelector('#f13-tagline');
+    var cta = root.querySelector('#f13-cta');
+    var commandText = root.querySelector('#f13-command-text');
+    var caret = root.querySelector('#f13-caret');
+
+    var tl = gsap.timeline({ paused: true });
+
+    tl.fromTo(wordmark,
+      { opacity: 0, yPercent: 6, scale: 0.98 },
+      { opacity: 1, yPercent: 0, scale: 1, duration: 0.45, ease: "expo.out" },
+      0);
+
+    tl.fromTo(tagline,
+      { opacity: 0, yPercent: 8 },
+      { opacity: 1, yPercent: 0, duration: 0.4, ease: "expo.out" },
+      0.4);
+
+    tl.fromTo(cta,
+      { opacity: 0, scale: 0.92 },
+      { opacity: 1, scale: 1, duration: 0.4, ease: "expo.out" },
+      0.8);
+
+    tl.set(caret, { opacity: 1 }, 0.8);
+
+    tl.fromTo(commandText,
+      { clipPath: "inset(0 100% 0 0)" },
+      { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "steps(34)" },
+      0.85);
+
+    tl.to(caret,
+      { opacity: 0, duration: 0.3, repeat: 6, yoyo: true, ease: "steps(1)" },
+      1.3);
+
+    window.__timelines = window.__timelines || {};
+    window.__timelines["13-end-card"] = tl;
+  })();
+</script>
+</template>

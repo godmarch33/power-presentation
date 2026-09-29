@@ -1,0 +1,142 @@
+{
+  "schema": "power-presentation/baseline@0.1",
+  "measured_at": "2026-09-26T19:02:03.668Z",
+  "probe": "scripts/wowprobe.py",
+  "target_lufs": {
+    "marketing": -14,
+    "sales": -14,
+    "investors": -16
+  },
+  "routes": {
+    "brag": {
+      "title": "/brag (latent-spaces/brag v0.2.2)",
+      "fixtures": [
+        "gs-02"
+      ],
+      "note": "brag accepts only a local static site — GS-02 is the one fixture it can run on"
+    },
+    "hyperframes": {
+      "title": "raw HyperFrames route (product-launch-video, one autonomous pass)",
+      "fixtures": [
+        "gs-01",
+        "gs-02",
+        "gs-03"
+      ]
+    },
+    "plugin": {
+      "title": "power-presentation /present",
+      "fixtures": [
+        "gs-01",
+        "gs-02",
+        "gs-03"
+      ]
+    }
+  },
+  "runs": [
+    {
+      "route": "brag",
+      "fixture": "GS-02",
+      "key": "gs-02",
+      "status": "measured",
+      "dir": "evals/baseline/runs/brag/gs-02",
+      "duration_sec": 20,
+      "cuts": 0,
+      "asl_sec": 20,
+      "longest_shot_sec": 20,
+      "frozen_pct": 46.17,
+      "longest_freeze_sec": 1.867,
+      "black_open": false,
+      "hook_visible_at_sec": null,
+      "lufs": -24.2,
+      "lra": 1.3,
+      "tp": -3.3,
+      "first_product_sec": null,
+      "first_outcome_sec": null,
+      "gates_failed": [
+        "QA-01",
+        "QA-03",
+        "QA-07",
+        "QA-08",
+        "QA-09",
+        "QA-11"
+      ],
+      "not_measured": [
+        "QA-04",
+        "QA-05",
+        "QA-06",
+        "QA-10",
+        "QA-12",
+        "QA-13"
+      ],
+      "scorecard": 21.5,
+      "measured_weight": 45,
+      "check_ok": true,
+      "check_errors": 0,
+      "contact_sheet": "evals/baseline/runs/brag/gs-02/QA/contact-sheet.png",
+      "notes": "# brag / GS-02 — run notes (2026-09-20)\n\n- Route: `/brag` skill v0.2.2 as installed in `~/.claude/skills/brag`, executed by Claude in the implementation session\n  (one pass, tone `polished`, no `--voice`), on `examples/gs-02-ledgerly/site`.\n- Inputs read: `site/index.html` only (brag reads the local site; no URL capture, no recordings). Numbers on screen:\n  3 days / 12 / 98.5% / 3.1 days / 11 hours / the Harborline quote — all from the page; the reconciliation rows\n  (amounts, invoice ids, customer names) are a recreation of the described flow, not captured UI (tier C in the\n  plugin's vocabulary; brag has no tier concept).\n- Composition: `composition/index.html` (monolithic, 6 scenes, 25 GSAP tweens, 6 eases); bed = ende.app Happy Beats\n  Vol. 9 at 0.35 with a 1.6 s fade, 7 Kenney SFX. `hyperframes check` (0.8.47): ok, 0 errors, 1 lint warning\n  (`audio_volume_tween_overrides_gain`, informational). Render: `--quality high`, 20.0 s, 11.2 s wall (hardware GPU).\n- Deliverables per brag step 4: `brag.mp4` (poster baked at 2.4 s via `scripts/poster-bake.sh` — brag's own recipe),\n  `brag.jpg`, `share-copy.txt`. `final.mp4` = the master *before* the poster bake, so the probe sees the real open.\n- Wall time for the whole pass ≈ 25 min of agent work; token cost not metered separately (implementation session).\n- No human touches."
+    },
+    {
+      "route": "hyperframes",
+      "fixture": "GS-01",
+      "key": "gs-01",
+      "status": "not_run",
+      "dir": "evals/baseline/runs/hyperframes/gs-01"
+    },
+    {
+      "route": "hyperframes",
+      "fixture": "GS-02",
+      "key": "gs-02",
+      "status": "not_run",
+      "dir": "evals/baseline/runs/hyperframes/gs-02"
+    },
+    {
+      "route": "hyperframes",
+      "fixture": "GS-03",
+      "key": "gs-03",
+      "status": "not_run",
+      "dir": "evals/baseline/runs/hyperframes/gs-03"
+    },
+    {
+      "route": "plugin",
+      "fixture": "GS-01",
+      "key": "gs-01",
+      "status": "not_run",
+      "dir": "evals/baseline/runs/plugin/gs-01"
+    },
+    {
+      "route": "plugin",
+      "fixture": "GS-02",
+      "key": "gs-02",
+      "status": "measured",
+      "dir": "evals/baseline/runs/plugin/gs-02",
+      "duration_sec": 59.6,
+      "cuts": 11,
+      "asl_sec": 4.97,
+      "longest_shot_sec": 7.3,
+      "frozen_pct": 0,
+      "longest_freeze_sec": 0,
+      "black_open": false,
+      "hook_visible_at_sec": 0.2,
+      "lufs": -14.4,
+      "lra": 3.5,
+      "tp": -1.4,
+      "first_product_sec": 3.2,
+      "first_outcome_sec": 6.3,
+      "gates_failed": [],
+      "not_measured": [],
+      "scorecard": 84.1,
+      "measured_weight": 90,
+      "check_ok": true,
+      "check_errors": 0,
+      "contact_sheet": "evals/baseline/runs/plugin/gs-02/QA/contact-sheet.png",
+      "notes": "# plugin / GS-02 — run notes (2026-09-20 … 2026-09-26)\n\n- Route: this repository's render path (`scripts/render-path.mjs` stages `brief` → `audio` → `packets` → `frames` →\n  `assemble` → `verify` → `render` → `deliver`) with the vendored `product-launch-video` workflow (HyperFrames 0.8.47),\n  driven by Claude in the implementation sessions, on `examples/gs-02-ledgerly` in `sales` mode, 16:9 only.\n- Inputs: `BRIEF.md`, `STORYBOARD.md` (12 frames), `SCRIPT.md`, `frame.md`, the record-flow capture of the Ledgerly\n  site (`assets/footage.mp4`, 3840×2160, 9.4 s) with its `events.jsonl` for the auto-zoom camera. VO: Kokoro, 12 lines;\n  captions word-timed by whisper `small.en`, burned in; no music bed (beat lock not measured).\n- Frames: written by frame-worker subagents from the packets; the footage frames (02, 04, 05, 06, 07, 09, 11) declare\n  the approved video that the vendor assembler hoists and `applyCamera` wraps.\n- Human / agent touches outside the stage runner (all in implementation sessions): frames 01 / 03 / 07 / 09 revised\n  on 2026-09-23 for the pre-render gates (QA-06 sidecars, QA-11 motion); frames 07 / 09 root ground made transparent\n  on 2026-09-26 (it hid the background footage once the hoist fix left one video per frame).\n- Stage wall time summed over all 36 stage runs in `.hyperframes/pp-stages.json` (every retry included): audio 65.5 s,\n  assemble 3.5 s, verify 336.7 s, render 154.2 s, deliver 84.3 s. The final chain: verify 65.6 s (`check` 60.2 s),\n  render 32.7 s, deliver 14.0 s on 16 of 32 threads at nice 10 (`POWER_PRESENTATION_NICE` / `_CPUSET`).\n- Token cost not metered separately (implementation sessions).\n- `final.mp4` = `renders/final/gs-02_16x9.mp4` after loudnorm and the poster bake (the bake replaces frame 0 only)."
+    },
+    {
+      "route": "plugin",
+      "fixture": "GS-03",
+      "key": "gs-03",
+      "status": "not_run",
+      "dir": "evals/baseline/runs/plugin/gs-03"
+    }
+  ]
+}

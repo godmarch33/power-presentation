@@ -1,0 +1,97 @@
+{
+  "schema": "power-presentation/intake@0.1",
+  "plugin_version": "0.1.0",
+  "arguments_raw": "--for marketing --duration 45 --format 16:9,9:16 --url https://plausible.io --yes",
+  "declared": {
+    "for": "marketing",
+    "duration": 45,
+    "format": [
+      "16:9",
+      "9:16"
+    ],
+    "source": {
+      "kind": "url",
+      "value": "https://plausible.io"
+    },
+    "yes": true
+  },
+  "derived": {
+    "reveal": {
+      "value": "early",
+      "source": "default:(QA-04 defaults)"
+    },
+    "voice": {
+      "value": false,
+      "source": "default:(off for marketing)"
+    },
+    "brand": {
+      "value": null,
+      "source": "userConfig:brand_kit_dir (unset; tokens from hyperframes capture of the declared URL)"
+    },
+    "preset": {
+      "value": null,
+      "source": "workflow Step 2 chooses when the brief is silent"
+    },
+    "style": {
+      "value": null,
+      "source": "investors-only, v1"
+    },
+    "privacy": {
+      "value": "default",
+      "source": "userConfig:privacy"
+    },
+    "budget": {
+      "value": 25,
+      "source": "userConfig:budget_usd"
+    },
+    "lang": {
+      "value": "en",
+      "source": "(English only; no --lang flag)"
+    },
+    "destination": {
+      "value": "hero launch (45–90 s)",
+      "source": "length-bands.md QA-01 band matching the declared 45 s for marketing"
+    },
+    "register": {
+      "value": "high",
+      "source": "brief-schema.md § 2 (marketing)"
+    },
+    "captions": {
+      "value": "on for 9:16, off for 16:9 (no VO), SRT always",
+      "source": "default"
+    },
+    "master_aspect": {
+      "value": "1920x1080",
+      "source": "(master always 16:9; 9:16 via render --batch)"
+    }
+  },
+  "questions": [],
+  "yes_decisions": [
+    {
+      "field": "source.url",
+      "decision": "not asked — declared --url https://plausible.io (prod, first link of the chain)"
+    },
+    {
+      "field": "for",
+      "decision": "not asked — declared marketing"
+    },
+    {
+      "field": "pitch",
+      "decision": "--yes: the story director's recommended concept is taken"
+    },
+    {
+      "field": "render?",
+      "decision": "--yes: silence = yes"
+    }
+  ],
+  "conflicts": [],
+  "phase_blocked": [],
+  "privacy_profile": "default",
+  "network_manifest": [
+    "registry.npmjs.org",
+    "plausible.io",
+    "us.i.posthog.com"
+  ],
+  "surface": "web-ui",
+  "evidence_plan": "prod"
+}

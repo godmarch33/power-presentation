@@ -1,0 +1,161 @@
+<template>
+<div id="root" data-composition-id="06-filtered-top-pages" data-width="1920" data-height="1080" data-duration="4.2">
+  <style>
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+
+    #root {
+      width: 100%;
+      height: 100%;
+      container-type: size;
+      background: transparent;
+      position: relative;
+      overflow: hidden;
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .f06-stage {
+      position: absolute;
+      left: 18.07cqw;
+      top: 0;
+      width: 81.93cqw;
+      height: 81.94cqh;
+      border-left: 1px solid rgba(88, 80, 236, 0.2);
+      overflow: hidden;
+    }
+
+    .f06-rail {
+      position: absolute;
+      left: 2.92cqw;
+      top: 4.44cqh;
+      width: 31.67cqw;
+      height: 75.19cqh;
+      background: #FFFFFF;
+      border: 1.5px solid rgba(88, 80, 236, 0.2);
+      border-radius: 14px;
+      box-sizing: border-box;
+      padding: 2.22cqh 1.25cqw;
+      display: flex;
+      flex-direction: column;
+      opacity: 1;
+      transform-origin: center center;
+      will-change: transform;
+    }
+
+    .f06-kicker {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 auto;
+      gap: 0.4cqh;
+    }
+
+    .f06-kicker-l1 {
+      display: block;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: max(3.7cqmin, 40px);
+      color: #5850EC;
+    }
+
+    .f06-kicker-l2 {
+      display: block;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: max(3.7cqmin, 40px);
+      color: #4B5563;
+    }
+
+    .f06-callout {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    .f06-line {
+      display: block;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      font-size: 6cqh;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: #252F3F;
+      opacity: 0;
+      will-change: transform, opacity;
+    }
+
+    @container (aspect-ratio < 1) {
+      .f06-stage {
+        left: 0;
+        top: 51.85cqh;
+        width: 100cqw;
+        height: 52.08cqh;
+        border-left: none;
+        border-top: 1px solid rgba(88, 80, 236, 0.2);
+      }
+
+      .f06-rail {
+        left: 5.56cqw;
+        top: 10.42cqh;
+        width: 88.89cqw;
+        height: 17.71cqh;
+        background: transparent;
+        border: none;
+        padding: 0;
+        justify-content: flex-start;
+      }
+
+      .f06-kicker-l1,
+      .f06-kicker-l2,
+      .f06-line {
+        font-size: max(3.7cqmin, 40px);
+      }
+    }
+  </style>
+
+  <div class="f06-stage" id="f06-stage"></div>
+
+  <div class="f06-rail" id="f06-rail">
+    <div class="f06-kicker" id="f06-kicker">
+      <span class="f06-kicker-l1">LIVE DEMO</span>
+      <span class="f06-kicker-l2">plausible.io's own stats</span>
+    </div>
+    <div class="f06-callout">
+      <span class="f06-line" id="f06-line1">Which pages</span>
+      <span class="f06-line" id="f06-line2">they land on.</span>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var root = document.querySelector('[data-composition-id="06-filtered-top-pages"]');
+      var line1 = root.querySelector('#f06-line1');
+      var line2 = root.querySelector('#f06-line2');
+      var rail = root.querySelector('#f06-rail');
+      var kicker = root.querySelector('#f06-kicker');
+
+      gsap.set(kicker, { opacity: 1 });
+      gsap.set(rail, { scale: 1, opacity: 1 });
+      gsap.set([line1, line2], { yPercent: 6, opacity: 0 });
+
+      var tl = gsap.timeline({ paused: true });
+
+      tl.fromTo(line1, { yPercent: 6, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.4, ease: "expo.out" }, 0.3);
+      tl.fromTo(line2, { yPercent: 6, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.4, ease: "expo.out" }, 0.42);
+
+
+      tl.fromTo(rail, { scale: 1 }, { scale: 1.015, duration: 0.9, ease: "sine.inOut" }, 2.6);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["06-filtered-top-pages"] = tl;
+    })();
+  </script>
+</div>
+</template>

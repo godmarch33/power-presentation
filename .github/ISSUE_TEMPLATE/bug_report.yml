@@ -1,0 +1,84 @@
+name: Bug report
+description: Something in /present, a script or a hook does not work as documented.
+title: "[Bug]: "
+labels: ["type/bug", "status/needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. **Do not paste secrets, customer data or unredacted captures** —
+        a security problem goes through [SECURITY.md](https://github.com/godmarch33/power-presentation/blob/main/SECURITY.md).
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you saw, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to reproduce
+      description: The exact command (for example `/power-presentation:present --for sales --url …`) or script call, and the steps after it.
+      render: shell
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Stage
+      options:
+        - Intake / interview
+        - Inspect (product type, story extraction)
+        - Capture (record-flow, VHS, stills)
+        - Story / storyboard / script
+        - Frames / render
+        - QA gates / scorecard / critic
+        - Deliver (poster, share copy, run report)
+        - Hooks / toolchain install
+        - Evals / golden set
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: product-type
+    attributes:
+      label: Product type being presented
+      options:
+        - Web app / site
+        - Electron / desktop
+        - CLI
+        - API / backend
+        - SDK / library
+        - Data / ML
+        - Mocks / design files
+        - Docs only
+        - Not relevant
+  - type: textarea
+    id: versions
+    attributes:
+      label: Versions and environment
+      description: Paste the output of `node scripts/toolchain.mjs status` (from the plugin directory) and fill in the rest.
+      value: |
+        - power-presentation: 0.3.0
+        - Claude Code:
+        - Node:
+        - OS:
+        - toolchain status:
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs and reports
+      description: Relevant parts of `run-report.json`, `QA/wowprobe.json`, or the hook / script output. Redact anything private.
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched the existing issues and this is not a duplicate.
+          required: true
+        - label: Nothing I attached contains secrets or personal data.
+          required: true

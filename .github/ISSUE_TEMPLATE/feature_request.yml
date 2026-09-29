@@ -1,0 +1,39 @@
+name: Feature request
+description: Propose new behaviour, a flag, a gate or a product type.
+title: "[Feature]: "
+labels: ["type/feature", "status/needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What are you trying to do, and what gets in the way today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should the plugin do? Flags, outputs, where in the pipeline.
+    validations:
+      required: true
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Audience mode
+      multiple: true
+      options:
+        - marketing
+        - sales
+        - investors
+        - all / not mode-specific
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Contribution
+      options:
+        - label: I would like to work on this myself.

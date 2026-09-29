@@ -1,0 +1,67 @@
+openapi: 3.1.0
+info:
+  title: Acme Jobs API (synthetic fixture GS-03)
+  version: 0.1.0
+  description: Fictional job-queue API used only by the power-presentation golden set.
+servers:
+  - url: https://api.acme-jobs.example/v1
+    description: Placeholder host (reserved .example domain); run a local mock for capture.
+paths:
+  /jobs:
+    post:
+      operationId: submitJob
+      summary: Submit a job
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JobRequest'
+      responses:
+        '202':
+          description: Job accepted and queued
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Job'
+  /jobs/{jobId}:
+    get:
+      operationId: getJob
+      summary: Get a job by id
+      parameters:
+        - name: jobId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: The job
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Job'
+        '404':
+          description: Unknown job id
+components:
+  schemas:
+    JobRequest:
+      type: object
+      required: [file]
+      properties:
+        file:
+          type: string
+          description: Path or object key of the input file
+    Job:
+      type: object
+      required: [id, status]
+      properties:
+        id:
+          type: string
+          examples: [job_7f3k2]
+        status:
+          type: string
+          enum: [queued, running, done, failed]
+        created_at:
+          type: string
+          format: date-time

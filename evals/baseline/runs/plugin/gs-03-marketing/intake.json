@@ -1,0 +1,90 @@
+{
+  "schema": "power-presentation/intake@0.1",
+  "plugin_version": "0.1.0",
+  "arguments_raw": "--for marketing --yes",
+  "declared": {
+    "for": "marketing",
+    "yes": true
+  },
+  "derived": {
+    "duration": {
+      "value": 45,
+      "source": "length-bands.md: hero launch band 45–90 s, lower edge picked under --yes (QA-01; no per-mode default)"
+    },
+    "destination": {
+      "value": "hero-launch",
+      "source": "default for marketing without a destination flag; band 45–90 s (QA-01)"
+    },
+    "format": {
+      "value": [
+        "16:9"
+      ],
+      "source": "brief-contract § 2: hero launch → 16:9 master only"
+    },
+    "reveal": {
+      "value": "early",
+      "source": "default"
+    },
+    "voice": {
+      "value": false,
+      "source": "default:(off for marketing)"
+    },
+    "source": {
+      "value": {
+        "kind": "repo-tape",
+        "value": "demo.tape"
+      },
+      "source": "repo:demo.tape (CLI product, VHS backend; no URL needed)"
+    },
+    "brand": {
+      "value": null,
+      "source": "userConfig:brand_kit_dir (unset)"
+    },
+    "preset": {
+      "value": null,
+      "source": "workflow Step 2 chooses"
+    },
+    "privacy": {
+      "value": "default",
+      "source": "userConfig:privacy"
+    },
+    "budget": {
+      "value": 25,
+      "source": "userConfig:budget_usd default"
+    },
+    "claims": {
+      "value": "/home/dmytrogr/Documents/power-presentation-runs/acmejobs/claims.json",
+      "source": "repo:claims.json (declared claims file found in the repo)"
+    },
+    "lang": {
+      "value": "en",
+      "source": "(English only; no --lang flag)"
+    },
+    "register": {
+      "value": "high",
+      "source": "audiences/marketing.md"
+    }
+  },
+  "questions": [],
+  "yes_decisions": [
+    "source: no --url/--local/--recording; repo is a CLI with demo.tape → VHS capture, prod-URL question not needed",
+    "duration: 45 s (hero launch band 45–90 s, lower edge)",
+    "format: 16:9 master only",
+    "voice: off (marketing default)",
+    "pitch: the story director's recommended concept is taken (q3 default)"
+  ],
+  "conflicts": [],
+  "phase_blocked": [],
+  "privacy_profile": "default",
+  "network_manifest": [
+    "registry.npmjs.org",
+    "us.i.posthog.com"
+  ],
+  "surface": "cli",
+  "evidence_plan": {
+    "chain_step": "vhs",
+    "tier": "A",
+    "capture": ".media/capture/capture-manifest.json",
+    "note": "repo demo.tape; api-card from openapi.yaml would be tier B \"from the spec\""
+  }
+}

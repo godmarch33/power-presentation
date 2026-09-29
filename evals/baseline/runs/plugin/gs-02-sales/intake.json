@@ -1,0 +1,39 @@
+{
+  "schema": "power-presentation/intake@0.1",
+  "plugin_version": "0.1.0",
+  "arguments_raw": "--for sales --duration 60 --local ./site --prospect prospect.json --pain \"manual month-end reconciliation\" --yes",
+  "declared": {
+    "for": "sales",
+    "duration": 60,
+    "source": { "kind": "local", "value": "./site" },
+    "prospect": "prospect.json",
+    "pain": "manual month-end reconciliation",
+    "yes": true
+  },
+  "derived": {
+    "format": { "value": ["16:9", "9:16"], "source": "brief-contract § 2 (sales outreach: 16:9 master + 9:16 render --batch cut; captions on for 9:16 + sales)" },
+    "reveal": { "value": "early", "source": "default" },
+    "voice": { "value": true, "source": "default:(on for sales/investors)" },
+    "brand": { "value": null, "source": "userConfig:brand_kit_dir (unset)" },
+    "preset": { "value": null, "source": "workflow Step 2 chooses when the brief is silent" },
+    "privacy": { "value": "default", "source": "userConfig:privacy (unset → default)" },
+    "budget": { "value": 25, "source": "userConfig:budget_usd (unset → threshold 25)" },
+    "lang": { "value": "en", "source": "(English only; no --lang flag)" },
+    "register": { "value": "medium", "source": "audience deltas (sales)" },
+    "destination": { "value": "sales outreach (30–60 s band)", "source": "length-bands.md QA-01" }
+  },
+  "questions": [],
+  "yes_decisions": [
+    { "field": "source.url", "decision": "no question: --local ./site declared (chain step: local)" },
+    { "field": "for", "decision": "no question: --for sales declared" },
+    { "field": "pitch", "decision": "story-director's recommended concept taken under --yes" },
+    { "field": "format", "decision": "16:9 master + 9:16 cut (sales outreach destination)" },
+    { "field": "storyboard", "decision": "BRIEF storyboard: no — autonomous mode under --yes (brief-contract § 1)" }
+  ],
+  "conflicts": [],
+  "phase_blocked": [],
+  "privacy_profile": "default",
+  "network_manifest": [],
+  "surface": null,
+  "evidence_plan": "local"
+}

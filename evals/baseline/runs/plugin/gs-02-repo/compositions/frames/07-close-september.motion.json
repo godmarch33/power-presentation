@@ -1,0 +1,8 @@
+{
+  "duration": 5.004,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f07-footage", "bySec": 0.5 },
+    { "kind": "before", "a": "#f07-kicker", "b": "#f07-textcard" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 }
+  ]
+}

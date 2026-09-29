@@ -1,0 +1,19 @@
+{
+  "duration": 2.75,
+  "assertions": [
+    {
+      "kind": "appearsBy",
+      "selector": "#f01-salutation",
+      "bySec": 0.5
+    },
+    {
+      "kind": "before",
+      "a": "#f01-salutation",
+      "b": "#f01-word-1"
+    },
+    {
+      "kind": "keepsMoving",
+      "maxStaticSec": 2.0
+    }
+  ]
+}

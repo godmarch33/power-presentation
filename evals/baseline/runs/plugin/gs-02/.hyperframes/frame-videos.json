@@ -1,0 +1,20 @@
+{
+  "note": "approved frame video declarations, put back before each vendor hoist (render-path assemble)",
+  "frames": {
+    "02-before.html": [
+      "<video id=\"f02-footage\" data-frame-video=\"approved\" src=\"assets/footage.mp4\" muted playsinline\n           data-start=\"0\" data-duration=\"3.1\" data-media-start=\"2.2\" data-track-index=\"5\"\n           data-frame-video-x=\"280\" data-frame-video-y=\"118\" data-frame-video-width=\"1360\" data-frame-video-height=\"765\"\n           data-frame-video-fit=\"cover\" data-frame-video-portrait=\"0,360,1080,1200\"></video>"
+    ],
+    "04-auto-match.html": [
+      "<video id=\"f04-footage\" data-frame-video=\"approved\" src=\"assets/footage.mp4\" muted playsinline\n           data-start=\"0\" data-duration=\"6.6\" data-media-start=\"4.7\" data-track-index=\"5\"\n           data-frame-video-x=\"280\" data-frame-video-y=\"118\" data-frame-video-width=\"1360\" data-frame-video-height=\"765\" data-frame-video-fit=\"cover\"\n           data-frame-video-portrait=\"0,360,1080,1200\"></video>"
+    ],
+    "05-audit-trail.html": [
+      "<video id=\"f05-video\" data-frame-video=\"approved\" src=\"assets/footage.mp4\" muted playsinline\n           data-start=\"0\" data-duration=\"6.9\" data-media-start=\"8.3\" data-track-index=\"5\"\n           data-frame-video-x=\"280\" data-frame-video-y=\"118\" data-frame-video-width=\"1360\" data-frame-video-height=\"765\"\n           data-frame-video-fit=\"cover\" data-frame-video-portrait=\"0,360,1080,1200\"></video>"
+    ],
+    "07-close-checklist.html": [
+      "<video id=\"f07-video\" data-frame-video=\"approved\" src=\"assets/footage.mp4\" muted playsinline\n           data-start=\"0\" data-duration=\"7.3\" data-media-start=\"11.5\" data-track-index=\"5\"\n           data-frame-video-x=\"280\" data-frame-video-y=\"118\" data-frame-video-width=\"1360\" data-frame-video-height=\"765\"\n           data-frame-video-fit=\"cover\" data-frame-video-portrait=\"0,360,1080,1200\"></video>"
+    ],
+    "08-lock-period.html": [
+      "<video id=\"f08-video\" data-frame-video=\"approved\" src=\"assets/footage.mp4\" muted playsinline\n           data-start=\"0\" data-duration=\"6.8\" data-media-start=\"15.1\" data-track-index=\"5\"\n           data-frame-video-x=\"280\" data-frame-video-y=\"118\" data-frame-video-width=\"1360\" data-frame-video-height=\"765\"\n           data-frame-video-fit=\"cover\" data-frame-video-portrait=\"0,360,1080,1200\"></video>"
+    ]
+  }
+}

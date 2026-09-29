@@ -1,0 +1,192 @@
+<template>
+<div id="root" data-composition-id="05-pivot-match-rate" data-width="1920" data-height="1080">
+  <style>
+    #root {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      container-type: size;
+      overflow: hidden;
+      background: transparent;
+      font-family: "Inter", sans-serif;
+    }
+
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+
+    .f05-bg {
+      position: absolute;
+      inset: 0;
+      background: #FFFFFF;
+    }
+
+    .f05-stat-wrap {
+      position: absolute;
+      left: 8cqw;
+      top: 26cqh;
+      width: 70cqw;
+      opacity: 0;
+    }
+
+    .f05-stat-num {
+      display: inline-block;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      font-size: 24.1cqh;
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      color: #2A6F97;
+    }
+
+    .f05-accent-line {
+      position: absolute;
+      left: 8cqw;
+      top: 51cqh;
+      width: 3.1cqw;
+      height: 0.37cqh;
+      background: #2A6F97;
+      border-radius: 2px;
+      transform: scaleX(0);
+      transform-origin: left center;
+    }
+
+    .f05-label {
+      position: absolute;
+      left: 8cqw;
+      top: 59cqh;
+      width: 62cqw;
+      opacity: 0;
+    }
+
+    .f05-label p {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 5.19cqh;
+      line-height: 1.3;
+      color: #5C6B7A;
+    }
+
+    .f05-label .f05-ink {
+      color: #14213D;
+      font-weight: 700;
+    }
+
+    .f05-chip {
+      position: absolute;
+      left: 65.5cqw;
+      top: 4cqh;
+      width: 30.9cqw;
+      height: 5.2cqh;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1.5px solid rgba(42, 111, 151, 0.2);
+      border-radius: 100px;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 2.59cqh;
+      color: #5C6B7A;
+      opacity: 1;
+      white-space: nowrap;
+    }
+
+    @container (aspect-ratio < 1) {
+      .f05-stat-wrap {
+        left: 8cqw;
+        top: 22cqh;
+        width: 84cqw;
+      }
+      .f05-stat-num {
+        font-size: 12cqw;
+      }
+      .f05-accent-line {
+        left: 8cqw;
+        top: 40cqh;
+        width: 14cqw;
+      }
+      .f05-label {
+        left: 8cqw;
+        top: 46cqh;
+        width: 84cqw;
+      }
+      .f05-label p {
+        font-size: 5.6cqw;
+      }
+      .f05-chip {
+        left: 8cqw;
+        top: 3cqh;
+        width: 84cqw;
+        height: 2.6cqh;
+        font-size: 1.6cqh;
+      }
+    }
+  </style>
+
+  <div id="f05-bg" class="f05-bg clip" data-start="0" data-duration="3.506" data-track-index="0"></div>
+
+  <div id="f05-stat-wrap" class="f05-stat-wrap clip" data-start="0" data-duration="3.506" data-track-index="1">
+    <span id="f05-stat-num" class="f05-stat-num">0.0%</span>
+    <div id="f05-accent-line" class="f05-accent-line"></div>
+  </div>
+
+  <div id="f05-label" class="f05-label clip" data-start="0" data-duration="3.506" data-track-index="2">
+    <p>of transactions <span class="f05-ink">auto-matched</span></p>
+    <p>without a human touch</p>
+  </div>
+
+  <div id="f05-chip" class="f05-chip clip" data-start="0" data-duration="3.506" data-track-index="3">
+    Synthetic fixture &middot; fictional numbers
+  </div>
+
+  <script src="assets/vendor/gsap@3.14.2/gsap.min.js"></script>
+  <script>
+    (function () {
+      var root = document.querySelector('[data-composition-id="05-pivot-match-rate"]');
+      var statWrap = root.querySelector('.f05-stat-wrap');
+      var statNum = root.querySelector('#f05-stat-num');
+      var accentLine = root.querySelector('#f05-accent-line');
+      var label = root.querySelector('#f05-label');
+
+      var counter = { value: 0 };
+
+      var tl = gsap.timeline({ paused: true });
+
+      tl.fromTo(statWrap,
+        { opacity: 0, scale: 0.92 },
+        { opacity: 1, scale: 1, duration: 0.3, ease: "expo.out" },
+        0.3
+      );
+      tl.to(counter, {
+        value: 98.5,
+        duration: 0.8,
+        ease: "expo.out",
+        onUpdate: function () {
+          statNum.textContent = counter.value.toFixed(1) + "%";
+        }
+      }, 0.3);
+
+      tl.fromTo(label,
+        { opacity: 0, yPercent: 15 },
+        { opacity: 1, yPercent: 0, duration: 0.5, ease: "expo.out" },
+        0.8
+      );
+
+      tl.fromTo(accentLine,
+        { scaleX: 0 },
+        { scaleX: 1, duration: 0.4, ease: "expo.out" },
+        1.3
+      );
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["05-pivot-match-rate"] = tl;
+    })();
+  </script>
+</div>
+</template>

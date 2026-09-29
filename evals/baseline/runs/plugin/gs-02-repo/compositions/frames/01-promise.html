@@ -1,0 +1,197 @@
+<template>
+<div id="root" data-composition-id="01-promise" data-width="1920" data-height="1080">
+  <style>
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+
+    #root {
+      width: 100%;
+      height: 100%;
+      container-type: size;
+      position: relative;
+      overflow: hidden;
+      background: transparent;
+      font-family: "Inter", sans-serif;
+    }
+
+    #root .clip {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #root .f01-bg {
+      background: #FFFFFF;
+    }
+
+    #root .f01-dotgrid {
+      position: absolute;
+      top: 9cqh;
+      right: 7cqw;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 1.4cqw;
+      opacity: 0.14;
+    }
+    #root .f01-dot {
+      width: 0.9cqh;
+      height: 0.9cqh;
+      border-radius: 50%;
+      background: #2A6F97;
+    }
+
+    #root .f01-chip {
+      position: absolute;
+      left: 65.52cqw;
+      top: 3.98cqh;
+      width: 30.89cqw;
+      height: 5.19cqh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.88);
+      border: 1.5px solid rgba(42,111,151,0.2);
+      border-radius: 100px;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 28px;
+      color: #5C6B7A;
+      white-space: nowrap;
+      letter-spacing: 0;
+    }
+
+    #root .f01-headline-group {
+      position: absolute;
+      left: 8cqw;
+      top: 27cqh;
+      width: 78cqw;
+      transform-origin: left center;
+      opacity: 0;
+    }
+
+    #root .f01-line {
+      display: block;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      font-size: 11.11cqh;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: #14213D;
+      opacity: 0;
+    }
+    #root .f01-line1 { margin: 0; }
+    #root .f01-line2 { margin: 1.2cqh 0 0 0; }
+
+    #root .f01-word-mask {
+      display: inline-block;
+      overflow: hidden;
+      vertical-align: top;
+      padding-bottom: 0.15cqh;
+    }
+    #root .f01-word {
+      display: inline-block;
+      will-change: transform, opacity;
+      opacity: 0;
+    }
+    #root .f01-space { display: inline-block; width: 0.9cqw; }
+
+    #root .f01-accent { color: #2A6F97; }
+
+    #root .f01-token12 {
+      position: relative;
+      display: inline-block;
+    }
+    #root .f01-strike {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 48%;
+      height: 6px;
+      background: #2A6F97;
+      transform-origin: left center;
+      transform: scaleX(0);
+    }
+
+    @container (aspect-ratio < 1) {
+      #root .f01-dotgrid {
+        top: 5cqh;
+        right: 5cqw;
+      }
+      #root .f01-chip {
+        left: 6cqw;
+        top: 3.98cqh;
+        width: 88cqw;
+        font-size: 22px;
+      }
+      #root .f01-headline-group {
+        left: 6cqw;
+        top: 18cqh;
+        width: 88cqw;
+      }
+      #root .f01-line {
+        font-size: 8.5cqw;
+      }
+    }
+  </style>
+
+  <div id="f01-bg" class="clip f01-bg" data-start="0" data-duration="2.5" data-track-index="0"></div>
+
+  <div class="f01-dotgrid">
+    <div class="f01-dot"></div><div class="f01-dot"></div><div class="f01-dot"></div>
+    <div class="f01-dot"></div><div class="f01-dot"></div><div class="f01-dot"></div>
+    <div class="f01-dot"></div><div class="f01-dot"></div><div class="f01-dot"></div>
+  </div>
+
+  <div class="f01-chip">Synthetic fixture &middot; fictional numbers</div>
+
+  <div id="f01-headline-group" class="f01-headline-group">
+    <div id="f01-line1" class="f01-line f01-line1">
+      <span class="f01-word-mask"><span class="f01-word">Close</span></span><span class="f01-space"></span><span class="f01-word-mask"><span class="f01-word">September's</span></span><span class="f01-space"></span><span class="f01-word-mask"><span class="f01-word">books</span></span>
+    </div>
+    <div id="f01-line2" class="f01-line f01-line2">
+      <span class="f01-word-mask"><span class="f01-word">in</span></span><span class="f01-space"></span><span class="f01-word-mask"><span class="f01-word f01-accent">3</span></span><span class="f01-space"></span><span class="f01-word-mask"><span class="f01-word f01-accent">days,</span></span><span class="f01-space"></span><span class="f01-word-mask"><span class="f01-word">not</span></span><span class="f01-space"></span><span class="f01-word-mask"><span class="f01-word f01-token12">12<span class="f01-strike"></span></span></span>
+    </div>
+  </div>
+
+  <script src="assets/vendor/gsap@3.14.2/gsap.min.js"></script>
+  <script>
+    (function () {
+      var root = document.querySelector('[data-composition-id="01-promise"]');
+      var q = function (sel) { return root.querySelector(sel); };
+      var qa = function (sel) { return root.querySelectorAll(sel); };
+
+      var tl = gsap.timeline({ paused: true });
+
+      var group = q('#f01-headline-group');
+      var line1 = q('#f01-line1');
+      var line2 = q('#f01-line2');
+      var line1Words = qa('#f01-line1 .f01-word');
+      var line2Words = qa('#f01-line2 .f01-word');
+      var strike = q('.f01-strike');
+
+      tl.fromTo(group, { opacity: 0 }, { opacity: 1, duration: 0.1, ease: "power1.out" }, 0);
+      tl.fromTo(line1, { opacity: 0 }, { opacity: 1, duration: 0.1, ease: "power1.out" }, 0);
+
+      tl.fromTo(line1Words, { yPercent: 120, opacity: 0 },
+        { yPercent: 0, opacity: 1, duration: 0.35, ease: "expo.out", stagger: 0.1 }, 0);
+
+      tl.fromTo(line2, { opacity: 0 }, { opacity: 1, duration: 0.1, ease: "power1.out" }, 0.55);
+      tl.fromTo(line2Words, { yPercent: 120, opacity: 0 },
+        { yPercent: 0, opacity: 1, duration: 0.3, ease: "expo.out", stagger: 0.09 }, 0.55);
+
+      tl.fromTo(strike, { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "expo.out" }, 1.0);
+
+      tl.fromTo(group, { scale: 1.0 }, { scale: 1.02, duration: 0.9, ease: "sine.inOut" }, 1.6);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["01-promise"] = tl;
+    })();
+  </script>
+</div>
+</template>

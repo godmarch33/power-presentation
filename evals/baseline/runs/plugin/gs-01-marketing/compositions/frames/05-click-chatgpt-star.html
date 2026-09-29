@@ -1,0 +1,180 @@
+<template>
+<div id="root" data-composition-id="05-click-chatgpt-star" data-width="1920" data-height="1080" data-duration="4.8">
+  <style>
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+
+    #root {
+      width: 100%;
+      height: 100%;
+      container-type: size;
+      background: transparent;
+      position: relative;
+      overflow: hidden;
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .f05-stage {
+      position: absolute;
+      left: 18.07cqw;
+      top: 0;
+      width: 81.93cqw;
+      height: 81.94cqh;
+      border-left: 1px solid rgba(88, 80, 236, 0.2);
+      overflow: hidden;
+    }
+
+    .f05-rail {
+      position: absolute;
+      left: 2.92cqw;
+      top: 4.44cqh;
+      width: 31.67cqw;
+      height: 75.19cqh;
+      background: #FFFFFF;
+      border: 1.5px solid rgba(88, 80, 236, 0.2);
+      border-radius: 14px;
+      box-sizing: border-box;
+      padding: 2.22cqh 1.25cqw;
+      display: flex;
+      flex-direction: column;
+      opacity: 1;
+      transform-origin: center center;
+      will-change: transform;
+    }
+
+    .f05-kicker {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 auto;
+      gap: 0.4cqh;
+    }
+
+    .f05-kicker-l1 {
+      display: block;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: max(3.7cqmin, 40px);
+      color: #5850EC;
+    }
+
+    .f05-kicker-l2 {
+      display: block;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: max(3.7cqmin, 40px);
+      color: #4B5563;
+    }
+
+    .f05-callout {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    .f05-line {
+      display: block;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      font-size: 6cqh;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: #252F3F;
+      opacity: 0;
+      will-change: transform, opacity;
+    }
+
+    .f05-line.f05-accent { color: #5850EC; }
+
+    #f05-oneclick-wrap,
+    #f05-now-wrap {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+    }
+
+    @container (aspect-ratio < 1) {
+      .f05-stage {
+        left: 0;
+        top: 51.85cqh;
+        width: 100cqw;
+        height: 52.08cqh;
+        border-left: none;
+        border-top: 1px solid rgba(88, 80, 236, 0.2);
+      }
+
+      .f05-rail {
+        left: 5.56cqw;
+        top: 10.42cqh;
+        width: 88.89cqw;
+        height: 17.71cqh;
+        background: transparent;
+        border: none;
+        padding: 0;
+        justify-content: flex-start;
+      }
+
+      .f05-kicker-l1,
+      .f05-kicker-l2,
+      .f05-line {
+        font-size: max(3.7cqmin, 40px);
+      }
+    }
+  </style>
+
+  <div class="f05-stage" id="f05-stage"></div>
+
+  <div class="f05-rail" id="f05-rail">
+    <div class="f05-kicker" id="f05-kicker">
+      <span class="f05-kicker-l1">LIVE DEMO</span>
+      <span class="f05-kicker-l2">plausible.io's own stats</span>
+    </div>
+    <div class="f05-callout">
+      <div id="f05-oneclick-wrap">
+        <span class="f05-line" id="f05-oneclick">One click.</span>
+      </div>
+      <div id="f05-now-wrap">
+        <span class="f05-line" id="f05-now-line1">Now it's only</span>
+        <span class="f05-line f05-accent" id="f05-now-line2">ChatGPT.</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var root = document.querySelector('[data-composition-id="05-click-chatgpt-star"]');
+      var oneClick = root.querySelector('#f05-oneclick');
+      var nowLine1 = root.querySelector('#f05-now-line1');
+      var nowLine2 = root.querySelector('#f05-now-line2');
+      var rail = root.querySelector('#f05-rail');
+
+      gsap.set(root.querySelector('#f05-kicker'), { opacity: 1 });
+      gsap.set(rail, { scale: 1, opacity: 1 });
+      gsap.set(oneClick, { yPercent: 6, opacity: 0 });
+      gsap.set([nowLine1, nowLine2], { yPercent: 6, opacity: 0 });
+
+      var tl = gsap.timeline({ paused: true });
+
+      tl.fromTo(oneClick, { yPercent: 6, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.4, ease: "expo.out" }, 0.2);
+
+      tl.to(oneClick, { yPercent: -3, opacity: 0, duration: 0.25, ease: "power2.in" }, 1.35);
+
+      tl.fromTo(nowLine1, { yPercent: 6, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.7, ease: "power3.out" }, 1.8);
+      tl.fromTo(nowLine2, { yPercent: 6, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.7, ease: "power3.out" }, 1.87);
+
+      tl.fromTo(rail, { scale: 1 }, { scale: 1.015, duration: 0.8, ease: "sine.inOut" }, 3.0);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["05-click-chatgpt-star"] = tl;
+    })();
+  </script>
+</div>
+</template>

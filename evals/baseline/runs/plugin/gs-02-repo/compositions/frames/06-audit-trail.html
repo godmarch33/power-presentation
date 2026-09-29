@@ -1,0 +1,147 @@
+<template>
+<div id="root" data-composition-id="06-audit-trail" data-width="1920" data-height="1080">
+  <style>
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+
+    #root {
+      width: 100%;
+      height: 100%;
+      container-type: size;
+      position: relative;
+      overflow: hidden;
+      font-family: "Inter", sans-serif;
+    }
+
+    #root .clip { position: absolute; inset: 0; }
+
+    .f06-stage {
+      position: absolute;
+      inset: 0;
+    }
+
+    .f06-kicker {
+      position: absolute;
+      left: 3.6cqw;
+      top: 4.0cqh;
+      width: 30cqw;
+      height: 6cqh;
+      border-radius: 100px;
+      background: #14213D;
+      display: flex;
+      align-items: center;
+      padding: 0 1.4cqw;
+      overflow: hidden;
+    }
+    .f06-kicker-inner {
+      display: flex;
+      align-items: baseline;
+      gap: 0.4cqw;
+      white-space: nowrap;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 600;
+      font-size: 4.07cqh;
+      line-height: 1;
+    }
+    .f06-kicker-count { color: #9CC3DA; }
+    .f06-kicker-label { color: #FFFFFF; }
+
+    .f06-chip {
+      position: absolute;
+      left: 65.5cqw;
+      top: 4.0cqh;
+      width: 30.9cqw;
+      height: 5.2cqh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1.5px solid rgba(42, 111, 151, 0.2);
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 2.59cqh;
+      color: #5C6B7A;
+      opacity: 1;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .f06-textcard {
+      position: absolute;
+      left: 5cqw;
+      top: 62cqh;
+      width: max-content;
+      display: inline-flex;
+      align-items: center;
+      padding: 1.6cqh 1.8cqw;
+      box-sizing: border-box;
+      border-radius: 14px;
+      background: #FFFFFF;
+      border: 1.5px solid rgba(42, 111, 151, 0.2);
+    }
+    .f06-textcard-label {
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 600;
+      font-size: 6.1cqh;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: #14213D;
+      white-space: nowrap;
+    }
+
+    @container (aspect-ratio < 1) {
+      .f06-kicker { left: 4cqw; top: 3cqh; width: 55cqw; height: 4.4cqh; }
+      .f06-kicker-inner { font-size: 2.9cqh; }
+      .f06-chip { left: 4cqw; top: 8.2cqh; width: 55cqw; height: 3.6cqh; font-size: 1.7cqh; }
+      .f06-textcard { left: 6cqw; top: 68cqh; }
+      .f06-textcard-label { font-size: 3.6cqh; }
+    }
+  </style>
+
+  <div id="f06-kicker-layer" class="clip" data-start="0" data-duration="4.992" data-track-index="1">
+    <div id="f06-kicker" class="f06-kicker">
+      <span class="f06-kicker-inner">
+        <span class="f06-kicker-count">Click 2</span>
+        <span class="f06-kicker-label">&nbsp;&middot; Audit trail</span>
+      </span>
+    </div>
+  </div>
+
+  <div id="f06-chip-layer" class="clip" data-start="0" data-duration="4.992" data-track-index="2">
+    <div id="f06-chip" class="f06-chip">Synthetic fixture &middot; fictional numbers</div>
+  </div>
+
+  <div id="f06-textcard-layer" class="clip" data-start="0" data-duration="4.992" data-track-index="3">
+    <div id="f06-textcard" class="f06-textcard">
+      <div id="f06-textcard-label" class="f06-textcard-label">Every match<br>leaves a receipt.</div>
+    </div>
+  </div>
+
+  <script src="assets/vendor/gsap@3.14.2/gsap.min.js"></script>
+  <script>
+    (function () {
+      var root = document.querySelector('[data-composition-id="06-audit-trail"]');
+      var kicker = root.querySelector('#f06-kicker');
+      var textCard = root.querySelector('#f06-textcard');
+
+      gsap.set(kicker, { clipPath: 'inset(0% 100% 0% 0%)', opacity: 1 });
+      gsap.set(textCard, { opacity: 0, yPercent: 30 });
+
+      var tl = gsap.timeline({ paused: true });
+
+      tl.to(kicker, { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.25, ease: 'expo.out' }, 0.05);
+      tl.to(kicker, { opacity: 0, yPercent: -20, duration: 0.2, ease: 'expo.in' }, 1.6);
+
+      tl.to(textCard, { opacity: 1, yPercent: 0, duration: 0.4, ease: 'expo.out' }, 2.6);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["06-audit-trail"] = tl;
+    })();
+  </script>
+</div>
+</template>

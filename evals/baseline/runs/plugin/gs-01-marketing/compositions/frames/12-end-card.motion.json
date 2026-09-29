@@ -1,0 +1,10 @@
+{
+  "duration": 4.0,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f12-logo-inner", "bySec": 0.6 },
+    { "kind": "before", "a": "#f12-logo-inner", "b": "#f12-tagline" },
+    { "kind": "before", "a": "#f12-tagline", "b": "#f12-url" },
+    { "kind": "before", "a": "#f12-url", "b": "#f12-cta-button" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 }
+  ]
+}

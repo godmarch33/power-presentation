@@ -1,0 +1,512 @@
+{
+  "schema": "power-presentation/stage-times@0.1",
+  "plugin": "0.1.0",
+  "stages_s": {
+    "brief": 0,
+    "frames": 0.6,
+    "audio": 98.5,
+    "assemble": 24.4,
+    "verify": 673.2,
+    "render": 296,
+    "deliver": 189.9
+  },
+  "runs": [
+    {
+      "command": "init",
+      "stage": "brief",
+      "at": "2026-09-20T10:02:07.170Z",
+      "seconds": 0,
+      "ok": true,
+      "detail": "node_modules/hyperframes → toolchain 0.8.47 | capture copied: footage.mp4, events.jsonl, capture-manifest.json, redactions.json, autozoom.json, index.html → .media/capture/ (+ assets/)"
+    },
+    {
+      "command": "packets",
+      "stage": "frames",
+      "at": "2026-09-20T10:12:22.053Z",
+      "seconds": 0.1,
+      "ok": true,
+      "detail": "12 packet(s) → .hyperframes/frame-packets/ (+ _dispatch.json; 12 frame file(s) still to build)"
+    },
+    {
+      "command": "packets",
+      "stage": "frames",
+      "at": "2026-09-20T12:42:17.097Z",
+      "seconds": 0.1,
+      "ok": true,
+      "detail": "12 packet(s) → .hyperframes/frame-packets/ (+ _dispatch.json; 12 frame file(s) still to build)"
+    },
+    {
+      "command": "packets",
+      "stage": "frames",
+      "at": "2026-09-20T13:10:02.042Z",
+      "seconds": 0.1,
+      "ok": true,
+      "detail": "12 packet(s) → .hyperframes/frame-packets/ (+ _dispatch.json; 12 frame file(s) still to build)"
+    },
+    {
+      "command": "audio",
+      "stage": "audio",
+      "at": "2026-09-23T13:38:56.398Z",
+      "seconds": 34.3,
+      "ok": true,
+      "detail": "12 voice line(s) via kokoro (am_michael) | sync-durations applied to STORYBOARD.md"
+    },
+    {
+      "command": "audio",
+      "stage": "audio",
+      "at": "2026-09-23T13:43:38.000Z",
+      "seconds": 31.2,
+      "ok": true,
+      "detail": "12 voice line(s) via kokoro (am_michael) | durations: frame 1 3.5s → 3.573s (voice 2.773s + 0.8s pause); frame 3 4s → 4.875s (voice 4.075s + 0.8s pause); frame 4 5s → 6.411s (voice 5.611s + 0.8s pause); frame 10 4s → 4.085s (voice 3.285s + 0.8s pause) | total 62.444s vs brief 60s (+2.444s, 4.1% — QA-01 band ±3 %: OUT OF BAND — the story director trims windows before the frames are built)"
+    },
+    {
+      "command": "packets",
+      "stage": "frames",
+      "at": "2026-09-23T13:44:44.240Z",
+      "seconds": 0.1,
+      "ok": true,
+      "detail": "12 packet(s) → .hyperframes/frame-packets/ (+ _dispatch.json; 12 frame file(s) still to build)"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-23T13:57:04.482Z",
+      "seconds": 0.4,
+      "ok": false,
+      "detail": "assemble-index.mjs failed (exit 1): ✗ assemble-index.mjs: 4 frame composition violation(s) — fix the worker output and re-assemble:\n  • frame 4 (Pain: the manual close): has a <video> inside the sub-composition. This workflow hoists media to index.html so the frame injector owns it; the framework itself renders media inside a sub-composition identically to media at the host root (verified by render, and pinned by packages/producer/tests/sub-composition-video), so this is an assembly convention, not a runtime limit. Move the clip to index.html as a root-level <video>/<audio> and drive any per-scene motion on the main timeline (composition-patterns.md archetype B).\n  • frame 5 (Show: reconcile): has a <video> inside the sub-composition. This workflow hoists media to index.html so the frame injector owns it; the framework itself renders media inside a sub-composition identically to media at the host root (verified by render, and pinned by packages/producer/tests/sub-composition-video), so this is an assembly convention, not a runtime limit. Move the clip to index.html as a root-level <video>/<audio> and drive any per-scene motion on the main timeline (composition-patterns.md archetype B).\n  • frame 6 (Show: audit trail): has a <video> inside the sub-composition. This workflow hoists media to index.html so the frame injector owns it; the framework itself renders media inside a sub-composition identically to media at the host root (verified by render, and pinned by packages/producer/tests/sub-composition-video), so this is an assembly convention, not a runtime limit. Move the clip to index.html as a root-level <video>/<audio> and drive any per-scene motion on the main timeline (composition-patterns.md archetype B).\n  • frame 11 (CTA lead-in): has a <video> inside the sub-composition. This workflow hoists media to index.html so the frame injector owns it; the framework itself renders media inside a sub-composition identically to media at the host root (verified by render, and pinned by packages/producer/tests/sub-composition-video), so this is an assembly convention, not a runtime limit. Move the clip to index.html as a root-level <video>/<audio> and drive any per-scene motion on the main timeline (composition-patterns.md archetype B)."
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-23T14:12:04.011Z",
+      "seconds": 0.2,
+      "ok": false,
+      "detail": "assemble-index.mjs failed (exit 1): ✗ assemble-index.mjs: 4 frame composition violation(s) — fix the worker output and re-assemble:\n  • frame 2 (Product: the Ledgerly site, live): has a <video> inside the sub-composition. This workflow hoists media to index.html so the frame injector owns it; the framework itself renders media inside a sub-composition identically to media at the host root (verified by render, and pinned by packages/producer/tests/sub-composition-video), so this is an assembly convention, not a runtime limit. Move the clip to index.html as a root-level <video>/<audio> and drive any per-scene motion on the main timeline (composition-patterns.md archetype B).\n  • frame 2 (Product: the Ledgerly site, live): a timed <video> (data-start/duration/track-index) has no class=\"clip\" — it renders for the whole frame instead of only its window. Add class=\"clip\", or remove the timing attrs if it is a GSAP-animated element meant to be present throughout.\n  • frame 7 (Outcome: average close): has a <video> inside the sub-composition. This workflow hoists media to index.html so the frame injector owns it; the framework itself renders media inside a sub-composition identically to media at the host root (verified by render, and pinned by packages/producer/tests/sub-composition-video), so this is an assembly convention, not a runtime limit. Move the clip to index.html as a root-level <video>/<audio> and drive any per-scene motion on the main timeline (composition-patterns.md archetype B).\n  • frame 7 (Outcome: average close): a timed <video> (data-start/duration/track-index) has no class=\"clip\" — it renders for the whole frame instead of only its window. Add class=\"clip\", or remove the timing attrs if it is a GSAP-animated element meant to be present throughout."
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-23T14:15:15.971Z",
+      "seconds": 0.4,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 44 group(s) from 99 words → compositions/captions.html (total 59.944s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | frames kept as source of truth: 02-product.html (1 declaration), 04-pain.html (1 declaration), 05-reconcile.html (1 declaration), 06-audit.html (1 declaration), 07-outcome.html (1 declaration), 09-benefit.html (1 declaration), 11-cta-lead.html (1 declaration) put back after the vendor hoist | assemble:   - asset \"the wordmark is typeset)\" named by a frame but not found under capture/ — frame will 404 it | transitions:   tracks: 01-hook[t0 0→3.573] 02-product[t1 3.573→8.073] 03-metric[t0 8.073→12.948] 04-pain[t1 12.948→19.359] 05-reconcile[t0 19.359→26.859] 06-audit[t1 26.359→31.859] 07-outcome[t0 31.859→37.359] 08-proof[t1 36.859→42.859] 09-benefit[t0 42.859→47.359] 10-price[t1 47.359→51.444] 11-cta-lead[t0 51.444→56.944] 12-end[t1 56.444→59.944]; ✓ transitions verify: 3 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | camera: 02-product 0 zoom(s), 1 click(s); 04-pain 0 zoom(s), 2 click(s); 05-reconcile 1 zoom(s), 3 click(s); 06-audit 1 zoom(s), 2 click(s); 09-benefit 0 zoom(s), 1 click(s); 11-cta-lead 1 zoom(s), 2 click(s)"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-23T14:16:13.295Z",
+      "seconds": 19.2,
+      "ok": false,
+      "detail": "pre-render gates failed: QA-02, QA-11 (QA/wowprobe.json)"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-23T14:20:16.115Z",
+      "seconds": 0.4,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 44 group(s) from 99 words → compositions/captions.html (total 59.944s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | frames kept as source of truth: 02-product.html (1 declaration), 04-pain.html (1 declaration), 05-reconcile.html (1 declaration), 06-audit.html (1 declaration), 07-outcome.html (1 declaration), 09-benefit.html (1 declaration), 11-cta-lead.html (1 declaration) put back after the vendor hoist | assemble:   - asset \"footage.mp4 [video]\" named by a frame but not found under capture/ — frame will 404 it | transitions:   tracks: 01-hook[t0 0→3.573] 02-product[t1 3.573→8.073] 03-metric[t0 8.073→12.948] 04-pain[t1 12.948→19.359] 05-reconcile[t0 19.359→26.859] 06-audit[t1 26.359→31.859] 07-outcome[t0 31.859→37.359] 08-proof[t1 36.859→42.859] 09-benefit[t0 42.859→47.359] 10-price[t1 47.359→51.444] 11-cta-lead[t0 51.444→56.944] 12-end[t1 56.444→59.944]; ✓ transitions verify: 3 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | camera: 02-product 0 zoom(s), 1 click(s); 04-pain 0 zoom(s), 2 click(s); 05-reconcile 1 zoom(s), 3 click(s); 06-audit 1 zoom(s), 2 click(s); 09-benefit 0 zoom(s), 1 click(s); 11-cta-lead 1 zoom(s), 2 click(s)"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-23T14:20:33.693Z",
+      "seconds": 17.4,
+      "ok": false,
+      "detail": "pre-render gates failed: QA-11 (QA/wowprobe.json)"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-23T14:21:59.410Z",
+      "seconds": 16.6,
+      "ok": true,
+      "detail": "lint: 1 finding(s), 0 error(s) | check: ok=true (10.9s, exit 0) → QA/check.json | animation-map: Animation map: 503/1685 tweens (skipped 1182 micro-tweens) → .hyperframes/anim-map/animation-map.json | wowprobe pre-render: gates_failed []; not measured QA-01, QA-03, QA-06, QA-07, QA-08, QA-09; scorecard 66.5"
+    },
+    {
+      "command": "render",
+      "stage": "render",
+      "at": "2026-09-23T14:23:12.560Z",
+      "seconds": 42.7,
+      "ok": true,
+      "detail": "render v1 ok: 16:9 59.967s renders/final/gs-02_16x9.mp4; wall 42.6s; hyperframes 0.8.47"
+    },
+    {
+      "command": "deliver",
+      "stage": "deliver",
+      "at": "2026-09-23T14:23:52.974Z",
+      "seconds": 11.7,
+      "ok": false,
+      "detail": "post-render gates failed: QA-08, QA-09 (QA/wowprobe.json; deliverables were still written)"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-23T14:28:18.276Z",
+      "seconds": 0.4,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 44 group(s) from 99 words → compositions/captions.html (total 59.944s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | frames kept as source of truth: 02-product.html (1 declaration), 04-pain.html (1 declaration), 05-reconcile.html (1 declaration), 06-audit.html (1 declaration), 07-outcome.html (1 declaration), 09-benefit.html (1 declaration), 11-cta-lead.html (1 declaration) put back after the vendor hoist | assemble:   - asset \"footage.mp4 [video]\" named by a frame but not found under capture/ — frame will 404 it | transitions:   tracks: 01-hook[t0 0→3.573] 02-product[t1 3.573→8.073] 03-metric[t0 8.073→12.948] 04-pain[t1 12.948→19.359] 05-reconcile[t0 19.359→26.859] 06-audit[t1 26.359→31.859] 07-outcome[t0 31.859→37.359] 08-proof[t1 36.859→42.859] 09-benefit[t0 42.859→47.359] 10-price[t1 47.359→51.444] 11-cta-lead[t0 51.444→56.944] 12-end[t1 56.444→59.944]; ✓ transitions verify: 3 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | camera: 02-product 0 zoom(s), 1 click(s); 04-pain 0 zoom(s), 2 click(s); 05-reconcile 1 zoom(s), 3 click(s); 06-audit 1 zoom(s), 2 click(s); 09-benefit 0 zoom(s), 1 click(s); 11-cta-lead 1 zoom(s), 2 click(s)"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-23T14:28:35.503Z",
+      "seconds": 17.1,
+      "ok": false,
+      "detail": "pre-render gates failed: QA-10 (QA/wowprobe.json)"
+    },
+    {
+      "command": "render",
+      "stage": "render",
+      "at": "2026-09-23T14:28:35.649Z",
+      "seconds": 0,
+      "ok": false,
+      "detail": "render refused: wowprobe gates failed: QA-10"
+    },
+    {
+      "command": "deliver",
+      "stage": "deliver",
+      "at": "2026-09-23T14:28:50.329Z",
+      "seconds": 14.5,
+      "ok": false,
+      "detail": "post-render gates failed: QA-08, QA-10 (QA/wowprobe.json; deliverables were still written)"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-23T14:33:08.659Z",
+      "seconds": 0.4,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 44 group(s) from 99 words → compositions/captions.html (total 59.944s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 28 cue(s) → captions/en.srt (caption_groups.json (44 word-timed groups, captions.mjs → 28 cues at ≥ 0.8 s, ≤ 20 cps)) | frames kept as source of truth: 02-product.html (1 declaration), 04-pain.html (1 declaration), 05-reconcile.html (1 declaration), 06-audit.html (1 declaration), 07-outcome.html (1 declaration), 09-benefit.html (1 declaration), 11-cta-lead.html (1 declaration) put back after the vendor hoist | assemble:   - asset \"footage.mp4 [video]\" named by a frame but not found under capture/ — frame will 404 it | transitions:   tracks: 01-hook[t0 0→3.573] 02-product[t1 3.573→8.073] 03-metric[t0 8.073→12.948] 04-pain[t1 12.948→19.359] 05-reconcile[t0 19.359→26.859] 06-audit[t1 26.359→31.859] 07-outcome[t0 31.859→37.359] 08-proof[t1 36.859→42.859] 09-benefit[t0 42.859→47.359] 10-price[t1 47.359→51.444] 11-cta-lead[t0 51.444→56.944] 12-end[t1 56.444→59.944]; ✓ transitions verify: 3 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | camera: 02-product 0 zoom(s), 1 click(s); 04-pain 0 zoom(s), 2 click(s); 05-reconcile 1 zoom(s), 3 click(s); 06-audit 1 zoom(s), 2 click(s); 09-benefit 0 zoom(s), 1 click(s); 11-cta-lead 1 zoom(s), 2 click(s)"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-23T14:34:15.577Z",
+      "seconds": 66.8,
+      "ok": false,
+      "detail": "pre-render gates failed: QA-02, QA-06, QA-10 (QA/wowprobe.json)"
+    },
+    {
+      "command": "render",
+      "stage": "render",
+      "at": "2026-09-23T14:34:15.729Z",
+      "seconds": 0,
+      "ok": false,
+      "detail": "render refused: QA/check.json is not ok (QA-02); wowprobe gates failed: QA-02, QA-06, QA-10"
+    },
+    {
+      "command": "deliver",
+      "stage": "deliver",
+      "at": "2026-09-23T14:34:30.500Z",
+      "seconds": 14.6,
+      "ok": false,
+      "detail": "post-render gates failed: QA-01, QA-02, QA-06, QA-10 (QA/wowprobe.json; deliverables were still written)"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-23T14:38:01.589Z",
+      "seconds": 0.5,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 44 group(s) from 99 words → compositions/captions.html (total 59.944s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 28 cue(s) → captions/en.srt (caption_groups.json (44 word-timed groups, captions.mjs → 28 cues at ≥ 0.8 s, ≤ 20 cps)) | frames kept as source of truth: 02-product.html (1 declaration), 04-pain.html (1 declaration), 05-reconcile.html (1 declaration), 06-audit.html (1 declaration), 07-outcome.html (1 declaration), 09-benefit.html (1 declaration), 11-cta-lead.html (1 declaration) put back after the vendor hoist | assemble:   - asset \"footage.mp4 [video]\" named by a frame but not found under capture/ — frame will 404 it | transitions:   tracks: 01-hook[t0 0→3.573] 02-product[t1 3.573→8.073] 03-metric[t0 8.073→12.948] 04-pain[t1 12.948→19.359] 05-reconcile[t0 19.359→26.859] 06-audit[t1 26.359→31.859] 07-outcome[t0 31.859→37.359] 08-proof[t1 36.859→42.859] 09-benefit[t0 42.859→47.359] 10-price[t1 47.359→51.444] 11-cta-lead[t0 51.444→56.944] 12-end[t1 56.444→59.944]; ✓ transitions verify: 3 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | camera: 02-product 0 zoom(s), 1 click(s); 04-pain 0 zoom(s), 2 click(s); 05-reconcile 1 zoom(s), 3 click(s); 06-audit 1 zoom(s), 2 click(s); 09-benefit 0 zoom(s), 1 click(s); 11-cta-lead 1 zoom(s), 2 click(s)"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-23T14:39:09.856Z",
+      "seconds": 68.1,
+      "ok": true,
+      "detail": "motion sidecar: 37 assertion(s) → index.motion.json from 12/12 frame sidecar(s); keepsMoving dropped (QA-07 on the master) | lint: 1 finding(s), 0 error(s) | check: ok=true (62.0s, exit 0) → QA/check.json | animation-map: Animation map: 503/1685 tweens (skipped 1182 micro-tweens) → .hyperframes/anim-map/animation-map.json | wowprobe pre-render: gates_failed []; not measured QA-01, QA-03, QA-07, QA-08, QA-09; scorecard 66.5"
+    },
+    {
+      "command": "render",
+      "stage": "render",
+      "at": "2026-09-23T14:39:53.828Z",
+      "seconds": 43.8,
+      "ok": true,
+      "detail": "render v1 ok: 16:9 59.967s renders/final/gs-02_16x9.mp4; wall 43.8s; hyperframes 0.8.47"
+    },
+    {
+      "command": "deliver",
+      "stage": "deliver",
+      "at": "2026-09-23T14:40:09.437Z",
+      "seconds": 15.5,
+      "ok": true,
+      "detail": "loudness: -21.55 LUFS / TP -1.47 dBTP → target -14 LUFS, TP ≤ -1.5 dBTP (two-pass loudnorm, video copied) | wowprobe post-render: gates_failed []; not measured none; scorecard 74.1; sheet QA/contact-sheet.png | poster: renders/final/gs-02_16x9.poster.png @ 1.2s (storyboard: storyboard `poster:` key), baked into frame 0 | srt: 28 cue(s) from caption_groups.json (44 word-timed groups, captions.mjs → 28 cues at ≥ 0.8 s, ≤ 20 cps) → renders/final/gs-02_16x9.en.srt (+ captions/en.srt) | share-copy lint: clean | run-report: run-report: /home/dmytrogr/Documents/power-presentation/evals/baseline/runs/plugin/gs-02/run-report.json — mode sales, gates_failed [], not measured 0, scorecard 74.1, 13 inputs read, 3 missing (critic, egress, media_ledger)"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-26T14:03:25.120Z",
+      "seconds": 0.4,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 44 group(s) from 99 words → compositions/captions.html (total 59.944s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 28 cue(s) → captions/en.srt (caption_groups.json (44 word-timed groups, captions.mjs → 28 cues at ≥ 0.8 s, ≤ 20 cps)) | frame footage: 7 declaration(s) recorded in .hyperframes/frame-videos.json | assemble:   - asset \"footage.mp4 [video]\" named by a frame but not found under capture/ — frame will 404 it | transitions:   tracks: 01-hook[t0 0→3.573] 02-product[t1 3.573→8.073] 03-metric[t0 8.073→12.948] 04-pain[t1 12.948→19.359] 05-reconcile[t0 19.359→26.859] 06-audit[t1 26.359→31.859] 07-outcome[t0 31.859→37.359] 08-proof[t1 36.859→42.859] 09-benefit[t0 42.859→47.359] 10-price[t1 47.359→51.444] 11-cta-lead[t0 51.444→56.944] 12-end[t1 56.444→59.944]; ✓ transitions verify: 3 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | camera: 02-product 0 zoom(s), 1 click(s); 04-pain 0 zoom(s), 2 click(s); 05-reconcile 1 zoom(s), 3 click(s); 06-audit 1 zoom(s), 2 click(s); 09-benefit 0 zoom(s), 1 click(s); 11-cta-lead 1 zoom(s), 2 click(s)"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-26T14:04:31.115Z",
+      "seconds": 65.9,
+      "ok": true,
+      "detail": "motion sidecar: 37 assertion(s) → index.motion.json from 12/12 frame sidecar(s); keepsMoving dropped (QA-07 on the master) | lint: 1 finding(s), 0 error(s) | check: ok=true (60.5s, exit 0) → QA/check.json | animation-map: Animation map: 503/1685 tweens (skipped 1182 micro-tweens) → .hyperframes/anim-map/animation-map.json | wowprobe pre-render: gates_failed []; not measured QA-01, QA-03, QA-07, QA-08, QA-09; scorecard 66.5"
+    },
+    {
+      "command": "render",
+      "stage": "render",
+      "at": "2026-09-26T14:05:06.217Z",
+      "seconds": 35,
+      "ok": true,
+      "detail": "render v1 ok: 16:9 59.967s renders/final/gs-02_16x9.mp4; wall 34.9s; hyperframes 0.8.47"
+    },
+    {
+      "command": "deliver",
+      "stage": "deliver",
+      "at": "2026-09-26T14:05:20.321Z",
+      "seconds": 14,
+      "ok": true,
+      "detail": "loudness: -21.55 LUFS / TP -1.47 dBTP → target -14 LUFS, TP ≤ -1.5 dBTP (two-pass loudnorm, video copied) | wowprobe post-render: gates_failed []; not measured none; scorecard 74.1; sheet QA/contact-sheet.png | poster: renders/final/gs-02_16x9.poster.png @ 1.2s (storyboard: storyboard `poster:` key), baked into frame 0 | srt: 28 cue(s) from caption_groups.json (44 word-timed groups, captions.mjs → 28 cues at ≥ 0.8 s, ≤ 20 cps) → renders/final/gs-02_16x9.en.srt (+ captions/en.srt) | share-copy lint: clean | run-report: run-report: /home/dmytrogr/Documents/power-presentation/evals/baseline/runs/plugin/gs-02/run-report.json — mode sales, gates_failed [], not measured 0, scorecard 74.1, 13 inputs read, 3 missing (critic, egress, media_ledger)"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-26T14:07:09.905Z",
+      "seconds": 0.4,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 44 group(s) from 99 words → compositions/captions.html (total 59.944s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 28 cue(s) → captions/en.srt (caption_groups.json (44 word-timed groups, captions.mjs → 28 cues at ≥ 0.8 s, ≤ 20 cps)) | frame footage re-declared for the hoist: 02-product.html (1), 04-pain.html (1), 05-reconcile.html (1), 06-audit.html (1), 07-outcome.html (1), 09-benefit.html (1), 11-cta-lead.html (1) from .hyperframes/frame-videos.json | frame footage: 7 declaration(s) recorded in .hyperframes/frame-videos.json | assemble:   - asset \"footage.mp4 [video]\" named by a frame but not found under capture/ — frame will 404 it | transitions:   tracks: 01-hook[t0 0→3.573] 02-product[t1 3.573→8.073] 03-metric[t0 8.073→12.948] 04-pain[t1 12.948→19.359] 05-reconcile[t0 19.359→26.859] 06-audit[t1 26.359→31.859] 07-outcome[t0 31.859→37.359] 08-proof[t1 36.859→42.859] 09-benefit[t0 42.859→47.359] 10-price[t1 47.359→51.444] 11-cta-lead[t0 51.444→56.944] 12-end[t1 56.444→59.944]; ✓ transitions verify: 3 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | camera: 02-product 0 zoom(s), 1 click(s); 04-pain 0 zoom(s), 2 click(s); 05-reconcile 1 zoom(s), 3 click(s); 06-audit 1 zoom(s), 2 click(s); 09-benefit 0 zoom(s), 1 click(s); 11-cta-lead 1 zoom(s), 2 click(s)"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-26T14:08:15.624Z",
+      "seconds": 65.6,
+      "ok": true,
+      "detail": "motion sidecar: 37 assertion(s) → index.motion.json from 12/12 frame sidecar(s); keepsMoving dropped (QA-07 on the master) | lint: 1 finding(s), 0 error(s) | check: ok=true (60.2s, exit 0) → QA/check.json | animation-map: Animation map: 503/1685 tweens (skipped 1182 micro-tweens) → .hyperframes/anim-map/animation-map.json | wowprobe pre-render: gates_failed []; not measured QA-01, QA-03, QA-07, QA-08, QA-09; scorecard 66.5"
+    },
+    {
+      "command": "render",
+      "stage": "render",
+      "at": "2026-09-26T14:08:48.452Z",
+      "seconds": 32.7,
+      "ok": true,
+      "detail": "render v1 ok: 16:9 59.967s renders/final/gs-02_16x9.mp4; wall 32.6s; hyperframes 0.8.47"
+    },
+    {
+      "command": "deliver",
+      "stage": "deliver",
+      "at": "2026-09-26T14:09:02.562Z",
+      "seconds": 14,
+      "ok": true,
+      "detail": "loudness: -21.55 LUFS / TP -1.47 dBTP → target -14 LUFS, TP ≤ -1.5 dBTP (two-pass loudnorm, video copied) | wowprobe post-render: gates_failed []; not measured none; scorecard 74.1; sheet QA/contact-sheet.png | poster: renders/final/gs-02_16x9.poster.png @ 1.2s (storyboard: storyboard `poster:` key), baked into frame 0 | srt: 28 cue(s) from caption_groups.json (44 word-timed groups, captions.mjs → 28 cues at ≥ 0.8 s, ≤ 20 cps) → renders/final/gs-02_16x9.en.srt (+ captions/en.srt) | share-copy lint: clean | run-report: run-report: /home/dmytrogr/Documents/power-presentation/evals/baseline/runs/plugin/gs-02/run-report.json — mode sales, gates_failed [], not measured 0, scorecard 74.1, 13 inputs read, 3 missing (critic, egress, media_ledger)"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-26T15:02:31.654Z",
+      "seconds": 0.4,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 44 group(s) from 99 words → compositions/captions.html (total 59.944s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 28 cue(s) → captions/en.srt (caption_groups.json (44 word-timed groups, captions.mjs → 28 cues at ≥ 0.8 s, ≤ 20 cps)) | frame footage re-declared for the hoist: 02-product.html (1), 04-pain.html (1), 05-reconcile.html (1), 06-audit.html (1), 07-outcome.html (1), 09-benefit.html (1), 11-cta-lead.html (1) from .hyperframes/frame-videos.json | frame footage: 7 declaration(s) recorded in .hyperframes/frame-videos.json | assemble:   - asset \"footage.mp4 [video]\" named by a frame but not found under capture/ — frame will 404 it | transitions:   tracks: 01-hook[t0 0→3.573] 02-product[t1 3.573→8.073] 03-metric[t0 8.073→12.948] 04-pain[t1 12.948→19.359] 05-reconcile[t0 19.359→26.859] 06-audit[t1 26.359→31.859] 07-outcome[t0 31.859→37.359] 08-proof[t1 36.859→42.859] 09-benefit[t0 42.859→47.359] 10-price[t1 47.359→51.444] 11-cta-lead[t0 51.444→56.944] 12-end[t1 56.444→59.944]; ✓ transitions verify: 3 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | camera: 02-product 0 zoom(s), 1 click(s); 04-pain 0 zoom(s), 2 click(s); 05-reconcile 1 zoom(s), 3 click(s); 06-audit 1 zoom(s), 2 click(s); 09-benefit 0 zoom(s), 1 click(s); 11-cta-lead 1 zoom(s), 2 click(s) | media ledger: 17 asset(s) — generated ×12, OFL-1.1 ×3, own-capture ×2; 17 added / re-frozen → .media/manifest.jsonl"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-26T15:07:07.117Z",
+      "seconds": 0.4,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 44 group(s) from 99 words → compositions/captions.html (total 59.944s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 28 cue(s) → captions/en.srt (caption_groups.json (44 word-timed groups, captions.mjs → 28 cues at ≥ 0.8 s, ≤ 20 cps)) | frame footage re-declared for the hoist: 02-product.html (1), 04-pain.html (1), 05-reconcile.html (1), 06-audit.html (1), 07-outcome.html (1), 09-benefit.html (1), 11-cta-lead.html (1) from .hyperframes/frame-videos.json | frame footage: 7 declaration(s) recorded in .hyperframes/frame-videos.json | assemble:   - asset \"footage.mp4 [video]\" named by a frame but not found under capture/ — frame will 404 it | transitions:   tracks: 01-hook[t0 0→3.573] 02-product[t1 3.573→8.073] 03-metric[t0 8.073→12.948] 04-pain[t1 12.948→19.359] 05-reconcile[t0 19.359→26.859] 06-audit[t1 26.359→31.859] 07-outcome[t0 31.859→37.359] 08-proof[t1 36.859→42.859] 09-benefit[t0 42.859→47.359] 10-price[t1 47.359→51.444] 11-cta-lead[t0 51.444→56.944] 12-end[t1 56.444→59.944]; ✓ transitions verify: 3 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | camera: 02-product 0 zoom(s), 1 click(s); 04-pain 0 zoom(s), 2 click(s); 05-reconcile 1 zoom(s), 3 click(s); 06-audit 1 zoom(s), 2 click(s); 09-benefit 0 zoom(s), 1 click(s); 11-cta-lead 1 zoom(s), 2 click(s) | media ledger: 17 asset(s) — generated ×12, OFL-1.1 ×3, own-capture ×2 → .media/manifest.jsonl"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-26T15:08:12.690Z",
+      "seconds": 65.4,
+      "ok": true,
+      "detail": "egress: cdn.jsdelivr.net → .media/egress.jsonl | motion sidecar: 37 assertion(s) → index.motion.json from 12/12 frame sidecar(s); keepsMoving dropped (QA-07 on the master) | lint: 1 finding(s), 0 error(s) | check: ok=true (60.2s, exit 0) → QA/check.json | animation-map: Animation map: 503/1685 tweens (skipped 1182 micro-tweens) → .hyperframes/anim-map/animation-map.json | wowprobe pre-render: gates_failed []; not measured QA-01, QA-03, QA-07, QA-08, QA-09; scorecard 66.5"
+    },
+    {
+      "command": "render",
+      "stage": "render",
+      "at": "2026-09-26T15:08:45.350Z",
+      "seconds": 32.5,
+      "ok": true,
+      "detail": "egress: cdn.jsdelivr.net → .media/egress.jsonl | render v1 ok: 16:9 59.967s renders/final/gs-02_16x9.mp4; wall 32.5s; hyperframes 0.8.47"
+    },
+    {
+      "command": "deliver",
+      "stage": "deliver",
+      "at": "2026-09-26T15:08:59.498Z",
+      "seconds": 14,
+      "ok": true,
+      "detail": "loudness: -21.55 LUFS / TP -1.47 dBTP → target -14 LUFS, TP ≤ -1.5 dBTP (two-pass loudnorm, video copied) | wowprobe post-render: gates_failed []; not measured none; scorecard 74.1; sheet QA/contact-sheet.png | poster: renders/final/gs-02_16x9.poster.png @ 1.2s (storyboard: storyboard `poster:` key), baked into frame 0 | srt: 28 cue(s) from caption_groups.json (44 word-timed groups, captions.mjs → 28 cues at ≥ 0.8 s, ≤ 20 cps) → renders/final/gs-02_16x9.en.srt (+ captions/en.srt) | share-copy lint: clean | run-report: run-report: /home/dmytrogr/Documents/power-presentation/evals/baseline/runs/plugin/gs-02/run-report.json — mode sales, gates_failed [], not measured 0, scorecard 74.1, 15 inputs read, 1 missing (critic)"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-26T16:03:46.513Z",
+      "seconds": 0.8,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 44 group(s) from 99 words → compositions/captions.html (total 59.944s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 28 cue(s) → captions/en.srt (caption_groups.json (44 word-timed groups, captions.mjs → 28 cues at ≥ 0.8 s, ≤ 20 cps)) | frame footage re-declared for the hoist: 02-product.html (1), 04-pain.html (1), 05-reconcile.html (1), 06-audit.html (1), 07-outcome.html (1), 09-benefit.html (1), 11-cta-lead.html (1) from .hyperframes/frame-videos.json | frame footage: 7 declaration(s) recorded in .hyperframes/frame-videos.json | assemble:   - asset \"footage.mp4 [video]\" named by a frame but not found under capture/ — frame will 404 it | transitions:   tracks: 01-hook[t0 0→3.573] 02-product[t1 3.573→8.073] 03-metric[t0 8.073→12.948] 04-pain[t1 12.948→19.359] 05-reconcile[t0 19.359→26.859] 06-audit[t1 26.359→31.859] 07-outcome[t0 31.859→37.359] 08-proof[t1 36.859→42.859] 09-benefit[t0 42.859→47.359] 10-price[t1 47.359→51.444] 11-cta-lead[t0 51.444→56.944] 12-end[t1 56.444→59.944]; ✓ transitions verify: 3 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | camera: 02-product 0 zoom(s), 1 click(s); 04-pain 0 zoom(s), 2 click(s); 05-reconcile 1 zoom(s), 3 click(s); 06-audit 1 zoom(s), 2 click(s); 09-benefit 0 zoom(s), 1 click(s); 11-cta-lead 1 zoom(s), 2 click(s) | media ledger: 17 asset(s) — generated ×12, OFL-1.1 ×3, own-capture ×2 → .media/manifest.jsonl | 9:16: portrait working copy .hyperframes/9x16 — 12 frame(s) reflowed, 31 composition file(s), 16 asset(s) linked | 9:16 captions: ✓ captions build: 44 group(s) from 99 words → compositions/captions.html (total 59.944s) · skin: preset skin (.hyperframes/caption-skin.html) (9:16 in the run → burned-in, word-timed) | 9:16 srt: 28 cue(s) → captions/en.srt (caption_groups.json (44 word-timed groups, captions.mjs → 28 cues at ≥ 0.8 s, ≤ 20 cps)) | 9:16 frame footage: 7 declaration(s) recorded in .hyperframes/frame-videos.json | 9:16 assemble:   - asset \"footage.mp4 [video]\" named by a frame but not found under capture/ — frame will 404 it | 9:16 transitions:   tracks: 01-hook[t0 0→3.573] 02-product[t1 3.573→8.073] 03-metric[t0 8.073→12.948] 04-pain[t1 12.948→19.359] 05-reconcile[t0 19.359→26.859] 06-audit[t1 26.359→31.859] 07-outcome[t0 31.859→37.359] 08-proof[t1 36.859→42.859] 09-benefit[t0 42.859→47.359] 10-price[t1 47.359→51.444] 11-cta-lead[t0 51.444→56.944] 12-end[t1 56.444→59.944]; ✓ transitions verify: 3 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | 9:16 camera: 02-product 0 zoom(s), 1 click(s); 04-pain 0 zoom(s), 2 click(s); 05-reconcile 1 zoom(s), 3 click(s); 06-audit 1 zoom(s), 2 click(s); 09-benefit 0 zoom(s), 1 click(s); 11-cta-lead 1 zoom(s), 2 click(s)"
+    },
+    {
+      "command": "init",
+      "stage": "brief",
+      "at": "2026-09-26T16:15:19.951Z",
+      "seconds": 0,
+      "ok": true,
+      "detail": "versions: the project sits inside /home/dmytrogr/Documents/power-presentation — no repository of its own, version commits are skipped | node_modules/hyperframes → toolchain 0.8.47 | capture copied: footage.mp4, events.jsonl, capture-manifest.json, redactions.json, autozoom.json, index.html → .media/capture/ (+ assets/)"
+    },
+    {
+      "command": "init",
+      "stage": "brief",
+      "at": "2026-09-26T16:18:06.927Z",
+      "seconds": 0,
+      "ok": true,
+      "detail": "versions: the project sits inside /home/dmytrogr/Documents/power-presentation — no repository of its own, version commits are skipped | node_modules/hyperframes → toolchain 0.8.47 | capture copied: footage.mp4, events.jsonl, capture-manifest.json, redactions.json, autozoom.json, index.html → .media/capture/ (+ assets/)"
+    },
+    {
+      "command": "audio",
+      "stage": "audio",
+      "at": "2026-09-26T17:33:19.521Z",
+      "seconds": 33,
+      "ok": true,
+      "detail": "12 voice line(s) via kokoro (am_michael) | captions locked to the script: 6 word(s) re-spelled or merged (whisper → SCRIPT) | durations: every director window already holds its voice line + the pause (STORYBOARD.md unchanged) | total 59.6s vs brief 60s (-0.4s, -0.7% — QA-01 band ±3 % ok)"
+    },
+    {
+      "command": "packets",
+      "stage": "frames",
+      "at": "2026-09-26T17:33:19.774Z",
+      "seconds": 0.1,
+      "ok": true,
+      "detail": "12 packet(s) → .hyperframes/frame-packets/ (+ _dispatch.json; 10 frame file(s) still to build)"
+    },
+    {
+      "command": "packets",
+      "stage": "frames",
+      "at": "2026-09-26T18:31:12.341Z",
+      "seconds": 0.1,
+      "ok": true,
+      "detail": "12 packet(s) → .hyperframes/frame-packets/ (+ _dispatch.json; 0 frame file(s) still to build); storyboard direction copied into each"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-26T18:31:54.549Z",
+      "seconds": 13,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 53 group(s) from 117 words → compositions/captions.html (total 59.6s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 34 cue(s) → captions/en.srt (caption_groups.json (53 word-timed groups, captions.mjs → 34 cues at ≥ 0.8 s, ≤ 20 cps)) | frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 5 frame(s) on held clips in assets/clips/ (5 cut, 0 cached) — 02-before 2.2–4.7 +0.6s hold drift→1.04; 04-auto-match 4.7–8.3 +3s hold drift→1.58; 05-audit-trail 8.3–11.5 +3.7s hold drift→2.2; 07-close-checklist 11.5–15.1 +3.7s hold drift→1.68; 08-lock-period 15.1–18.27 +3.63s hold drift→1.68 | assemble:   - asset \"no Ledgerly URL in the sources (TODO(fixture): \"ledgerly.example\" is the reserved-domain placeholder)\" named by a frame but not found under capture/ — frame will 404 it | transitions: ✓ transitions inject: 0 transitions (all cuts) — index.html unchanged; ✓ transitions verify: 0 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 14 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 02-before 1 zoom(s), 0 click(s); 04-auto-match 2 zoom(s), 1 click(s); 05-audit-trail 2 zoom(s), 1 click(s); 07-close-checklist 2 zoom(s), 1 click(s); 08-lock-period 2 zoom(s), 1 click(s) | media ledger: 22 asset(s) — generated ×12, unknown ×5, OFL-1.1 ×3, own-capture ×2; 17 added / re-frozen → .media/manifest.jsonl | warning: media ledger blocks the render: licence assets/clips/02-before.mp4, licence assets/clips/04-auto-match.mp4, licence assets/clips/05-audit-trail.mp4, licence assets/clips/07-close-checklist.mp4, licence assets/clips/08-lock-period.mp4 — node scripts/media-ledger.mjs check | 9:16: portrait working copy .hyperframes/9x16 — 12 frame(s) reflowed, 30 composition file(s), 27 asset(s) linked | 9:16 captions: ✓ captions build: 53 group(s) from 117 words → compositions/captions.html (total 59.6s) · skin: preset skin (.hyperframes/caption-skin.html) (9:16 in the run → burned-in, word-timed) | 9:16 srt: 34 cue(s) → captions/en.srt (caption_groups.json (53 word-timed groups, captions.mjs → 34 cues at ≥ 0.8 s, ≤ 20 cps)) | 9:16 frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | 9:16 footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 02-before 2.2–4.7 +0.6s hold drift→1.04; 04-auto-match 4.7–8.3 +3s hold drift→1.58; 05-audit-trail 8.3–11.5 +3.7s hold drift→2.2; 07-close-checklist 11.5–15.1 +3.7s hold drift→1.68; 08-lock-period 15.1–18.27 +3.63s hold drift→1.68 | 9:16 assemble:   - asset \"no Ledgerly URL in the sources (TODO(fixture): \"ledgerly.example\" is the reserved-domain placeholder)\" named by a frame but not found under capture/ — frame will 404 it | 9:16 transitions: ✓ transitions inject: 0 transitions (all cuts) — index.html unchanged; ✓ transitions verify: 0 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | 9:16 gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | 9:16 camera: 02-before 1 zoom(s), 0 click(s); 04-auto-match 2 zoom(s), 1 click(s); 05-audit-trail 2 zoom(s), 1 click(s); 07-close-checklist 2 zoom(s), 1 click(s); 08-lock-period 2 zoom(s), 1 click(s)"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-26T18:34:05.147Z",
+      "seconds": 0.9,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 53 group(s) from 117 words → compositions/captions.html (total 59.6s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 34 cue(s) → captions/en.srt (caption_groups.json (53 word-timed groups, captions.mjs → 34 cues at ≥ 0.8 s, ≤ 20 cps)) | frame footage re-declared for the hoist: 02-before.html (1), 04-auto-match.html (1), 05-audit-trail.html (1), 07-close-checklist.html (1), 08-lock-period.html (1) from .hyperframes/frame-videos.json | frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 02-before 2.2–4.7 +0.6s hold drift→1.04; 04-auto-match 4.7–8.3 +3s hold drift→1.58; 05-audit-trail 8.3–11.5 +3.7s hold drift→2.2; 07-close-checklist 11.5–15.1 +3.7s hold drift→1.68; 08-lock-period 15.1–18.27 +3.63s hold drift→1.68 | assemble:   - asset \"08-lock-period.mp4 (the window + the file's last frame, footage ≈ 18.233 s, held 3.63 s)\" named by a frame but not found under capture/ — frame will 404 it | transitions: ✓ transitions inject: 0 transitions (all cuts) — index.html unchanged; ✓ transitions verify: 0 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 02-before 1 zoom(s), 0 click(s); 04-auto-match 2 zoom(s), 1 click(s); 05-audit-trail 2 zoom(s), 1 click(s); 07-close-checklist 2 zoom(s), 1 click(s); 08-lock-period 2 zoom(s), 1 click(s) | media ledger: 22 asset(s) — generated ×12, own-capture ×7, OFL-1.1 ×3 → .media/manifest.jsonl | 9:16: portrait working copy .hyperframes/9x16 — 12 frame(s) reflowed, 30 composition file(s), 27 asset(s) linked | 9:16 captions: ✓ captions build: 53 group(s) from 117 words → compositions/captions.html (total 59.6s) · skin: preset skin (.hyperframes/caption-skin.html) (9:16 in the run → burned-in, word-timed) | 9:16 srt: 34 cue(s) → captions/en.srt (caption_groups.json (53 word-timed groups, captions.mjs → 34 cues at ≥ 0.8 s, ≤ 20 cps)) | 9:16 frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | 9:16 footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 02-before 2.2–4.7 +0.6s hold drift→1.04; 04-auto-match 4.7–8.3 +3s hold drift→1.58; 05-audit-trail 8.3–11.5 +3.7s hold drift→2.2; 07-close-checklist 11.5–15.1 +3.7s hold drift→1.68; 08-lock-period 15.1–18.27 +3.63s hold drift→1.68 | 9:16 assemble:   - asset \"08-lock-period.mp4 (the window + the file's last frame, footage ≈ 18.233 s, held 3.63 s)\" named by a frame but not found under capture/ — frame will 404 it | 9:16 transitions: ✓ transitions inject: 0 transitions (all cuts) — index.html unchanged; ✓ transitions verify: 0 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | 9:16 gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | 9:16 camera: 02-before 1 zoom(s), 0 click(s); 04-auto-match 2 zoom(s), 1 click(s); 05-audit-trail 2 zoom(s), 1 click(s); 07-close-checklist 2 zoom(s), 1 click(s); 08-lock-period 2 zoom(s), 1 click(s)"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-26T18:34:32.788Z",
+      "seconds": 0.9,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 53 group(s) from 117 words → compositions/captions.html (total 59.6s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 34 cue(s) → captions/en.srt (caption_groups.json (53 word-timed groups, captions.mjs → 34 cues at ≥ 0.8 s, ≤ 20 cps)) | frame footage re-declared for the hoist: 02-before.html (1), 04-auto-match.html (1), 05-audit-trail.html (1), 07-close-checklist.html (1), 08-lock-period.html (1) from .hyperframes/frame-videos.json | frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 02-before 2.2–4.7 +0.6s hold drift→1.04; 04-auto-match 4.7–8.3 +3s hold drift→1.58; 05-audit-trail 8.3–11.5 +3.7s hold drift→2.2; 07-close-checklist 11.5–15.1 +3.7s hold drift→1.68; 08-lock-period 15.1–18.27 +3.63s hold drift→1.68 | assemble:   - asset \"footage.mp4 [video]\" named by a frame but not found under capture/ — frame will 404 it | transitions: ✓ transitions inject: 0 transitions (all cuts) — index.html unchanged; ✓ transitions verify: 0 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 02-before 1 zoom(s), 0 click(s); 04-auto-match 2 zoom(s), 1 click(s); 05-audit-trail 2 zoom(s), 1 click(s); 07-close-checklist 2 zoom(s), 1 click(s); 08-lock-period 2 zoom(s), 1 click(s) | media ledger: 22 asset(s) — generated ×12, own-capture ×7, OFL-1.1 ×3 → .media/manifest.jsonl | 9:16: portrait working copy .hyperframes/9x16 — 12 frame(s) reflowed, 30 composition file(s), 27 asset(s) linked | 9:16 captions: ✓ captions build: 53 group(s) from 117 words → compositions/captions.html (total 59.6s) · skin: preset skin (.hyperframes/caption-skin.html) (9:16 in the run → burned-in, word-timed) | 9:16 srt: 34 cue(s) → captions/en.srt (caption_groups.json (53 word-timed groups, captions.mjs → 34 cues at ≥ 0.8 s, ≤ 20 cps)) | 9:16 frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | 9:16 footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 02-before 2.2–4.7 +0.6s hold drift→1.04; 04-auto-match 4.7–8.3 +3s hold drift→1.58; 05-audit-trail 8.3–11.5 +3.7s hold drift→2.2; 07-close-checklist 11.5–15.1 +3.7s hold drift→1.68; 08-lock-period 15.1–18.27 +3.63s hold drift→1.68 | 9:16 assemble:   - asset \"footage.mp4 [video]\" named by a frame but not found under capture/ — frame will 404 it | 9:16 transitions: ✓ transitions inject: 0 transitions (all cuts) — index.html unchanged; ✓ transitions verify: 0 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | 9:16 gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | 9:16 camera: 02-before 1 zoom(s), 0 click(s); 04-auto-match 2 zoom(s), 1 click(s); 05-audit-trail 2 zoom(s), 1 click(s); 07-close-checklist 2 zoom(s), 1 click(s); 08-lock-period 2 zoom(s), 1 click(s)"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-26T18:34:43.933Z",
+      "seconds": 0.9,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 53 group(s) from 117 words → compositions/captions.html (total 59.6s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 34 cue(s) → captions/en.srt (caption_groups.json (53 word-timed groups, captions.mjs → 34 cues at ≥ 0.8 s, ≤ 20 cps)) | frame footage re-declared for the hoist: 02-before.html (1), 04-auto-match.html (1), 05-audit-trail.html (1), 07-close-checklist.html (1), 08-lock-period.html (1) from .hyperframes/frame-videos.json | frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 02-before 2.2–4.7 +0.6s hold drift→1.04; 04-auto-match 4.7–8.3 +3s hold drift→1.58; 05-audit-trail 8.3–11.5 +3.7s hold drift→2.2; 07-close-checklist 11.5–15.1 +3.7s hold drift→1.68; 08-lock-period 15.1–18.27 +3.63s hold drift→1.68 | assemble:   - asset \"none\" named by a frame but not found under capture/ — frame will 404 it | transitions: ✓ transitions inject: 0 transitions (all cuts) — index.html unchanged; ✓ transitions verify: 0 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 02-before 1 zoom(s), 0 click(s); 04-auto-match 2 zoom(s), 1 click(s); 05-audit-trail 2 zoom(s), 1 click(s); 07-close-checklist 2 zoom(s), 1 click(s); 08-lock-period 2 zoom(s), 1 click(s) | media ledger: 22 asset(s) — generated ×12, own-capture ×7, OFL-1.1 ×3 → .media/manifest.jsonl | 9:16: portrait working copy .hyperframes/9x16 — 12 frame(s) reflowed, 30 composition file(s), 27 asset(s) linked | 9:16 captions: ✓ captions build: 53 group(s) from 117 words → compositions/captions.html (total 59.6s) · skin: preset skin (.hyperframes/caption-skin.html) (9:16 in the run → burned-in, word-timed) | 9:16 srt: 34 cue(s) → captions/en.srt (caption_groups.json (53 word-timed groups, captions.mjs → 34 cues at ≥ 0.8 s, ≤ 20 cps)) | 9:16 frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | 9:16 footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 02-before 2.2–4.7 +0.6s hold drift→1.04; 04-auto-match 4.7–8.3 +3s hold drift→1.58; 05-audit-trail 8.3–11.5 +3.7s hold drift→2.2; 07-close-checklist 11.5–15.1 +3.7s hold drift→1.68; 08-lock-period 15.1–18.27 +3.63s hold drift→1.68 | 9:16 assemble:   - asset \"none\" named by a frame but not found under capture/ — frame will 404 it | 9:16 transitions: ✓ transitions inject: 0 transitions (all cuts) — index.html unchanged; ✓ transitions verify: 0 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | 9:16 gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | 9:16 camera: 02-before 1 zoom(s), 0 click(s); 04-auto-match 2 zoom(s), 1 click(s); 05-audit-trail 2 zoom(s), 1 click(s); 07-close-checklist 2 zoom(s), 1 click(s); 08-lock-period 2 zoom(s), 1 click(s)"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-26T18:35:11.517Z",
+      "seconds": 0.9,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 53 group(s) from 117 words → compositions/captions.html (total 59.6s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 34 cue(s) → captions/en.srt (caption_groups.json (53 word-timed groups, captions.mjs → 34 cues at ≥ 0.8 s, ≤ 20 cps)) | frame footage re-declared for the hoist: 02-before.html (1), 04-auto-match.html (1), 05-audit-trail.html (1), 07-close-checklist.html (1), 08-lock-period.html (1) from .hyperframes/frame-videos.json | frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 02-before 2.2–4.7 +0.6s hold drift→1.04; 04-auto-match 4.7–8.3 +3s hold drift→1.58; 05-audit-trail 8.3–11.5 +3.7s hold drift→2.2; 07-close-checklist 11.5–15.1 +3.7s hold drift→1.68; 08-lock-period 15.1–18.27 +3.63s hold drift→1.68 | assemble:   - null | transitions: ✓ transitions inject: 0 transitions (all cuts) — index.html unchanged; ✓ transitions verify: 0 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 02-before 1 zoom(s), 0 click(s); 04-auto-match 2 zoom(s), 1 click(s); 05-audit-trail 2 zoom(s), 1 click(s); 07-close-checklist 2 zoom(s), 1 click(s); 08-lock-period 2 zoom(s), 1 click(s) | media ledger: 22 asset(s) — generated ×12, own-capture ×7, OFL-1.1 ×3 → .media/manifest.jsonl | 9:16: portrait working copy .hyperframes/9x16 — 12 frame(s) reflowed, 30 composition file(s), 27 asset(s) linked | 9:16 captions: ✓ captions build: 53 group(s) from 117 words → compositions/captions.html (total 59.6s) · skin: preset skin (.hyperframes/caption-skin.html) (9:16 in the run → burned-in, word-timed) | 9:16 srt: 34 cue(s) → captions/en.srt (caption_groups.json (53 word-timed groups, captions.mjs → 34 cues at ≥ 0.8 s, ≤ 20 cps)) | 9:16 frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | 9:16 footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 02-before 2.2–4.7 +0.6s hold drift→1.04; 04-auto-match 4.7–8.3 +3s hold drift→1.58; 05-audit-trail 8.3–11.5 +3.7s hold drift→2.2; 07-close-checklist 11.5–15.1 +3.7s hold drift→1.68; 08-lock-period 15.1–18.27 +3.63s hold drift→1.68 | 9:16 assemble:   - null | 9:16 transitions: ✓ transitions inject: 0 transitions (all cuts) — index.html unchanged; ✓ transitions verify: 0 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | 9:16 gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | 9:16 camera: 02-before 1 zoom(s), 0 click(s); 04-auto-match 2 zoom(s), 1 click(s); 05-audit-trail 2 zoom(s), 1 click(s); 07-close-checklist 2 zoom(s), 1 click(s); 08-lock-period 2 zoom(s), 1 click(s)"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-26T18:36:11.438Z",
+      "seconds": 0.9,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 53 group(s) from 117 words → compositions/captions.html (total 59.6s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 34 cue(s) → captions/en.srt (caption_groups.json (53 word-timed groups, captions.mjs → 34 cues at ≥ 0.8 s, ≤ 20 cps)) | frame footage re-declared for the hoist: 02-before.html (1), 04-auto-match.html (1), 05-audit-trail.html (1), 07-close-checklist.html (1), 08-lock-period.html (1) from .hyperframes/frame-videos.json | frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 02-before 2.2–4.7 +0.6s hold drift→1.04; 04-auto-match 4.7–8.3 +3s hold drift→1.58; 05-audit-trail 8.3–11.5 +3.7s hold drift→2.2; 07-close-checklist 11.5–15.1 +3.7s hold drift→1.68; 08-lock-period 15.1–18.27 +3.63s hold drift→1.68 | assemble: total duration:    59.6s (expected ~60s, -0.4s) | transitions: ✓ transitions inject: 0 transitions (all cuts) — index.html unchanged; ✓ transitions verify: 0 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 02-before 1 zoom(s), 0 click(s); 04-auto-match 2 zoom(s), 1 click(s); 05-audit-trail 2 zoom(s), 1 click(s); 07-close-checklist 2 zoom(s), 1 click(s); 08-lock-period 2 zoom(s), 1 click(s) | media ledger: 22 asset(s) — generated ×12, own-capture ×7, OFL-1.1 ×3 → .media/manifest.jsonl | 9:16: portrait working copy .hyperframes/9x16 — 12 frame(s) reflowed, 30 composition file(s), 27 asset(s) linked | 9:16 captions: ✓ captions build: 53 group(s) from 117 words → compositions/captions.html (total 59.6s) · skin: preset skin (.hyperframes/caption-skin.html) (9:16 in the run → burned-in, word-timed) | 9:16 srt: 34 cue(s) → captions/en.srt (caption_groups.json (53 word-timed groups, captions.mjs → 34 cues at ≥ 0.8 s, ≤ 20 cps)) | 9:16 frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | 9:16 footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 02-before 2.2–4.7 +0.6s hold drift→1.04; 04-auto-match 4.7–8.3 +3s hold drift→1.58; 05-audit-trail 8.3–11.5 +3.7s hold drift→2.2; 07-close-checklist 11.5–15.1 +3.7s hold drift→1.68; 08-lock-period 15.1–18.27 +3.63s hold drift→1.68 | 9:16 assemble: total duration:    59.6s (expected ~60s, -0.4s) | 9:16 transitions: ✓ transitions inject: 0 transitions (all cuts) — index.html unchanged; ✓ transitions verify: 0 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | 9:16 gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | 9:16 camera: 02-before 1 zoom(s), 0 click(s); 04-auto-match 2 zoom(s), 1 click(s); 05-audit-trail 2 zoom(s), 1 click(s); 07-close-checklist 2 zoom(s), 1 click(s); 08-lock-period 2 zoom(s), 1 click(s)"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-26T18:38:00.253Z",
+      "seconds": 88.6,
+      "ok": false,
+      "detail": "9:16 hyperframes check is not ok (QA-02 / QA-14 on the portrait host — QA/check-9x16.json)"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-26T18:38:43.525Z",
+      "seconds": 0.9,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 53 group(s) from 117 words → compositions/captions.html (total 59.6s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 34 cue(s) → captions/en.srt (caption_groups.json (53 word-timed groups, captions.mjs → 34 cues at ≥ 0.8 s, ≤ 20 cps)) | frame footage re-declared for the hoist: 02-before.html (1), 04-auto-match.html (1), 05-audit-trail.html (1), 07-close-checklist.html (1), 08-lock-period.html (1) from .hyperframes/frame-videos.json | frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 02-before 2.2–4.7 +0.6s hold drift→1.04; 04-auto-match 4.7–8.3 +3s hold drift→1.58; 05-audit-trail 8.3–11.5 +3.7s hold drift→2.2; 07-close-checklist 11.5–15.1 +3.7s hold drift→1.68; 08-lock-period 15.1–18.27 +3.63s hold drift→1.68 | assemble: total duration:    59.6s (expected ~60s, -0.4s) | transitions: ✓ transitions inject: 0 transitions (all cuts) — index.html unchanged; ✓ transitions verify: 0 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 02-before 1 zoom(s), 0 click(s); 04-auto-match 2 zoom(s), 1 click(s); 05-audit-trail 2 zoom(s), 1 click(s); 07-close-checklist 2 zoom(s), 1 click(s); 08-lock-period 2 zoom(s), 1 click(s) | media ledger: 22 asset(s) — generated ×12, own-capture ×7, OFL-1.1 ×3 → .media/manifest.jsonl | 9:16: portrait working copy .hyperframes/9x16 — 12 frame(s) reflowed, 30 composition file(s), 27 asset(s) linked | 9:16 captions: ✓ captions build: 53 group(s) from 117 words → compositions/captions.html (total 59.6s) · skin: preset skin (.hyperframes/caption-skin.html) (9:16 in the run → burned-in, word-timed) | 9:16 srt: 34 cue(s) → captions/en.srt (caption_groups.json (53 word-timed groups, captions.mjs → 34 cues at ≥ 0.8 s, ≤ 20 cps)) | 9:16 frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | 9:16 footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 02-before 2.2–4.7 +0.6s hold drift→1.04; 04-auto-match 4.7–8.3 +3s hold drift→1.58; 05-audit-trail 8.3–11.5 +3.7s hold drift→2.2; 07-close-checklist 11.5–15.1 +3.7s hold drift→1.68; 08-lock-period 15.1–18.27 +3.63s hold drift→1.68 | 9:16 assemble: total duration:    59.6s (expected ~60s, -0.4s) | 9:16 transitions: ✓ transitions inject: 0 transitions (all cuts) — index.html unchanged; ✓ transitions verify: 0 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | 9:16 gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | 9:16 camera: 02-before 1 zoom(s), 0 click(s); 04-auto-match 2 zoom(s), 1 click(s); 05-audit-trail 2 zoom(s), 1 click(s); 07-close-checklist 2 zoom(s), 1 click(s); 08-lock-period 2 zoom(s), 1 click(s)"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-26T18:40:12.107Z",
+      "seconds": 88.4,
+      "ok": true,
+      "detail": "egress: us.i.posthog.com → .media/egress.jsonl | motion sidecar: 49 assertion(s) → index.motion.json from 12/12 frame sidecar(s); keepsMoving dropped (QA-07 on the master) | lint: 1 finding(s), 0 error(s) | check: ok=true (64.3s, exit 0) → QA/check.json | animation-map: Animation map: 515/1918 tweens (skipped 1403 micro-tweens) → .hyperframes/anim-map/animation-map.json | wowprobe pre-render: gates_failed []; not measured QA-01, QA-03, QA-07, QA-08, QA-09; scorecard 74 | 9:16 lint: 1 finding(s), 0 error(s) | 9:16 check: ok=true (13.3s, exit 0) → QA/check-9x16.json"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-26T18:42:21.154Z",
+      "seconds": 0.9,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 53 group(s) from 117 words → compositions/captions.html (total 59.6s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 34 cue(s) → captions/en.srt (caption_groups.json (53 word-timed groups, captions.mjs → 34 cues at ≥ 0.8 s, ≤ 20 cps)) | frame footage re-declared for the hoist: 02-before.html (1), 04-auto-match.html (1), 05-audit-trail.html (1), 07-close-checklist.html (1), 08-lock-period.html (1) from .hyperframes/frame-videos.json | frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 02-before 2.2–4.7 +0.6s hold drift→1.04; 04-auto-match 4.7–8.3 +3s hold drift→1.58; 05-audit-trail 8.3–11.5 +3.7s hold drift→2.2; 07-close-checklist 11.5–15.1 +3.7s hold drift→1.68; 08-lock-period 15.1–18.27 +3.63s hold drift→1.68 | assemble: total duration:    59.6s (expected ~60s, -0.4s) | transitions: ✓ transitions inject: 0 transitions (all cuts) — index.html unchanged; ✓ transitions verify: 0 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 02-before 1 zoom(s), 0 click(s); 04-auto-match 2 zoom(s), 1 click(s); 05-audit-trail 2 zoom(s), 1 click(s); 07-close-checklist 2 zoom(s), 1 click(s); 08-lock-period 2 zoom(s), 1 click(s) | media ledger: 22 asset(s) — generated ×12, own-capture ×7, OFL-1.1 ×3 → .media/manifest.jsonl | 9:16: portrait working copy .hyperframes/9x16 — 12 frame(s) reflowed, 30 composition file(s), 27 asset(s) linked | 9:16 captions: ✓ captions build: 53 group(s) from 117 words → compositions/captions.html (total 59.6s) · skin: preset skin (.hyperframes/caption-skin.html) (9:16 in the run → burned-in, word-timed) | 9:16 srt: 34 cue(s) → captions/en.srt (caption_groups.json (53 word-timed groups, captions.mjs → 34 cues at ≥ 0.8 s, ≤ 20 cps)) | 9:16 frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | 9:16 footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 02-before 2.2–4.7 +0.6s hold drift→1.04; 04-auto-match 4.7–8.3 +3s hold drift→1.58; 05-audit-trail 8.3–11.5 +3.7s hold drift→2.2; 07-close-checklist 11.5–15.1 +3.7s hold drift→1.68; 08-lock-period 15.1–18.27 +3.63s hold drift→1.68 | 9:16 assemble: total duration:    59.6s (expected ~60s, -0.4s) | 9:16 transitions: ✓ transitions inject: 0 transitions (all cuts) — index.html unchanged; ✓ transitions verify: 0 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | 9:16 gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | 9:16 camera: 02-before 1 zoom(s), 0 click(s); 04-auto-match 2 zoom(s), 1 click(s); 05-audit-trail 2 zoom(s), 1 click(s); 07-close-checklist 2 zoom(s), 1 click(s); 08-lock-period 2 zoom(s), 1 click(s)"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-26T18:44:13.738Z",
+      "seconds": 94.1,
+      "ok": true,
+      "detail": "egress: us.i.posthog.com → .media/egress.jsonl | motion sidecar: 49 assertion(s) → index.motion.json from 12/12 frame sidecar(s); keepsMoving dropped (QA-07 on the master) | lint: 1 finding(s), 0 error(s) | check: ok=true (66.3s, exit 0) → QA/check.json | animation-map: Animation map: 515/1918 tweens (skipped 1403 micro-tweens) → .hyperframes/anim-map/animation-map.json | wowprobe pre-render: gates_failed []; not measured QA-01, QA-03, QA-07, QA-08, QA-09; scorecard 74 | 9:16 lint: 1 finding(s), 0 error(s) | 9:16 check: ok=true (14.9s, exit 0) → QA/check-9x16.json"
+    },
+    {
+      "command": "render",
+      "stage": "render",
+      "at": "2026-09-26T18:46:14.060Z",
+      "seconds": 109.3,
+      "ok": true,
+      "detail": "egress: us.i.posthog.com → .media/egress.jsonl | render v2 ok: 16:9 59.6s renders/final/gs-02_16x9.mp4; wall 55s | render v2 ok: 9:16 59.6s renders/final/gs-02_9x16.mp4; wall 54.1s | hyperframes 0.8.47; formats 16:9 + 9:16"
+    },
+    {
+      "command": "deliver",
+      "stage": "deliver",
+      "at": "2026-09-26T18:46:54.896Z",
+      "seconds": 32.6,
+      "ok": true,
+      "detail": "loudness: -21.44 LUFS / TP -1.45 dBTP → target -14 LUFS, TP ≤ -1.5 dBTP (two-pass loudnorm, video copied) | wowprobe post-render: gates_failed []; not measured none; scorecard 84.1; sheet QA/contact-sheet.png | poster: renders/final/gs-02_16x9.poster.png @ 2.8s (storyboard: storyboard `poster:` key), baked into frame 0 | srt: 34 cue(s) from caption_groups.json (53 word-timed groups, captions.mjs → 34 cues at ≥ 0.8 s, ≤ 20 cps) → renders/final/gs-02_16x9.en.srt (+ captions/en.srt) | 9:16 loudness: -21.44 LUFS / TP -1.45 dBTP → target -14 LUFS, TP ≤ -1.5 dBTP (two-pass loudnorm, video copied) | 9:16 wowprobe post-render: gates_failed []; not measured QA-06; scorecard 84.1; sheet QA/contact-sheet-9x16.png | 9:16 poster: renders/final/gs-02_9x16.poster.png @ 2.8s (storyboard: storyboard `poster:` key), baked into frame 0 | 9:16 srt: 34 cue(s) from caption_groups.json (53 word-timed groups, captions.mjs → 34 cues at ≥ 0.8 s, ≤ 20 cps) → renders/final/gs-02_9x16.en.srt | share-copy lint: clean | run-report: run-report: /home/dmytrogr/Documents/power-presentation/evals/baseline/runs/plugin/gs-02/run-report.json — mode sales, gates_failed [], not measured 0, scorecard 84.1, 16 inputs read, 0 missing (none)"
+    },
+    {
+      "command": "deliver",
+      "stage": "deliver",
+      "at": "2026-09-26T18:49:12.846Z",
+      "seconds": 29.5,
+      "ok": true,
+      "detail": "loudness: already within QA-08 (-14.42 LUFS, TP -1.36 dBTP) | wowprobe post-render: gates_failed []; not measured none; scorecard 84.1; sheet QA/contact-sheet.png | poster: renders/final/gs-02_16x9.poster.png @ 2.8s (storyboard: storyboard `poster:` key), baked into frame 0 | srt: 34 cue(s) from caption_groups.json (53 word-timed groups, captions.mjs → 34 cues at ≥ 0.8 s, ≤ 20 cps) → renders/final/gs-02_16x9.en.srt (+ captions/en.srt) | 9:16 loudness: already within QA-08 (-14.42 LUFS, TP -1.36 dBTP) | 9:16 wowprobe post-render: gates_failed []; not measured QA-06; scorecard 84.1; sheet QA/contact-sheet-9x16.png | 9:16 poster: renders/final/gs-02_9x16.poster.png @ 2.8s (storyboard: storyboard `poster:` key), baked into frame 0 | 9:16 srt: 34 cue(s) from caption_groups.json (53 word-timed groups, captions.mjs → 34 cues at ≥ 0.8 s, ≤ 20 cps) → renders/final/gs-02_9x16.en.srt | share-copy lint: clean | run-report: run-report: /home/dmytrogr/Documents/power-presentation/evals/baseline/runs/plugin/gs-02/run-report.json — mode sales, gates_failed [], not measured 0, scorecard 84.1, 16 inputs read, 0 missing (none)"
+    },
+    {
+      "command": "deliver",
+      "stage": "deliver",
+      "at": "2026-09-26T18:51:04.110Z",
+      "seconds": 29.5,
+      "ok": true,
+      "detail": "loudness: already within QA-08 (-14.42 LUFS, TP -1.36 dBTP) | wowprobe post-render: gates_failed []; not measured none; scorecard 84.1; sheet QA/contact-sheet.png | poster: renders/final/gs-02_16x9.poster.png @ 2.8s (storyboard: storyboard `poster:` key), baked into frame 0 | srt: 34 cue(s) from caption_groups.json (53 word-timed groups, captions.mjs → 34 cues at ≥ 0.8 s, ≤ 20 cps) → renders/final/gs-02_16x9.en.srt (+ captions/en.srt) | 9:16 loudness: already within QA-08 (-14.42 LUFS, TP -1.36 dBTP) | 9:16 wowprobe post-render: gates_failed []; not measured QA-06; scorecard 84.1; sheet QA/contact-sheet-9x16.png | 9:16 poster: renders/final/gs-02_9x16.poster.png @ 2.8s (storyboard: storyboard `poster:` key), baked into frame 0 | 9:16 srt: 34 cue(s) from caption_groups.json (53 word-timed groups, captions.mjs → 34 cues at ≥ 0.8 s, ≤ 20 cps) → renders/final/gs-02_9x16.en.srt | share-copy lint: clean | run-report: run-report: /home/dmytrogr/Documents/power-presentation/evals/baseline/runs/plugin/gs-02/run-report.json — mode sales, gates_failed [], not measured 0, scorecard 84.1, 16 inputs read, 0 missing (none)"
+    }
+  ],
+  "wall_s": 1282.6
+}

@@ -1,0 +1,58 @@
+name: pin-bump
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/lib/versions.mjs
+      - vendor/**
+  pull_request:
+    paths:
+      - scripts/lib/versions.mjs
+      - vendor/**
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  HYPERFRAMES_SKIP_SKILLS: "1"
+  HYPERFRAMES_NO_TELEMETRY: "1"
+  DO_NOT_TRACK: "1"
+  POWER_PRESENTATION_DATA: ${{ github.workspace }}/.pp-data
+
+jobs:
+  pinned-cli:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: "22"
+
+      - name: System tools (ffmpeg, tesseract for the OCR gate, python3)
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg tesseract-ocr python3
+
+      - name: Vendored workflow matches its provenance (offline)
+        run: node scripts/vendor-workflow.mjs check
+
+      - name: Install the pinned toolchain (hyperframes, chrome-headless-shell, Playwright + Chromium)
+        run: node scripts/toolchain.mjs install --skip-tts --skip-whisper --quiet
+
+      - name: Doctor gate for the pin
+        run: node scripts/toolchain.mjs doctor
+
+      - name: Script tests against the real CLI (double render, record-flow end-to-end)
+        run: |
+          set -euo pipefail
+          eval "$(node scripts/toolchain.mjs env)"
+          node --test --test-concurrency=2 "scripts/*.test.mjs"
+
+      - name: GS-02 heavy fixture through record-flow + autozoom, then verify (golden set)
+        run: |
+          set -euo pipefail
+          eval "$(node scripts/toolchain.mjs env)"
+          node scripts/golden-set.mjs build --only gs-02
+          node scripts/golden-set.mjs verify --only gs-02

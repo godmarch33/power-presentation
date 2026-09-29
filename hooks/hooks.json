@@ -1,0 +1,87 @@
+{
+  "description": "power-presentation hooks: SessionStart toolchain probe + env export + vendored-workflow seed and an async SessionStart toolchain install into ${CLAUDE_PLUGIN_DATA}; frame lint after Edit/Write of compositions/frames/*.html (QA-02); render guard before `hyperframes render` (QA-02, capture-clean, toolchain-ready) — dry-run unless POWER_PRESENTATION_HOOKS_ENFORCE=1; background-render rewake; the progress line a /present user sees instead of the orchestrator's narration (PostToolUse + Stop systemMessage from the stage clock, informational, off with POWER_PRESENTATION_PROGRESS=0). See hooks/README.md.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/session-start.sh",
+            "args": [],
+            "timeout": 60,
+            "statusMessage": "power-presentation: probing toolchain"
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/toolchain-install.sh",
+            "args": [],
+            "async": true,
+            "statusMessage": "power-presentation: installing toolchain (background)"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/guard-render.sh",
+            "args": [],
+            "timeout": 200
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/lint-frame.sh",
+            "args": [],
+            "timeout": 30
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/render-rewake.sh",
+            "args": [],
+            "asyncRewake": true,
+            "timeout": 10
+          }
+        ]
+      },
+      {
+        "matcher": "Bash|Agent|Task|Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/progress.sh",
+            "args": [],
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/progress.sh",
+            "args": [],
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

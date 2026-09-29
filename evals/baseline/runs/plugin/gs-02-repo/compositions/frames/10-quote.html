@@ -1,0 +1,265 @@
+<template>
+<div id="root" data-composition-id="10-quote" data-width="1920" data-height="1080" data-duration="6.302">
+  <style>
+    #root {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      container-type: size;
+      overflow: hidden;
+      background: transparent;
+      font-family: "Inter", sans-serif;
+    }
+
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+
+    .f10-bg {
+      position: absolute;
+      inset: 0;
+      background: #FFFFFF;
+    }
+
+    .f10-rings {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .f10-rings-inner {
+      position: relative;
+      width: min(58cqw, 58cqh);
+      height: min(58cqw, 58cqh);
+      transform-origin: center center;
+    }
+
+    .f10-ring {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      border-radius: 50%;
+      border: 1px solid rgba(42, 111, 151, 0.10);
+    }
+
+    .f10-ring--1 { width: 100%; height: 100%; }
+    .f10-ring--2 { width: 72%; height: 72%; border-color: rgba(42, 111, 151, 0.08); }
+    .f10-ring--3 { width: 46%; height: 46%; border-color: rgba(42, 111, 151, 0.06); }
+
+    .f10-quote-group {
+      position: absolute;
+      inset: 0;
+      transform-origin: 8cqw 50cqh;
+    }
+
+    .f10-quote-mark {
+      position: absolute;
+      left: 8cqw;
+      top: 9cqh;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      font-size: min(8cqw, 14.2cqh);
+      line-height: 0.5;
+      color: #2A6F97;
+      opacity: 0;
+    }
+
+    .f10-sentence1,
+    .f10-sentence2 {
+      position: absolute;
+      left: 8cqw;
+      width: 70cqw;
+    }
+
+    .f10-sentence1 { top: 24cqh; }
+    .f10-sentence2 { top: 42cqh; }
+
+    .f10-sentence1 .f10-line,
+    .f10-sentence2 .f10-line {
+      margin: 0;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 500;
+      font-size: min(3.33cqw, 5.93cqh);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      color: #14213D;
+      opacity: 0;
+    }
+
+    .f10-accent { color: #2A6F97; }
+
+    .f10-attribution {
+      position: absolute;
+      left: 8cqw;
+      top: 66cqh;
+      width: 60cqw;
+    }
+
+    .f10-attribution .f10-attr-line {
+      margin: 0;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 600;
+      font-size: min(2.29cqw, 4.07cqh);
+      line-height: 1.3;
+      color: #5C6B7A;
+      opacity: 0;
+    }
+
+    .f10-chip {
+      position: absolute;
+      left: 65.5cqw;
+      top: 4cqh;
+      width: 30.9cqw;
+      height: 5.2cqh;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1.5px solid rgba(42, 111, 151, 0.2);
+      border-radius: 100px;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 2.59cqh;
+      color: #5C6B7A;
+      opacity: 1;
+      white-space: nowrap;
+    }
+
+    @container (aspect-ratio < 1) {
+      .f10-quote-mark {
+        left: 8cqw;
+        top: 8cqh;
+        font-size: min(14cqw, 8cqh);
+      }
+      .f10-sentence1,
+      .f10-sentence2 {
+        left: 8cqw;
+        width: 84cqw;
+      }
+      .f10-sentence1 { top: 16cqh; }
+      .f10-sentence2 { top: 34cqh; }
+      .f10-sentence1 .f10-line,
+      .f10-sentence2 .f10-line {
+        font-size: min(7.4cqw, 6.5cqh);
+      }
+      .f10-attribution {
+        left: 8cqw;
+        top: 54cqh;
+        width: 84cqw;
+      }
+      .f10-attribution .f10-attr-line {
+        font-size: min(4.4cqw, 3.4cqh);
+      }
+      .f10-chip {
+        left: 8cqw;
+        top: 3cqh;
+        width: 84cqw;
+        height: 2.6cqh;
+        font-size: min(3.2cqw, 1.8cqh);
+      }
+    }
+  </style>
+
+  <div id="f10-bg" class="f10-bg clip" data-start="0" data-duration="6.302" data-track-index="0"></div>
+
+  <div id="f10-rings" class="f10-rings clip" data-start="0" data-duration="6.302" data-track-index="1">
+    <div id="f10-rings-inner" class="f10-rings-inner">
+      <span class="f10-ring f10-ring--1"></span>
+      <span class="f10-ring f10-ring--2"></span>
+      <span class="f10-ring f10-ring--3"></span>
+    </div>
+  </div>
+
+  <div id="f10-quote-group" class="f10-quote-group clip" data-start="0" data-duration="6.302" data-track-index="2">
+    <div id="f10-quote-mark" class="f10-quote-mark">&#8220;</div>
+
+    <div id="f10-sentence1" class="f10-sentence1">
+      <p id="f10-hero" class="f10-line">We went from a <span class="f10-accent">12-day</span> close</p>
+      <p id="f10-s1-line2" class="f10-line">to <span class="f10-accent">under 4</span>.</p>
+    </div>
+
+    <div id="f10-sentence2" class="f10-sentence2">
+      <p id="f10-s2-line1" class="f10-line">The <span class="f10-accent">audit trail</span> is the part</p>
+      <p id="f10-s2-line2" class="f10-line">our auditors love.</p>
+    </div>
+
+    <div id="f10-attribution" class="f10-attribution">
+      <p id="f10-attr-line1" class="f10-attr-line">Priya Menon, Controller</p>
+      <p id="f10-attr-line2" class="f10-attr-line">Harborline Logistics (fictional)</p>
+    </div>
+  </div>
+
+  <div id="f10-chip" class="f10-chip clip" data-start="0" data-duration="6.302" data-track-index="3">
+    Synthetic fixture &middot; fictional numbers
+  </div>
+
+  <script src="assets/vendor/gsap@3.14.2/gsap.min.js"></script>
+  <script>
+    (function () {
+      var root = document.querySelector('[data-composition-id="10-quote"]');
+      var quoteGroup = root.querySelector('#f10-quote-group');
+      var quoteMark = root.querySelector('#f10-quote-mark');
+      var hero = root.querySelector('#f10-hero');
+      var s1Line2 = root.querySelector('#f10-s1-line2');
+      var s2Line1 = root.querySelector('#f10-s2-line1');
+      var s2Line2 = root.querySelector('#f10-s2-line2');
+      var attr1 = root.querySelector('#f10-attr-line1');
+      var attr2 = root.querySelector('#f10-attr-line2');
+
+      var tl = gsap.timeline({ paused: true });
+
+      tl.addLabel("sentence1", 0.3);
+      tl.fromTo(quoteMark, { opacity: 0 }, { opacity: 0.15, duration: 0.3, ease: "expo.out" }, 0.05);
+      tl.fromTo(hero,
+        { opacity: 0, yPercent: 30 },
+        { opacity: 1, yPercent: 0, duration: 0.3, ease: "expo.out" },
+        "sentence1"
+      );
+      tl.fromTo(s1Line2,
+        { opacity: 0, yPercent: 30 },
+        { opacity: 1, yPercent: 0, duration: 0.3, ease: "expo.out" },
+        "sentence1+=0.1"
+      );
+
+      tl.addLabel("attribution", 0.9);
+      tl.fromTo(attr1,
+        { opacity: 0, yPercent: 20 },
+        { opacity: 1, yPercent: 0, duration: 0.25, ease: "expo.out" },
+        "attribution"
+      );
+      tl.fromTo(attr2,
+        { opacity: 0, yPercent: 20 },
+        { opacity: 1, yPercent: 0, duration: 0.25, ease: "expo.out" },
+        "attribution+=0.1"
+      );
+
+      tl.addLabel("sentence2", 2.3);
+      tl.fromTo(s2Line1,
+        { opacity: 0, yPercent: 30 },
+        { opacity: 1, yPercent: 0, duration: 0.28, ease: "expo.out" },
+        "sentence2"
+      );
+      tl.fromTo(s2Line2,
+        { opacity: 0, yPercent: 30 },
+        { opacity: 1, yPercent: 0, duration: 0.28, ease: "expo.out" },
+        "sentence2+=0.1"
+      );
+
+      tl.fromTo(quoteGroup,
+        { scale: 1.0, yPercent: 0 },
+        { scale: 1.04, yPercent: -0.8, duration: 3.6, ease: "power1.inOut" },
+        2.4
+      );
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["10-quote"] = tl;
+    })();
+  </script>
+</div>
+</template>

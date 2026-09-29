@@ -1,0 +1,6 @@
+{ "duration": 4.0,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f04-footage", "bySec": 0.5 },
+    { "kind": "appearsBy", "selector": "#f04-eyebrow", "bySec": 0.5 },
+    { "kind": "before", "a": "#f04-eyebrow", "b": "#f04-line1" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 } ] }

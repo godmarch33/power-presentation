@@ -1,0 +1,424 @@
+{
+  "schema": "power-presentation/claims-index@0.1",
+  "version": 2,
+  "plugin_version": "0.1.0",
+  "generated_by": "scripts/extract-story.mjs",
+  "repo": "ledgerly-sales",
+  "url": null,
+  "rule": "every number, logo and quote that goes on screen or into SCRIPT.md must be listed here with a `file:line` or URL source; `status: unverified` items never reach the script and are shown in `gaps` before render (QA-12)",
+  "counts": {
+    "total": 15,
+    "verified": 13,
+    "unverified": 2,
+    "by_kind": {
+      "number": 12,
+      "quote": 1,
+      "logo": 0,
+      "text": 2
+    },
+    "demonstrated": 5
+  },
+  "claims": [
+    {
+      "id": "c001",
+      "kind": "number",
+      "value": "3 days",
+      "number": 3,
+      "unit": "days",
+      "unit_kind": "measure",
+      "context": "Close the books in 3 days, not 12",
+      "source": "site/index.html:27",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "used_in": [
+        "STORYBOARD.md frame 02 (text \"Month-end in 3 days, not 12\" — 27-char cut of the sourced line)",
+        "STORYBOARD.md frontmatter message (verbatim \"Close the books in 3 days, not 12\")"
+      ],
+      "declared_id": "close-days-hero",
+      "declared_ids": [
+        "close-days-hero"
+      ],
+      "declared_source": "site/index.html:27",
+      "verification": "declared source site/index.html:27 states 3 days"
+    },
+    {
+      "id": "c002",
+      "kind": "number",
+      "value": "98.5%",
+      "number": 98.5,
+      "unit": "%",
+      "unit_kind": "measure",
+      "context": "What Ledgerly does — 98.5% — of transactions auto-matched to invoices and bank lines without a human touch.",
+      "source": "site/index.html:36",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "used_in": [
+        "STORYBOARD.md frame 06 (text \"98.5%\", count-up)",
+        "SCRIPT.md line 5 (\"ninety-eight point five percent\")"
+      ],
+      "declared_id": "auto-match-rate",
+      "declared_ids": [
+        "auto-match-rate"
+      ],
+      "declared_source": "site/index.html:36",
+      "verification": "declared source site/index.html:36 states 98.5%"
+    },
+    {
+      "id": "c003",
+      "kind": "number",
+      "value": "3.1 days",
+      "number": 3.1,
+      "unit": "days",
+      "unit_kind": "measure",
+      "context": "of transactions auto-matched to invoices and bank lines without a human touch. — 3.1 days — average month-end close across Ledgerly customers in Q2 2026.",
+      "source": "site/index.html:40",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "used_in": [],
+      "declared_id": "avg-close-days",
+      "declared_ids": [
+        "avg-close-days"
+      ],
+      "declared_source": "site/index.html:40",
+      "verification": "declared source site/index.html:40 states 3.1 days"
+    },
+    {
+      "id": "c004",
+      "kind": "number",
+      "value": "11 hours",
+      "number": 11,
+      "unit": "h",
+      "unit_kind": "measure",
+      "context": "average month-end close across Ledgerly customers in Q2 2026. — 11 hours — saved per accountant per week on manual reconciliation.",
+      "source": "site/index.html:44",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "used_in": [
+        "STORYBOARD.md frame 12 (tagline \"11 hours saved per accountant, per week\")"
+      ],
+      "declared_id": "hours-saved",
+      "declared_ids": [
+        "hours-saved"
+      ],
+      "declared_source": "site/index.html:44",
+      "verification": "declared source site/index.html:44 states 11 hours"
+    },
+    {
+      "id": "c005",
+      "kind": "number",
+      "value": "240",
+      "number": 240,
+      "unit": "teams",
+      "unit_kind": "count",
+      "context": "240 finance teams run their close on Ledgerly.",
+      "source": "site/index.html:52",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "used_in": [],
+      "declared_id": "customer-count",
+      "declared_ids": [
+        "customer-count"
+      ],
+      "declared_source": "site/index.html:52",
+      "verification": "declared source site/index.html:52 states 240"
+    },
+    {
+      "id": "c006",
+      "kind": "number",
+      "value": "EUR 190",
+      "number": 190,
+      "unit": "EUR",
+      "unit_kind": "currency",
+      "context": "From EUR 190 per month per entity. Unlimited users, unlimited bank feeds.",
+      "source": "site/index.html:61",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "used_in": [],
+      "declared_id": "price-per-entity",
+      "declared_ids": [
+        "price-per-entity"
+      ],
+      "declared_source": "site/index.html:61",
+      "verification": "declared source site/index.html:61 states EUR 190"
+    },
+    {
+      "id": "c007",
+      "kind": "number",
+      "value": "12",
+      "number": 12,
+      "unit": null,
+      "unit_kind": "bare",
+      "context": "Close the books in 3 days, not 12",
+      "source": "site/index.html:27",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "used_in": [
+        "STORYBOARD.md frame 02 (text \"Month-end in 3 days, not 12\" — 27-char cut of the sourced line)",
+        "STORYBOARD.md frontmatter message (verbatim \"Close the books in 3 days, not 12\")"
+      ],
+      "declared_id": "close-days-before",
+      "declared_ids": [
+        "close-days-before"
+      ],
+      "declared_source": "site/index.html:27",
+      "verification": "declared source site/index.html:27 states 12"
+    },
+    {
+      "id": "c008",
+      "kind": "quote",
+      "value": "We went from a 12-day close to under 4. The audit trail is the part our auditors love.",
+      "context": "Priya Menon, Controller, Harborline Logistics",
+      "attribution": {
+        "name": "Priya Menon",
+        "role": "Controller",
+        "company": "Harborline Logistics",
+        "raw": "Priya Menon, Controller, Harborline Logistics"
+      },
+      "source": "site/index.html:54",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "named": true,
+      "declared": true,
+      "used_in": [
+        "STORYBOARD.md frame 10 (pull quote, verbatim, attribution \"Priya Menon, Controller, Harborline Logistics (fictional)\")",
+        "SCRIPT.md line 9 (names Harborline Logistics only)"
+      ],
+      "declared_id": "testimonial-harborline",
+      "declared_ids": [
+        "testimonial-harborline"
+      ],
+      "declared_source": "site/index.html:54",
+      "verification": "declared source site/index.html:54 states the quote"
+    },
+    {
+      "id": "c009",
+      "kind": "number",
+      "value": "10x faster",
+      "number": 10,
+      "unit": "x",
+      "context": "how much faster the month-end close runs on Ledgerly",
+      "source": null,
+      "source_kind": "declared",
+      "date": null,
+      "claim_type": "declared",
+      "status": "unverified",
+      "declared": true,
+      "declared_id": "close-speedup",
+      "declared_ids": [
+        "close-speedup"
+      ],
+      "declared_source": null,
+      "verification": "no source line contains 10x faster",
+      "used_in": []
+    },
+    {
+      "id": "c010",
+      "kind": "number",
+      "value": "50,000 customers",
+      "number": 50000,
+      "unit": "customers",
+      "context": "customers using Ledgerly",
+      "source": null,
+      "source_kind": "declared",
+      "date": null,
+      "claim_type": "declared",
+      "status": "unverified",
+      "declared": true,
+      "declared_id": "customer-total",
+      "declared_ids": [
+        "customer-total"
+      ],
+      "declared_source": null,
+      "verification": "no source line contains 50,000 customers",
+      "used_in": []
+    },
+    {
+      "id": "c101",
+      "kind": "number",
+      "value": "0 of 7 matched",
+      "number": 0,
+      "unit": null,
+      "unit_kind": "count",
+      "context": "Reconciliation view before Auto-match: 'Imported this morning. Nothing is matched yet.' - Ledgerly seeded demo workspace (Nordwell Bank EUR), not Northbridge data",
+      "source": "site/app.html:77",
+      "evidence": {
+        "tier": "A",
+        "footage": ".media/capture/footage.mp4",
+        "timecode": "1.4-3.27",
+        "frame": "STORYBOARD.md frame 03 (capture_window 1.4-3.0)"
+      },
+      "used_in": [
+        "STORYBOARD.md frame 03 (callout \"0 of 7 matched\")"
+      ],
+      "source_kind": "repo-files",
+      "date": "2026-09-27",
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false
+    },
+    {
+      "id": "c102",
+      "kind": "number",
+      "value": "7 of 7 matched",
+      "number": 7,
+      "unit": null,
+      "unit_kind": "count",
+      "context": "All seven seeded bank lines matched to invoices after one Auto-match click (rows flip 3.52-5.50 s) - seeded demo workspace",
+      "source": "site/app.html:126",
+      "evidence": {
+        "tier": "A",
+        "footage": ".media/capture/footage.mp4",
+        "timecode": "5.50-14.27",
+        "frame": "STORYBOARD.md frame 04 (capture_window 3.0-6.3, local 2.55)"
+      },
+      "used_in": [
+        "STORYBOARD.md frame 04 (callout \"7 of 7 matched\")"
+      ],
+      "source_kind": "repo-files",
+      "date": "2026-09-27",
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false
+    },
+    {
+      "id": "c103",
+      "kind": "text",
+      "value": "September locked",
+      "context": "Close September checklist completed and Lock period pressed; the pill 'September locked' appears - seeded demo workspace",
+      "source": "site/app.html:117",
+      "evidence": {
+        "tier": "A",
+        "footage": ".media/capture/footage.mp4",
+        "timecode": "12.3-14.27",
+        "frame": "STORYBOARD.md frame 09 (capture_window 12.1-14.2)"
+      },
+      "used_in": [
+        "STORYBOARD.md frame 09 (callout \"September locked\")"
+      ],
+      "source_kind": "repo-files",
+      "date": "2026-09-27",
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false
+    },
+    {
+      "id": "c104",
+      "kind": "number",
+      "value": "EUR 2,965.20",
+      "number": 2965.2,
+      "unit": "EUR",
+      "unit_kind": "currency",
+      "context": "Sep 03 Coldharbour Packaging bank line (seeded demo data) - shown in the table and the audit-trail panel header",
+      "source": "site/app.html:85",
+      "evidence": {
+        "tier": "A",
+        "footage": ".media/capture/footage.mp4",
+        "timecode": "1.4-14.27 (panel 6.6-14.27)",
+        "frame": "STORYBOARD.md frame 05 (capture_window 6.3-8.3)"
+      },
+      "used_in": [
+        "STORYBOARD.md frame 05 (scene line; visible in footage only, no overlay)"
+      ],
+      "source_kind": "repo-files",
+      "date": "2026-09-27",
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false
+    },
+    {
+      "id": "c105",
+      "kind": "text",
+      "value": "INV-2026-0418",
+      "context": "Invoice matched to the Sep 03 line; audit trail 'Matched to INV-2026-0418', 'Posted to the ledger - Account 4010 Packaging - no manual touch' (seeded demo data)",
+      "source": "site/app.html:160-161",
+      "evidence": {
+        "tier": "A",
+        "footage": ".media/capture/footage.mp4",
+        "timecode": "6.6-14.27",
+        "frame": "STORYBOARD.md frame 05 (capture_window 6.3-8.3, drift hold)"
+      },
+      "used_in": [
+        "STORYBOARD.md frame 05 (scene line; callout \"Posted — no manual touch\")",
+        "SCRIPT.md line 4 (\"no manual touch\")"
+      ],
+      "source_kind": "repo-files",
+      "date": "2026-09-27",
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false
+    }
+  ],
+  "gaps": [
+    {
+      "id": "unverified-claim",
+      "value": "10x faster",
+      "kind": "number",
+      "where": "claims.json",
+      "reason": "no source line contains 10x faster",
+      "needed": "a `file:line` or URL in the sources that contains this value, or drop it from the script (QA-12)"
+    },
+    {
+      "id": "unverified-claim",
+      "value": "50,000 customers",
+      "kind": "number",
+      "where": "claims.json",
+      "reason": "no source line contains 50,000 customers",
+      "needed": "a `file:line` or URL in the sources that contains this value, or drop it from the script (QA-12)"
+    },
+    {
+      "id": "no-ledgerly-url",
+      "value": null,
+      "kind": "text",
+      "where": "STORYBOARD.md frame 12 (QA-13 order logo -> tagline -> URL)",
+      "reason": "no Ledgerly URL, domain, calendar link or contact address in site/index.html, site/app.html or story-extraction.yaml (cta.href is the relative app.html)",
+      "needed": "the Ledgerly URL or the sender's calendar link from the user; then add `- text: \"<url>\" @ 1.1-3.5` on frame 12 and set `order: logo -> tagline -> URL`"
+    },
+    {
+      "id": "prospect-close-length",
+      "value": null,
+      "kind": "number",
+      "where": "STORYBOARD.md frame 11",
+      "reason": "Northbridge Retail Group's close length and volumes are not in any source (prospect.json holds name/company/role/site only)",
+      "needed": "nothing - the video asks the question instead of stating it"
+    },
+    {
+      "id": "no-prospect-logo",
+      "value": null,
+      "kind": "logo",
+      "where": "STORYBOARD.md frames 01, 11",
+      "reason": "https://northbridge-retail.example was not fetched (.example domain); no logo or site capture",
+      "needed": "prospect logo/site capture for personalisation level L2; text-only personalisation used"
+    }
+  ],
+  "declared": {
+    "ref": "claims.json",
+    "total": 10,
+    "verified": 8,
+    "unverified": 2
+  },
+  "metrics": null,
+  "updated_by": "agents/story-director (dispatch 2 - storyboard v1)"
+}

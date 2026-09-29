@@ -1,0 +1,192 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "Space Grotesk";
+      src: url("assets/fonts/SpaceGrotesk-latin-wght.woff2") format("woff2-variations"), url("assets/fonts/SpaceGrotesk-latin-wght.woff2") format("woff2");
+      font-weight: 300 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    #root {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      container-type: size;
+      font-family: "Space Grotesk", sans-serif;
+      --f09-bg: #ffffff;
+      --f09-primary: #2a6f97;
+      --f09-text: #14213d;
+      --f09-accent-light: rgba(42, 111, 151, 0.08);
+    }
+
+    #root .clip {
+      position: absolute;
+      inset: 0;
+    }
+
+    .f09-bg {
+      background: var(--f09-bg);
+    }
+
+    .f09-accentline {
+      position: absolute;
+      left: 8.3333cqw;
+      top: 27.7778cqh;
+      width: 5.5556cqmin;
+      height: 0.3704cqmin;
+      min-height: 3px;
+      border-radius: 2px;
+      background: var(--f09-primary);
+      transform-origin: left center;
+    }
+
+    .f09-rule {
+      position: absolute;
+      left: 8.3333cqw;
+      top: 29.0741cqh;
+      width: 5.5556cqmin;
+      height: 0.5556cqmin;
+      min-height: 4px;
+      border-radius: 3px;
+      background: var(--f09-accent-light);
+      transform-origin: left center;
+    }
+
+    .f09-numeral-mask {
+      position: absolute;
+      left: 8.3333cqw;
+      top: 30.5556cqh;
+      width: 80cqw;
+      height: 21cqh;
+      overflow: hidden;
+    }
+
+    .f09-numeral {
+      display: block;
+      font-weight: 700;
+      font-size: 18.5185cqh;
+      line-height: 1;
+      color: var(--f09-primary);
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+
+    .f09-label-mask {
+      position: absolute;
+      left: 8.3333cqw;
+      top: 52.7778cqh;
+      width: 80cqw;
+      height: 6.5cqh;
+      overflow: hidden;
+    }
+
+    .f09-label {
+      display: block;
+      font-weight: 600;
+      font-size: 4.8148cqh;
+      line-height: 1.3;
+      color: var(--f09-text);
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+
+    @container (aspect-ratio < 1) {
+      .f09-accentline {
+        left: 47.2222cqw;
+        top: 22.9167cqh;
+      }
+
+      .f09-rule {
+        left: 47.2222cqw;
+        top: 23.6458cqh;
+      }
+
+      .f09-numeral-mask {
+        left: 0;
+        top: 32cqh;
+        width: 100%;
+        height: 14cqh;
+      }
+
+      .f09-numeral {
+        text-align: center;
+        font-size: 12.2396cqh;
+      }
+
+      .f09-label-mask {
+        left: 0;
+        top: 46.3229cqh;
+        width: 100%;
+        height: 9.6cqh;
+      }
+
+      .f09-label {
+        text-align: center;
+        font-size: 3.5417cqh;
+      }
+    }
+  </style>
+
+  <div id="root" data-composition-id="09-average-close" data-width="1920" data-height="1080">
+    <div id="f09-bg-clip" class="clip f09-bg" data-start="0" data-duration="4.3" data-track-index="0"></div>
+
+    <div id="f09-accentline-clip" class="clip" data-start="0" data-duration="4.3" data-track-index="1">
+      <div class="f09-accentline" id="f09-accentline"></div>
+    </div>
+
+    <div id="f09-rule-clip" class="clip" data-start="0" data-duration="4.3" data-track-index="2">
+      <div class="f09-rule" id="f09-rule"></div>
+    </div>
+
+    <div id="f09-numeral-clip" class="clip" data-start="0" data-duration="4.3" data-track-index="3">
+      <div class="f09-numeral-mask">
+        <div class="f09-numeral" id="f09-numeral">3.1 days</div>
+      </div>
+    </div>
+
+    <div id="f09-label-clip" class="clip" data-start="0" data-duration="4.3" data-track-index="4">
+      <div class="f09-label-mask">
+        <div class="f09-label" id="f09-label">average month-end close</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/vendor/gsap@3.14.2/gsap.min.js"></script>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+
+      tl.fromTo(
+        "#f09-accentline",
+        { yPercent: -6400, autoAlpha: 0 },
+        { yPercent: 0, autoAlpha: 1, duration: 0.4, ease: "power2.inOut" },
+        0
+      );
+
+      tl.fromTo(
+        "#f09-numeral",
+        { yPercent: 100, autoAlpha: 0 },
+        { yPercent: 0, autoAlpha: 1, duration: 0.7, ease: "power3.out" },
+        0.3
+      );
+      tl.fromTo(
+        "#f09-label",
+        { yPercent: 100, autoAlpha: 0 },
+        { yPercent: 0, autoAlpha: 1, duration: 0.5, ease: "power3.out" },
+        0.7
+      );
+
+      tl.fromTo(
+        "#f09-rule",
+        { scaleX: 0 },
+        { scaleX: 1, duration: 2.6, ease: "sine.inOut" },
+        1.4
+      );
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["09-average-close"] = tl;
+    })();
+  </script>
+</template>

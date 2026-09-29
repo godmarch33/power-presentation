@@ -1,0 +1,220 @@
+<template>
+<div id="root" data-composition-id="12-end-card" data-width="1920" data-height="1080">
+  <style>
+    #root {
+      width: 100%;
+      height: 100%;
+      container-type: size;
+      position: relative;
+      overflow: hidden;
+      background: #FFFFFF;
+      font-family: "Inter", sans-serif;
+    }
+
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+
+    .f12-ground {
+      position: absolute;
+      inset: 0;
+      background: #FFFFFF;
+    }
+
+    .f12-progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0.28cqh;
+      background: #2A6F97;
+    }
+
+    .f12-rings {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 1px;
+      height: 1px;
+      transform: translate(-50%, -50%);
+      transform-origin: center center;
+      will-change: transform;
+    }
+
+    .f12-ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      border: 1.5px solid rgba(42, 111, 151, 0.14);
+      transform: translate(-50%, -50%);
+    }
+
+    .f12-ring-1 { width: 46cqmin; height: 46cqmin; }
+    .f12-ring-2 { width: 64cqmin; height: 64cqmin; border-color: rgba(42, 111, 151, 0.09); }
+    .f12-ring-3 { width: 82cqmin; height: 82cqmin; border-color: rgba(42, 111, 151, 0.05); }
+
+    .f12-wordmark {
+      position: absolute;
+      top: 30cqh;
+      left: 50%;
+      transform: translate(-50%, 0);
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      font-size: 6.67cqmin;
+      letter-spacing: -0.02em;
+      line-height: 1.08;
+      color: #14213D;
+      text-align: center;
+      white-space: nowrap;
+      will-change: transform, opacity;
+    }
+
+    .f12-tagline {
+      position: absolute;
+      top: 44cqh;
+      left: 50%;
+      transform: translate(-50%, 0);
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 3.7cqmin;
+      line-height: 1.3;
+      color: #5C6B7A;
+      text-align: center;
+      max-width: 70cqw;
+      will-change: transform, opacity;
+    }
+
+    .f12-tagline .f12-hl {
+      color: #2A6F97;
+    }
+
+    .f12-cta {
+      position: absolute;
+      left: 40cqw;
+      top: 64cqh;
+      width: 20cqw;
+      height: 8.5cqh;
+      border-radius: 100px;
+      background: #2A6F97;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 1;
+    }
+
+    .f12-cta-label {
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 600;
+      font-size: 4.07cqmin;
+      line-height: 1;
+      color: #FFFFFF;
+      white-space: nowrap;
+    }
+
+    .f12-credit {
+      position: absolute;
+      top: 77cqh;
+      left: 50%;
+      transform: translate(-50%, 0);
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-size: 2.41cqmin;
+      line-height: 1.4;
+      color: #5C6B7A;
+      text-align: center;
+      white-space: nowrap;
+      will-change: opacity;
+    }
+
+    @container (aspect-ratio < 1) {
+      .f12-wordmark { top: 22cqh; font-size: 5.6cqmin; }
+      .f12-tagline { top: 33cqh; max-width: 86cqw; font-size: 3.2cqmin; }
+      .f12-cta { left: 25cqw; top: 55cqh; width: 50cqw; height: 6.5cqh; }
+      .f12-cta-label { font-size: 3.4cqmin; }
+      .f12-credit { top: 76cqh; font-size: 2.1cqmin; }
+      .f12-ring-1 { width: 60cqmin; height: 60cqmin; }
+      .f12-ring-2 { width: 80cqmin; height: 80cqmin; }
+      .f12-ring-3 { width: 100cqmin; height: 100cqmin; }
+    }
+  </style>
+
+  <div class="f12-ground clip" id="f12-ground" data-start="0" data-duration="3.5" data-track-index="0"></div>
+  <div class="f12-progress clip" id="f12-progress" data-start="0" data-duration="3.5" data-track-index="1"></div>
+
+  <div class="f12-rings clip" id="f12-rings" data-start="0" data-duration="3.5" data-track-index="2">
+    <div class="f12-ring f12-ring-1"></div>
+    <div class="f12-ring f12-ring-2"></div>
+    <div class="f12-ring f12-ring-3"></div>
+  </div>
+
+  <div class="f12-wordmark clip" id="f12-wordmark" data-start="0" data-duration="3.5" data-track-index="3">Ledgerly</div>
+
+  <div class="f12-tagline clip" id="f12-tagline" data-start="0" data-duration="3.5" data-track-index="4">
+    <span class="f12-hl">11 hours</span> saved per accountant, per week
+  </div>
+
+  <div class="f12-cta clip" id="f12-cta" data-start="0" data-duration="3.5" data-track-index="5">
+    <span class="f12-cta-label" data-var-text="cta_label">Reply &ldquo;yes&rdquo;</span>
+  </div>
+
+  <div class="f12-credit clip" id="f12-credit" data-start="0" data-duration="3.5" data-track-index="6">Narration is AI-generated.</div>
+
+  <script src="assets/vendor/gsap@3.14.2/gsap.min.js"></script>
+  <script>
+    (function () {
+      var root = document.querySelector('[data-composition-id="12-end-card"]');
+      var rings = root.querySelector('#f12-rings');
+      var wordmark = root.querySelector('#f12-wordmark');
+      var tagline = root.querySelector('#f12-tagline');
+      var credit = root.querySelector('#f12-credit');
+
+
+      gsap.set(rings, { opacity: 0, scale: 1 });
+
+      var tl = gsap.timeline({ paused: true });
+
+      tl.fromTo(
+        rings,
+        { opacity: 0 },
+        { opacity: 1, duration: 0.25, ease: 'power2.out', immediateRender: false },
+        0.15
+      );
+
+      tl.fromTo(
+        wordmark,
+        { opacity: 0, y: 16 },
+        { opacity: 1, y: 0, duration: 0.4, ease: 'power3.out' },
+        0.3
+      );
+
+      tl.fromTo(
+        tagline,
+        { opacity: 0, y: 14 },
+        { opacity: 1, y: 0, duration: 0.4, ease: 'power3.out' },
+        0.7
+      );
+
+      tl.fromTo(
+        credit,
+        { opacity: 0 },
+        { opacity: 1, duration: 0.4, ease: 'power3.out' },
+        1.1
+      );
+
+      tl.fromTo(
+        rings,
+        { scale: 1 },
+        { scale: 1.02, duration: 3.35, ease: 'sine.inOut', immediateRender: false },
+        0.15
+      );
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines['12-end-card'] = tl;
+    })();
+  </script>
+</div>
+</template>

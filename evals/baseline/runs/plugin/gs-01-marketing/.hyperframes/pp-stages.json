@@ -1,0 +1,222 @@
+{
+  "schema": "power-presentation/stage-times@0.1",
+  "plugin": "0.1.0",
+  "stages_s": {
+    "intake": 16,
+    "inspect": 42.2,
+    "capture": 121.6,
+    "brief": 330.8,
+    "pitch": 266.5,
+    "design_spec": 15.2,
+    "storyboard": 730.2,
+    "audio": 0,
+    "frames": 1166.6,
+    "assemble": 12.9,
+    "verify": 247.2,
+    "review": 195.3,
+    "render": 73.3,
+    "deliver": 51.6
+  },
+  "runs": [
+    {
+      "command": "external:intake",
+      "stage": "intake",
+      "at": "2026-09-27T09:56:36.785Z",
+      "seconds": 16,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T09:56:20.771Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "external:inspect",
+      "stage": "inspect",
+      "at": "2026-09-27T09:57:23.986Z",
+      "seconds": 42.2,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T09:56:41.813Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "external:capture",
+      "stage": "capture",
+      "at": "2026-09-27T09:59:25.744Z",
+      "seconds": 121.6,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T09:57:24.135Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "init",
+      "stage": "brief",
+      "at": "2026-09-27T09:59:31.405Z",
+      "seconds": 5.4,
+      "ok": true,
+      "detail": "versions: git init + .gitignore (media pinned by the ledger, not committed) | scaffolded with the pinned hyperframes 0.8.47 (toolchain): AGENTS.md, CLAUDE.md, hyperframes.json, index.html, meta.json, package.json | node_modules/hyperframes → toolchain 0.8.47 | capture copied: footage.mp4, events.jsonl, capture-manifest.json, redactions.json, autozoom.json, index.html → .media/capture/ (+ assets/)",
+      "source": "render-path"
+    },
+    {
+      "command": "external:pitch",
+      "stage": "pitch",
+      "at": "2026-09-27T10:04:18.476Z",
+      "seconds": 266.5,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T09:59:51.936Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "external:brief",
+      "stage": "brief",
+      "at": "2026-09-27T10:04:51.306Z",
+      "seconds": 325.4,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T09:59:25.891Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "external:design_spec",
+      "stage": "design_spec",
+      "at": "2026-09-27T10:05:06.675Z",
+      "seconds": 15.2,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T10:04:51.460Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "external:storyboard",
+      "stage": "storyboard",
+      "at": "2026-09-27T10:17:16.979Z",
+      "seconds": 730.2,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T10:05:06.826Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "audio",
+      "stage": "audio",
+      "at": "2026-09-27T10:17:21.502Z",
+      "seconds": 0,
+      "ok": true,
+      "detail": "no SCRIPT.md — no voiceover | bgm assets/bgm/happy-beats-business-moves-vol-10-by-ende-dot-app.mp3 (volume 0.9, credit \"Music: \"Happy Beats / Business Moves Vol. 10\" by Sascha Ende / ende.app (CC BY 4.0)\") | sfx: 5 cue(s) from the CC0 pack — click@f3+2.21, panel@f3+3.3, click@f5+1, success@f5+1.7, panel@f7+0.7; densest 30 s window 5 (3–5, polished 2–3)",
+      "source": "render-path"
+    },
+    {
+      "command": "packets",
+      "stage": "frames",
+      "at": "2026-09-27T10:17:21.609Z",
+      "seconds": 0.1,
+      "ok": true,
+      "detail": "fonts: 2 families (Inter, Space Grotesk) → 6 @font-face rule(s) in frame.md ## Staged fonts; 6 face(s) staged into assets/fonts/ from the toolchain | 12 packet(s) → .hyperframes/frame-packets/ (+ _dispatch.json; 12 frame file(s) still to build); storyboard direction copied into each; 3 absolute skill path(s) in each header",
+      "source": "render-path"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-27T10:36:48.137Z",
+      "seconds": 10.6,
+      "ok": true,
+      "detail": "captions: not burned in (16:9 without VO → off (kicker cards carry the text); SRT still written) | warning: hoist marker(s) with no recorded declaration: 03-landing-live-demo.html (1), 04-dashboard-all-traffic.html (1), 05-click-chatgpt-star.html (1), 06-filtered-top-pages.html (1), 07-filtered-map-goals.html (1) — that footage is not hoisted; the frame-worker re-declares it | frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 5 frame(s) on held clips in assets/clips/ (5 cut, 0 cached) — 03-landing-live-demo 0–4.2; 04-dashboard-all-traffic 4.2–5.8 +2.4s hold drift→1.6; 05-click-chatgpt-star 5.8–7.9 +2.5s hold drift→1.6; 06-filtered-top-pages 7.9–9.9 +2s hold drift→1.6; 07-filtered-map-goals 9.9–12.3 +1.8s hold drift→1.5 | assemble: total duration:    45s (expected ~45s, +0s) | transitions:   tracks: 01-hook-question[t0 0→2.6] 02-promise[t1 2.6→5.1] 03-landing-live-demo[t0 4.800000000000001→9.2] 04-dashboard-all-traffic[t1 9→13.2] 05-click-chatgpt-star[t0 13→17.8] 06-filtered-top-pages[t1 17.6→21.8] 07-filtered-map-goals[t0 21.6→26.1] 08-ai-tools[t1 25.8→29.8] 09-no-cookies[t0 29.6→32.8] 10-made-in-eu[t1 32.6→35.8] 11-proof-quote[t0 35.6→41] 12-end-card[t1 41→45]; ✓ transitions verify: 9 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 1 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js); warning: gsap stays on the CDN — not the pinned 3.14.2: https://unpkg.com/gsap@3/dist/gsap.min.js, https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js (point the frame at the pinned version) | camera: 03-landing-live-demo 2 zoom(s), 1 click(s); 04-dashboard-all-traffic 0 zoom(s), 0 click(s); 05-click-chatgpt-star 1 zoom(s), 1 click(s); 06-filtered-top-pages 1 zoom(s), 0 click(s); 07-filtered-map-goals 0 zoom(s), 0 click(s) | media ledger: 80 asset(s) — unknown ×63, own-capture ×7, OFL-1.1 ×6, CC0-1.0 ×3, CC-BY-4.0 ×1; 80 added / re-frozen → .media/manifest.jsonl | warning: media ledger blocks the render: licence .media/capture/frames/f01.png, licence .media/capture/frames/f02.png, licence .media/capture/frames/f03.png, licence .media/capture/frames/f04.png, licence .media/capture/frames/f05.png, licence .media/capture/frames/f06.png, licence .media/capture/frames/f07.png, licence .media/capture/frames/f08.png, licence .media/capture/frames/f09.png, licence .media/capture/frames/f10.png, licence .media/capture/frames/f11.png, licence .media/capture/frames/f12.png, licence .media/capture/sheet.png, licence .media/demo-capture/assets/contact-sheet.jpg, licence .media/demo-capture/assets/favicon.svg, licence .media/demo-capture/assets/icon-apple-touch-icon-180x180.png, licence .media/demo-capture/assets/icon-icon-unsized.svg, licence .media/demo-capture/assets/logo-07ee85d6.svg, licence .media/demo-capture/assets/logo-86e171cf.svg, licence .media/demo-capture/assets/svg-2dc5536b.svg, licence .media/demo-capture/assets/svg-9d1d152e.svg, licence .media/demo-capture/assets/svg-e06eeeea.svg, licence .media/demo-capture/assets/svg-e0914bc5.svg, licence .media/demo-capture/assets/svgs/contact-sheet-1.jpg, licence .media/demo-capture/assets/svgs/contact-sheet-2.jpg, licence .media/demo-capture/assets/svgs/contact-sheet-3.jpg, licence .media/demo-capture/assets/svgs/logo-599a66b1.svg, licence .media/demo-capture/assets/svgs/svg-099ab980-2.svg, licence .media/demo-capture/assets/svgs/svg-099ab980-3.svg, licence .media/demo-capture/assets/svgs/svg-099ab980.svg, licence .media/demo-capture/assets/svgs/svg-29b6b6fb.svg, licence .media/demo-capture/assets/svgs/svg-599a66b1-2.svg, licence .media/demo-capture/assets/svgs/svg-599a66b1-3.svg, licence .media/demo-capture/assets/svgs/svg-599a66b1-4.svg, licence .media/demo-capture/assets/svgs/svg-599a66b1-5.svg, licence .media/demo-capture/assets/svgs/svg-599a66b1-6.svg, licence .media/demo-capture/assets/svgs/svg-599a66b1-7.svg, licence .media/demo-capture/assets/svgs/svg-599a66b1-8.svg, licence .media/demo-capture/assets/svgs/svg-599a66b1.svg, licence .media/demo-capture/assets/svgs/svg-65e34f07.svg, licence .media/demo-capture/assets/svgs/svg-841bcc89-2.svg, licence .media/demo-capture/assets/svgs/svg-841bcc89-3.svg, licence .media/demo-capture/assets/svgs/svg-841bcc89.svg, licence .media/demo-capture/assets/svgs/svg-926a2a7f.svg, licence .media/demo-capture/assets/svgs/svg-99025202.svg, licence .media/demo-capture/assets/svgs/svg-a6006fd2.svg, licence .media/demo-capture/assets/svgs/svg-a7506dae.svg, licence .media/demo-capture/assets/svgs/svg-a78750cf-2.svg, licence .media/demo-capture/assets/svgs/svg-a78750cf-3.svg, licence .media/demo-capture/assets/svgs/svg-a78750cf-4.svg, licence .media/demo-capture/assets/svgs/svg-a78750cf.svg, licence .media/demo-capture/assets/svgs/svg-c74619df-2.svg, licence .media/demo-capture/assets/svgs/svg-c74619df.svg, licence .media/demo-capture/assets/svgs/svg-f300ac90-2.svg, licence .media/demo-capture/assets/svgs/svg-f300ac90.svg, licence .media/demo-capture/assets/svgs/svg-f436a3d2.svg, licence .media/demo-capture/screenshots/contact-sheet.jpg, licence .media/demo-capture/screenshots/full-page.png, licence .media/demo-capture/screenshots/scroll-000.png, licence .media/demo-capture/screenshots/scroll-042.png, licence .media/demo-capture/screenshots/scroll-084.png, licence .media/demo-capture/screenshots/scroll-100.png, licence assets/logo-670e83ee.svg — node scripts/media-ledger.mjs check | 9:16: portrait working copy .hyperframes/9x16 — 12 frame(s) reflowed, 29 composition file(s), 23 asset(s) linked | 9:16 captions: not burned in (9:16 in the run → burned-in, word-timed) | 9:16 warning: hoist marker(s) with no recorded declaration: 03-landing-live-demo.html (1), 04-dashboard-all-traffic.html (1), 05-click-chatgpt-star.html (1), 06-filtered-top-pages.html (1), 07-filtered-map-goals.html (1) — that footage is not hoisted; the frame-worker re-declares it | 9:16 frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | 9:16 footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 03-landing-live-demo 0–4.2; 04-dashboard-all-traffic 4.2–5.8 +2.4s hold drift→1.6; 05-click-chatgpt-star 5.8–7.9 +2.5s hold drift→1.6; 06-filtered-top-pages 7.9–9.9 +2s hold drift→1.6; 07-filtered-map-goals 9.9–12.3 +1.8s hold drift→1.5 | 9:16 assemble: total duration:    45s (expected ~45s, +0s) | 9:16 transitions:   tracks: 01-hook-question[t0 0→2.6] 02-promise[t1 2.6→5.1] 03-landing-live-demo[t0 4.800000000000001→9.2] 04-dashboard-all-traffic[t1 9→13.2] 05-click-chatgpt-star[t0 13→17.8] 06-filtered-top-pages[t1 17.6→21.8] 07-filtered-map-goals[t0 21.6→26.1] 08-ai-tools[t1 25.8→29.8] 09-no-cookies[t0 29.6→32.8] 10-made-in-eu[t1 32.6→35.8] 11-proof-quote[t0 35.6→41] 12-end-card[t1 41→45]; ✓ transitions verify: 9 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | 9:16 gsap served from the project: 1 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js); warning: gsap stays on the CDN — not the pinned 3.14.2: https://unpkg.com/gsap@3/dist/gsap.min.js, https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js (point the frame at the pinned version) | 9:16 camera: 03-landing-live-demo 2 zoom(s), 1 click(s); 04-dashboard-all-traffic 0 zoom(s), 0 click(s); 05-click-chatgpt-star 1 zoom(s), 1 click(s); 06-filtered-top-pages 1 zoom(s), 0 click(s); 07-filtered-map-goals 0 zoom(s), 0 click(s)",
+      "source": "render-path"
+    },
+    {
+      "command": "external:frames",
+      "stage": "frames",
+      "at": "2026-09-27T10:36:48.138Z",
+      "seconds": 1166.5,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T10:17:21.609Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-27T10:37:28.891Z",
+      "seconds": 0.8,
+      "ok": true,
+      "detail": "captions: not burned in (16:9 without VO → off (kicker cards carry the text); SRT still written) | frame footage re-declared for the hoist: 03-landing-live-demo.html (1), 04-dashboard-all-traffic.html (1), 05-click-chatgpt-star.html (1), 06-filtered-top-pages.html (1), 07-filtered-map-goals.html (1) from .hyperframes/frame-videos.json | warning: hoist marker(s) with no recorded declaration: 03-landing-live-demo.html (1), 04-dashboard-all-traffic.html (1), 05-click-chatgpt-star.html (1), 06-filtered-top-pages.html (1), 07-filtered-map-goals.html (1) — that footage is not hoisted; the frame-worker re-declares it | frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 03-landing-live-demo 0–4.2; 04-dashboard-all-traffic 4.2–5.8 +2.4s hold drift→1.6; 05-click-chatgpt-star 5.8–7.9 +2.5s hold drift→1.6; 06-filtered-top-pages 7.9–9.9 +2s hold drift→1.6; 07-filtered-map-goals 9.9–12.3 +1.8s hold drift→1.5 | assemble: total duration:    45s (expected ~45s, +0s) | transitions:   tracks: 01-hook-question[t0 0→2.6] 02-promise[t1 2.6→5.1] 03-landing-live-demo[t0 4.800000000000001→9.2] 04-dashboard-all-traffic[t1 9→13.2] 05-click-chatgpt-star[t0 13→17.8] 06-filtered-top-pages[t1 17.6→21.8] 07-filtered-map-goals[t0 21.6→26.1] 08-ai-tools[t1 25.8→29.8] 09-no-cookies[t0 29.6→32.8] 10-made-in-eu[t1 32.6→35.8] 11-proof-quote[t0 35.6→41] 12-end-card[t1 41→45]; ✓ transitions verify: 9 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 1 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 03-landing-live-demo 2 zoom(s), 1 click(s); 04-dashboard-all-traffic 0 zoom(s), 0 click(s); 05-click-chatgpt-star 1 zoom(s), 1 click(s); 06-filtered-top-pages 1 zoom(s), 0 click(s); 07-filtered-map-goals 0 zoom(s), 0 click(s) | media ledger: 80 asset(s) — unknown ×62, own-capture ×8, OFL-1.1 ×6, CC0-1.0 ×3, CC-BY-4.0 ×1 → .media/manifest.jsonl | warning: media ledger blocks the render: licence .media/capture/frames/f01.png, licence .media/capture/frames/f02.png, licence .media/capture/frames/f03.png, licence .media/capture/frames/f04.png, licence .media/capture/frames/f05.png, licence .media/capture/frames/f06.png, licence .media/capture/frames/f07.png, licence .media/capture/frames/f08.png, licence .media/capture/frames/f09.png, licence .media/capture/frames/f10.png, licence .media/capture/frames/f11.png, licence .media/capture/frames/f12.png, licence .media/capture/sheet.png, licence .media/demo-capture/assets/contact-sheet.jpg, licence .media/demo-capture/assets/favicon.svg, licence .media/demo-capture/assets/icon-apple-touch-icon-180x180.png, licence .media/demo-capture/assets/icon-icon-unsized.svg, licence .media/demo-capture/assets/logo-07ee85d6.svg, licence .media/demo-capture/assets/logo-86e171cf.svg, licence .media/demo-capture/assets/svg-2dc5536b.svg, licence .media/demo-capture/assets/svg-9d1d152e.svg, licence .media/demo-capture/assets/svg-e06eeeea.svg, licence .media/demo-capture/assets/svg-e0914bc5.svg, licence .media/demo-capture/assets/svgs/contact-sheet-1.jpg, licence .media/demo-capture/assets/svgs/contact-sheet-2.jpg, licence .media/demo-capture/assets/svgs/contact-sheet-3.jpg, licence .media/demo-capture/assets/svgs/logo-599a66b1.svg, licence .media/demo-capture/assets/svgs/svg-099ab980-2.svg, licence .media/demo-capture/assets/svgs/svg-099ab980-3.svg, licence .media/demo-capture/assets/svgs/svg-099ab980.svg, licence .media/demo-capture/assets/svgs/svg-29b6b6fb.svg, licence .media/demo-capture/assets/svgs/svg-599a66b1-2.svg, licence .media/demo-capture/assets/svgs/svg-599a66b1-3.svg, licence .media/demo-capture/assets/svgs/svg-599a66b1-4.svg, licence .media/demo-capture/assets/svgs/svg-599a66b1-5.svg, licence .media/demo-capture/assets/svgs/svg-599a66b1-6.svg, licence .media/demo-capture/assets/svgs/svg-599a66b1-7.svg, licence .media/demo-capture/assets/svgs/svg-599a66b1-8.svg, licence .media/demo-capture/assets/svgs/svg-599a66b1.svg, licence .media/demo-capture/assets/svgs/svg-65e34f07.svg, licence .media/demo-capture/assets/svgs/svg-841bcc89-2.svg, licence .media/demo-capture/assets/svgs/svg-841bcc89-3.svg, licence .media/demo-capture/assets/svgs/svg-841bcc89.svg, licence .media/demo-capture/assets/svgs/svg-926a2a7f.svg, licence .media/demo-capture/assets/svgs/svg-99025202.svg, licence .media/demo-capture/assets/svgs/svg-a6006fd2.svg, licence .media/demo-capture/assets/svgs/svg-a7506dae.svg, licence .media/demo-capture/assets/svgs/svg-a78750cf-2.svg, licence .media/demo-capture/assets/svgs/svg-a78750cf-3.svg, licence .media/demo-capture/assets/svgs/svg-a78750cf-4.svg, licence .media/demo-capture/assets/svgs/svg-a78750cf.svg, licence .media/demo-capture/assets/svgs/svg-c74619df-2.svg, licence .media/demo-capture/assets/svgs/svg-c74619df.svg, licence .media/demo-capture/assets/svgs/svg-f300ac90-2.svg, licence .media/demo-capture/assets/svgs/svg-f300ac90.svg, licence .media/demo-capture/assets/svgs/svg-f436a3d2.svg, licence .media/demo-capture/screenshots/contact-sheet.jpg, licence .media/demo-capture/screenshots/full-page.png, licence .media/demo-capture/screenshots/scroll-000.png, licence .media/demo-capture/screenshots/scroll-042.png, licence .media/demo-capture/screenshots/scroll-084.png, licence .media/demo-capture/screenshots/scroll-100.png, missing .media/capture/frames/f01.png, missing .media/capture/frames/f02.png, missing .media/capture/frames/f03.png, missing .media/capture/frames/f04.png, missing .media/capture/frames/f05.png, missing .media/capture/frames/f06.png, missing .media/capture/frames/f07.png, missing .media/capture/frames/f08.png, missing .media/capture/frames/f09.png, missing .media/capture/frames/f10.png, missing .media/capture/frames/f11.png, missing .media/capture/frames/f12.png, missing .media/capture/sheet.png, missing .media/demo-capture/assets/contact-sheet.jpg, missing .media/demo-capture/assets/favicon.svg, missing .media/demo-capture/assets/icon-apple-touch-icon-180x180.png, missing .media/demo-capture/assets/icon-icon-unsized.svg, missing .media/demo-capture/assets/logo-07ee85d6.svg, missing .media/demo-capture/assets/logo-86e171cf.svg, missing .media/demo-capture/assets/svg-2dc5536b.svg, missing .media/demo-capture/assets/svg-9d1d152e.svg, missing .media/demo-capture/assets/svg-e06eeeea.svg, missing .media/demo-capture/assets/svg-e0914bc5.svg, missing .media/demo-capture/assets/svgs/contact-sheet-1.jpg, missing .media/demo-capture/assets/svgs/contact-sheet-2.jpg, missing .media/demo-capture/assets/svgs/contact-sheet-3.jpg, missing .media/demo-capture/assets/svgs/logo-599a66b1.svg, missing .media/demo-capture/assets/svgs/svg-099ab980-2.svg, missing .media/demo-capture/assets/svgs/svg-099ab980-3.svg, missing .media/demo-capture/assets/svgs/svg-099ab980.svg, missing .media/demo-capture/assets/svgs/svg-29b6b6fb.svg, missing .media/demo-capture/assets/svgs/svg-599a66b1-2.svg, missing .media/demo-capture/assets/svgs/svg-599a66b1-3.svg, missing .media/demo-capture/assets/svgs/svg-599a66b1-4.svg, missing .media/demo-capture/assets/svgs/svg-599a66b1-5.svg, missing .media/demo-capture/assets/svgs/svg-599a66b1-6.svg, missing .media/demo-capture/assets/svgs/svg-599a66b1-7.svg, missing .media/demo-capture/assets/svgs/svg-599a66b1-8.svg, missing .media/demo-capture/assets/svgs/svg-599a66b1.svg, missing .media/demo-capture/assets/svgs/svg-65e34f07.svg, missing .media/demo-capture/assets/svgs/svg-841bcc89-2.svg, missing .media/demo-capture/assets/svgs/svg-841bcc89-3.svg, missing .media/demo-capture/assets/svgs/svg-841bcc89.svg, missing .media/demo-capture/assets/svgs/svg-926a2a7f.svg, missing .media/demo-capture/assets/svgs/svg-99025202.svg, missing .media/demo-capture/assets/svgs/svg-a6006fd2.svg, missing .media/demo-capture/assets/svgs/svg-a7506dae.svg, missing .media/demo-capture/assets/svgs/svg-a78750cf-2.svg, missing .media/demo-capture/assets/svgs/svg-a78750cf-3.svg, missing .media/demo-capture/assets/svgs/svg-a78750cf-4.svg, missing .media/demo-capture/assets/svgs/svg-a78750cf.svg, missing .media/demo-capture/assets/svgs/svg-c74619df-2.svg, missing .media/demo-capture/assets/svgs/svg-c74619df.svg, missing .media/demo-capture/assets/svgs/svg-f300ac90-2.svg, missing .media/demo-capture/assets/svgs/svg-f300ac90.svg, missing .media/demo-capture/assets/svgs/svg-f436a3d2.svg, missing .media/demo-capture/screenshots/contact-sheet.jpg, missing .media/demo-capture/screenshots/full-page.png, missing .media/demo-capture/screenshots/scroll-000.png, missing .media/demo-capture/screenshots/scroll-042.png, missing .media/demo-capture/screenshots/scroll-084.png, missing .media/demo-capture/screenshots/scroll-100.png — node scripts/media-ledger.mjs check | 9:16: portrait working copy .hyperframes/9x16 — 12 frame(s) reflowed, 29 composition file(s), 23 asset(s) linked | 9:16 captions: not burned in (9:16 in the run → burned-in, word-timed) | 9:16 warning: hoist marker(s) with no recorded declaration: 03-landing-live-demo.html (1), 04-dashboard-all-traffic.html (1), 05-click-chatgpt-star.html (1), 06-filtered-top-pages.html (1), 07-filtered-map-goals.html (1) — that footage is not hoisted; the frame-worker re-declares it | 9:16 frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | 9:16 footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 03-landing-live-demo 0–4.2; 04-dashboard-all-traffic 4.2–5.8 +2.4s hold drift→1.6; 05-click-chatgpt-star 5.8–7.9 +2.5s hold drift→1.6; 06-filtered-top-pages 7.9–9.9 +2s hold drift→1.6; 07-filtered-map-goals 9.9–12.3 +1.8s hold drift→1.5 | 9:16 assemble: total duration:    45s (expected ~45s, +0s) | 9:16 transitions:   tracks: 01-hook-question[t0 0→2.6] 02-promise[t1 2.6→5.1] 03-landing-live-demo[t0 4.800000000000001→9.2] 04-dashboard-all-traffic[t1 9→13.2] 05-click-chatgpt-star[t0 13→17.8] 06-filtered-top-pages[t1 17.6→21.8] 07-filtered-map-goals[t0 21.6→26.1] 08-ai-tools[t1 25.8→29.8] 09-no-cookies[t0 29.6→32.8] 10-made-in-eu[t1 32.6→35.8] 11-proof-quote[t0 35.6→41] 12-end-card[t1 41→45]; ✓ transitions verify: 9 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | 9:16 gsap served from the project: 1 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | 9:16 camera: 03-landing-live-demo 2 zoom(s), 1 click(s); 04-dashboard-all-traffic 0 zoom(s), 0 click(s); 05-click-chatgpt-star 1 zoom(s), 1 click(s); 06-filtered-top-pages 1 zoom(s), 0 click(s); 07-filtered-map-goals 0 zoom(s), 0 click(s)",
+      "source": "render-path"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-27T10:38:40.653Z",
+      "seconds": 71.6,
+      "ok": false,
+      "detail": "pre-render gates failed: QA-02, QA-06 (QA/wowprobe.json)",
+      "source": "render-path"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-27T10:39:13.553Z",
+      "seconds": 0.7,
+      "ok": true,
+      "detail": "captions: not burned in (16:9 without VO → off (kicker cards carry the text); SRT still written) | frame footage re-declared for the hoist: 03-landing-live-demo.html (1), 04-dashboard-all-traffic.html (1), 05-click-chatgpt-star.html (1), 06-filtered-top-pages.html (1), 07-filtered-map-goals.html (1) from .hyperframes/frame-videos.json | warning: hoist marker(s) with no recorded declaration: 03-landing-live-demo.html (1), 04-dashboard-all-traffic.html (1), 05-click-chatgpt-star.html (1), 06-filtered-top-pages.html (1), 07-filtered-map-goals.html (1) — that footage is not hoisted; the frame-worker re-declares it | frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 03-landing-live-demo 0–4.2; 04-dashboard-all-traffic 4.2–5.8 +2.4s hold drift→1.6; 05-click-chatgpt-star 5.8–7.9 +2.5s hold drift→1.6; 06-filtered-top-pages 7.9–9.9 +2s hold drift→1.6; 07-filtered-map-goals 9.9–12.3 +1.8s hold drift→1.5 | assemble: total duration:    45s (expected ~45s, +0s) | transitions:   tracks: 01-hook-question[t0 0→2.6] 02-promise[t1 2.6→5.1] 03-landing-live-demo[t0 4.800000000000001→9.2] 04-dashboard-all-traffic[t1 9→13.2] 05-click-chatgpt-star[t0 13→17.8] 06-filtered-top-pages[t1 17.6→21.8] 07-filtered-map-goals[t0 21.6→26.1] 08-ai-tools[t1 25.8→29.8] 09-no-cookies[t0 29.6→32.8] 10-made-in-eu[t1 32.6→35.8] 11-proof-quote[t0 35.6→41] 12-end-card[t1 41→45]; ✓ transitions verify: 9 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 1 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 03-landing-live-demo 2 zoom(s), 1 click(s); 04-dashboard-all-traffic 0 zoom(s), 0 click(s); 05-click-chatgpt-star 1 zoom(s), 1 click(s); 06-filtered-top-pages 1 zoom(s), 0 click(s); 07-filtered-map-goals 0 zoom(s), 0 click(s) | media ledger: 18 asset(s) — own-capture ×8, OFL-1.1 ×6, CC0-1.0 ×3, CC-BY-4.0 ×1 → .media/manifest.jsonl | 9:16: portrait working copy .hyperframes/9x16 — 12 frame(s) reflowed, 29 composition file(s), 23 asset(s) linked | 9:16 captions: not burned in (9:16 in the run → burned-in, word-timed) | 9:16 warning: hoist marker(s) with no recorded declaration: 03-landing-live-demo.html (1), 04-dashboard-all-traffic.html (1), 05-click-chatgpt-star.html (1), 06-filtered-top-pages.html (1), 07-filtered-map-goals.html (1) — that footage is not hoisted; the frame-worker re-declares it | 9:16 frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | 9:16 footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 03-landing-live-demo 0–4.2; 04-dashboard-all-traffic 4.2–5.8 +2.4s hold drift→1.6; 05-click-chatgpt-star 5.8–7.9 +2.5s hold drift→1.6; 06-filtered-top-pages 7.9–9.9 +2s hold drift→1.6; 07-filtered-map-goals 9.9–12.3 +1.8s hold drift→1.5 | 9:16 assemble: total duration:    45s (expected ~45s, +0s) | 9:16 transitions:   tracks: 01-hook-question[t0 0→2.6] 02-promise[t1 2.6→5.1] 03-landing-live-demo[t0 4.800000000000001→9.2] 04-dashboard-all-traffic[t1 9→13.2] 05-click-chatgpt-star[t0 13→17.8] 06-filtered-top-pages[t1 17.6→21.8] 07-filtered-map-goals[t0 21.6→26.1] 08-ai-tools[t1 25.8→29.8] 09-no-cookies[t0 29.6→32.8] 10-made-in-eu[t1 32.6→35.8] 11-proof-quote[t0 35.6→41] 12-end-card[t1 41→45]; ✓ transitions verify: 9 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | 9:16 gsap served from the project: 1 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | 9:16 camera: 03-landing-live-demo 2 zoom(s), 1 click(s); 04-dashboard-all-traffic 0 zoom(s), 0 click(s); 05-click-chatgpt-star 1 zoom(s), 1 click(s); 06-filtered-top-pages 1 zoom(s), 0 click(s); 07-filtered-map-goals 0 zoom(s), 0 click(s)",
+      "source": "render-path"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-27T10:40:38.923Z",
+      "seconds": 85.2,
+      "ok": true,
+      "detail": "egress: us.i.posthog.com → .media/egress.jsonl | motion sidecar: 27 assertion(s) → index.motion.json from 12/12 frame sidecar(s); keepsMoving dropped (QA-07 on the master) | lint: 1 finding(s), 0 error(s) | check: ok=true (61.3s, exit 0) → QA/check.json | animation-map: Animation map: 192/221 tweens (skipped 29 micro-tweens) → .hyperframes/anim-map/animation-map.json | wowprobe pre-render: gates_failed []; not measured QA-01, QA-03, QA-07, QA-08, QA-09; scorecard 81.8 | 9:16 lint: 1 finding(s), 0 error(s) | 9:16 check: ok=true (13.1s, exit 0) → QA/check-9x16.json",
+      "source": "render-path"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-27T10:42:09.898Z",
+      "seconds": 0.8,
+      "ok": true,
+      "detail": "captions: not burned in (16:9 without VO → off (kicker cards carry the text); SRT still written) | frame footage re-declared for the hoist: 03-landing-live-demo.html (1), 04-dashboard-all-traffic.html (1), 05-click-chatgpt-star.html (1), 06-filtered-top-pages.html (1), 07-filtered-map-goals.html (1) from .hyperframes/frame-videos.json | warning: hoist marker(s) with no recorded declaration: 03-landing-live-demo.html (1), 04-dashboard-all-traffic.html (1), 05-click-chatgpt-star.html (1), 06-filtered-top-pages.html (1), 07-filtered-map-goals.html (1) — that footage is not hoisted; the frame-worker re-declares it | frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 03-landing-live-demo 0–4.2; 04-dashboard-all-traffic 4.2–5.8 +2.4s hold drift→1.6; 05-click-chatgpt-star 5.8–7.9 +2.5s hold drift→1.6; 06-filtered-top-pages 7.9–9.9 +2s hold drift→1.6; 07-filtered-map-goals 9.9–12.3 +1.8s hold drift→1.5 | assemble: total duration:    45s (expected ~45s, +0s) | transitions:   tracks: 01-hook-question[t0 0→2.6] 02-promise[t1 2.6→5.1] 03-landing-live-demo[t0 4.800000000000001→9.2] 04-dashboard-all-traffic[t1 9→13.2] 05-click-chatgpt-star[t0 13→17.8] 06-filtered-top-pages[t1 17.6→21.8] 07-filtered-map-goals[t0 21.6→26.1] 08-ai-tools[t1 25.8→29.8] 09-no-cookies[t0 29.6→32.8] 10-made-in-eu[t1 32.6→35.8] 11-proof-quote[t0 35.6→41] 12-end-card[t1 41→45]; ✓ transitions verify: 9 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 1 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 03-landing-live-demo 2 zoom(s), 1 click(s); 04-dashboard-all-traffic 0 zoom(s), 0 click(s); 05-click-chatgpt-star 1 zoom(s), 1 click(s); 06-filtered-top-pages 1 zoom(s), 0 click(s); 07-filtered-map-goals 0 zoom(s), 0 click(s) | media ledger: 18 asset(s) — own-capture ×8, OFL-1.1 ×6, CC0-1.0 ×3, CC-BY-4.0 ×1 → .media/manifest.jsonl | 9:16: portrait working copy .hyperframes/9x16 — 12 frame(s) reflowed, 29 composition file(s), 23 asset(s) linked | 9:16 captions: not burned in (9:16 in the run → burned-in, word-timed) | 9:16 warning: hoist marker(s) with no recorded declaration: 03-landing-live-demo.html (1), 04-dashboard-all-traffic.html (1), 05-click-chatgpt-star.html (1), 06-filtered-top-pages.html (1), 07-filtered-map-goals.html (1) — that footage is not hoisted; the frame-worker re-declares it | 9:16 frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | 9:16 footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 03-landing-live-demo 0–4.2; 04-dashboard-all-traffic 4.2–5.8 +2.4s hold drift→1.6; 05-click-chatgpt-star 5.8–7.9 +2.5s hold drift→1.6; 06-filtered-top-pages 7.9–9.9 +2s hold drift→1.6; 07-filtered-map-goals 9.9–12.3 +1.8s hold drift→1.5 | 9:16 assemble: total duration:    45s (expected ~45s, +0s) | 9:16 transitions:   tracks: 01-hook-question[t0 0→2.6] 02-promise[t1 2.6→5.1] 03-landing-live-demo[t0 4.800000000000001→9.2] 04-dashboard-all-traffic[t1 9→13.2] 05-click-chatgpt-star[t0 13→17.8] 06-filtered-top-pages[t1 17.6→21.8] 07-filtered-map-goals[t0 21.6→26.1] 08-ai-tools[t1 25.8→29.8] 09-no-cookies[t0 29.6→32.8] 10-made-in-eu[t1 32.6→35.8] 11-proof-quote[t0 35.6→41] 12-end-card[t1 41→45]; ✓ transitions verify: 9 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | 9:16 gsap served from the project: 1 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | 9:16 camera: 03-landing-live-demo 2 zoom(s), 1 click(s); 04-dashboard-all-traffic 0 zoom(s), 0 click(s); 05-click-chatgpt-star 1 zoom(s), 1 click(s); 06-filtered-top-pages 1 zoom(s), 0 click(s); 07-filtered-map-goals 0 zoom(s), 0 click(s)",
+      "source": "render-path"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-27T10:43:40.480Z",
+      "seconds": 90.4,
+      "ok": true,
+      "detail": "egress: us.i.posthog.com → .media/egress.jsonl | motion sidecar: 27 assertion(s) → index.motion.json from 12/12 frame sidecar(s); keepsMoving dropped (QA-07 on the master) | lint: 1 finding(s), 0 error(s) | check: ok=true (63.7s, exit 0) → QA/check.json | animation-map: Animation map: 192/221 tweens (skipped 29 micro-tweens) → .hyperframes/anim-map/animation-map.json | wowprobe pre-render: gates_failed []; not measured QA-01, QA-03, QA-07, QA-08, QA-09; scorecard 81.8 | 9:16 lint: 1 finding(s), 0 error(s) | 9:16 check: ok=true (13.8s, exit 0) → QA/check-9x16.json",
+      "source": "render-path"
+    },
+    {
+      "command": "external:review",
+      "stage": "review",
+      "at": "2026-09-27T10:44:02.961Z",
+      "seconds": 195.3,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T10:40:47.667Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "render",
+      "stage": "render",
+      "at": "2026-09-27T10:45:17.948Z",
+      "seconds": 73.3,
+      "ok": true,
+      "detail": "egress: us.i.posthog.com → .media/egress.jsonl | render v1 ok: 16:9 45s renders/final/plausible_16x9.mp4; wall 36.6s | render v1 ok: 9:16 45s renders/final/plausible_9x16.mp4; wall 36.6s | hyperframes 0.8.47; formats 16:9 + 9:16",
+      "source": "render-path"
+    },
+    {
+      "command": "deliver",
+      "stage": "deliver",
+      "at": "2026-09-27T10:45:50.858Z",
+      "seconds": 27.9,
+      "ok": true,
+      "detail": "loudness: -24.33 LUFS / TP -1.58 dBTP → -18.01 LUFS / TP -1.5 dBTP (target -18 LUFS, TP ≤ -1.5 dBTP; two-pass loudnorm, video copied) — QA-08 row: --target-lufs | wowprobe post-render: gates_failed []; not measured none; scorecard 81.3; sheet QA/contact-sheet.png | poster: renders/final/plausible_16x9.poster.png @ 17.2s (storyboard: storyboard `poster:` key), baked into frame 0 | srt: 24 cue(s) from STORYBOARD.md text timeline (no VO — the on-screen text as captions) → renders/final/plausible_16x9.en.srt (+ captions/en.srt) | 9:16 loudness: -24.33 LUFS / TP -1.58 dBTP → -18.01 LUFS / TP -1.5 dBTP (target -18 LUFS, TP ≤ -1.5 dBTP; two-pass loudnorm, video copied) — QA-08 row: --target-lufs | 9:16 wowprobe post-render: gates_failed []; not measured QA-06; scorecard 81.2; sheet QA/contact-sheet-9x16.png | 9:16 poster: renders/final/plausible_9x16.poster.png @ 17.2s (storyboard: storyboard `poster:` key), baked into frame 0 | 9:16 srt: 24 cue(s) from STORYBOARD.md text timeline (no VO — the on-screen text as captions) → renders/final/plausible_9x16.en.srt | share-copy.txt skeleton written (fill the copy, then lint) | share-copy lint: exit 3 — violations in QA/share-copy-lint.json | run-report: run-report: /home/dmytrogr/Documents/power-presentation-runs/plausible/run-report.json — mode marketing, gates_failed [], not measured 0, scorecard 81.3, 15 inputs read, 1 missing (critic)",
+      "source": "render-path"
+    },
+    {
+      "command": "deliver",
+      "stage": "deliver",
+      "at": "2026-09-27T10:58:34.601Z",
+      "seconds": 23.7,
+      "ok": true,
+      "detail": "loudness: already within QA-08 (-18.01 LUFS, TP -1.5 dBTP) — QA-08 row: --target-lufs | wowprobe post-render: gates_failed []; not measured none; scorecard 81.3; sheet QA/contact-sheet.png | poster: renders/final/plausible_16x9.poster.png @ 17.2s (storyboard: storyboard `poster:` key), baked into frame 0 | srt: 24 cue(s) from STORYBOARD.md text timeline (no VO — the on-screen text as captions) → renders/final/plausible_16x9.en.srt (+ captions/en.srt) | 9:16 loudness: already within QA-08 (-18.01 LUFS, TP -1.5 dBTP) — QA-08 row: --target-lufs | 9:16 wowprobe post-render: gates_failed []; not measured QA-06; scorecard 81.2; sheet QA/contact-sheet-9x16.png | 9:16 poster: renders/final/plausible_9x16.poster.png @ 17.2s (storyboard: storyboard `poster:` key), baked into frame 0 | 9:16 srt: 24 cue(s) from STORYBOARD.md text timeline (no VO — the on-screen text as captions) → renders/final/plausible_9x16.en.srt | share-copy lint: clean | run-report: run-report: /home/dmytrogr/Documents/power-presentation-runs/plausible/run-report.json — mode marketing, gates_failed [], not measured 0, scorecard 81.3, 16 inputs read, 0 missing (none)",
+      "source": "render-path"
+    }
+  ],
+  "wall_s": 3269.4,
+  "pending": {}
+}

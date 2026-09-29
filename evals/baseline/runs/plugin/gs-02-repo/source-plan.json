@@ -1,0 +1,36 @@
+{
+  "schema": "power-presentation/source-plan@0.1",
+  "repo": "/home/dmytrogr/Documents/power-presentation-runs/ledgerly-repo",
+  "surface": "web-ui",
+  "secondary": [],
+  "mode": "marketing",
+  "options": {
+    "web": [
+      {
+        "kind": "static",
+        "dir": "site",
+        "entry": "site/index.html",
+        "runnable": true,
+        "reason": "a static site with content, served from loopback"
+      }
+    ],
+    "prod_url_hints": [],
+    "tapes": [],
+    "specs": [],
+    "bins": [],
+    "readme_commands": []
+  },
+  "routes": [
+    {
+      "class": "web-ui",
+      "source": "local-static",
+      "tier": "A",
+      "dir": "site",
+      "how": "node ${CLAUDE_PLUGIN_ROOT}/scripts/record-flow.mjs --local --repo \"<REPO>/site\" --flow .media/flow.json --out .media/capture/",
+      "reason": "the static site site/index.html served from loopback"
+    }
+  ],
+  "questions": [],
+  "writes_to_repo": false,
+  "note": "the repository is read only; a dev server runs from a copy in the workspace (run-copy)"
+}

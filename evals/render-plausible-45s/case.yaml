@@ -1,0 +1,28 @@
+schema_version: "1.1"
+name: render-plausible-45s
+description: Nightly (v1) full render of GS-01 - a 45 s marketing video from https://plausible.io must produce at least one mp4 and a run-report.json. Fails until the render path lands.
+tags: [nightly, render, v1, gs-01]
+runs: 1
+expected_outcome: A rendered mp4 under renders/ and a run-report.json exist after the run; the run stays inside the wall-time budget.
+execution:
+  prompt: |
+    /present --for marketing --duration 45 --format 16:9,9:16 --url https://plausible.io --yes
+
+    Run the whole pipeline autonomously: capture the real dashboard with record-flow, build the storyboard,
+    pass the QA gates, render both formats, and write run-report.json. Do not ask questions; --yes answers them.
+  max_turns: 200
+  timeout_seconds: 3600
+  allowed_tools: [Read, Glob, Grep, Skill, Agent]
+graders:
+  - name: present-skill-fired
+    type: tool_used
+    tool: Skill
+    input_match: '"skill"\s*:\s*"(?:[\w-]+:)?present"'
+  - name: mp4-rendered
+    type: file_exists
+    path: "**/renders/**/*.mp4"
+    weight: 2
+  - name: run-report-written
+    type: file_exists
+    path: "**/run-report.json"
+    weight: 2

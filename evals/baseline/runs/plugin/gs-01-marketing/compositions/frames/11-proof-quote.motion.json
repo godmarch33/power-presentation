@@ -1,0 +1,8 @@
+{
+  "duration": 5.4,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f11-quote-text", "bySec": 0.5 },
+    { "kind": "before", "a": "#f11-quote-text", "b": "#f11-attribution" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 }
+  ]
+}

@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+set -euo pipefail
+state="${TMPDIR:-/tmp}/acmejobs-fixture.state"
+case "${1:-}" in
+  submit)
+    file="${3:-report.csv}"
+    printf 'uploading %s … ' "$file"; sleep 0.6; echo "ok"
+    echo "job_7f3k2 queued"
+    date +%s > "$state"
+    ;;
+  watch)
+    echo "watching job_7f3k2"
+    echo "status: queued";  sleep 0.9
+    echo "status: running"; sleep 2.2
+    echo "status: done"
+    ;;
+  result)
+    cat <<'JSON'
+{
+  "id": "job_7f3k2",
+  "status": "done",
+  "input": { "file": "report.csv", "rows": 12480 },
+  "output": { "file": "report.parquet", "rows": 12480 },
+  "started_at": "2026-09-20T09:00:04Z",
+  "finished_at": "2026-09-20T09:00:07Z",
+  "duration_ms": 3120,
+  "worker": "eu-west-1a",
+  "retries": 0
+}
+JSON
+    ;;
+  --version|-v) echo "acmejobs 0.1.0 (fixture mock)" ;;
+  *) echo "usage: acmejobs submit --file <path> | watch --last | result --last --json" >&2; exit 2 ;;
+esac

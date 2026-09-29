@@ -1,0 +1,35 @@
+{
+  "schema": "power-presentation/intake@0.1",
+  "plugin_version": "0.1.0",
+  "arguments_raw": "--for sales --duration 60 --local ./site --prospect prospect.json --pain \"manual month-end reconciliation\" --yes",
+  "declared": {
+    "for": "sales", "duration": 60, "format": null, "reveal": null, "voice": null,
+    "source": { "kind": "local", "value": "examples/gs-02-ledgerly/site" },
+    "brand": null, "preset": null, "style": null, "privacy": null, "budget": null, "yes": true,
+    "prospect": "prospect.json", "pain": "manual month-end reconciliation", "metrics": null, "deck": null, "recipe": null
+  },
+  "derived": {
+    "voice":    { "value": true, "source": "default:(on for sales/investors)" },
+    "format":   { "value": ["16:9"], "source": "destination→aspect (brief-contract § 2); 9:16 not requested" },
+    "reveal":   { "value": "early", "source": "default" },
+    "register": { "value": "medium", "source": "audiences/sales.md (audience table)" },
+    "preset":   { "value": "blue-professional", "source": "workflow Step 2 (brief silent; cobalt→brand accent #2a6f97)" },
+    "budget":   { "value": 25, "source": "userConfig:budget_usd" },
+    "brand":    { "value": null, "source": "userConfig:brand_kit_dir — none; tokens from site/index.html :root" },
+    "privacy":  { "value": "default", "source": "userConfig:privacy" },
+    "lang":     { "value": "en", "source": "(English only; no --lang flag)" },
+    "destination": { "value": "sales-outreach", "source": "length-bands.md band for sales (QA-01: 30–60 s)" }
+  },
+  "questions": [],
+  "yes_decisions": [
+    "prod URL: none declared — --local ./site captured over an in-process static server (chain step local, tier A)",
+    "pitch: concept 1 (the prospect's own number on the real product) — recommended by the story director"
+  ],
+  "conflicts": [],
+  "phase_blocked": [],
+  "privacy_profile": "default",
+  "network_manifest": [],
+  "surface": "web-ui",
+  "evidence_plan": "local",
+  "fixture": "GS-02 Ledgerly (synthetic) — plugin-route baseline run; every value fictional"
+}

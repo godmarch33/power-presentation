@@ -1,0 +1,333 @@
+<template>
+<div id="root" data-composition-id="05-one-line-trail" data-width="1920" data-height="1080" data-duration="8.573">
+  <style>
+    #root {
+      width: 100%;
+      height: 100%;
+      container-type: size;
+      position: relative;
+      overflow: hidden;
+      font-family: "Inter", sans-serif;
+      color: #14213D;
+    }
+
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+
+    .f05-progress-track {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: rgba(42, 111, 151, 0.15);
+    }
+    .f05-progress-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 41.667cqw;
+      background: #2A6F97;
+      transform-origin: left center;
+    }
+
+    .f05-stage-box {
+      position: absolute;
+      left: 25cqw;
+      top: 6cqh;
+      width: 70cqw;
+      height: 70cqh;
+      border-radius: 14px;
+      border: 1.5px solid rgba(42, 111, 151, 0.2);
+      box-sizing: border-box;
+      pointer-events: none;
+    }
+
+    .f05-rail {
+      position: absolute;
+      left: 5cqw;
+      top: 20cqh;
+      width: 17cqw;
+      height: 44cqh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .f05-rail-connector,
+    .f05-rail-connector-fill {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      bottom: 10px;
+      width: 2px;
+      transform-origin: top center;
+    }
+    .f05-rail-connector { background: rgba(42, 111, 151, 0.2); }
+    .f05-rail-connector-fill { background: #2A6F97; transform: scaleY(0.25); }
+
+    .f05-rail-stop {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .f05-rail-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      flex: none;
+      background: transparent;
+      border: 2px solid rgba(42, 111, 151, 0.3);
+    }
+    .f05-rail-label {
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 600;
+      font-size: 2.78cqh;
+      color: #5C6B7A;
+      white-space: nowrap;
+    }
+
+    .f05-chip {
+      position: absolute;
+      left: 5cqw;
+      top: 69cqh;
+      height: 5cqh;
+      display: flex;
+      align-items: center;
+      padding: 0 1.6cqw;
+      border-radius: 100px;
+      background: rgba(42, 111, 151, 0.08);
+      pointer-events: none;
+    }
+    .f05-chip-label {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 2.41cqh;
+      color: #2A6F97;
+      white-space: nowrap;
+    }
+
+    .f05-callout {
+      position: absolute;
+      left: 3cqw;
+      top: 4.5cqh;
+      max-width: 21cqw;
+      padding: 1.4cqh 1.8cqw;
+      border-radius: 12px;
+      background: #FFFFFF;
+      border: 1.5px solid rgba(42, 111, 151, 0.2);
+      display: inline-flex;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      will-change: transform, opacity;
+    }
+    .f05-callout-label {
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 600;
+      font-size: 3.7cqh;
+      line-height: 1.25;
+      color: #14213D;
+      white-space: normal;
+    }
+
+    .f05-underline {
+      position: absolute;
+      left: 44cqw;
+      top: 52cqh;
+      width: 24cqw;
+      height: 2px;
+      background: #2A6F97;
+      opacity: 0;
+      pointer-events: none;
+      will-change: transform, opacity;
+    }
+
+    @container (aspect-ratio < 1) {
+      .f05-stage-box {
+        left: 4cqw;
+        top: 15cqh;
+        width: 92cqw;
+        height: 64cqh;
+      }
+      .f05-rail {
+        left: 5cqw;
+        top: 5cqh;
+        width: 90cqw;
+        height: 7cqh;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .f05-rail-connector,
+      .f05-rail-connector-fill {
+        display: none;
+      }
+      .f05-rail-stop {
+        flex-direction: column;
+        gap: 6px;
+      }
+      .f05-rail-label {
+        display: none;
+      }
+      .f05-rail-label[data-active="true"] {
+        display: block;
+        font-size: 2.08cqh;
+      }
+      .f05-chip {
+        left: auto;
+        right: 5cqw;
+        top: 12.5cqh;
+        height: 2cqh;
+        padding: 0 1.2cqw;
+      }
+      .f05-chip-label {
+        font-size: 1.3cqh;
+      }
+      .f05-callout {
+        left: 5cqw;
+        top: 79.5cqh;
+        width: 90cqw;
+        max-width: none;
+        justify-content: center;
+        padding: 0.5cqh 2cqw;
+      }
+      .f05-callout-label {
+        font-size: 1.5cqh;
+      }
+      .f05-underline {
+        left: 32cqw;
+        top: 46cqh;
+        width: 36cqw;
+      }
+    }
+  </style>
+
+  <div class="f05-stage-box clip" id="f05-stage-box" data-start="0" data-duration="8.573" data-track-index="0"></div>
+
+  <div class="f05-rail clip" id="f05-rail" data-start="0" data-duration="8.573" data-track-index="2">
+    <div class="f05-rail-stop" data-stop="0">
+      <div class="f05-rail-dot" id="f05-dot-0"></div>
+      <div class="f05-rail-label" id="f05-label-0" data-active="false">Imported</div>
+    </div>
+    <div class="f05-rail-stop" data-stop="1">
+      <div class="f05-rail-dot" id="f05-dot-1"></div>
+      <div class="f05-rail-label" id="f05-label-1" data-active="true">Matched</div>
+    </div>
+    <div class="f05-rail-stop" data-stop="2">
+      <div class="f05-rail-dot" id="f05-dot-2"></div>
+      <div class="f05-rail-label" id="f05-label-2" data-active="false">Posted</div>
+    </div>
+    <div class="f05-rail-stop" data-stop="3">
+      <div class="f05-rail-dot" id="f05-dot-3"></div>
+      <div class="f05-rail-label" id="f05-label-3" data-active="false">Closing</div>
+    </div>
+    <div class="f05-rail-stop" data-stop="4">
+      <div class="f05-rail-dot" id="f05-dot-4"></div>
+      <div class="f05-rail-label" id="f05-label-4" data-active="false">Locked</div>
+    </div>
+    <div class="f05-rail-connector"></div>
+    <div class="f05-rail-connector-fill" id="f05-rail-connector-fill"></div>
+  </div>
+
+  <div class="f05-chip clip" id="f05-chip" data-start="0" data-duration="8.573" data-track-index="3">
+    <div class="f05-chip-label">Ledgerly demo data</div>
+  </div>
+
+  <div class="f05-callout clip" id="f05-callout" data-start="0" data-duration="8.573" data-track-index="4">
+    <div class="f05-callout-label">Posted — no manual touch</div>
+  </div>
+
+  <div class="f05-underline clip" id="f05-underline" data-start="0" data-duration="8.573" data-track-index="5"></div>
+
+  <div class="f05-progress-track clip" id="f05-progress-track" data-start="0" data-duration="8.573" data-track-index="6"></div>
+  <div class="f05-progress-fill clip" id="f05-progress-fill" data-start="0" data-duration="8.573" data-track-index="7"></div>
+
+  <script src="assets/vendor/gsap@3.14.2/gsap.min.js"></script>
+  <script>
+    (function () {
+      var root = document.querySelector('[data-composition-id="05-one-line-trail"]');
+
+      var stageBox = root.querySelector('#f05-stage-box');
+      var rail = root.querySelector('#f05-rail');
+      var chip = root.querySelector('#f05-chip');
+      var progressFill = root.querySelector('#f05-progress-fill');
+
+      var dotMatched = root.querySelector('#f05-dot-1');
+      var labelMatched = root.querySelector('#f05-label-1');
+      var dotPosted = root.querySelector('#f05-dot-2');
+      var labelPosted = root.querySelector('#f05-label-2');
+      var connectorFill = root.querySelector('#f05-rail-connector-fill');
+      var callout = root.querySelector('#f05-callout');
+      var underline = root.querySelector('#f05-underline');
+
+      gsap.set(root.querySelector('#f05-dot-0'), { backgroundColor: '#2A6F97', borderColor: '#2A6F97' });
+      gsap.set(root.querySelector('#f05-label-0'), { color: '#14213D' });
+      gsap.set(dotMatched, { backgroundColor: '#2A6F97', borderColor: '#2A6F97' });
+      gsap.set(labelMatched, { color: '#2A6F97' });
+
+      var tl = gsap.timeline({ paused: true });
+
+      tl.fromTo(
+        [stageBox, rail, chip],
+        { opacity: 0, y: 10 },
+        { opacity: 1, y: 0, duration: 0.3, ease: 'power3.out', stagger: 0.05 },
+        0.1
+      );
+      tl.fromTo(
+        progressFill,
+        { scaleX: 0 },
+        { scaleX: 1, duration: 0.3, ease: 'power3.out' },
+        0.1
+      );
+
+      tl.to(dotMatched, { backgroundColor: '#2A6F97', borderColor: '#2A6F97', duration: 0.4, ease: 'power3.out' }, 0.3);
+      tl.to(labelMatched, { color: '#14213D', duration: 0.4, ease: 'power3.out' }, 0.3);
+      tl.to(dotPosted, { backgroundColor: '#2A6F97', borderColor: '#2A6F97', duration: 0.4, ease: 'power3.out' }, 0.3);
+      tl.to(labelPosted, { color: '#2A6F97', duration: 0.4, ease: 'power3.out' }, 0.3);
+      tl.to(connectorFill, { scaleY: 0.5, duration: 0.4, ease: 'power3.out' }, 0.3);
+      tl.set(labelMatched, { attr: { 'data-active': 'false' } }, 0.3);
+      tl.set(labelPosted, { attr: { 'data-active': 'true' } }, 0.3);
+
+      tl.fromTo(
+        callout,
+        { opacity: 0, scale: 0.92 },
+        { opacity: 1, scale: 1, duration: 0.4, ease: 'power3.out' },
+        2.6
+      );
+
+      tl.fromTo(
+        callout,
+        { scale: 1 },
+        { scale: 1.015, duration: 0.5, ease: 'sine.inOut', immediateRender: false },
+        3.6
+      );
+      tl.to(callout, { scale: 1, duration: 0.5, ease: 'sine.inOut' }, 4.1);
+
+      tl.fromTo(
+        underline,
+        { yPercent: 0, opacity: 0 },
+        { yPercent: 700, opacity: 1, duration: 0.5, ease: 'power2.inOut' },
+        5.4
+      );
+
+      tl.fromTo(
+        underline,
+        { scaleX: 1 },
+        { scaleX: 1.04, duration: 0.5, ease: 'sine.inOut', immediateRender: false },
+        6.9
+      );
+      tl.to(underline, { scaleX: 1, duration: 0.5, ease: 'sine.inOut' }, 7.4);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines['05-one-line-trail'] = tl;
+    })();
+  </script>
+</div>
+</template>

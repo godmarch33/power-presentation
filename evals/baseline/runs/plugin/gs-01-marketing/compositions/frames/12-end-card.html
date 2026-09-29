@@ -1,0 +1,234 @@
+<template>
+  <div id="root" data-composition-id="12-end-card" data-width="1920" data-height="1080">
+    <style>
+      #root {
+        width: 100%;
+        height: 100%;
+        container-type: size;
+        background: transparent;
+        position: relative;
+        overflow: hidden;
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+      @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+      @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+      @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+      @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: block; }
+      @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+
+      .f12-ground {
+        position: absolute;
+        inset: 0;
+        background: #FFFFFF;
+      }
+
+      .f12-logo-wrap {
+        position: absolute;
+        left: 0;
+        top: 11cqh;
+        width: 100%;
+        text-align: center;
+      }
+
+      .f12-logo-inner {
+        display: inline-block;
+        width: 22cqw;
+        transform-origin: 50% 50%;
+        opacity: 0;
+      }
+
+      .f12-logo-img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .f12-tagline {
+        position: absolute;
+        left: 0;
+        top: 29cqh;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+      }
+
+      .f12-tagline p {
+        margin: 0;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 500;
+        font-size: 4.4cqh;
+        line-height: 1.3;
+        letter-spacing: -0.02em;
+        color: #252F3F;
+      }
+
+      .f12-tagline .f12-accent {
+        color: #5850EC;
+      }
+
+      .f12-url {
+        position: absolute;
+        left: 0;
+        top: 71cqh;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+      }
+
+      .f12-url span {
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 500;
+        font-size: 4cqh;
+        color: #4B5563;
+        letter-spacing: -0.01em;
+      }
+
+      .f12-cta-wrap {
+        position: absolute;
+        left: 0;
+        top: 46cqh;
+        width: 100%;
+        text-align: center;
+      }
+
+      .f12-cta-button {
+        display: inline-block;
+        opacity: 0;
+        transform-origin: 50% 50%;
+        background: #5850EC;
+        color: #FFFFFF;
+        border-radius: 100px;
+        padding: 2cqh 4.4cqw;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 600;
+        font-size: 5cqh;
+        letter-spacing: -0.01em;
+      }
+
+      .f12-support {
+        position: absolute;
+        left: 0;
+        top: 60cqh;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+      }
+
+      .f12-support p {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: max(3.7cqmin, 40px);
+        line-height: 1.4;
+        color: #4B5563;
+      }
+
+      @container (aspect-ratio < 1) {
+        .f12-logo-wrap { top: 10cqh; }
+        .f12-logo-inner { width: 34cqw; }
+
+        .f12-tagline { top: 26cqh; }
+        .f12-tagline p {
+          font-size: max(3.6cqmin, 40px);
+          line-height: 1.35;
+        }
+
+        .f12-cta-wrap { top: 44cqh; }
+        .f12-cta-button {
+          padding: 1.8cqh 6cqw;
+          font-size: max(3.9cqmin, 44px);
+        }
+
+        .f12-support { top: 59cqh; }
+
+        .f12-url { top: 69cqh; }
+        .f12-url span { font-size: max(3.4cqmin, 40px); }
+      }
+    </style>
+
+    <div class="clip f12-ground" id="f12-ground" data-start="0" data-duration="4.0" data-track-index="0"></div>
+
+    <div class="clip f12-logo-wrap" id="f12-logo" data-start="0" data-duration="4.0" data-track-index="1">
+      <span class="f12-logo-inner" id="f12-logo-inner">
+        <img class="f12-logo-img" src="assets/logo-670e83ee.svg" alt="Plausible" />
+      </span>
+    </div>
+
+    <div class="clip f12-tagline" id="f12-tagline" data-start="0" data-duration="4.0" data-track-index="2">
+      <p>Analytics script <span class="f12-accent">54&times;</span> smaller</p>
+      <p>than Google Analytics</p>
+    </div>
+
+    <div class="clip f12-cta-wrap" id="f12-cta-button-wrap" data-start="0" data-duration="4.0" data-track-index="3">
+      <span class="f12-cta-button" id="f12-cta-button" data-var-text="cta_label">Start my free trial</span>
+    </div>
+
+    <div class="clip f12-support" id="f12-support" data-start="0" data-duration="4.0" data-track-index="4">
+      <p>30-day free trial.</p>
+      <p>No credit card required.</p>
+    </div>
+
+    <div class="clip f12-url" id="f12-url" data-start="0" data-duration="4.0" data-track-index="5">
+      <span data-var-text="url_label">plausible.io</span>
+    </div>
+
+    <script>
+      (function () {
+        var tl = gsap.timeline({ paused: true });
+
+        gsap.set("#f12-logo-inner", { scale: 0.9, opacity: 0 });
+        gsap.set("#f12-tagline", { yPercent: 15, opacity: 0 });
+        gsap.set("#f12-url", { opacity: 0 });
+        gsap.set("#f12-cta-button", { scale: 0.85, opacity: 0, transformOrigin: "50% 50%" });
+        gsap.set("#f12-support", { yPercent: 10, opacity: 0 });
+
+        tl.fromTo(
+          "#f12-logo-inner",
+          { scale: 0.9, opacity: 0 },
+          { scale: 1, opacity: 1, duration: 0.4, ease: "expo.out" },
+          0.2
+        );
+
+        tl.fromTo(
+          "#f12-tagline",
+          { yPercent: 15, opacity: 0 },
+          { yPercent: 0, opacity: 1, duration: 0.4, ease: "expo.out" },
+          0.6
+        );
+
+        tl.fromTo(
+          "#f12-url",
+          { opacity: 0 },
+          { opacity: 1, duration: 0.3, ease: "power2.out" },
+          1.0
+        );
+
+        tl.fromTo(
+          "#f12-cta-button",
+          { scale: 0.85, opacity: 0 },
+          { scale: 1, opacity: 1, duration: 0.4, ease: "power3.out" },
+          1.2
+        );
+
+        tl.fromTo(
+          "#f12-support",
+          { yPercent: 10, opacity: 0 },
+          { yPercent: 0, opacity: 1, duration: 0.3, ease: "power2.out" },
+          1.6
+        );
+
+        tl.fromTo(
+          "#f12-cta-button",
+          { scale: 1.0 },
+          { scale: 1.03, duration: 2.0, ease: "power1.inOut", immediateRender: false },
+          1.6
+        );
+
+        window.__timelines = window.__timelines || {};
+        window.__timelines["12-end-card"] = tl;
+      })();
+    </script>
+  </div>
+</template>

@@ -1,0 +1,110 @@
+{
+  "schema": "power-presentation/intake@0.1",
+  "plugin_version": "0.1.0",
+  "arguments_raw": "--for marketing --duration 45 --repo --yes",
+  "repo": "/home/dmytrogr/Documents/power-presentation-runs/ledgerly-repo",
+  "project": "/home/dmytrogr/Documents/power-presentation-runs/ledgerly-repo/power-presentation-out/ledgerly-repo-marketing",
+  "declared": {
+    "for": "marketing",
+    "duration": 45,
+    "source": {
+      "kind": "repo",
+      "value": "/home/dmytrogr/Documents/power-presentation-runs/ledgerly-repo",
+      "plan": "source-plan.json"
+    },
+    "yes": true
+  },
+  "derived": {
+    "format": {
+      "value": [
+        "16:9"
+      ],
+      "source": "brief-contract § 2: destination hero launch (45–90 s band) → 16:9 master only; no 9:16 cut requested"
+    },
+    "reveal": {
+      "value": "early",
+      "source": "default:(QA-04 defaults apply)"
+    },
+    "voice": {
+      "value": false,
+      "source": "default:(off for marketing)"
+    },
+    "brand": {
+      "value": null,
+      "source": "userConfig:brand_kit_dir (unset)"
+    },
+    "preset": {
+      "value": null,
+      "source": "workflow Step 2 chooses when the brief is silent"
+    },
+    "privacy": {
+      "value": "default",
+      "source": "userConfig:privacy (unset → default)"
+    },
+    "budget": {
+      "value": 25,
+      "source": "userConfig:budget_usd (unset → threshold 25)"
+    },
+    "lang": {
+      "value": "en",
+      "source": "(English only; no --lang flag)"
+    },
+    "destination": {
+      "value": "hero-launch",
+      "source": "length-bands.md: 45 s sits in the marketing hero-launch band 45–90 s (QA-01)"
+    },
+    "register": {
+      "value": "high",
+      "source": "brief-schema § 2: marketing → high"
+    }
+  },
+  "questions": [],
+  "yes_decisions": [
+    {
+      "field": "source.url",
+      "decision": "no URL question — --repo is the source (§ 4a); web-source question answered by source-plan default",
+      "reason": "under --yes"
+    },
+    {
+      "field": "pitch",
+      "decision": "story-director's recommended concept",
+      "reason": "under --yes answers question 3 with the recommendation"
+    },
+    {
+      "field": "format",
+      "decision": "16:9 master only",
+      "reason": "hero-launch destination; 9:16 is an optional render --batch cut not requested"
+    },
+    {
+      "field": "voice",
+      "decision": "off",
+      "reason": "marketing default; kinetic type carries meaning, video works muted"
+    }
+  ],
+  "conflicts": [],
+  "phase_blocked": [],
+  "privacy_profile": "default",
+  "network_manifest": [
+    {
+      "host": "registry.npmjs.org",
+      "why": "npx hyperframes before init links the pinned CLI"
+    },
+    {
+      "host": "us.i.posthog.com",
+      "why": "HyperFrames CLI telemetry"
+    }
+  ],
+  "surface": "web-ui",
+  "evidence_plan": {
+    "chain_step": "local",
+    "routes": [
+      {
+        "class": "web-ui",
+        "source": "local-static",
+        "tier": "A",
+        "dir": "site"
+      }
+    ],
+    "plan": "source-plan.json"
+  }
+}

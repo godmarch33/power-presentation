@@ -1,0 +1,127 @@
+<template>
+<div id="root" data-composition-id="02-promise" data-width="1920" data-height="1080" data-duration="2.5">
+  <style>
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+
+    #root {
+      width: 100%;
+      height: 100%;
+      container-type: size;
+      background: transparent;
+      position: relative;
+      overflow: hidden;
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .f02-clip-bg {
+      position: absolute;
+      inset: 0;
+      background: #FFFFFF;
+    }
+
+    .f02-stage {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 0;
+    }
+
+    .f02-wrap {
+      width: min(78cqw, 78cqh);
+      max-width: 84cqw;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: min(1.2cqh, 1.2cqw);
+      margin-top: -8cqh;
+      will-change: transform;
+    }
+
+    .f02-line {
+      display: block;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      font-size: min(8cqh, 6.8cqw);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: #252F3F;
+      opacity: 0;
+      white-space: nowrap;
+    }
+
+    .f02-accent {
+      color: #5850EC;
+    }
+
+    .f02-underline-host {
+      position: relative;
+      display: inline-block;
+    }
+
+    .f02-underline {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -0.12em;
+      height: max(4px, 0.45cqh);
+      background: #5850EC;
+      border-radius: 2px;
+      transform: scaleX(0);
+      transform-origin: left center;
+    }
+
+    @container (aspect-ratio < 1) {
+      .f02-wrap {
+        width: 90cqw;
+        max-width: 92cqw;
+        margin-top: -6cqh;
+      }
+      .f02-line {
+        font-size: min(6.5cqh, 9.5cqw);
+        white-space: normal;
+      }
+    }
+  </style>
+
+  <div class="clip f02-clip-bg" id="f02-ground" data-start="0" data-duration="2.5" data-track-index="0"></div>
+
+  <div class="f02-stage">
+  <div class="f02-wrap" id="f02-wrap">
+    <span class="f02-line" id="f02-line1">See your <span class="f02-accent">ChatGPT</span></span>
+    <span class="f02-line" id="f02-line2">visitors in <span class="f02-underline-host">one click<span class="f02-underline" id="f02-underline"></span></span>.</span>
+  </div>
+  </div>
+
+  <script>
+    (function () {
+      var root = document.querySelector('[data-composition-id="02-promise"]');
+      var line1 = root.querySelector('#f02-line1');
+      var line2 = root.querySelector('#f02-line2');
+      var underline = root.querySelector('#f02-underline');
+      var wrap = root.querySelector('#f02-wrap');
+
+      gsap.set([line1, line2], { yPercent: 4, opacity: 0 });
+      gsap.set(underline, { scaleX: 0 });
+      gsap.set(wrap, { scale: 1 });
+
+      var tl = gsap.timeline({ paused: true });
+
+      tl.fromTo(line1, { yPercent: 4, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.5, ease: "expo.out" }, 0.1);
+      tl.fromTo(line2, { yPercent: 4, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.5, ease: "expo.out" }, 0.2);
+      tl.fromTo(underline, { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power2.inOut" }, 0.6);
+      tl.fromTo(wrap, { scale: 1.0 }, { scale: 1.02, duration: 1.0, ease: "sine.inOut" }, 1.2);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["02-promise"] = tl;
+    })();
+  </script>
+</div>
+</template>

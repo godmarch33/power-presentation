@@ -1,0 +1,6 @@
+{ "duration": 3.982,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f11-wordmark", "bySec": 0.5 },
+    { "kind": "before", "a": "#f11-wordmark", "b": "#f11-tagline" },
+    { "kind": "before", "a": "#f11-tagline", "b": "#f11-pill-label" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 } ] }

@@ -1,0 +1,11 @@
+{
+  "duration": 3.8,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f06-numeral", "bySec": 0.5 },
+    { "kind": "before", "a": "#f06-numeral", "b": "#f06-label" },
+    { "kind": "before", "a": "#f06-label", "b": "#f06-rule" },
+    { "kind": "staysInFrame", "selector": "#f06-numeral" },
+    { "kind": "staysInFrame", "selector": "#f06-label" },
+    { "kind": "keepsMoving", "withinSelector": "#root", "maxStaticSec": 2.0 }
+  ]
+}

@@ -1,0 +1,230 @@
+<template>
+<div id="root" data-composition-id="08-traction" data-width="1920" data-height="1080">
+<style>
+  #root {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    container-type: size;
+    overflow: hidden;
+    background: #FFFFFF;
+  }
+
+  @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+  @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+  @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+  @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+  @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: block; }
+  @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+
+  .f08-ground {
+    position: absolute;
+    inset: 0;
+    background: #FFFFFF;
+  }
+
+  .f08-rule {
+    position: absolute;
+    left: 5cqw;
+    top: 76.5cqh;
+    width: 90cqw;
+    height: 1px;
+    background: #DFE5EC;
+    opacity: 1;
+  }
+
+  .f08-content {
+    position: absolute;
+    inset: 0;
+    transform-origin: 5cqw 50%;
+    will-change: transform;
+  }
+
+  .f08-eyebrow {
+    position: absolute;
+    left: 5cqw;
+    top: 18cqh;
+    max-width: 78cqw;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+    font-size: 2.6cqh;
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #2A6F97;
+    opacity: 0;
+  }
+
+  .f08-card {
+    position: absolute;
+    top: 30cqh;
+    width: 28cqw;
+    height: 34cqh;
+    border-radius: 14px;
+    border: 1.5px solid rgba(42, 111, 151, 0.20);
+    background: rgba(42, 111, 151, 0.04);
+    box-shadow: none;
+    box-sizing: border-box;
+    padding: 3cqh 2cqw;
+  }
+
+  .f08-card--1 { left: 5cqw; }
+  .f08-card--2 { left: 36cqw; }
+  .f08-card--3 { left: 67cqw; }
+
+  .f08-card-content {
+    opacity: 0;
+  }
+
+  .f08-metric-value {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    font-size: 11.11cqh;
+    line-height: 1.0;
+    color: #2A6F97;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .f08-metric-value sup {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+    font-size: 0.36em;
+    vertical-align: super;
+    color: #2A6F97;
+  }
+
+  .f08-metric-label {
+    margin-top: 1.6cqh;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 3.15cqh;
+    line-height: 1.3;
+    color: #14213D;
+  }
+
+  .f08-rail {
+    position: absolute;
+    left: 5cqw;
+    top: 77.5cqh;
+    width: 90cqw;
+    height: 4cqh;
+    overflow: hidden;
+  }
+
+  .f08-rail-entry {
+    position: absolute;
+    top: 0;
+    width: 28cqw;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 2.6cqh;
+    line-height: 1.2;
+    color: #5C6B7A;
+    white-space: nowrap;
+    opacity: 0;
+  }
+
+  .f08-rail-entry .f08-marker {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+    color: #2A6F97;
+  }
+
+  .f08-rail-col1 { left: 0cqw; }
+  .f08-rail-col2 { left: 31cqw; }
+  .f08-rail-col3 { left: 62cqw; }
+
+  @container (aspect-ratio < 1) {
+    .f08-eyebrow { top: 6cqh; font-size: 1.7cqh; }
+
+    .f08-card {
+      width: 90cqw;
+      height: 14cqh;
+      padding: 1.6cqh 3cqw;
+    }
+    .f08-card--1 { left: 5cqw; top: 12cqh; }
+    .f08-card--2 { left: 5cqw; top: 28cqh; }
+    .f08-card--3 { left: 5cqw; top: 44cqh; }
+
+    .f08-metric-value { font-size: 7.2cqh; }
+    .f08-metric-label { font-size: 2.1cqh; margin-top: 0.8cqh; }
+
+    .f08-rule { top: 76.5cqh; }
+    .f08-rail { top: 77.5cqh; height: 4cqh; }
+    .f08-rail-entry { width: 90cqw; font-size: 1.6cqh; }
+    .f08-rail-col1 { left: 0cqw; top: 0; }
+    .f08-rail-col2 { left: 0cqw; top: 1.4cqh; }
+    .f08-rail-col3 { left: 0cqw; top: 2.8cqh; }
+  }
+</style>
+
+<div id="f08-ground" class="clip f08-ground" data-start="0" data-duration="9.547" data-track-index="0"></div>
+
+<div class="f08-content">
+  <div id="f08-eyebrow" class="f08-eyebrow">Traction: teams stay and expand</div>
+
+  <div class="f08-card f08-card--1">
+    <div class="f08-card-content" id="f08-card1-content">
+      <div class="f08-metric-value" id="f08-card1-value">240<sup>5</sup></div>
+      <div class="f08-metric-label">active teams</div>
+    </div>
+  </div>
+
+  <div class="f08-card f08-card--2">
+    <div class="f08-card-content" id="f08-card2-content">
+      <div class="f08-metric-value" id="f08-card2-value">3.1 days<sup>1</sup></div>
+      <div class="f08-metric-label">average close</div>
+    </div>
+  </div>
+
+  <div class="f08-card f08-card--3">
+    <div class="f08-card-content" id="f08-card3-content">
+      <div class="f08-metric-value" id="f08-card3-value">118%<sup>6</sup></div>
+      <div class="f08-metric-label">net revenue retention</div>
+    </div>
+  </div>
+</div>
+
+<div class="f08-rule"></div>
+
+<div class="f08-rail">
+  <div class="f08-rail-entry f08-rail-col1" id="f08-rail1"><span class="f08-marker">5</span> Active accounts &middot; as of 2026-08-31</div>
+  <div class="f08-rail-entry f08-rail-col2" id="f08-rail2"><span class="f08-marker">1</span> Avg. close &middot; as of 2026-06-30</div>
+  <div class="f08-rail-entry f08-rail-col3" id="f08-rail3"><span class="f08-marker">6</span> NRR &middot; as of 2026-06-30</div>
+</div>
+
+<script src="assets/vendor/gsap@3.14.2/gsap.min.js"></script>
+<script>
+(function () {
+  var root = document.querySelector('[data-composition-id="08-traction"]');
+  var tl = gsap.timeline({ paused: true });
+
+  var content = root.querySelector('.f08-content');
+  var eyebrow = root.querySelector('#f08-eyebrow');
+  var card1 = root.querySelector('#f08-card1-content');
+  var card2 = root.querySelector('#f08-card2-content');
+  var card3 = root.querySelector('#f08-card3-content');
+  var rail1 = root.querySelector('#f08-rail1');
+  var rail2 = root.querySelector('#f08-rail2');
+  var rail3 = root.querySelector('#f08-rail3');
+
+  tl.fromTo(content, { scale: 1.0 }, { scale: 1.02, duration: 9.547, ease: 'sine.inOut' }, 0);
+
+  tl.fromTo(eyebrow, { opacity: 0 }, { opacity: 1, duration: 0.35, ease: 'power3.out' }, 0.2);
+
+  tl.fromTo(card1, { opacity: 0 }, { opacity: 1, duration: 0.35, ease: 'power3.out' }, 0.3);
+  tl.fromTo(rail1, { opacity: 0 }, { opacity: 1, duration: 0.30, ease: 'power2.out' }, 0.4);
+
+  tl.fromTo(card2, { opacity: 0 }, { opacity: 1, duration: 0.35, ease: 'power3.out' }, 2.4);
+  tl.fromTo(rail2, { opacity: 0 }, { opacity: 1, duration: 0.30, ease: 'power2.out' }, 2.6);
+
+  tl.fromTo(card3, { opacity: 0 }, { opacity: 1, duration: 0.35, ease: 'power3.out' }, 7.3);
+  tl.fromTo(rail3, { opacity: 0 }, { opacity: 1, duration: 0.30, ease: 'power2.out' }, 7.5);
+
+  window.__timelines = window.__timelines || {};
+  window.__timelines["08-traction"] = tl;
+})();
+</script>
+</div>
+</template>

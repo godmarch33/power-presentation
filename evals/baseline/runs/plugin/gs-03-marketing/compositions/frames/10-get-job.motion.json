@@ -1,0 +1,6 @@
+{ "duration": 4.006,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f10-card", "bySec": 0.5 },
+    { "kind": "before", "a": "#f10-heading", "b": "#f10-endpoint" },
+    { "kind": "before", "a": "#f10-endpoint", "b": "#f10-status-pill" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 } ] }

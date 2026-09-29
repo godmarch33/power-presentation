@@ -1,0 +1,7 @@
+{ "duration": 4.0,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f13-logo", "bySec": 0.5 },
+    { "kind": "before", "a": "#f13-logo", "b": "#f13-tagline" },
+    { "kind": "before", "a": "#f13-tagline", "b": "#f13-cta" },
+    { "kind": "before", "a": "#f13-cta", "b": "#f13-disclosure" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 } ] }

@@ -1,0 +1,5 @@
+{ "duration": 4.255,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f09-kicker", "bySec": 0.5 },
+    { "kind": "before", "a": "#f09-req-line", "b": "#f09-status-pill" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 } ] }

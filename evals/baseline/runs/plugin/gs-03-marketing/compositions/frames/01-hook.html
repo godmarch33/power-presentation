@@ -1,0 +1,192 @@
+<template>
+<div id="root" data-composition-id="01-hook" data-width="1920" data-height="1080" data-duration="2.75">
+  <style>
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+    @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+    @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+    @font-face { font-family: "EB Garamond"; src: url("assets/fonts/EBGaramond-400-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: block; }
+    @font-face { font-family: "EB Garamond"; src: url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "EB Garamond"; src: url("assets/fonts/EBGaramond-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+
+    #root {
+      width: 100%;
+      height: 100%;
+      container-type: size;
+      position: relative;
+      overflow: hidden;
+      font-family: "Inter", sans-serif;
+    }
+
+    #root .clip { position: absolute; inset: 0; }
+
+    .f01-bg {
+      background: #FAF9F5;
+    }
+
+    #root .f01-kicker {
+      left: 12cqw;
+      top: 12cqh;
+      width: 40cqw;
+      height: 4.5cqh;
+      right: auto;
+      bottom: auto;
+      display: flex;
+      align-items: center;
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 500;
+      font-size: 3.7cqh;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #141413;
+      white-space: nowrap;
+    }
+
+    .f01-spike { color: #CC785C; margin-right: 0.5em; }
+
+    #root .f01-rule {
+      left: 12cqw;
+      top: 19cqh;
+      width: 76cqw;
+      height: 1px;
+      right: auto;
+      bottom: auto;
+      background: rgba(20, 20, 19, 0.12);
+    }
+
+    #f01-salutation {
+      left: 12cqw;
+      top: 30cqh;
+      width: 68cqw;
+      height: 10cqh;
+      right: auto;
+      bottom: auto;
+      opacity: 0;
+      display: flex;
+      align-items: baseline;
+    }
+
+    .f01-sal-mask {
+      overflow: hidden;
+      display: inline-block;
+      --r: 100%;
+      clip-path: inset(0 var(--r) 0 0);
+    }
+
+    .f01-sal-text {
+      display: inline-block;
+      font-family: "EB Garamond", serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 6.7cqw;
+      line-height: 1.05;
+      letter-spacing: -0.012em;
+      color: #141413;
+      white-space: nowrap;
+    }
+
+    .f01-caret {
+      display: inline-block;
+      width: 0.4cqw;
+      height: 5.6cqw;
+      margin-left: 0.3cqw;
+      background: #CC785C;
+      opacity: 0;
+    }
+
+    #f01-promise {
+      left: 12cqw;
+      top: 42cqh;
+      width: 68cqw;
+      height: 12cqh;
+      right: auto;
+      bottom: auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+    }
+
+    .f01-word {
+      display: inline-block;
+      font-family: "EB Garamond", serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 7.3cqw;
+      line-height: 1.02;
+      letter-spacing: -0.022em;
+      color: #141413;
+      margin-right: 0.26em;
+      opacity: 0;
+    }
+
+    #f01-content-wrap {
+      transform-origin: 50% 50%;
+      will-change: transform;
+    }
+
+    @container (aspect-ratio < 1) {
+      #root .f01-kicker { top: 6cqh; width: 70cqw; font-size: 2.1cqh; }
+      #root .f01-rule { top: 10.5cqh; width: 88cqw; left: 6cqw; }
+      #f01-salutation { top: 18cqh; left: 6cqw; width: 88cqw; }
+      .f01-sal-text { font-size: 9cqw; }
+      #f01-promise { top: 30cqh; left: 6cqw; width: 88cqw; }
+      .f01-word { font-size: 9.5cqw; }
+    }
+  </style>
+
+  <div id="f01-bg" class="f01-bg clip" data-start="0" data-duration="2.75" data-track-index="0"></div>
+  <div id="f01-kicker" class="f01-kicker clip" data-start="0" data-duration="2.75" data-track-index="1">
+    <span class="f01-spike">✱</span><span>RE: YOUR JOBS</span>
+  </div>
+  <div id="f01-rule" class="f01-rule clip" data-start="0" data-duration="2.75" data-track-index="2"></div>
+  <div id="f01-content-wrap" class="clip" data-start="0" data-duration="2.75" data-track-index="3">
+    <div id="f01-salutation" class="clip" data-start="0" data-duration="2.75">
+      <span class="f01-sal-mask"><span class="f01-sal-text">Dear dashboard,</span></span><span class="f01-caret"></span>
+    </div>
+    <div id="f01-promise" class="clip" data-start="0" data-duration="2.75" data-track-index="4">
+      <span id="f01-word-1" class="f01-word">three</span><span class="f01-word">commands</span><span class="f01-word">replace</span><span class="f01-word">you.</span>
+    </div>
+  </div>
+
+  <script src="assets/vendor/gsap@3.14.2/gsap.min.js"></script>
+  <script>
+    (function () {
+      var root = document.querySelector('[data-composition-id="01-hook"]');
+      var salutation = root.querySelector('#f01-salutation');
+      var mask = root.querySelector('.f01-sal-mask');
+      var caret = root.querySelector('.f01-caret');
+      var words = root.querySelectorAll('#f01-promise .f01-word');
+      var contentWrap = root.querySelector('#f01-content-wrap');
+      var frameDuration = parseFloat(root.getAttribute('data-duration')) || 2.75;
+
+      var tl = gsap.timeline({ paused: true });
+
+      tl.fromTo(contentWrap, { y: "0cqh", scale: 1 }, {
+        y: "-2cqh",
+        scale: 1.015,
+        duration: frameDuration,
+        ease: "sine.inOut"
+      }, 0);
+
+
+      tl.fromTo(salutation, { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power3.out" }, 0.15);
+      tl.fromTo(mask, { "--r": "100%" }, { "--r": "0%", duration: 0.35, ease: "power2.out" }, 0.15);
+      tl.fromTo(caret, { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power3.out" }, 0.15);
+
+      tl.fromTo(words, { opacity: 0, yPercent: 20 }, {
+        opacity: 1,
+        yPercent: 0,
+        duration: 0.25,
+        ease: "expo.out",
+        stagger: 0.09
+      }, 0.6);
+
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["01-hook"] = tl;
+    })();
+  </script>
+</div>
+</template>

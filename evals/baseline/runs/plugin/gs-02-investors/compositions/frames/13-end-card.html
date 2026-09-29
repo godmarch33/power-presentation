@@ -1,0 +1,158 @@
+<template>
+<div id="root" data-composition-id="13-end-card" data-width="1920" data-height="1080">
+  <style>
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+
+    #root {
+      width: 100%;
+      height: 100%;
+      container-type: size;
+      position: relative;
+      overflow: hidden;
+      background: transparent;
+      font-family: "Inter", sans-serif;
+      font-variant-numeric: tabular-nums;
+    }
+
+    #f13-content {
+      position: absolute;
+      inset: 0;
+      transform-origin: 0% 50%;
+      will-change: transform;
+    }
+
+    #f13-logo,
+    #f13-tagline,
+    #f13-cta {
+      position: absolute;
+      left: 0;
+      width: 100cqw;
+      text-align: center;
+      margin: 0;
+    }
+
+    #f13-logo {
+      top: 30cqh;
+      font-family: "Space Grotesk";
+      font-weight: 700;
+      font-size: 6.667cqh;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #14213D;
+      opacity: 0;
+    }
+
+    #f13-tagline {
+      top: 42cqh;
+      font-family: "Inter";
+      font-weight: 400;
+      font-size: 3.704cqh;
+      color: #5C6B7A;
+      opacity: 0;
+    }
+
+    #f13-cta {
+      top: 52cqh;
+      opacity: 0;
+    }
+
+    .f13-pill {
+      display: inline-block;
+      background: #2A6F97;
+      color: #FFFFFF;
+      font-family: "Space Grotesk";
+      font-weight: 600;
+      font-size: 3.704cqh;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      padding: 1.4cqh 3.2cqw;
+      border-radius: 999px;
+      text-align: center;
+    }
+
+    .f13-rule {
+      position: absolute;
+      left: 5cqw;
+      top: 76.5cqh;
+      width: 90cqw;
+      height: 1px;
+      background: #DFE5EC;
+      opacity: 1;
+    }
+
+    #f13-disclosure {
+      position: absolute;
+      left: 5cqw;
+      top: 77.5cqh;
+      width: 90cqw;
+      height: 4cqh;
+      font-family: "Inter";
+      font-weight: 400;
+      font-size: 2.222cqh;
+      color: #5C6B7A;
+      line-height: 1.2;
+      margin: 0;
+      opacity: 0;
+    }
+
+    @container (aspect-ratio < 1) {
+      #f13-logo {
+        font-size: 8cqh;
+      }
+      #f13-tagline,
+      .f13-pill {
+        font-size: 4.2cqh;
+      }
+      .f13-rule,
+      #f13-disclosure {
+        left: 6cqw;
+        width: 88cqw;
+      }
+    }
+  </style>
+
+  <div id="f13-content">
+    <p id="f13-logo">Ledgerly</p>
+    <p id="f13-tagline">Month-end close in days, not weeks</p>
+    <p id="f13-cta"><span class="f13-pill">Raising EUR 1,500,000<br>founders@ledgerly.example</span></p>
+  </div>
+
+  <div id="f13-footnote-rule" class="clip f13-rule" data-start="0" data-duration="4.0" data-track-index="0"></div>
+  <p id="f13-disclosure">Narration is AI-generated.</p>
+
+  <script src="assets/vendor/gsap@3.14.2/gsap.min.js"></script>
+  <script>
+    (function () {
+      var root = document.querySelector('[data-composition-id="13-end-card"]');
+      var tl = gsap.timeline({ paused: true });
+
+      tl.fromTo(root.querySelector('#f13-logo'),
+        { opacity: 0, y: 8 },
+        { opacity: 1, y: 0, duration: 0.35, ease: 'power3.out' }, 0.0);
+
+      tl.fromTo(root.querySelector('#f13-tagline'),
+        { opacity: 0 },
+        { opacity: 1, duration: 0.35, ease: 'power3.out' }, 0.4);
+
+      tl.fromTo(root.querySelector('#f13-cta'),
+        { opacity: 0 },
+        { opacity: 1, duration: 0.35, ease: 'power3.out' }, 0.8);
+
+      tl.fromTo(root.querySelector('#f13-disclosure'),
+        { opacity: 0 },
+        { opacity: 1, duration: 0.30, ease: 'power2.out' }, 1.2);
+
+      tl.fromTo(root.querySelector('#f13-content'),
+        { scale: 1 },
+        { scale: 1.02, duration: 4.0, ease: 'sine.inOut' }, 0);
+
+      window.__timelines['13-end-card'] = tl;
+    })();
+  </script>
+</div>
+</template>

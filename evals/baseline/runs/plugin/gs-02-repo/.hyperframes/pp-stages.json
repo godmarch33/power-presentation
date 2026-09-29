@@ -1,0 +1,274 @@
+{
+  "schema": "power-presentation/stage-times@0.1",
+  "plugin": "0.1.0",
+  "stages_s": {
+    "intake": 26,
+    "inspect": 22.3,
+    "capture": 49,
+    "brief": 39,
+    "storyboard": 771.7,
+    "audio": 0,
+    "frames": 1257.9,
+    "assemble": 12.6,
+    "verify": 435.1,
+    "review": 577.1,
+    "render": 85.4,
+    "deliver": 50.5
+  },
+  "runs": [
+    {
+      "command": "external:intake",
+      "stage": "intake",
+      "at": "2026-09-27T15:21:45.024Z",
+      "seconds": 26,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T15:21:19.065Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "external:inspect",
+      "stage": "inspect",
+      "at": "2026-09-27T15:22:11.823Z",
+      "seconds": 22.3,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T15:21:49.479Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "external:capture",
+      "stage": "capture",
+      "at": "2026-09-27T15:23:00.941Z",
+      "seconds": 49,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T15:22:11.981Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "init",
+      "stage": "brief",
+      "at": "2026-09-27T15:23:06.453Z",
+      "seconds": 5.4,
+      "ok": true,
+      "detail": "versions: git init + .gitignore (media pinned by the ledger, not committed) | scaffolded with the pinned hyperframes 0.8.47 (toolchain): AGENTS.md, CLAUDE.md, hyperframes.json, index.html, meta.json, package.json | node_modules/hyperframes → toolchain 0.8.47 | capture copied: footage.mp4, events.jsonl, capture-manifest.json, redactions.json, autozoom.json, index.html → .media/capture/ (+ assets/)",
+      "source": "render-path"
+    },
+    {
+      "command": "external:brief",
+      "stage": "brief",
+      "at": "2026-09-27T15:24:26.353Z",
+      "seconds": 33.6,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T15:23:52.794Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "external:storyboard",
+      "stage": "storyboard",
+      "at": "2026-09-27T15:37:18.240Z",
+      "seconds": 771.7,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T15:24:26.512Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "audio",
+      "stage": "audio",
+      "at": "2026-09-27T15:37:22.825Z",
+      "seconds": 0,
+      "ok": true,
+      "detail": "no SCRIPT.md — no voiceover | bgm assets/bgm/happy-beats-business-moves-vol-1-by-ende-dot-app.mp3 (volume 0.9, credit \"Music: \"Happy Beats / Business Moves Vol. 1\" by Sascha Ende / ende.app (CC BY 4.0)\") | sfx: 6 cue(s) from the CC0 pack — click@f4+0.13, success@f4+2.36, click@f6+0.72, click@f7+0.75, click@f8+0.67, success@f8+0.8; densest 30 s window 6 (3–5, polished 2–3) | warning: 6 SFX cues in one 30 s window — allows 3–5 (every staggered element does not get a sound) | cuts on the beat: 9/10 cut(s) within ±0.15s of a beat; 10 window(s) moved ≤ 0.251s, total kept",
+      "source": "render-path"
+    },
+    {
+      "command": "packets",
+      "stage": "frames",
+      "at": "2026-09-27T15:37:22.937Z",
+      "seconds": 0.1,
+      "ok": true,
+      "detail": "fonts: 2 families (Inter, Space Grotesk) → 6 @font-face rule(s) in frame.md ## Staged fonts; 6 face(s) staged into assets/fonts/ from the toolchain | 11 packet(s) → .hyperframes/frame-packets/ (+ _dispatch.json; 11 frame file(s) still to build); storyboard direction copied into each; 3 absolute skill path(s) in each header",
+      "source": "render-path"
+    },
+    {
+      "command": "audio",
+      "stage": "audio",
+      "at": "2026-09-27T15:37:35.794Z",
+      "seconds": 0,
+      "ok": true,
+      "detail": "no SCRIPT.md — no voiceover | bgm assets/bgm/happy-beats-business-moves-vol-1-by-ende-dot-app.mp3 (volume 0.9, credit \"Music: \"Happy Beats / Business Moves Vol. 1\" by Sascha Ende / ende.app (CC BY 4.0)\") | sfx: 5 cue(s) from the CC0 pack — click@f4+0.13, success@f4+2.36, click@f6+0.72, click@f7+0.75, success@f8+0.8; densest 30 s window 5 (3–5, polished 2–3) | cuts on the beat: 9/10 cut(s) within ±0.15s of a beat; 0 window(s) moved ≤ 0.251s, total kept",
+      "source": "render-path"
+    },
+    {
+      "command": "packets",
+      "stage": "frames",
+      "at": "2026-09-27T15:37:35.909Z",
+      "seconds": 0.1,
+      "ok": true,
+      "detail": "fonts: 2 families (Inter, Space Grotesk) → 6 @font-face rule(s) in frame.md ## Staged fonts | 11 packet(s) → .hyperframes/frame-packets/ (+ _dispatch.json; 11 frame file(s) still to build); storyboard direction copied into each; 3 absolute skill path(s) in each header",
+      "source": "render-path"
+    },
+    {
+      "command": "external:frames",
+      "stage": "frames",
+      "at": "2026-09-27T15:58:33.744Z",
+      "seconds": 1257.7,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T15:37:36.070Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-27T15:58:44.874Z",
+      "seconds": 11,
+      "ok": true,
+      "detail": "captions: not burned in (16:9 without VO → off (kicker cards carry the text); SRT still written) | frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 5 frame(s) on held clips in assets/clips/ (5 cut, 0 cached) — 03-before 2.2–3.45 +1.75s hold drift→1.6; 04-automatch 3.45–6.1 +2.35s hold drift→1.5; 06-audit-trail 6.1–8.6 +2.5s hold drift→1.7; 07-close-september 8.7–12.1 +1.6s hold drift→1.6; 08-september-locked 12.1–14.95 +2.45s hold drift→1.8 | assemble: total duration:    45s (expected ~45s, +0s) | transitions:   tracks: 01-promise[t0 0→2.5] 02-evidence[t1 2.5→4.828] 03-before[t0 4.5280000000000005→7.523] 04-automatch[t1 7.523000000000001→12.766] 05-pivot-match-rate[t0 12.516000000000002→16.022] 06-audit-trail[t1 16.022000000000002→21.014] 07-close-september[t0 21.014000000000003→26.018] 08-september-locked[t1 26.018→31.771] 09-pivot-hours[t0 31.521→35.016] 10-quote[t1 35.016→41.318] 11-end-card[t0 41.018→45]; ✓ transitions verify: 4 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 12 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 03-before 1 zoom(s), 0 click(s); 04-automatch 2 zoom(s), 1 click(s); 06-audit-trail 1 zoom(s), 1 click(s); 07-close-september 3 zoom(s), 1 click(s); 08-september-locked 2 zoom(s), 1 click(s) | bed: fade-in 0.4s, fade-out 1.5s; silence before the reveal in frame(s) 8 (0.4s) → data-automation on the bed | media ledger: 16 asset(s) — own-capture ×7, OFL-1.1 ×6, CC0-1.0 ×2, CC-BY-4.0 ×1; 16 added / re-frozen → .media/manifest.jsonl",
+      "source": "render-path"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-27T15:59:58.774Z",
+      "seconds": 69.8,
+      "ok": false,
+      "detail": "pre-render gates failed: QA-11, QA-13 (QA/wowprobe.json)",
+      "source": "render-path"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-27T16:02:01.068Z",
+      "seconds": 0.4,
+      "ok": true,
+      "detail": "captions: not burned in (16:9 without VO → off (kicker cards carry the text); SRT still written) | frame footage re-declared for the hoist: 03-before.html (1), 04-automatch.html (1), 06-audit-trail.html (1), 07-close-september.html (1), 08-september-locked.html (1) from .hyperframes/frame-videos.json | frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 03-before 2.2–3.45 +1.75s hold drift→1.6; 04-automatch 3.45–6.1 +2.35s hold drift→1.5; 06-audit-trail 6.1–8.6 +2.5s hold drift→1.7; 07-close-september 8.7–12.1 +1.6s hold drift→1.6; 08-september-locked 12.1–14.95 +2.45s hold drift→1.8 | assemble: total duration:    45s (expected ~45s, +0s) | transitions:   tracks: 01-promise[t0 0→2.5] 02-evidence[t1 2.5→4.828] 03-before[t0 4.5280000000000005→7.523] 04-automatch[t1 7.523000000000001→12.766] 05-pivot-match-rate[t0 12.516000000000002→16.022] 06-audit-trail[t1 16.022000000000002→21.014] 07-close-september[t0 21.014000000000003→26.018] 08-september-locked[t1 26.018→31.771] 09-pivot-hours[t0 31.521→35.016] 10-quote[t1 35.016→41.318] 11-end-card[t0 41.018→45]; ✓ transitions verify: 4 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 1 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 03-before 1 zoom(s), 0 click(s); 04-automatch 2 zoom(s), 1 click(s); 06-audit-trail 1 zoom(s), 1 click(s); 07-close-september 3 zoom(s), 1 click(s); 08-september-locked 2 zoom(s), 1 click(s) | bed: fade-in 0.4s, fade-out 1.5s; silence before the reveal in frame(s) 8 (0.4s) → data-automation on the bed | media ledger: 16 asset(s) — own-capture ×7, OFL-1.1 ×6, CC0-1.0 ×2, CC-BY-4.0 ×1 → .media/manifest.jsonl",
+      "source": "render-path"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-27T16:03:14.108Z",
+      "seconds": 72.9,
+      "ok": false,
+      "detail": "pre-render gates failed: QA-11 (QA/wowprobe.json)",
+      "source": "render-path"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-27T16:04:56.038Z",
+      "seconds": 72.9,
+      "ok": true,
+      "detail": "egress: us.i.posthog.com → .media/egress.jsonl | motion sidecar: 24 assertion(s) → index.motion.json from 11/11 frame sidecar(s); keepsMoving dropped (QA-07 on the master) | lint: 1 finding(s), 0 error(s) | check: ok=true (64.3s, exit 0) → QA/check.json | animation-map: Animation map: 203/240 tweens (skipped 37 micro-tweens) → .hyperframes/anim-map/animation-map.json | wowprobe pre-render: gates_failed []; not measured QA-01, QA-03, QA-07, QA-08, QA-09; scorecard 94.2",
+      "source": "render-path"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-27T16:10:05.795Z",
+      "seconds": 0.4,
+      "ok": true,
+      "detail": "captions: not burned in (16:9 without VO → off (kicker cards carry the text); SRT still written) | frame footage re-declared for the hoist: 03-before.html (1), 04-automatch.html (1), 06-audit-trail.html (1), 07-close-september.html (1), 08-september-locked.html (1) from .hyperframes/frame-videos.json | frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 03-before 2.2–3.45 +1.75s hold drift→1.6; 04-automatch 3.45–6.1 +2.35s hold drift→1.5; 06-audit-trail 6.1–8.6 +2.5s hold drift→1.7; 07-close-september 8.7–12.1 +1.6s hold drift→1.6; 08-september-locked 12.1–14.95 +2.45s hold drift→1.8 | assemble: total duration:    45s (expected ~45s, +0s) | transitions:   tracks: 01-promise[t0 0→2.5] 02-evidence[t1 2.5→4.828] 03-before[t0 4.5280000000000005→7.523] 04-automatch[t1 7.523000000000001→12.766] 05-pivot-match-rate[t0 12.516000000000002→16.022] 06-audit-trail[t1 16.022000000000002→21.014] 07-close-september[t0 21.014000000000003→26.018] 08-september-locked[t1 26.018→31.771] 09-pivot-hours[t0 31.521→35.016] 10-quote[t1 35.016→41.318] 11-end-card[t0 41.018→45]; ✓ transitions verify: 4 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 1 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 03-before 1 zoom(s), 0 click(s); 04-automatch 2 zoom(s), 1 click(s); 06-audit-trail 1 zoom(s), 1 click(s); 07-close-september 3 zoom(s), 1 click(s); 08-september-locked 2 zoom(s), 1 click(s) | bed: fade-in 0.4s, fade-out 1.5s; silence before the reveal in frame(s) 8 (0.4s) → data-automation on the bed | media ledger: 16 asset(s) — own-capture ×7, OFL-1.1 ×6, CC0-1.0 ×2, CC-BY-4.0 ×1 → .media/manifest.jsonl",
+      "source": "render-path"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-27T16:11:18.991Z",
+      "seconds": 73,
+      "ok": true,
+      "detail": "egress: us.i.posthog.com → .media/egress.jsonl | motion sidecar: 24 assertion(s) → index.motion.json from 11/11 frame sidecar(s); keepsMoving dropped (QA-07 on the master) | lint: 1 finding(s), 0 error(s) | check: ok=true (64.2s, exit 0) → QA/check.json | animation-map: Animation map: 203/240 tweens (skipped 37 micro-tweens) → .hyperframes/anim-map/animation-map.json | wowprobe pre-render: gates_failed []; not measured QA-01, QA-03, QA-07, QA-08, QA-09; scorecard 94.2",
+      "source": "render-path"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-27T16:13:08.964Z",
+      "seconds": 0.4,
+      "ok": true,
+      "detail": "captions: not burned in (16:9 without VO → off (kicker cards carry the text); SRT still written) | frame footage re-declared for the hoist: 03-before.html (1), 04-automatch.html (1), 06-audit-trail.html (1), 07-close-september.html (1), 08-september-locked.html (1) from .hyperframes/frame-videos.json | frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 03-before 2.2–3.45 +1.75s hold drift→1.6; 04-automatch 3.45–6.1 +2.35s hold drift→1.5; 06-audit-trail 6.1–8.6 +2.5s hold drift→1.7; 07-close-september 8.7–12.1 +1.6s hold drift→1.6; 08-september-locked 12.1–14.95 +2.45s hold drift→1.8 | assemble: total duration:    45s (expected ~45s, +0s) | transitions:   tracks: 01-promise[t0 0→2.5] 02-evidence[t1 2.5→4.828] 03-before[t0 4.5280000000000005→7.523] 04-automatch[t1 7.523000000000001→12.766] 05-pivot-match-rate[t0 12.516000000000002→16.022] 06-audit-trail[t1 16.022000000000002→21.014] 07-close-september[t0 21.014000000000003→26.018] 08-september-locked[t1 26.018→31.771] 09-pivot-hours[t0 31.521→35.016] 10-quote[t1 35.016→41.318] 11-end-card[t0 41.018→45]; ✓ transitions verify: 4 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 1 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 03-before 1 zoom(s), 0 click(s); 04-automatch 2 zoom(s), 1 click(s); 06-audit-trail 1 zoom(s), 1 click(s); 07-close-september 3 zoom(s), 1 click(s); 08-september-locked 2 zoom(s), 1 click(s) | bed: fade-in 0.4s, fade-out 1.5s; silence before the reveal in frame(s) 8 (0.4s) → data-automation on the bed | media ledger: 16 asset(s) — own-capture ×7, OFL-1.1 ×6, CC0-1.0 ×2, CC-BY-4.0 ×1 → .media/manifest.jsonl",
+      "source": "render-path"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-27T16:14:22.870Z",
+      "seconds": 73.7,
+      "ok": true,
+      "detail": "egress: us.i.posthog.com → .media/egress.jsonl | motion sidecar: 24 assertion(s) → index.motion.json from 11/11 frame sidecar(s); keepsMoving dropped (QA-07 on the master) | lint: 1 finding(s), 0 error(s) | check: ok=true (64.9s, exit 0) → QA/check.json | animation-map: Animation map: 203/240 tweens (skipped 37 micro-tweens) → .hyperframes/anim-map/animation-map.json | wowprobe pre-render: gates_failed []; not measured QA-01, QA-03, QA-07, QA-08, QA-09; scorecard 94.2",
+      "source": "render-path"
+    },
+    {
+      "command": "external:review",
+      "stage": "review",
+      "at": "2026-09-27T16:14:40.382Z",
+      "seconds": 577.1,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T16:05:03.238Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "render",
+      "stage": "render",
+      "at": "2026-09-27T16:15:26.170Z",
+      "seconds": 45.4,
+      "ok": true,
+      "detail": "egress: us.i.posthog.com → .media/egress.jsonl | render v1 ok: 16:9 45s renders/final/ledgerly-repo-marketing_16x9.mp4; wall 45.3s | hyperframes 0.8.47; formats 16:9",
+      "source": "render-path"
+    },
+    {
+      "command": "deliver",
+      "stage": "deliver",
+      "at": "2026-09-27T16:15:46.942Z",
+      "seconds": 16.6,
+      "ok": false,
+      "detail": "post-render gates failed: QA-07 (QA/wowprobe.json; deliverables were still written)",
+      "source": "render-path"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-27T16:18:54.634Z",
+      "seconds": 0.4,
+      "ok": true,
+      "detail": "captions: not burned in (16:9 without VO → off (kicker cards carry the text); SRT still written) | frame footage re-declared for the hoist: 03-before.html (1), 04-automatch.html (1), 06-audit-trail.html (1), 07-close-september.html (1), 08-september-locked.html (1) from .hyperframes/frame-videos.json | frame footage: 5 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 5 frame(s) on held clips in assets/clips/ (0 cut, 5 cached) — 03-before 2.2–3.45 +1.75s hold drift→1.6; 04-automatch 3.45–6.1 +2.35s hold drift→1.5; 06-audit-trail 6.1–8.6 +2.5s hold drift→1.7; 07-close-september 8.7–12.1 +1.6s hold drift→1.6; 08-september-locked 12.1–14.95 +2.45s hold drift→1.8 | assemble: total duration:    45s (expected ~45s, +0s) | transitions:   tracks: 01-promise[t0 0→2.5] 02-evidence[t1 2.5→4.828] 03-before[t0 4.5280000000000005→7.523] 04-automatch[t1 7.523000000000001→12.766] 05-pivot-match-rate[t0 12.516000000000002→16.022] 06-audit-trail[t1 16.022000000000002→21.014] 07-close-september[t0 21.014000000000003→26.018] 08-september-locked[t1 26.018→31.771] 09-pivot-hours[t0 31.521→35.016] 10-quote[t1 35.016→41.318] 11-end-card[t0 41.018→45]; ✓ transitions verify: 4 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 1 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 03-before 1 zoom(s), 0 click(s); 04-automatch 2 zoom(s), 1 click(s); 06-audit-trail 1 zoom(s), 1 click(s); 07-close-september 3 zoom(s), 1 click(s); 08-september-locked 2 zoom(s), 1 click(s) | bed: fade-in 0.4s, fade-out 1.5s; silence before the reveal in frame(s) 8 (0.4s) → data-automation on the bed | media ledger: 16 asset(s) — own-capture ×7, OFL-1.1 ×6, CC0-1.0 ×2, CC-BY-4.0 ×1 → .media/manifest.jsonl",
+      "source": "render-path"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-27T16:20:07.571Z",
+      "seconds": 72.8,
+      "ok": true,
+      "detail": "egress: us.i.posthog.com → .media/egress.jsonl | motion sidecar: 24 assertion(s) → index.motion.json from 11/11 frame sidecar(s); keepsMoving dropped (QA-07 on the master) | lint: 1 finding(s), 0 error(s) | check: ok=true (64.2s, exit 0) → QA/check.json | animation-map: Animation map: 188/225 tweens (skipped 37 micro-tweens) → .hyperframes/anim-map/animation-map.json | wowprobe pre-render: gates_failed []; not measured QA-01, QA-03, QA-07, QA-08, QA-09; scorecard 94",
+      "source": "render-path"
+    },
+    {
+      "command": "render",
+      "stage": "render",
+      "at": "2026-09-27T16:20:48.029Z",
+      "seconds": 40,
+      "ok": true,
+      "detail": "egress: us.i.posthog.com → .media/egress.jsonl | render v1 ok: 16:9 45s renders/final/ledgerly-repo-marketing_16x9.mp4; wall 39.9s | hyperframes 0.8.47; formats 16:9",
+      "source": "render-path"
+    },
+    {
+      "command": "deliver",
+      "stage": "deliver",
+      "at": "2026-09-27T16:21:04.699Z",
+      "seconds": 16.5,
+      "ok": true,
+      "detail": "loudness: -16.74 LUFS / TP -2.2 dBTP → -18.02 LUFS / TP -3.39 dBTP (target -18 LUFS, TP ≤ -1.5 dBTP; two-pass loudnorm, video copied) — QA-08 row: --target-lufs | wowprobe post-render: gates_failed []; not measured none; scorecard 92.6; sheet QA/contact-sheet.png | poster: renders/final/ledgerly-repo-marketing_16x9.poster.png @ 30.218s (storyboard: storyboard `poster:` key), baked into frame 0 | srt: 33 cue(s) from STORYBOARD.md text timeline (no VO — the on-screen text as captions) → renders/final/ledgerly-repo-marketing_16x9.en.srt (+ captions/en.srt) | share-copy lint: clean | run-report: run-report: /home/dmytrogr/Documents/power-presentation-runs/ledgerly-repo/power-presentation-out/ledgerly-repo-marketing/run-report.json — mode marketing, gates_failed [], not measured 0, scorecard 92.6, 15 inputs read, 1 missing (critic)",
+      "source": "render-path"
+    },
+    {
+      "command": "deliver",
+      "stage": "deliver",
+      "at": "2026-09-27T16:36:26.267Z",
+      "seconds": 17.4,
+      "ok": true,
+      "detail": "loudness: already within QA-08 (-18.02 LUFS, TP -3.39 dBTP) — QA-08 row: --target-lufs | wowprobe post-render: gates_failed []; not measured none; scorecard 92.6; sheet QA/contact-sheet.png | poster: renders/final/ledgerly-repo-marketing_16x9.poster.png @ 30.218s (storyboard: storyboard `poster:` key), baked into frame 0 | srt: 33 cue(s) from STORYBOARD.md text timeline (no VO — the on-screen text as captions) → renders/final/ledgerly-repo-marketing_16x9.en.srt (+ captions/en.srt) | share-copy lint: clean | run-report: run-report: /home/dmytrogr/Documents/power-presentation-runs/ledgerly-repo/power-presentation-out/ledgerly-repo-marketing/run-report.json — mode marketing, gates_failed [], not measured 0, scorecard 92.6, 16 inputs read, 0 missing (none)",
+      "source": "render-path"
+    }
+  ],
+  "wall_s": 3326.6,
+  "pending": {}
+}

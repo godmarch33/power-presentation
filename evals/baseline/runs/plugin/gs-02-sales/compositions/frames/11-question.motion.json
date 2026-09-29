@@ -1,0 +1,8 @@
+{
+  "duration": 6.014,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f11-question", "bySec": 0.5 },
+    { "kind": "before", "a": "#f11-question", "b": "#f11-cta" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 }
+  ]
+}

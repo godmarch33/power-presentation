@@ -1,0 +1,17 @@
+[
+  { "action": "wait", "ms": 3000 },
+  { "action": "click", "selector": "button:has-text(\"Entry pages\")" },
+  { "action": "wait", "ms": 1500 },
+  { "action": "click", "selector": "button:has-text(\"Top pages\")" },
+  { "action": "wait", "ms": 1200 },
+  { "action": "scroll", "selector": "button:has-text(\"Sources\")" },
+  { "action": "wait", "ms": 1000 },
+  { "action": "click", "selector": "button:has-text(\"Sources\")" },
+  { "action": "wait", "ms": 1500 },
+  { "action": "click", "selector": "button:has-text(\"Countries\")" },
+  { "action": "wait", "ms": 1500 },
+  { "action": "click", "selector": "button:has-text(\"Devices\")" },
+  { "action": "wait", "ms": 1500 },
+  { "action": "scroll", "selector": "button:has-text(\"Goals\")" },
+  { "action": "wait", "ms": 1500 }
+]

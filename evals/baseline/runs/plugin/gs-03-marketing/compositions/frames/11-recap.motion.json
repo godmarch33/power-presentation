@@ -1,0 +1,7 @@
+{ "duration": 3.994,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f11-verb-1", "bySec": 0.5 },
+    { "kind": "before", "a": "#f11-verb-1", "b": "#f11-verb-2" },
+    { "kind": "before", "a": "#f11-verb-2", "b": "#f11-verb-3" },
+    { "kind": "before", "a": "#f11-verb-3", "b": "#f11-closing" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 } ] }

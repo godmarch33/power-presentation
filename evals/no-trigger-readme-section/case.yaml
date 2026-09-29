@@ -1,0 +1,25 @@
+schema_version: "1.1"
+name: no-trigger-readme-section
+description: A README edit that merely talks about a launch video is a writing task; no present* skill may fire and nothing renders (negative case N2, golden set).
+tags: [no-trigger, per-pr, mvp]
+expected_outcome: Claude drafts the README section as text; no Skill call to present, present-edit, present-render or present-qa; no hyperframes render.
+execution:
+  prompt: |
+    Add a "Launch video" section to our README.md: two short paragraphs that explain where the 45-second product
+    video lives (docs/launch.mp4), when it was last re-rendered, and who to ping to update it. Text only — do not
+    make or render any video.
+  max_turns: 5
+  timeout_seconds: 300
+  allowed_tools: [Read, Glob, Grep, Skill]
+graders:
+  - name: no-present-skill-fired
+    type: tool_used
+    tool: Skill
+    input_match: '"skill"\s*:\s*"(?:[\w-]+:)?present(?:-[\w-]+)?"'
+    min: 0
+    max: 0
+    arm: both
+  - name: answers-with-readme-text
+    type: regex
+    pattern: 'Launch video|launch video'
+    target: last_message

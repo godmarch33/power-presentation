@@ -1,0 +1,8 @@
+{
+  "duration": 6.304,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f04-metric-numeral", "bySec": 0.5 },
+    { "kind": "before", "a": "#f04-metric-numeral", "b": "#f04-label" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 }
+  ]
+}

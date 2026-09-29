@@ -1,0 +1,6 @@
+{ "duration": 9.0,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f12-amount", "bySec": 0.5 },
+    { "kind": "before", "a": "#f12-amount", "b": "#f12-milestone" },
+    { "kind": "before", "a": "#f12-milestone", "b": "#f12-contact" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 } ] }

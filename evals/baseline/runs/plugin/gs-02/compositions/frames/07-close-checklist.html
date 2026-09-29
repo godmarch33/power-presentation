@@ -1,0 +1,108 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "Space Grotesk";
+      src: url("assets/fonts/SpaceGrotesk-latin-wght.woff2") format("woff2-variations"), url("assets/fonts/SpaceGrotesk-latin-wght.woff2") format("woff2");
+      font-weight: 300 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    #root {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      container-type: size;
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    #f07-stage {
+      position: absolute;
+      left: 14.5833cqw;
+      top: 10.9259cqh;
+      width: 70.8333cqw;
+      height: 70.8333cqh;
+      border: 1.5px solid rgba(42, 111, 151, 0.2);
+      border-radius: 14px;
+      transform-origin: 50% 50%;
+      pointer-events: none;
+    }
+
+    #f07-band {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    #f07-accent {
+      position: absolute;
+      left: 8.3333cqw;
+      top: 4.0741cqh;
+      width: 3.125cqw;
+      height: 0.3704cqh;
+      min-height: 2px;
+      border-radius: 2px;
+      background: #2a6f97;
+      transform-origin: left center;
+    }
+
+    #f07-label {
+      position: absolute;
+      left: 8.3333cqw;
+      top: 5.3704cqh;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 600;
+      font-size: 4.8148cqh;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      color: #14213d;
+      white-space: nowrap;
+    }
+    .f07-label-line {
+      display: inline;
+    }
+
+    @container (aspect-ratio < 1) {
+      #f07-stage {
+        display: none;
+      }
+      #f07-label {
+        white-space: normal;
+        max-width: 70cqw;
+      }
+      .f07-label-line {
+        display: block;
+      }
+    }
+  </style>
+
+  <div id="root" data-composition-id="07-close-checklist" data-start="0" data-duration="7.3" data-width="1920" data-height="1080">
+    <div id="f07-stage"></div>
+
+    <div id="f07-band" class="clip" data-start="0" data-duration="7.3" data-track-index="3">
+      <div id="f07-accent"></div>
+      <div id="f07-label"><span class="f07-label-line">Ledgerly runs</span> <span class="f07-label-line">the checklist</span></div>
+    </div>
+
+  </div>
+
+  <script src="assets/vendor/gsap@3.14.2/gsap.min.js"></script>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+
+      tl.fromTo("#f07-stage", { scale: 0.97, autoAlpha: 0.85 }, { scale: 1, autoAlpha: 1, duration: 0.35, ease: "power3.out" }, 0.1);
+      tl.fromTo("#f07-accent", { yPercent: 220, scaleX: 0.4, autoAlpha: 0 }, { yPercent: 0, scaleX: 1, autoAlpha: 1, duration: 0.4, ease: "power2.inOut" }, 0.1);
+
+      tl.fromTo("#f07-label", { yPercent: 140, autoAlpha: 0 }, { yPercent: 0, autoAlpha: 1, duration: 0.45, ease: "power3.out" }, 1.0);
+
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["07-close-checklist"] = tl;
+    })();
+  </script>
+</template>

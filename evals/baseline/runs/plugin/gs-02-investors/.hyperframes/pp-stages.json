@@ -1,0 +1,231 @@
+{
+  "schema": "power-presentation/stage-times@0.1",
+  "plugin": "0.1.0",
+  "stages_s": {
+    "intake": 24.5,
+    "inspect": 27.4,
+    "capture": 59.7,
+    "pitch": 155.7,
+    "brief": 67.7,
+    "design_spec": 4.8,
+    "audio": 87.4,
+    "storyboard": 832.4,
+    "frames": 1147.3,
+    "assemble": 14.4,
+    "verify": 211.7,
+    "review": 125.4,
+    "render": 72.7,
+    "deliver": 24.4
+  },
+  "runs": [
+    {
+      "command": "external:intake",
+      "stage": "intake",
+      "at": "2026-09-27T11:06:09.833Z",
+      "seconds": 24.5,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T11:05:45.344Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "external:inspect",
+      "stage": "inspect",
+      "at": "2026-09-27T11:06:43.714Z",
+      "seconds": 27.4,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T11:06:16.271Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "external:capture",
+      "stage": "capture",
+      "at": "2026-09-27T11:07:43.567Z",
+      "seconds": 59.7,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T11:06:43.874Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "external:pitch",
+      "stage": "pitch",
+      "at": "2026-09-27T11:10:36.108Z",
+      "seconds": 155.7,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T11:08:00.372Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "init",
+      "stage": "brief",
+      "at": "2026-09-27T11:10:39.228Z",
+      "seconds": 2.8,
+      "ok": true,
+      "detail": "versions: git init + .gitignore (media pinned by the ledger, not committed) | scaffolded with the pinned hyperframes 0.8.47 (toolchain): AGENTS.md, CLAUDE.md, hyperframes.json, index.html, meta.json, package.json | node_modules/hyperframes → toolchain 0.8.47 | capture copied: footage.mp4, events.jsonl, capture-manifest.json, redactions.json, autozoom.json, index.html → .media/capture/ (+ assets/)",
+      "source": "render-path"
+    },
+    {
+      "command": "external:brief",
+      "stage": "brief",
+      "at": "2026-09-27T11:11:41.127Z",
+      "seconds": 64.9,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T11:10:36.265Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "external:design_spec",
+      "stage": "design_spec",
+      "at": "2026-09-27T11:11:46.047Z",
+      "seconds": 4.8,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T11:11:41.284Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "audio",
+      "stage": "audio",
+      "at": "2026-09-27T11:22:41.864Z",
+      "seconds": 52.3,
+      "ok": true,
+      "detail": "bgm: storyboard music pack:vol-1 → --bgm pack:vol-1 | audio: synthesised (no previous synthesis) → .media/tts-cache.json | 12 voice line(s) via kokoro (am_michael) | captions locked to the script: 13 word(s) re-spelled or merged (whisper → SCRIPT) | durations: frame 1 5s → 6.069s (voice 5.269s + 0.8s pause); frame 2 4.5s → 5.003s (voice 4.203s + 0.8s pause); frame 4 6s → 6.24s (voice 5.44s + 0.8s pause); frame 8 9.5s → 9.547s (voice 8.747s + 0.8s pause) | total 91.859s vs brief 90s (+1.859s, 2.1% — QA-01 band ±3 % ok) | bgm assets/bgm/happy-beats-business-moves-vol-1-by-ende-dot-app.mp3 (volume 0.12, credit \"Music: \"Happy Beats / Business Moves Vol. 1\" by Sascha Ende / ende.app (CC BY 4.0)\") | sfx: 6 cue(s) from the CC0 pack — click@f3+1.24, success@f3+3.9, click@f5+0.56, click@f6+0.73, click@f7+0.71, success@f7+0.75; densest 30 s window 5 (3–5, polished 2–3)",
+      "source": "render-path"
+    },
+    {
+      "command": "audio",
+      "stage": "audio",
+      "at": "2026-09-27T11:23:29.987Z",
+      "seconds": 17,
+      "ok": true,
+      "detail": "bgm: storyboard music pack:vol-1 → --bgm pack:vol-1 | audio: 2 line(s) synthesised (frames 1, 2), 10 reused from the per-line store → .media/tts-cache.json | 12 voice line(s) via kokoro (am_michael) | captions locked to the script: 12 word(s) re-spelled or merged (whisper → SCRIPT) | durations: frame 1 4.5s → 5.237s (voice 4.437s + 0.8s pause); frame 2 3.8s → 3.893s (voice 3.093s + 0.8s pause) | total 89.917s vs brief 90s (-0.083s, -0.1% — QA-01 band ±3 % ok) | bgm assets/bgm/happy-beats-business-moves-vol-1-by-ende-dot-app.mp3 (volume 0.12, credit \"Music: \"Happy Beats / Business Moves Vol. 1\" by Sascha Ende / ende.app (CC BY 4.0)\") | sfx: 5 cue(s) from the CC0 pack — click@f3+1.24, click@f5+0.56, click@f6+0.73, click@f7+0.71, success@f7+0.75; densest 30 s window 4 (3–5, polished 2–3)",
+      "source": "render-path"
+    },
+    {
+      "command": "audio",
+      "stage": "audio",
+      "at": "2026-09-27T11:24:27.335Z",
+      "seconds": 18.1,
+      "ok": true,
+      "detail": "bgm: storyboard music pack:vol-1 → --bgm pack:vol-1 | audio: 2 line(s) synthesised (frames 1, 4), 10 reused from the per-line store → .media/tts-cache.json | 12 voice line(s) via kokoro (am_michael) | captions locked to the script: 11 word(s) re-spelled or merged (whisper → SCRIPT) | durations: frame 1 5.237s → 5.493s (voice 4.693s + 0.8s pause); frame 4 6.24s → 6.304s (voice 5.504s + 0.8s pause) | total 90.237s vs brief 90s (+0.237s, 0.3% — QA-01 band ±3 % ok) | bgm assets/bgm/happy-beats-business-moves-vol-1-by-ende-dot-app.mp3 (volume 0.12, credit \"Music: \"Happy Beats / Business Moves Vol. 1\" by Sascha Ende / ende.app (CC BY 4.0)\") | sfx: 5 cue(s) from the CC0 pack — click@f3+1.24, click@f5+0.56, click@f6+0.73, click@f7+0.71, success@f7+0.75; densest 30 s window 4 (3–5, polished 2–3)",
+      "source": "render-path"
+    },
+    {
+      "command": "external:storyboard",
+      "stage": "storyboard",
+      "at": "2026-09-27T11:25:38.646Z",
+      "seconds": 832.4,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T11:11:46.204Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "audio",
+      "stage": "audio",
+      "at": "2026-09-27T11:25:48.323Z",
+      "seconds": 0,
+      "ok": true,
+      "detail": "audio: 12 line(s) cached — SCRIPT.md lines, voice and speed unchanged, wav hashes checked; no engine call | 12 voice line(s) via kokoro (am_michael) | captions locked to the script: 11 word(s) re-spelled or merged (whisper → SCRIPT) | durations: every director window already holds its voice line + the pause (STORYBOARD.md unchanged) | total 90.237s vs brief 90s (+0.237s, 0.3% — QA-01 band ±3 % ok) | bgm assets/bgm/happy-beats-business-moves-vol-1-by-ende-dot-app.mp3 (volume 0.12, credit \"Music: \"Happy Beats / Business Moves Vol. 1\" by Sascha Ende / ende.app (CC BY 4.0)\") | sfx: 5 cue(s) from the CC0 pack — click@f3+1.24, click@f5+0.56, click@f6+0.73, click@f7+0.71, success@f7+0.75; densest 30 s window 4 (3–5, polished 2–3)",
+      "source": "render-path"
+    },
+    {
+      "command": "packets",
+      "stage": "frames",
+      "at": "2026-09-27T11:25:48.436Z",
+      "seconds": 0.1,
+      "ok": true,
+      "detail": "fonts: 2 families (Inter, Space Grotesk) → 6 @font-face rule(s) in frame.md ## Staged fonts; 6 face(s) staged into assets/fonts/ from the toolchain | 13 packet(s) → .hyperframes/frame-packets/ (+ _dispatch.json; 13 frame file(s) still to build); storyboard direction copied into each; 3 absolute skill path(s) in each header",
+      "source": "render-path"
+    },
+    {
+      "command": "external:frames",
+      "stage": "frames",
+      "at": "2026-09-27T11:45:00.061Z",
+      "seconds": 1147.2,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T11:25:52.910Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-27T11:45:13.824Z",
+      "seconds": 13.6,
+      "ok": true,
+      "detail": "captions: not burned in (investors 16:9 with VO → kicker cards + SRT, burned-in only by flag) | frame footage: 4 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 4 frame(s) on held clips in assets/clips/ (4 cut, 0 cached) — 03-auto-match 1.7–5.9 +4.8s hold drift→1.6; 05-audit-trail 5.9–8.25 +6.15s hold drift→1.8; 06-close-checklist 8.25–12.1 +4.15s hold drift→1.5; 07-lock-period 12.1–15.3 +6.3s hold drift→1.8 | assemble: total duration:    90.237s (expected ~90s, +0.237s) | transitions: ✓ transitions inject: 0 transitions (all cuts) — index.html unchanged; ✓ transitions verify: 0 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 14 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 03-auto-match 3 zoom(s), 1 click(s); 05-audit-trail 1 zoom(s), 1 click(s); 06-close-checklist 2 zoom(s), 1 click(s); 07-lock-period 2 zoom(s), 1 click(s) | media ledger: 27 asset(s) — generated ×12, OFL-1.1 ×6, own-capture ×6, CC0-1.0 ×2, CC-BY-4.0 ×1; 27 added / re-frozen → .media/manifest.jsonl",
+      "source": "render-path"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-27T11:46:29.341Z",
+      "seconds": 72.5,
+      "ok": false,
+      "detail": "pre-render gates failed: QA-11 (QA/wowprobe.json)",
+      "source": "render-path"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-27T11:47:50.799Z",
+      "seconds": 0.4,
+      "ok": true,
+      "detail": "captions: not burned in (investors 16:9 with VO → kicker cards + SRT, burned-in only by flag) | frame footage re-declared for the hoist: 03-auto-match.html (1), 05-audit-trail.html (1), 06-close-checklist.html (1), 07-lock-period.html (1) from .hyperframes/frame-videos.json | frame footage: 4 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 4 frame(s) on held clips in assets/clips/ (0 cut, 4 cached) — 03-auto-match 1.7–5.9 +4.8s hold drift→1.6; 05-audit-trail 5.9–8.25 +6.15s hold drift→1.8; 06-close-checklist 8.25–12.1 +4.15s hold drift→1.5; 07-lock-period 12.1–15.3 +6.3s hold drift→1.8 | assemble: total duration:    90.237s (expected ~90s, +0.237s) | transitions: ✓ transitions inject: 0 transitions (all cuts) — index.html unchanged; ✓ transitions verify: 0 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 1 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 03-auto-match 3 zoom(s), 1 click(s); 05-audit-trail 1 zoom(s), 1 click(s); 06-close-checklist 2 zoom(s), 1 click(s); 07-lock-period 2 zoom(s), 1 click(s) | media ledger: 27 asset(s) — generated ×12, OFL-1.1 ×6, own-capture ×6, CC0-1.0 ×2, CC-BY-4.0 ×1 → .media/manifest.jsonl",
+      "source": "render-path"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-27T11:49:00.060Z",
+      "seconds": 69.1,
+      "ok": true,
+      "detail": "egress: us.i.posthog.com → .media/egress.jsonl | motion sidecar: 32 assertion(s) → index.motion.json from 13/13 frame sidecar(s); keepsMoving dropped (QA-07 on the master) | lint: 1 finding(s), 0 error(s) | check: ok=true (62.7s, exit 0) → QA/check.json | animation-map: Animation map: 173/192 tweens (skipped 19 micro-tweens) → .hyperframes/anim-map/animation-map.json | wowprobe pre-render: gates_failed []; not measured QA-01, QA-03, QA-07, QA-08, QA-09; scorecard 81",
+      "source": "render-path"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-27T11:49:40.668Z",
+      "seconds": 0.4,
+      "ok": true,
+      "detail": "captions: not burned in (investors 16:9 with VO → kicker cards + SRT, burned-in only by flag) | frame footage re-declared for the hoist: 03-auto-match.html (1), 05-audit-trail.html (1), 06-close-checklist.html (1), 07-lock-period.html (1) from .hyperframes/frame-videos.json | frame footage: 4 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 4 frame(s) on held clips in assets/clips/ (0 cut, 4 cached) — 03-auto-match 1.7–5.9 +4.8s hold drift→1.6; 05-audit-trail 5.9–8.25 +6.15s hold drift→1.8; 06-close-checklist 8.25–12.1 +4.15s hold drift→1.5; 07-lock-period 12.1–15.3 +6.3s hold drift→1.8 | assemble: total duration:    90.237s (expected ~90s, +0.237s) | transitions: ✓ transitions inject: 0 transitions (all cuts) — index.html unchanged; ✓ transitions verify: 0 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 1 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 03-auto-match 3 zoom(s), 1 click(s); 05-audit-trail 1 zoom(s), 1 click(s); 06-close-checklist 2 zoom(s), 1 click(s); 07-lock-period 2 zoom(s), 1 click(s) | media ledger: 27 asset(s) — generated ×12, OFL-1.1 ×6, own-capture ×6, CC0-1.0 ×2, CC-BY-4.0 ×1 → .media/manifest.jsonl",
+      "source": "render-path"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-27T11:50:50.888Z",
+      "seconds": 70.1,
+      "ok": true,
+      "detail": "egress: us.i.posthog.com → .media/egress.jsonl | motion sidecar: 32 assertion(s) → index.motion.json from 13/13 frame sidecar(s); keepsMoving dropped (QA-07 on the master) | lint: 1 finding(s), 0 error(s) | check: ok=true (63.6s, exit 0) → QA/check.json | animation-map: Animation map: 173/192 tweens (skipped 19 micro-tweens) → .hyperframes/anim-map/animation-map.json | wowprobe pre-render: gates_failed []; not measured QA-01, QA-03, QA-07, QA-08, QA-09; scorecard 81",
+      "source": "render-path"
+    },
+    {
+      "command": "external:review",
+      "stage": "review",
+      "at": "2026-09-27T11:51:10.956Z",
+      "seconds": 125.4,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T11:49:05.560Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "render",
+      "stage": "render",
+      "at": "2026-09-27T11:52:24.007Z",
+      "seconds": 72.7,
+      "ok": true,
+      "detail": "egress: us.i.posthog.com → .media/egress.jsonl | render v1 ok: 16:9 90.267s renders/final/ledgerly-investors_16x9.mp4; wall 72.6s | hyperframes 0.8.47; formats 16:9",
+      "source": "render-path"
+    },
+    {
+      "command": "deliver",
+      "stage": "deliver",
+      "at": "2026-09-27T11:52:51.440Z",
+      "seconds": 24.4,
+      "ok": true,
+      "detail": "loudness: -22.21 LUFS / TP -1.47 dBTP → -17.23 LUFS / TP -1.32 dBTP (target -17 LUFS, TP ≤ -1.5 dBTP; two-pass loudnorm, video copied) — QA-08 row: --target-lufs | wowprobe post-render: gates_failed []; not measured none; scorecard 82.1; sheet QA/contact-sheet.png | poster: renders/final/ledgerly-investors_16x9.poster.png @ 46.69s (storyboard: storyboard `poster:` key), baked into frame 0 | srt: 38 cue(s) from audio_meta.json words grouped by 4 (no captions.mjs pass) → 38 cues at ≥ 0.8 s, ≤ 20 cps → renders/final/ledgerly-investors_16x9.en.srt (+ captions/en.srt) | share-copy.txt skeleton written (fill the copy, then lint) | share-copy lint: exit 3 — violations in QA/share-copy-lint.json | run-report: run-report: /home/dmytrogr/Documents/power-presentation-runs/ledgerly-investors/run-report.json — mode investors, gates_failed [], not measured 0, scorecard 82.1, 15 inputs read, 1 missing (critic)",
+      "source": "render-path"
+    }
+  ],
+  "wall_s": 2855.5,
+  "pending": {}
+}

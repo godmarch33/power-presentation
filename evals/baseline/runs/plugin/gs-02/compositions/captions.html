@@ -1,0 +1,208 @@
+<template id="captions-template" data-composition-id="captions" data-width="1920" data-height="1080">
+<script src="assets/vendor/gsap@3.14.2/gsap.min.js"></script>
+
+<style data-brand-tokens>
+      @font-face { font-family: 'Space Grotesk'; src: url('assets/fonts/SpaceGrotesk-latin-wght.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: block; }
+      @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-400.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: block; }
+      @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-700.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: block; }
+      :root {
+      --bg: #ffffff;
+      --primary: #2a6f97;
+      --text: #14213d;
+      --text-muted: #5c6b7a;
+      --text-light: #9A9A9A;
+      --accent-light: rgba(42, 111, 151, 0.08);
+      --accent-medium: rgba(42, 111, 151, 0.15);
+      --border: rgba(42, 111, 151, 0.2);
+      --card-bg: rgba(42, 111, 151, 0.04);
+      --positive: #059669;
+      --negative: #dc2626;
+      --cap-ink: #14213d;
+      --cap-canvas: #ffffff;
+      --cap-accent: #2a6f97;
+      --cap-accent-2: #5c6b7a;
+      --font-display: "Space Grotesk", system-ui, serif;
+      --font-body: "Inter", system-ui, sans-serif;
+      --cap-band-top: 900px;
+      --cap-band-height: 180px;
+      }
+    </style>
+
+<style>
+  #captions-root {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .caption-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    pointer-events: none;
+  }
+  .caption-stage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: var(--cap-band-top, 900px);
+    height: var(--cap-band-height, 180px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .caption-group {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+  }
+
+  .caption-pill {
+    max-width: 78%;
+    padding: 20px 44px 24px;
+    background: color-mix(in srgb, var(--cap-accent, #1e2bfa) 4%, var(--cap-canvas, #fdfae7));
+    border: 1.5px solid color-mix(in srgb, var(--cap-accent, #1e2bfa) 20%, transparent);
+    border-radius: 14px;
+  }
+  .caption-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.1em 0.34em;
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    font-weight: 600;
+    font-size: clamp(40px, 4.4vw, 58px);
+    line-height: 1.16;
+    letter-spacing: -0.02em;
+  }
+
+  .caption-word {
+    display: inline-block;
+    padding: 0 0.34em;
+    min-width: 1.9em;
+    text-align: center;
+    border-radius: 999px;
+    color: color-mix(in srgb, var(--cap-ink, #111111) 52%, var(--cap-canvas, #fdfae7));
+  }
+  .caption-word.is-active {
+    color: var(--cap-canvas, #fdfae7);
+    background: var(--cap-accent, #1e2bfa);
+    box-shadow: none;
+  }
+  .caption-word.is-spoken {
+    color: var(--cap-ink, #111111);
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .caption-word.cap-brand {
+    color: var(--cap-accent, #1e2bfa);
+  }
+  .caption-word.cap-num {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    font-weight: 700;
+    color: var(--cap-accent, #1e2bfa);
+  }
+  .caption-word.cap-cta {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--cap-accent-2, #dc2626);
+    text-underline-offset: 0.1em;
+  }
+
+  @media (max-aspect-ratio: 9/16) {
+    .caption-pill {
+      max-width: 92%;
+    }
+    .caption-line {
+      font-size: clamp(34px, 5.4vw, 48px);
+    }
+  }
+</style>
+
+<div
+  id="captions-root"
+  data-composition-id="captions"
+  data-timeline-locked
+  data-start="0"
+  data-duration="59.6"
+  data-fps="30"
+  data-width="1920"
+  data-height="1080"
+>
+  <div class="caption-layer" aria-hidden="true">
+    <div id="caption-stage" class="caption-stage"></div>
+  </div>
+</div>
+
+<script>
+  var GROUPS = [{"id":"caption-group-0","frame":1,"start":0.13,"end":0.42,"text":"Dana,","words":[{"id":"caption-word-0-0","text":"Dana,","start":0.13,"end":0.42}]},{"id":"caption-group-1","frame":1,"start":0.42,"end":0.64,"text":"what","words":[{"id":"caption-word-1-0","text":"what","start":0.42,"end":0.52}]},{"id":"caption-group-2","frame":1,"start":0.71,"end":1.78,"text":"about a three-day","words":[{"id":"caption-word-2-0","text":"about","start":0.71,"end":1.05},{"id":"caption-word-2-1","text":"a","start":1.05,"end":1.08},{"id":"caption-word-2-2","text":"three-day","start":1.26,"end":1.73}]},{"id":"caption-group-3","frame":1,"start":1.78,"end":2.27,"text":"close?","words":[{"id":"caption-word-3-0","text":"close?","start":1.78,"end":2.15}]},{"id":"caption-group-4","frame":2,"start":3.24,"end":3.72,"text":"Today,","words":[{"id":"caption-word-4-0","text":"Today,","start":3.24,"end":3.6}]},{"id":"caption-group-5","frame":2,"start":3.76,"end":4.23,"text":"every line","words":[{"id":"caption-word-5-0","text":"every","start":3.76,"end":3.97},{"id":"caption-word-5-1","text":"line","start":3.97,"end":4.23}]},{"id":"caption-group-6","frame":2,"start":4.23,"end":5.16,"text":"waits for you.","words":[{"id":"caption-word-6-0","text":"waits","start":4.23,"end":4.55},{"id":"caption-word-6-1","text":"for","start":4.55,"end":4.72},{"id":"caption-word-6-2","text":"you.","start":4.72,"end":5.04}]},{"id":"caption-group-7","frame":3,"start":6.39,"end":9.36,"text":"98.5% auto matched.","words":[{"id":"caption-word-7-0","text":"98.5%","start":6.39,"end":7.83},{"id":"caption-word-7-1","text":"auto","start":7.83,"end":8.31},{"id":"caption-word-7-2","text":"matched.","start":8.31,"end":9.24}]},{"id":"caption-group-8","frame":4,"start":10.25,"end":11.8,"text":"Click Auto-match,","words":[{"id":"caption-word-8-0","text":"Click","start":10.25,"end":10.75},{"id":"caption-word-8-1","text":"Auto-match,","start":10.75,"end":11.78}]},{"id":"caption-group-9","frame":4,"start":11.8,"end":12.32,"text":"and every","words":[{"id":"caption-word-9-0","text":"and","start":11.8,"end":11.98},{"id":"caption-word-9-1","text":"every","start":11.98,"end":12.32}]},{"id":"caption-group-10","frame":4,"start":12.32,"end":12.96,"text":"bank line","words":[{"id":"caption-word-10-0","text":"bank","start":12.32,"end":12.59},{"id":"caption-word-10-1","text":"line","start":12.59,"end":12.84}]},{"id":"caption-group-11","frame":4,"start":12.96,"end":13.5,"text":"finds its","words":[{"id":"caption-word-11-0","text":"finds","start":12.96,"end":13.28},{"id":"caption-word-11-1","text":"its","start":13.28,"end":13.5}]},{"id":"caption-group-12","frame":4,"start":13.5,"end":14.57,"text":"own invoice while","words":[{"id":"caption-word-12-0","text":"own","start":13.5,"end":13.72},{"id":"caption-word-12-1","text":"invoice","start":13.72,"end":14.21},{"id":"caption-word-12-2","text":"while","start":14.27,"end":14.57}]},{"id":"caption-group-13","frame":4,"start":14.57,"end":15.26,"text":"you watch.","words":[{"id":"caption-word-13-0","text":"you","start":14.57,"end":14.77},{"id":"caption-word-13-1","text":"watch.","start":14.77,"end":15.14}]},{"id":"caption-group-14","frame":5,"start":16.92,"end":18.4,"text":"Open any line,","words":[{"id":"caption-word-14-0","text":"Open","start":16.92,"end":17.33},{"id":"caption-word-14-1","text":"any","start":17.33,"end":17.73},{"id":"caption-word-14-2","text":"line,","start":17.73,"end":18.4}]},{"id":"caption-group-15","frame":5,"start":18.4,"end":18.78,"text":"and its","words":[{"id":"caption-word-15-0","text":"and","start":18.4,"end":18.59},{"id":"caption-word-15-1","text":"its","start":18.59,"end":18.78}]},{"id":"caption-group-16","frame":5,"start":18.78,"end":19.42,"text":"audit trail","words":[{"id":"caption-word-16-0","text":"audit","start":18.78,"end":19.09},{"id":"caption-word-16-1","text":"trail","start":19.09,"end":19.42}]},{"id":"caption-group-17","frame":5,"start":19.42,"end":20.79,"text":"is already there,","words":[{"id":"caption-word-17-0","text":"is","start":19.42,"end":19.59},{"id":"caption-word-17-1","text":"already","start":19.6,"end":20.22},{"id":"caption-word-17-2","text":"there,","start":20.22,"end":20.75}]},{"id":"caption-group-18","frame":5,"start":20.79,"end":21.03,"text":"from the","words":[{"id":"caption-word-18-0","text":"from","start":20.79,"end":20.91},{"id":"caption-word-18-1","text":"the","start":20.91,"end":21.03}]},{"id":"caption-group-19","frame":5,"start":21.03,"end":21.48,"text":"bank feed","words":[{"id":"caption-word-19-0","text":"bank","start":21.03,"end":21.2},{"id":"caption-word-19-1","text":"feed","start":21.2,"end":21.48}]},{"id":"caption-group-20","frame":5,"start":21.48,"end":22.39,"text":"to approval.","words":[{"id":"caption-word-20-0","text":"to","start":21.48,"end":21.62},{"id":"caption-word-20-1","text":"approval.","start":21.62,"end":22.27}]},{"id":"caption-group-21","frame":6,"start":23.78,"end":24.84,"text":"That's 11 hours","words":[{"id":"caption-word-21-0","text":"That's","start":23.78,"end":24.1},{"id":"caption-word-21-1","text":"11","start":24.1,"end":24.5},{"id":"caption-word-21-2","text":"hours","start":24.5,"end":24.84}]},{"id":"caption-group-22","frame":6,"start":24.84,"end":25.14,"text":"a week","words":[{"id":"caption-word-22-0","text":"a","start":24.84,"end":24.89},{"id":"caption-word-22-1","text":"week","start":24.9,"end":25.02}]},{"id":"caption-group-23","frame":6,"start":25.17,"end":25.59,"text":"back,","words":[{"id":"caption-word-23-0","text":"back,","start":25.17,"end":25.47}]},{"id":"caption-group-24","frame":6,"start":25.68,"end":26.65,"text":"per accountant.","words":[{"id":"caption-word-24-0","text":"per","start":25.68,"end":25.77},{"id":"caption-word-24-1","text":"accountant.","start":25.77,"end":26.53}]},{"id":"caption-group-25","frame":7,"start":27.54,"end":28.62,"text":"Then Close September","words":[{"id":"caption-word-25-0","text":"Then","start":27.54,"end":27.73},{"id":"caption-word-25-1","text":"Close","start":27.77,"end":28.06},{"id":"caption-word-25-2","text":"September","start":28.06,"end":28.62}]},{"id":"caption-group-26","frame":7,"start":28.62,"end":29.05,"text":"runs the","words":[{"id":"caption-word-26-0","text":"runs","start":28.62,"end":28.87},{"id":"caption-word-26-1","text":"the","start":28.87,"end":29.04}]},{"id":"caption-group-27","frame":7,"start":29.05,"end":30.84,"text":"closed checklist for you,","words":[{"id":"caption-word-27-0","text":"closed","start":29.05,"end":29.42},{"id":"caption-word-27-1","text":"checklist","start":29.42,"end":29.94},{"id":"caption-word-27-2","text":"for","start":30.06,"end":30.38},{"id":"caption-word-27-3","text":"you,","start":30.4,"end":30.78}]},{"id":"caption-group-28","frame":7,"start":30.84,"end":32.14,"text":"step by step,","words":[{"id":"caption-word-28-0","text":"step","start":30.84,"end":31.23},{"id":"caption-word-28-1","text":"by","start":31.23,"end":31.44},{"id":"caption-word-28-2","text":"step,","start":31.44,"end":32.14}]},{"id":"caption-group-29","frame":7,"start":32.14,"end":33.14,"text":"until nothing is","words":[{"id":"caption-word-29-0","text":"until","start":32.14,"end":32.48},{"id":"caption-word-29-1","text":"nothing","start":32.54,"end":32.98},{"id":"caption-word-29-2","text":"is","start":33.04,"end":33.14}]},{"id":"caption-group-30","frame":7,"start":33.14,"end":33.84,"text":"left open.","words":[{"id":"caption-word-30-0","text":"left","start":33.14,"end":33.42},{"id":"caption-word-30-1","text":"open.","start":33.42,"end":33.72}]},{"id":"caption-group-31","frame":8,"start":34.85,"end":35.85,"text":"Lock the period,","words":[{"id":"caption-word-31-0","text":"Lock","start":34.85,"end":35.05},{"id":"caption-word-31-1","text":"the","start":35.18,"end":35.31},{"id":"caption-word-31-2","text":"period,","start":35.37,"end":35.85}]},{"id":"caption-group-32","frame":8,"start":35.85,"end":36.99,"text":"and September is","words":[{"id":"caption-word-32-0","text":"and","start":35.85,"end":36.03},{"id":"caption-word-32-1","text":"September","start":36.13,"end":36.83},{"id":"caption-word-32-2","text":"is","start":36.83,"end":36.93}]},{"id":"caption-group-33","frame":8,"start":36.99,"end":37.63,"text":"closed.","words":[{"id":"caption-word-33-0","text":"closed.","start":36.99,"end":37.56}]},{"id":"caption-group-34","frame":8,"start":37.63,"end":38.05,"text":"It stays","words":[{"id":"caption-word-34-0","text":"It","start":37.63,"end":37.7},{"id":"caption-word-34-1","text":"stays","start":37.7,"end":37.98}]},{"id":"caption-group-35","frame":8,"start":38.05,"end":38.68,"text":"closed for","words":[{"id":"caption-word-35-0","text":"closed","start":38.05,"end":38.47},{"id":"caption-word-35-1","text":"for","start":38.47,"end":38.68}]},{"id":"caption-group-36","frame":8,"start":38.68,"end":39.81,"text":"your auditors.","words":[{"id":"caption-word-36-0","text":"your","start":38.68,"end":38.96},{"id":"caption-word-36-1","text":"auditors.","start":38.96,"end":39.69}]},{"id":"caption-group-37","frame":9,"start":41.63,"end":43.82,"text":"Customers close in 3.1","words":[{"id":"caption-word-37-0","text":"Customers","start":41.63,"end":42.4},{"id":"caption-word-37-1","text":"close","start":42.4,"end":42.75},{"id":"caption-word-37-2","text":"in","start":42.86,"end":43.03},{"id":"caption-word-37-3","text":"3.1","start":43.03,"end":43.82}]},{"id":"caption-group-38","frame":9,"start":43.82,"end":45.02,"text":"days on average.","words":[{"id":"caption-word-38-0","text":"days","start":43.82,"end":44.18},{"id":"caption-word-38-1","text":"on","start":44.18,"end":44.36},{"id":"caption-word-38-2","text":"average.","start":44.36,"end":44.9}]},{"id":"caption-group-39","frame":10,"start":45.99,"end":47.53,"text":"Harborline Logistics","words":[{"id":"caption-word-39-0","text":"Harborline","start":45.99,"end":46.83},{"id":"caption-word-39-1","text":"Logistics","start":46.83,"end":47.41}]},{"id":"caption-group-40","frame":10,"start":47.74,"end":48.1,"text":"went from","words":[{"id":"caption-word-40-0","text":"went","start":47.74,"end":47.88},{"id":"caption-word-40-1","text":"from","start":47.97,"end":48.1}]},{"id":"caption-group-41","frame":10,"start":48.1,"end":48.55,"text":"a 12","words":[{"id":"caption-word-41-0","text":"a","start":48.1,"end":48.11},{"id":"caption-word-41-1","text":"12","start":48.16,"end":48.54}]},{"id":"caption-group-42","frame":10,"start":48.55,"end":49.29,"text":"day close","words":[{"id":"caption-word-42-0","text":"day","start":48.55,"end":48.74},{"id":"caption-word-42-1","text":"close","start":48.8,"end":49.17}]},{"id":"caption-group-43","frame":10,"start":49.29,"end":50.26,"text":"to under 4.","words":[{"id":"caption-word-43-0","text":"to","start":49.29,"end":49.43},{"id":"caption-word-43-1","text":"under","start":49.43,"end":49.86},{"id":"caption-word-43-2","text":"4.","start":49.86,"end":50.14}]},{"id":"caption-group-44","frame":11,"start":51.35,"end":52.61,"text":"Reply yes,","words":[{"id":"caption-word-44-0","text":"Reply","start":51.35,"end":51.94},{"id":"caption-word-44-1","text":"yes,","start":51.94,"end":52.58}]},{"id":"caption-group-45","frame":11,"start":52.61,"end":53.02,"text":"and I'll","words":[{"id":"caption-word-45-0","text":"and","start":52.61,"end":52.77},{"id":"caption-word-45-1","text":"I'll","start":52.77,"end":53.02}]},{"id":"caption-group-46","frame":11,"start":53.02,"end":53.71,"text":"hold Tuesday","words":[{"id":"caption-word-46-0","text":"hold","start":53.02,"end":53.27},{"id":"caption-word-46-1","text":"Tuesday","start":53.27,"end":53.71}]},{"id":"caption-group-47","frame":11,"start":53.71,"end":54.39,"text":"or Thursday","words":[{"id":"caption-word-47-0","text":"or","start":53.71,"end":53.78},{"id":"caption-word-47-1","text":"Thursday","start":53.89,"end":54.28}]},{"id":"caption-group-48","frame":11,"start":54.39,"end":54.89,"text":"for you.","words":[{"id":"caption-word-48-0","text":"for","start":54.39,"end":54.53},{"id":"caption-word-48-1","text":"you.","start":54.53,"end":54.77}]},{"id":"caption-group-49","frame":12,"start":56.19,"end":56.83,"text":"Ledgerly.","words":[{"id":"caption-word-49-0","text":"Ledgerly.","start":56.19,"end":56.71}]},{"id":"caption-group-50","frame":12,"start":56.91,"end":57.36,"text":"Close the","words":[{"id":"caption-word-50-0","text":"Close","start":56.91,"end":57.16},{"id":"caption-word-50-1","text":"the","start":57.16,"end":57.33}]},{"id":"caption-group-51","frame":12,"start":57.36,"end":57.86,"text":"books in","words":[{"id":"caption-word-51-0","text":"books","start":57.36,"end":57.73},{"id":"caption-word-51-1","text":"in","start":57.73,"end":57.86}]},{"id":"caption-group-52","frame":12,"start":57.86,"end":58.71,"text":"three days.","words":[{"id":"caption-word-52-0","text":"three","start":57.86,"end":58.23},{"id":"caption-word-52-1","text":"days.","start":58.23,"end":58.59}]}];
+  var DURATION = 59.6;
+
+  (function () {
+    var stage = document.getElementById("caption-stage");
+
+    GROUPS.forEach(function (group, g) {
+      var groupEl = document.createElement("div");
+      groupEl.className = "caption-group";
+      groupEl.id = "caption-group-" + g;
+      var pill = document.createElement("div");
+      pill.className = "caption-pill";
+      var line = document.createElement("div");
+      line.className = "caption-line";
+      (group.words || []).forEach(function (w, i) {
+        var span = document.createElement("span");
+        span.className = "caption-word";
+        span.id = "caption-word-" + g + "-" + i;
+        span.textContent = String(w.text);
+        line.appendChild(span);
+      });
+      pill.appendChild(line);
+      groupEl.appendChild(pill);
+      stage.appendChild(groupEl);
+    });
+
+    window.__timelines = window.__timelines || {};
+    var tl = gsap.timeline({ paused: true });
+
+    GROUPS.forEach(function (group, g) {
+      var groupEl = document.getElementById("caption-group-" + g);
+      var words = group.words || [];
+      var next = GROUPS[g + 1];
+      var isLast = g === GROUPS.length - 1;
+      var start = Math.max(0, Number(group.start));
+      var end = isLast ? DURATION : Math.min(Number(next.start), Number(group.end) + 0.3);
+      if (end <= start) end = start + 0.01;
+
+      tl.set(groupEl, { opacity: 1 }, start);
+      tl.set(groupEl, { opacity: 0 }, end);
+
+      words.forEach(function (w, i) {
+        var el = document.getElementById("caption-word-" + g + "-" + i);
+        var at = Math.max(start, Number(w.start));
+        tl.set(el, { className: "caption-word" }, start);
+        tl.set(el, { className: "caption-word is-active" }, at);
+        tl.fromTo(el, { scale: 0.985 }, { scale: 1, duration: 0.18, ease: "power1.out" }, at);
+        if (i + 1 < words.length) {
+          var nextAt = Math.max(start, Number(words[i + 1].start));
+          tl.set(el, { className: "caption-word is-spoken" }, nextAt);
+        }
+      });
+      if (words.length) {
+        var lastEl = document.getElementById("caption-word-" + g + "-" + (words.length - 1));
+        var lastSpoken = Math.min(end, Number(words[words.length - 1].end) + 0.1);
+        tl.set(lastEl, { className: "caption-word is-spoken" }, lastSpoken);
+      }
+    });
+
+    tl.to({}, { duration: DURATION }, 0);
+    window.__timelines["captions"] = tl;
+  })();
+</script>
+
+<style>
+  .caption-line { line-height: 1.1 !important; }
+</style>
+</template>

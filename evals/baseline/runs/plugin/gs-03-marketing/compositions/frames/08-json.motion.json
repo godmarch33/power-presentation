@@ -1,0 +1,4 @@
+{ "duration": 4.005,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f08-kicker", "bySec": 0.5 },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 } ] }

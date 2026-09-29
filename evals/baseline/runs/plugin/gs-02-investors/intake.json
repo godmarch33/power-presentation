@@ -1,0 +1,125 @@
+{
+  "schema": "power-presentation/intake@0.1",
+  "plugin_version": "0.1.0",
+  "arguments_raw": "--for investors --duration 90 --local ./site --metrics metrics.csv --yes",
+  "declared": {
+    "for": "investors",
+    "duration": 90,
+    "source": {
+      "kind": "local",
+      "value": "./site"
+    },
+    "metrics": "metrics.csv",
+    "yes": true
+  },
+  "derived": {
+    "format": {
+      "value": [
+        "16:9"
+      ],
+      "source": "brief-contract § 2 (investors demo destination → 16:9 master; no --format given)"
+    },
+    "reveal": {
+      "value": "early",
+      "source": "default:(QA-04 defaults)"
+    },
+    "voice": {
+      "value": true,
+      "source": "default:(on for sales/investors)"
+    },
+    "brand": {
+      "value": null,
+      "source": "userConfig:brand_kit_dir (unset)"
+    },
+    "preset": {
+      "value": null,
+      "source": "default:(workflow Step 2 chooses when the brief is silent)"
+    },
+    "style": {
+      "value": null,
+      "source": "default:(restrained demo; cinematic is v1)"
+    },
+    "privacy": {
+      "value": "default",
+      "source": "userConfig:privacy (SessionStart hook: privacy=default)"
+    },
+    "budget": {
+      "value": 25,
+      "source": "userConfig:budget_usd default (threshold 25)"
+    },
+    "lang": {
+      "value": "en",
+      "source": "(English only; no --lang flag)"
+    },
+    "destination": {
+      "value": "investors demo (60–120 s band)",
+      "source": "length-bands.md QA-01 table"
+    },
+    "register": {
+      "value": "premium",
+      "source": "brief-schema.md § 2 (investors → premium)"
+    }
+  },
+  "questions": [],
+  "yes_decisions": [
+    {
+      "field": "source",
+      "decision": "--local ./site (static site: index.html, no package.json) — no URL question needed",
+      "source": "declared"
+    },
+    {
+      "field": "for",
+      "decision": "investors (declared) — no audience question",
+      "source": "declared"
+    },
+    {
+      "field": "pitch",
+      "decision": "take the story-director's recommended concept",
+      "source": "--yes"
+    },
+    {
+      "field": "format",
+      "decision": "16:9 master only",
+      "source": "brief-contract § 2"
+    },
+    {
+      "field": "budget",
+      "decision": "USD 25 cap; --yes continues past an over-budget estimate but it is reported"
+    },
+    {
+      "field": "network_manifest",
+      "decision": "printed 2 hosts; --yes continues (default privacy profile)",
+      "source": "--yes"
+    },
+    {
+      "field": "pitch",
+      "decision": "concept 4 'Audited, not animated' (story-director recommendation)",
+      "source": "--yes"
+    },
+    {
+      "field": "budget",
+      "decision": "estimate ~$30.25 > $25 ceiling; --yes continues, reported",
+      "source": "--yes"
+    },
+    {
+      "field": "quote attribution",
+      "decision": "frame 9 keeps the site's '(fictional)' suffix (site/index.html:55)",
+      "source": "verbatim source"
+    }
+  ],
+  "conflicts": [],
+  "phase_blocked": [],
+  "privacy_profile": "default",
+  "network_manifest": [
+    {
+      "host": "registry.npmjs.org",
+      "why": "bare npx hyperframes before R init links the pinned CLI"
+    },
+    {
+      "host": "us.i.posthog.com",
+      "why": "HyperFrames CLI telemetry; DO_NOT_TRACK not set"
+    }
+  ],
+  "surface": "web-ui",
+  "evidence_plan": "local"
+}

@@ -1,0 +1,824 @@
+{
+  "ok": false,
+  "strict": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 4
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": false,
+    "errorCount": 6,
+    "warningCount": 1,
+    "infoCount": 10,
+    "findings": [
+      {
+        "code": "clipped_text",
+        "severity": "error",
+        "time": 0.556,
+        "selector": "div.caption-text",
+        "message": "Text content is clipped by its own box.",
+        "rect": {
+          "left": 421.72,
+          "top": 868,
+          "right": 1498.27,
+          "bottom": 940,
+          "width": 1076.55,
+          "height": 72
+        },
+        "text": "WE ASKED WHAT YOU NEEDED.",
+        "fixHint": "Text is 1077px x 72px inside 1077px x 72px and overflows by up to 7px; increase the text box height to at least ~79px, or allow wrapping with max-width/fitTextFontSize.",
+        "overflow": {
+          "bottom": 7
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/captions.html",
+        "bbox": {
+          "x": 421.72,
+          "y": 868,
+          "width": 1076.55,
+          "height": 72
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 1.667,
+        "occurrences": 2,
+        "heldMs": 0
+      },
+      {
+        "code": "text_box_overflow",
+        "severity": "error",
+        "time": 0.556,
+        "selector": "div.caption-text",
+        "message": "Text extends outside its nearest visual/container box.",
+        "rect": {
+          "left": 421.72,
+          "top": 860,
+          "right": 1498.27,
+          "bottom": 947,
+          "width": 1076.55,
+          "height": 87
+        },
+        "containerSelector": "div.caption-text",
+        "text": "We asked what you needed.",
+        "fixHint": "Text is 1077px x 87px inside 1077px x 72px and overflows by up to 8px; increase the container height to at least ~87px or shrink font-size from 72px to ~60px, or allow wrapping with max-width/fitTextFontSize.",
+        "containerRect": {
+          "left": 421.72,
+          "top": 868,
+          "right": 1498.27,
+          "bottom": 940,
+          "width": 1076.55,
+          "height": 72
+        },
+        "overflow": {
+          "top": 8,
+          "bottom": 7
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/captions.html",
+        "bbox": {
+          "x": 421.72,
+          "y": 860,
+          "width": 1076.55,
+          "height": 87
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 1.667,
+        "occurrences": 2,
+        "heldMs": 0
+      },
+      {
+        "code": "clipped_text",
+        "severity": "error",
+        "time": 3.889,
+        "selector": "div.caption-text",
+        "message": "Text content is clipped by its own box.",
+        "rect": {
+          "left": 160,
+          "top": 868,
+          "right": 1760,
+          "bottom": 940,
+          "width": 1600,
+          "height": 72
+        },
+        "text": "MOTION GRAPHICS, SIXTY-TWO PERCENT SAID",
+        "fixHint": "Text is 1600px x 72px inside 1600px x 72px and overflows by up to 16px; resize the text box to at least ~1616px x 79px, or allow wrapping with max-width/fitTextFontSize.",
+        "overflow": {
+          "right": 16,
+          "bottom": 7
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/captions.html",
+        "bbox": {
+          "x": 160,
+          "y": 868,
+          "width": 1600,
+          "height": 72
+        },
+        "firstSeen": 3.889,
+        "lastSeen": 5,
+        "occurrences": 2,
+        "heldMs": 0
+      },
+      {
+        "code": "text_box_overflow",
+        "severity": "error",
+        "time": 3.889,
+        "selector": "div.caption-text",
+        "message": "Text extends outside its nearest visual/container box.",
+        "rect": {
+          "left": 160,
+          "top": 860,
+          "right": 1775.73,
+          "bottom": 947,
+          "width": 1615.73,
+          "height": 87
+        },
+        "containerSelector": "div.caption-text",
+        "text": "motion graphics, sixty-two percent said",
+        "fixHint": "Text is 1616px x 87px inside 1600px x 72px and overflows by up to 16px; resize the container to at least ~1616px x 87px or shrink font-size from 72px to ~60px, or allow wrapping with max-width/fitTextFontSize.",
+        "containerRect": {
+          "left": 160,
+          "top": 868,
+          "right": 1760,
+          "bottom": 940,
+          "width": 1600,
+          "height": 72
+        },
+        "overflow": {
+          "right": 15.73,
+          "top": 8,
+          "bottom": 7
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/captions.html",
+        "bbox": {
+          "x": 160,
+          "y": 860,
+          "width": 1615.73,
+          "height": 87
+        },
+        "firstSeen": 3.889,
+        "lastSeen": 5,
+        "occurrences": 2,
+        "heldMs": 0
+      },
+      {
+        "code": "clipped_text",
+        "severity": "error",
+        "time": 6.111,
+        "selector": "div.caption-text",
+        "message": "Text content is clipped by its own box.",
+        "rect": {
+          "left": 318.33,
+          "top": 868,
+          "right": 1601.66,
+          "bottom": 940,
+          "width": 1283.33,
+          "height": 72
+        },
+        "text": "STATIC CONTENT WAS COSTING YOU",
+        "fixHint": "Text is 1283px x 72px inside 1283px x 72px and overflows by up to 7px; increase the text box height to at least ~79px, or allow wrapping with max-width/fitTextFontSize.",
+        "overflow": {
+          "bottom": 7
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/captions.html",
+        "bbox": {
+          "x": 318.33,
+          "y": 868,
+          "width": 1283.33,
+          "height": 72
+        },
+        "firstSeen": 6.111,
+        "lastSeen": 7.222,
+        "occurrences": 2,
+        "heldMs": 0
+      },
+      {
+        "code": "text_box_overflow",
+        "severity": "error",
+        "time": 6.111,
+        "selector": "div.caption-text",
+        "message": "Text extends outside its nearest visual/container box.",
+        "rect": {
+          "left": 318.33,
+          "top": 860,
+          "right": 1601.66,
+          "bottom": 947,
+          "width": 1283.33,
+          "height": 87
+        },
+        "containerSelector": "div.caption-text",
+        "text": "static content was costing you",
+        "fixHint": "Text is 1283px x 87px inside 1283px x 72px and overflows by up to 8px; increase the container height to at least ~87px or shrink font-size from 72px to ~60px, or allow wrapping with max-width/fitTextFontSize.",
+        "containerRect": {
+          "left": 318.33,
+          "top": 868,
+          "right": 1601.66,
+          "bottom": 940,
+          "width": 1283.33,
+          "height": 72
+        },
+        "overflow": {
+          "top": 8,
+          "bottom": 7
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/captions.html",
+        "bbox": {
+          "x": 318.33,
+          "y": 860,
+          "width": 1283.33,
+          "height": 87
+        },
+        "firstSeen": 6.111,
+        "lastSeen": 7.222,
+        "occurrences": 2,
+        "heldMs": 0
+      },
+      {
+        "code": "container_overflow",
+        "severity": "warning",
+        "time": 0.556,
+        "selector": "div.grid-container",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 2080,
+          "bottom": 1240,
+          "width": 2080,
+          "height": 1240
+        },
+        "containerSelector": "#graphics-comp > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "overflow": {
+          "right": 160,
+          "bottom": 160
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/graphics.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 2080,
+          "height": 1240
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 9.444,
+        "occurrences": 9,
+        "heldMs": 0
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "h1.title",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -1567.41,
+          "top": 382.59,
+          "right": -252.66,
+          "bottom": 599.59,
+          "width": 1314.75,
+          "height": 217
+        },
+        "containerSelector": "#master-root",
+        "text": "HYPERFRAMES",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "overflow": {
+          "left": 1567.41
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/intro.html",
+        "bbox": {
+          "x": -1567.41,
+          "y": 382.59,
+          "width": 1314.75,
+          "height": 217
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "h2.subtitle",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -1600,
+          "top": 591.59,
+          "right": -762.89,
+          "bottom": 668.59,
+          "width": 837.11,
+          "height": 77
+        },
+        "containerSelector": "#master-root",
+        "text": "THE SURVEY FINDINGS",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "overflow": {
+          "left": 1600
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/intro.html",
+        "bbox": {
+          "x": -1600,
+          "y": 591.59,
+          "width": 837.11,
+          "height": 77
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "h1.title",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -1567.41,
+          "top": 410.59,
+          "right": 192.59,
+          "bottom": 572.59,
+          "width": 1760,
+          "height": 162
+        },
+        "containerSelector": "div.text-wrapper",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 160,
+          "top": 410.59,
+          "right": 1920,
+          "bottom": 669.39,
+          "width": 1760,
+          "height": 258.8
+        },
+        "overflow": {
+          "left": 1727.41
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/intro.html",
+        "bbox": {
+          "x": -1567.41,
+          "y": 410.59,
+          "width": 1760,
+          "height": 162
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "h2.subtitle",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -1600,
+          "top": 592.59,
+          "right": 160,
+          "bottom": 669.39,
+          "width": 1760,
+          "height": 76.8
+        },
+        "containerSelector": "div.text-wrapper",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 160,
+          "top": 410.59,
+          "right": 1920,
+          "bottom": 669.39,
+          "width": 1760,
+          "height": 258.8
+        },
+        "overflow": {
+          "left": 1760
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/intro.html",
+        "bbox": {
+          "x": -1600,
+          "y": 592.59,
+          "width": 1760,
+          "height": 76.8
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "clipped_text",
+        "severity": "info",
+        "time": 2.778,
+        "selector": "div.caption-text",
+        "message": "Text content is clipped by its own box.",
+        "rect": {
+          "left": 315.03,
+          "top": 868,
+          "right": 1604.97,
+          "bottom": 940,
+          "width": 1289.94,
+          "height": 72
+        },
+        "text": "FORTY-SEVEN PERCENT OF YOU SAID",
+        "fixHint": "Text is 1290px x 72px inside 1290px x 72px and overflows by up to 7px; increase the text box height to at least ~79px, or allow wrapping with max-width/fitTextFontSize.",
+        "overflow": {
+          "bottom": 7
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/captions.html",
+        "bbox": {
+          "x": 315.03,
+          "y": 868,
+          "width": 1289.94,
+          "height": 72
+        },
+        "firstSeen": 2.778,
+        "lastSeen": 2.778,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_box_overflow",
+        "severity": "info",
+        "time": 2.778,
+        "selector": "div.caption-text",
+        "message": "Text extends outside its nearest visual/container box.",
+        "rect": {
+          "left": 315.03,
+          "top": 860,
+          "right": 1604.97,
+          "bottom": 947,
+          "width": 1289.94,
+          "height": 87
+        },
+        "containerSelector": "div.caption-text",
+        "text": "Forty-seven percent of you said",
+        "fixHint": "Text is 1290px x 87px inside 1290px x 72px and overflows by up to 8px; increase the container height to at least ~87px or shrink font-size from 72px to ~60px, or allow wrapping with max-width/fitTextFontSize.",
+        "containerRect": {
+          "left": 315.03,
+          "top": 868,
+          "right": 1604.97,
+          "bottom": 940,
+          "width": 1289.94,
+          "height": 72
+        },
+        "overflow": {
+          "top": 8,
+          "bottom": 7
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/captions.html",
+        "bbox": {
+          "x": 315.03,
+          "y": 860,
+          "width": 1289.94,
+          "height": 87
+        },
+        "firstSeen": 2.778,
+        "lastSeen": 2.778,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "clipped_text",
+        "severity": "info",
+        "time": 8.333,
+        "selector": "div.caption-text",
+        "message": "Text content is clipped by its own box.",
+        "rect": {
+          "left": 406.02,
+          "top": 868,
+          "right": 1513.97,
+          "bottom": 940,
+          "width": 1107.95,
+          "height": 72
+        },
+        "text": "ATTENTION, AND THREE OUT OF",
+        "fixHint": "Text is 1108px x 72px inside 1108px x 72px and overflows by up to 7px; increase the text box height to at least ~79px, or allow wrapping with max-width/fitTextFontSize.",
+        "overflow": {
+          "bottom": 7
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/captions.html",
+        "bbox": {
+          "x": 406.02,
+          "y": 868,
+          "width": 1107.95,
+          "height": 72
+        },
+        "firstSeen": 8.333,
+        "lastSeen": 8.333,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_box_overflow",
+        "severity": "info",
+        "time": 8.333,
+        "selector": "div.caption-text",
+        "message": "Text extends outside its nearest visual/container box.",
+        "rect": {
+          "left": 406.02,
+          "top": 860,
+          "right": 1513.97,
+          "bottom": 947,
+          "width": 1107.95,
+          "height": 87
+        },
+        "containerSelector": "div.caption-text",
+        "text": "attention, and three out of",
+        "fixHint": "Text is 1108px x 87px inside 1108px x 72px and overflows by up to 8px; increase the container height to at least ~87px or shrink font-size from 72px to ~60px, or allow wrapping with max-width/fitTextFontSize.",
+        "containerRect": {
+          "left": 406.02,
+          "top": 868,
+          "right": 1513.97,
+          "bottom": 940,
+          "width": 1107.95,
+          "height": 72
+        },
+        "overflow": {
+          "top": 8,
+          "bottom": 7
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/captions.html",
+        "bbox": {
+          "x": 406.02,
+          "y": 860,
+          "width": 1107.95,
+          "height": 87
+        },
+        "firstSeen": 8.333,
+        "lastSeen": 8.333,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "clipped_text",
+        "severity": "info",
+        "time": 9.444,
+        "selector": "div.caption-text",
+        "message": "Text content is clipped by its own box.",
+        "rect": {
+          "left": 493.83,
+          "top": 868,
+          "right": 1426.16,
+          "bottom": 940,
+          "width": 932.33,
+          "height": 72
+        },
+        "text": "FOUR SAID YOU KNOW THE",
+        "fixHint": "Text is 932px x 72px inside 932px x 72px and overflows by up to 7px; increase the text box height to at least ~79px, or allow wrapping with max-width/fitTextFontSize.",
+        "overflow": {
+          "bottom": 7
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/captions.html",
+        "bbox": {
+          "x": 493.83,
+          "y": 868,
+          "width": 932.33,
+          "height": 72
+        },
+        "firstSeen": 9.444,
+        "lastSeen": 9.444,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_box_overflow",
+        "severity": "info",
+        "time": 9.444,
+        "selector": "div.caption-text",
+        "message": "Text extends outside its nearest visual/container box.",
+        "rect": {
+          "left": 493.83,
+          "top": 860,
+          "right": 1426.16,
+          "bottom": 947,
+          "width": 932.33,
+          "height": 87
+        },
+        "containerSelector": "div.caption-text",
+        "text": "four said you know the",
+        "fixHint": "Text is 932px x 87px inside 932px x 72px and overflows by up to 8px; increase the container height to at least ~87px or shrink font-size from 72px to ~60px, or allow wrapping with max-width/fitTextFontSize.",
+        "containerRect": {
+          "left": 493.83,
+          "top": 868,
+          "right": 1426.16,
+          "bottom": 940,
+          "width": 932.33,
+          "height": 72
+        },
+        "overflow": {
+          "top": 8,
+          "bottom": 7
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/captions.html",
+        "bbox": {
+          "x": 493.83,
+          "y": 860,
+          "width": 932.33,
+          "height": 87
+        },
+        "firstSeen": 9.444,
+        "lastSeen": 9.444,
+        "occurrences": 1,
+        "heldMs": 0
+      }
+    ],
+    "duration": 10,
+    "samples": [
+      0.556,
+      1.667,
+      2.778,
+      3.889,
+      5,
+      6.111,
+      7.222,
+      8.333,
+      9.444,
+      10
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 17,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": false,
+    "errorCount": 2,
+    "warningCount": 2,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.12:1; WCAG AA requires 3:1.",
+        "text": "47%",
+        "fg": "rgb(212,160,23)",
+        "bg": "rgb(242,242,242)",
+        "ratio": 2.12,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(176,133,19)",
+        "large": true,
+        "selector": "div:nth-of-type(1) > div:nth-of-type(2) > div > div > div:nth-of-type(1) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/graphics.html",
+        "bbox": {
+          "x": 291.65625,
+          "y": 303.328125,
+          "width": 327.71875,
+          "height": 112
+        },
+        "time": 2.778
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 2.12:1; WCAG AA requires 3:1.",
+        "text": "62%",
+        "fg": "rgb(212,160,23)",
+        "bg": "rgb(242,242,242)",
+        "ratio": 2.12,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(176,133,19)",
+        "large": true,
+        "selector": "div:nth-of-type(1) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/graphics.html",
+        "bbox": {
+          "x": 291.65625,
+          "y": 303.328125,
+          "width": 331.140625,
+          "height": 112
+        },
+        "time": 5
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 2.12:1; WCAG AA requires 3:1.",
+        "text": "62%",
+        "fg": "rgb(212,160,23)",
+        "bg": "rgb(242,242,242)",
+        "ratio": 2.12,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(176,133,19)",
+        "large": true,
+        "selector": "div:nth-of-type(1) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/graphics.html",
+        "bbox": {
+          "x": 291.65625,
+          "y": 303.328125,
+          "width": 331.140625,
+          "height": 112
+        },
+        "time": 7.222
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.12:1; WCAG AA requires 3:1.",
+        "text": "3 OF 4",
+        "fg": "rgb(212,160,23)",
+        "bg": "rgb(242,242,242)",
+        "ratio": 2.12,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(176,133,19)",
+        "large": true,
+        "selector": "div:nth-of-type(1) > div:nth-of-type(2) > div > div > div:nth-of-type(3) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/graphics.html",
+        "bbox": {
+          "x": 1100,
+          "y": 303.328125,
+          "width": 438.046875,
+          "height": 112
+        },
+        "time": 9.444
+      }
+    ],
+    "enabled": true,
+    "samples": [
+      0.556,
+      2.778,
+      5,
+      7.222,
+      9.444
+    ],
+    "checked": 15,
+    "passed": 11
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "_meta": {
+    "version": "0.8.47",
+    "latestVersion": "0.8.54",
+    "updateAvailable": true
+  }
+}

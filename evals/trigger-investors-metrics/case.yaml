@@ -1,0 +1,23 @@
+schema_version: "1.1"
+name: trigger-investors-metrics
+description: An investor demo request with metrics.csv must invoke the present skill and answer in investors mode.
+tags: [trigger, per-pr, mvp]
+expected_outcome: The present skill is invoked and the reply speaks about the investors mode (traction numbers from --metrics, ask card).
+execution:
+  prompt: |
+    We are raising a seed round next month. I need a 90-second investor demo video of our product.
+    Our traction numbers are in metrics.csv (MRR, active accounts, retention, all with dates and sources).
+    Real product footage only, no mockups. Keep it calm, no hype.
+  max_turns: 15
+  timeout_seconds: 600
+  allowed_tools: [Read, Glob, Grep, Skill]
+graders:
+  - name: present-skill-fired
+    type: tool_used
+    tool: Skill
+    input_match: '"skill"\s*:\s*"(?:[\w-]+:)?present"'
+  - name: answers-in-investors-mode
+    type: regex
+    pattern: 'investors?'
+    flags: i
+    target: last_message

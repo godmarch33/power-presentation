@@ -1,0 +1,152 @@
+<template>
+<div id="root" data-composition-id="11-recap" data-width="1920" data-height="1080" data-duration="4.244">
+  <style>
+    #root {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      container-type: size;
+      overflow: hidden;
+      font-family: "Inter", sans-serif;
+    }
+
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+    @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+    @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+    @font-face { font-family: "EB Garamond"; src: url("assets/fonts/EBGaramond-400-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: block; }
+    @font-face { font-family: "EB Garamond"; src: url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "EB Garamond"; src: url("assets/fonts/EBGaramond-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+
+    .f11-ground {
+      position: absolute;
+      inset: 0;
+      background-color: #FAF9F5;
+    }
+
+    .f11-kicker {
+      position: absolute;
+      left: 12cqw;
+      top: 12cqh;
+      width: 40cqw;
+      height: 4.5cqh;
+      display: flex;
+      align-items: center;
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 500;
+      font-size: 3.7037cqh;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #141413;
+      white-space: nowrap;
+    }
+    .f11-kicker .f11-spike { color: #CC785C; margin-right: 0.5em; }
+
+    .f11-rule-top {
+      position: absolute;
+      left: 12cqw;
+      top: 19cqh;
+      width: 76cqw;
+      height: 1px;
+      background-color: rgba(20, 20, 19, 0.12);
+    }
+
+    .f11-column {
+      position: absolute;
+      left: 12cqw;
+      top: 0;
+      width: 68cqw;
+      transform-origin: left top;
+      will-change: transform;
+    }
+
+    .f11-verb {
+      position: absolute;
+      left: 0;
+      width: 68cqw;
+      font-family: "EB Garamond", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 6.5cqh;
+      line-height: 1.05;
+      letter-spacing: -0.018em;
+      color: #141413;
+      opacity: 0;
+    }
+    #f11-verb-1 { top: 30cqh; }
+    #f11-verb-2 { top: 41cqh; }
+    #f11-verb-3 { top: 52cqh; }
+
+    #f11-coral-rule {
+      position: absolute;
+      left: 0;
+      top: 62cqh;
+      width: 12cqw;
+      height: 1px;
+      background-color: #CC785C;
+      transform: scaleX(0);
+      transform-origin: left center;
+    }
+
+    #f11-closing {
+      position: absolute;
+      left: 0;
+      top: 68cqh;
+      width: 68cqw;
+      font-family: "EB Garamond", serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 7.5cqh;
+      line-height: 1.05;
+      letter-spacing: -0.012em;
+      color: #141413;
+      opacity: 0;
+    }
+  </style>
+
+  <div id="f11-ground" class="f11-ground clip" data-start="0" data-duration="4.244" data-track-index="0"></div>
+
+  <div id="f11-kicker" class="f11-kicker clip" data-start="0" data-duration="4.244" data-track-index="1">
+    <span class="f11-spike">&#10033;</span><span>RE: YOUR JOBS</span>
+  </div>
+
+  <div id="f11-rule-top" class="f11-rule-top clip" data-start="0" data-duration="4.244" data-track-index="2"></div>
+
+  <div class="f11-column">
+    <div id="f11-verb-1" class="f11-verb clip" data-start="0.3" data-duration="3.944" data-track-index="3">Submit.</div>
+    <div id="f11-verb-2" class="f11-verb clip" data-start="0.8" data-duration="3.444" data-track-index="4">Watch.</div>
+    <div id="f11-verb-3" class="f11-verb clip" data-start="1.3" data-duration="2.944" data-track-index="5">Read.</div>
+    <div id="f11-coral-rule" class="clip" data-start="2.15" data-duration="2.094" data-track-index="6"></div>
+    <div id="f11-closing" class="clip" data-start="2.2" data-duration="2.044" data-track-index="7">No dashboard in between.</div>
+  </div>
+
+  <script src="assets/vendor/gsap@3.14.2/gsap.min.js"></script>
+  <script>
+    (function () {
+      var root = document.querySelector('[data-composition-id="11-recap"]');
+      var verb1 = root.querySelector('#f11-verb-1');
+      var verb2 = root.querySelector('#f11-verb-2');
+      var verb3 = root.querySelector('#f11-verb-3');
+      var rule = root.querySelector('#f11-coral-rule');
+      var closing = root.querySelector('#f11-closing');
+      var column = root.querySelector('.f11-column');
+      var duration = parseFloat(root.getAttribute('data-duration')) || 4.244;
+
+      var tl = gsap.timeline({ paused: true });
+
+      tl.fromTo(verb1, { opacity: 0, yPercent: 20 }, { opacity: 1, yPercent: 0, duration: 0.5, ease: 'expo.out' }, 0.3);
+      tl.fromTo(verb2, { opacity: 0, yPercent: 20 }, { opacity: 1, yPercent: 0, duration: 0.5, ease: 'expo.out' }, 0.8);
+      tl.fromTo(verb3, { opacity: 0, yPercent: 20 }, { opacity: 1, yPercent: 0, duration: 0.5, ease: 'expo.out' }, 1.3);
+      tl.fromTo(rule, { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: 'expo.out' }, 1.75);
+      tl.fromTo(closing, { opacity: 0, yPercent: 20 }, { opacity: 1, yPercent: 0, duration: 0.5, ease: 'expo.out' }, 1.8);
+
+      tl.fromTo(column, { y: 0, scale: 1 }, { y: -20, scale: 1.02, duration: duration, ease: 'sine.inOut' }, 0);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["11-recap"] = tl;
+    })();
+  </script>
+</div>
+</template>

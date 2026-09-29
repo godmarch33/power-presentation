@@ -1,0 +1,146 @@
+<template>
+<div id="root" data-composition-id="12-sign-off" data-width="1920" data-height="1080" data-duration="3.744">
+<style>
+  @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+  @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+  @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+  @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+  @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+  @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+  @font-face { font-family: "EB Garamond"; src: url("assets/fonts/EBGaramond-400-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: block; }
+  @font-face { font-family: "EB Garamond"; src: url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+  @font-face { font-family: "EB Garamond"; src: url("assets/fonts/EBGaramond-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+
+  #root {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    container-type: size;
+    overflow: hidden;
+    font-family: "Inter", sans-serif;
+  }
+  .clip { position: absolute; }
+  .f12-bg { top: 0; left: 0; width: 100%; height: 100%; background: #FAF9F5; }
+  .f12-kicker {
+    left: 12cqw; top: 12cqh; width: 40cqw; height: 4.5cqh;
+    display: flex; align-items: center;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 500;
+    font-size: 2.083cqw;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #141413;
+    white-space: nowrap;
+  }
+  .f12-kicker .f12-spike { color: #CC785C; margin-right: 0.5em; }
+  .f12-rule {
+    left: 12cqw; top: 19cqh; width: 76cqw; height: 1px;
+    background: rgba(20, 20, 19, 0.12);
+  }
+  .f12-signature {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+  }
+  .f12-yours {
+    left: 12cqw; top: 40cqh; width: 68cqw;
+    font-family: "EB Garamond", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 6.7cqw;
+    line-height: 1.05;
+    letter-spacing: -0.012em;
+    color: #141413;
+    opacity: 0;
+  }
+  .f12-line2 {
+    left: 12cqw; top: 55cqh; width: 68cqw;
+    font-family: "EB Garamond", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 6.7cqw;
+    line-height: 1.05;
+    letter-spacing: -0.012em;
+    color: #141413;
+    white-space: nowrap;
+  }
+  .f12-word { display: inline-block; opacity: 0; }
+  .f12-terminal-word { position: relative; }
+  .f12-underline {
+    position: absolute;
+    left: 0; right: 0; bottom: -0.08em;
+    height: 0.045em;
+    background: #CC785C;
+    transform-origin: left center;
+  }
+</style>
+
+<div id="f12-bg" class="clip f12-bg" data-start="0" data-duration="3.744" data-track-index="0"></div>
+
+<div id="f12-kicker" class="clip f12-kicker" data-start="0" data-duration="3.744" data-track-index="1">
+  <span class="f12-spike">&#10033;</span>RE: YOUR JOBS
+</div>
+
+<div id="f12-rule" class="clip f12-rule" data-start="0" data-duration="3.744" data-track-index="2"></div>
+
+<div id="f12-signature" class="f12-signature">
+  <div id="f12-yours" class="clip f12-yours" data-start="0" data-duration="3.744" data-track-index="3">Yours,</div>
+
+  <div id="f12-line2" class="clip f12-line2" data-start="0" data-duration="3.744" data-track-index="4">
+    <span id="f12-word-1" class="f12-word">from&nbsp;</span><span id="f12-word-2" class="f12-word">the&nbsp;</span><span id="f12-word-3" class="f12-word f12-terminal-word">terminal.<span class="f12-underline"></span></span>
+  </div>
+</div>
+
+<script src="assets/vendor/gsap@3.14.2/gsap.min.js"></script>
+<script>
+(function () {
+  var root = document.querySelector('[data-composition-id="12-sign-off"]');
+  var signature = root.querySelector('#f12-signature');
+  var yours = root.querySelector('#f12-yours');
+  var word1 = root.querySelector('#f12-word-1');
+  var word2 = root.querySelector('#f12-word-2');
+  var word3 = root.querySelector('#f12-word-3');
+  var underline = root.querySelector('.f12-underline');
+  var frameDuration = parseFloat(root.getAttribute('data-duration')) || 3.744;
+
+  var tl = gsap.timeline({ paused: true });
+
+  tl.fromTo(signature,
+    { y: 0, scale: 1 },
+    { y: -20, scale: 1.02, duration: frameDuration, ease: "sine.inOut" },
+    0
+  );
+
+  tl.fromTo(yours,
+    { opacity: 0, yPercent: 12 },
+    { opacity: 1, yPercent: 0, duration: 0.45, ease: "expo.out" },
+    0.3
+  );
+
+  tl.fromTo(word1,
+    { opacity: 0, yPercent: 10 },
+    { opacity: 1, yPercent: 0, duration: 0.4, ease: "expo.out" },
+    0.55
+  );
+  tl.fromTo(word2,
+    { opacity: 0, yPercent: 10 },
+    { opacity: 1, yPercent: 0, duration: 0.4, ease: "expo.out" },
+    0.8
+  );
+  tl.fromTo(word3,
+    { opacity: 0, yPercent: 10 },
+    { opacity: 1, yPercent: 0, duration: 0.4, ease: "expo.out" },
+    1.05
+  );
+
+  tl.fromTo(underline,
+    { scaleX: 0 },
+    { scaleX: 1, duration: 0.2, ease: "expo.out" },
+    1.4
+  );
+
+  window.__timelines = window.__timelines || {};
+  window.__timelines["12-sign-off"] = tl;
+})();
+</script>
+</div>
+</template>

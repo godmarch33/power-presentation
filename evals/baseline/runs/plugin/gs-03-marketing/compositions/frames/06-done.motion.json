@@ -1,0 +1,5 @@
+{ "duration": 4.992,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f06-kicker", "bySec": 0.5 },
+    { "kind": "before", "a": "#f06-running", "b": "#f06-done" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 } ] }

@@ -1,0 +1,5 @@
+{ "duration": 8.0,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f06-exhibit", "bySec": 0.5 },
+    { "kind": "before", "a": "#f06-exhibit", "b": "#f06-note" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 } ] }

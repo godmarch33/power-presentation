@@ -1,0 +1,11 @@
+metric,value,as_of,unit,source
+MRR,"EUR 45,600",2026-08-31,EUR,fixture: synthetic ledger (GS-02 investors variant; MVP exit criterion)
+Active accounts,240,2026-08-31,teams,site/index.html:52
+Net revenue retention,118%,2026-06-30,%,fixture: synthetic ledger (GS-02 investors variant)
+Average month-end close,3.1 days,2026-06-30,days,site/index.html:40
+Auto-match rate,98.5%,2026-08-31,%,site/index.html:36
+Ask: raise,"EUR 1,500,000",2026-09-01,EUR,fixture: synthetic ask (GS-02 investors variant; ask card)
+Ask: milestone,500 active accounts,2026-09-01,teams,fixture: synthetic ask (GS-02 investors variant; ask card)
+Ask: deadline,2026-12-15,2026-09-01,date,fixture: synthetic ask (GS-02 investors variant; ask card)
+Ask: contact,founders@ledgerly.example,2026-09-01,email,fixture: synthetic (reserved .example domain)
+Team,"2 founders, both former finance controllers",2026-09-01,people,fixture: synthetic (GS-02 investors variant; team beat)

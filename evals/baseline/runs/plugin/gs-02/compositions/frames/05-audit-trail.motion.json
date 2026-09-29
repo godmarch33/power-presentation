@@ -1,0 +1,10 @@
+{
+  "duration": 6.9,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f05-video", "bySec": 0.5 },
+    { "kind": "before", "a": "#f05-accent", "b": "#f05-label" },
+    { "kind": "staysInFrame", "selector": "#f05-stage" },
+    { "kind": "staysInFrame", "selector": "#f05-label" },
+    { "kind": "keepsMoving", "withinSelector": "#root", "maxStaticSec": 2.0 }
+  ]
+}

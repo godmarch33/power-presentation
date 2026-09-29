@@ -1,0 +1,161 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "Space Grotesk";
+      src: url("assets/fonts/SpaceGrotesk-latin-wght.woff2") format("woff2-variations"), url("assets/fonts/SpaceGrotesk-latin-wght.woff2") format("woff2");
+      font-weight: 300 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Inter";
+      src: url("assets/fonts/Inter-400.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Inter";
+      src: url("assets/fonts/Inter-700.woff2") format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    #root {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      container-type: size;
+      font-family: "Inter", sans-serif;
+      --f04-primary: #2a6f97;
+      --f04-text: #14213d;
+      --f04-border: rgba(42, 111, 151, 0.2);
+    }
+
+    #root .clip {
+      position: absolute;
+      inset: 0;
+    }
+
+    .f04-accent {
+      position: absolute;
+      left: 8.3333cqw;
+      top: 4.0741cqh;
+      width: 60px;
+      height: 4px;
+      border-radius: 2px;
+      background: var(--f04-primary);
+      transform-origin: left center;
+    }
+
+    .f04-label {
+      position: absolute;
+      left: 8.3333cqw;
+      top: 5.3704cqh;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 600;
+      color: var(--f04-text);
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+    }
+
+    .f04-label-full {
+      display: inline-block;
+      font-size: 4.8148cqh;
+      white-space: nowrap;
+    }
+
+    .f04-label-line {
+      display: none;
+      font-size: 4.8148cqh;
+    }
+
+    .f04-stage {
+      position: absolute;
+      left: 14.5833cqw;
+      top: 10.9259cqh;
+      width: 70.8333cqw;
+      height: 70.8333cqh;
+      box-sizing: border-box;
+      border: 1.5px solid var(--f04-border);
+      border-radius: 14px;
+      transform-origin: 50% 50%;
+    }
+
+    @container (aspect-ratio < 1) {
+      .f04-accent {
+        left: 5.9259cqw;
+        top: 3.3333cqh;
+      }
+
+      .f04-label {
+        left: 5.9259cqw;
+        top: 6.25cqh;
+      }
+
+      .f04-label-full {
+        display: none;
+      }
+
+      .f04-label-line {
+        display: block;
+      }
+
+      .f04-stage {
+        left: 0cqw;
+        top: 18.75cqh;
+        width: 100cqw;
+        height: 62.5cqh;
+      }
+    }
+  </style>
+
+  <div id="root" data-composition-id="04-auto-match" data-start="0" data-duration="6.6" data-width="1920" data-height="1080">
+    <div id="f04-accent-clip" class="clip" data-start="0" data-duration="6.6" data-track-index="1">
+      <div class="f04-accent"></div>
+    </div>
+
+    <div id="f04-label-clip" class="clip" data-start="0" data-duration="6.6" data-track-index="2">
+      <div class="f04-label">
+        <span class="f04-label-full">Auto-match, one click</span>
+        <span class="f04-label-line">Auto-match,</span><br />
+        <span class="f04-label-line">one click</span>
+      </div>
+    </div>
+
+    <div class="f04-stage"></div>
+
+  </div>
+
+  <script src="assets/vendor/gsap@3.14.2/gsap.min.js"></script>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+
+      tl.fromTo(
+        ".f04-accent",
+        { yPercent: 6400, autoAlpha: 0 },
+        { yPercent: 0, autoAlpha: 1, duration: 0.4, ease: "power2.inOut" },
+        0
+      );
+      tl.fromTo(
+        ".f04-stage",
+        { scale: 0.96 },
+        { scale: 1, duration: 0.5, ease: "power3.out" },
+        0
+      );
+      tl.fromTo(
+        ".f04-label",
+        { autoAlpha: 0, yPercent: 40 },
+        { autoAlpha: 1, yPercent: 0, duration: 0.45, ease: "power3.out" },
+        0.2
+      );
+
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["04-auto-match"] = tl;
+    })();
+  </script>
+</template>

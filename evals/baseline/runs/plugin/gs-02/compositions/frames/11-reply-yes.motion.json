@@ -1,0 +1,7 @@
+{
+  "duration": 4.8,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f11-pill", "bySec": 0.5 },
+    { "kind": "keepsMoving", "withinSelector": "#f11-scene", "maxStaticSec": 2.0 }
+  ]
+}

@@ -1,0 +1,146 @@
+<template>
+  <div id="root" data-composition-id="10-why-now" data-width="1920" data-height="1080">
+    <style>
+      #root {
+        width: 100%;
+        height: 100%;
+        container-type: size;
+        position: relative;
+        background: #FFFFFF;
+        overflow: hidden;
+        font-family: "Inter", sans-serif;
+      }
+
+      @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+      @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+      @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+      @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+      @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: block; }
+      @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+
+      .f10-content {
+        position: absolute;
+        left: 5cqw;
+        top: 0;
+        width: 78cqw;
+        height: 100cqh;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+      .f10-eyebrow {
+        position: absolute;
+        top: 18cqh;
+        left: 0;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 600;
+        font-size: min(2.9cqh, 1.46cqw);
+        line-height: 1.1;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #2A6F97;
+        opacity: 0;
+      }
+
+      .f10-headline {
+        position: absolute;
+        top: 30cqh;
+        left: 0;
+        width: 100%;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 700;
+        font-size: min(4.2cqw, 7.4cqh);
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+        color: #5C6B7A;
+        opacity: 0;
+        text-align: left;
+      }
+
+      .f10-rule {
+        position: absolute;
+        left: 5cqw;
+        top: 76.5cqh;
+        width: 90cqw;
+        height: 1px;
+        background: #DFE5EC;
+        opacity: 1;
+      }
+
+      .f10-rail {
+        position: absolute;
+        left: 5cqw;
+        top: 77.5cqh;
+        width: 28cqw;
+        height: 4cqh;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: min(2.6cqh, 1.46cqw);
+        line-height: 1.3;
+        color: #5C6B7A;
+        opacity: 0;
+      }
+
+      @container (aspect-ratio < 1) {
+        .f10-content {
+          left: 6cqw;
+          width: 88cqw;
+        }
+        .f10-eyebrow {
+          top: 14cqh;
+          font-size: min(2.2cqh, 3.4cqw);
+        }
+        .f10-headline {
+          top: 24cqh;
+          font-size: min(6.5cqw, 8cqh);
+        }
+        .f10-rail {
+          left: 6cqw;
+          top: 77.5cqh;
+          width: 88cqw;
+        }
+        .f10-rule {
+          left: 6cqw;
+          width: 88cqw;
+        }
+      }
+    </style>
+
+    <div class="f10-content">
+      <div class="f10-eyebrow">Why now</div>
+      <div class="f10-headline">This line is intentionally<br>left blank.</div>
+    </div>
+
+    <div class="f10-rule"></div>
+    <div class="f10-rail">No sourced why-now claim on file</div>
+
+    <script src="assets/vendor/gsap@3.14.2/gsap.min.js"></script>
+    <script>
+      (function () {
+        var root = document.querySelector('[data-composition-id="10-why-now"]');
+        var content = root.querySelector(".f10-content");
+        var eyebrow = root.querySelector(".f10-eyebrow");
+        var headline = root.querySelector(".f10-headline");
+        var rail = root.querySelector(".f10-rail");
+
+        var tl = gsap.timeline({ paused: true });
+
+        tl.fromTo(content, { scale: 1 }, { scale: 1.02, duration: 5.5, ease: "sine.inOut" }, 0);
+
+        tl.fromTo(eyebrow, { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power3.out" }, 0.3);
+
+        tl.fromTo(
+          headline,
+          { opacity: 0, yPercent: 12 },
+          { opacity: 1, yPercent: 0, duration: 0.35, ease: "power3.out" },
+          0.8
+        );
+
+        tl.fromTo(rail, { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 1.0);
+
+        window.__timelines = window.__timelines || {};
+        window.__timelines["10-why-now"] = tl;
+      })();
+    </script>
+  </div>
+</template>

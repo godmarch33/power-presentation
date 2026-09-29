@@ -1,0 +1,5 @@
+{ "duration": 3.495,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f03-footage", "bySec": 0.5 },
+    { "kind": "before", "a": "#f03-footage", "b": "#f03-letter" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 } ] }

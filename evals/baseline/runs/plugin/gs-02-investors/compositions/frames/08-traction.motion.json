@@ -1,0 +1,6 @@
+{ "duration": 9.547,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f08-card1-content", "bySec": 0.5 },
+    { "kind": "before", "a": "#f08-card1-content", "b": "#f08-card2-content" },
+    { "kind": "before", "a": "#f08-card2-content", "b": "#f08-card3-content" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 } ] }

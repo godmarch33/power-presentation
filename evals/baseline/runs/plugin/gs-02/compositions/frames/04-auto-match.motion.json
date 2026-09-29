@@ -1,0 +1,10 @@
+{
+  "duration": 6.6,
+  "assertions": [
+    { "kind": "appearsBy", "selector": ".f04-stage", "bySec": 0.5 },
+    { "kind": "before", "a": ".f04-stage", "b": ".f04-label" },
+    { "kind": "staysInFrame", "selector": ".f04-stage" },
+    { "kind": "staysInFrame", "selector": ".f04-label" },
+    { "kind": "keepsMoving", "withinSelector": "#root", "maxStaticSec": 2.0 }
+  ]
+}

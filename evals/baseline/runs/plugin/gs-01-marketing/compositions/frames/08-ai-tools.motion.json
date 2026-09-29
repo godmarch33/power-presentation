@@ -1,0 +1,7 @@
+{ "duration": 3.8,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f08-name-chatgpt", "bySec": 0.5 },
+    { "kind": "before", "a": "#f08-name-chatgpt", "b": "#f08-name-perplexity" },
+    { "kind": "before", "a": "#f08-name-perplexity", "b": "#f08-name-claude" },
+    { "kind": "before", "a": "#f08-name-claude", "b": "#f08-benefit" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 } ] }

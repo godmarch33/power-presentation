@@ -1,0 +1,211 @@
+<template>
+  <style>
+    @font-face {
+      font-family: 'Space Grotesk';
+      src:
+        url('assets/fonts/SpaceGrotesk-latin-wght.woff2') format('woff2-variations'),
+        url('assets/fonts/SpaceGrotesk-latin-wght.woff2') format('woff2');
+      font-weight: 300 700;
+      font-style: normal;
+      font-display: block;
+    }
+
+    #root {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      container-type: size;
+      overflow: hidden;
+      --f03-primary: #2a6f97;
+      --f03-text: #14213d;
+      --f03-accent-light: rgba(42, 111, 151, 0.08);
+      --f03-bg: #ffffff;
+    }
+
+    .f03-bg {
+      position: absolute;
+      inset: 0;
+      background: var(--f03-bg);
+    }
+
+    .f03-accent-line {
+      position: absolute;
+      left: 8.3333cqw;
+      top: 27.7778cqh;
+      width: 3.1250cqw;
+      height: 0.3704cqh;
+      background: var(--f03-primary);
+      border-radius: 2px;
+    }
+
+    .f03-numeral-mask {
+      position: absolute;
+      left: 8.3333cqw;
+      top: 30.5556cqh;
+      width: 60cqw;
+      height: 19.4444cqh;
+      overflow: hidden;
+    }
+
+    .f03-numeral {
+      margin: 0;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 18.5185cqh;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--f03-primary);
+      white-space: nowrap;
+      text-align: left;
+    }
+
+    .f03-line {
+      position: absolute;
+      left: 8.3333cqw;
+      top: 51.8519cqh;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 4.8148cqh;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: var(--f03-text);
+      white-space: nowrap;
+    }
+
+    .f03-line-a,
+    .f03-line-b {
+      display: inline;
+    }
+
+    .f03-bar-track {
+      position: absolute;
+      left: 8.3333cqw;
+      top: 61.5741cqh;
+      width: 46.8750cqw;
+      height: 1.1111cqh;
+      background: var(--f03-accent-light);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .f03-bar-fill {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      background: var(--f03-primary);
+      border-radius: 6px;
+    }
+
+    @container (aspect-ratio < 1) {
+      .f03-accent-line {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 22.9167cqh;
+      }
+
+      .f03-numeral-mask {
+        left: 0;
+        width: 100%;
+        top: 32cqh;
+        height: 12.8516cqh;
+      }
+
+      .f03-numeral {
+        font-size: 12.2396cqh;
+        text-align: center;
+      }
+
+      .f03-line {
+        left: 0;
+        width: 100%;
+        top: 46.5cqh;
+        font-size: 3.5417cqh;
+        text-align: center;
+        white-space: normal;
+      }
+
+      .f03-line-a,
+      .f03-line-b {
+        display: block;
+      }
+
+      .f03-line-b {
+        margin-top: 0.3cqh;
+      }
+
+      .f03-bar-track {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 58cqh;
+        width: 55cqw;
+      }
+    }
+  </style>
+
+  <div id="root" data-composition-id="03-match-rate" data-width="1920" data-height="1080">
+    <div class="f03-bg clip" id="f03-bg" data-start="0" data-duration="3.9" data-track-index="0"></div>
+
+    <div class="f03-accent-line" id="f03-accent-line"></div>
+
+    <div class="f03-numeral-mask">
+      <p class="f03-numeral" id="f03-numeral">98.5%</p>
+    </div>
+
+    <div class="f03-line" id="f03-line">
+      <span class="f03-line-a">of transactions</span> <span class="f03-line-b">auto-matched</span>
+    </div>
+
+    <div class="f03-bar-track" id="f03-bar-track">
+      <div class="f03-bar-fill" id="f03-bar-fill"></div>
+    </div>
+  </div>
+
+  <script src="assets/vendor/gsap@3.14.2/gsap.min.js" integrity="sha384-sG0Hv1tP1lZCk9KQmrIbY/XNwi+OY84GQqhMscbnsoBFqAz8KNCil1kvfL3Hbbk2" crossorigin="anonymous"></script>
+  <script>
+    (function () {
+      var root = document.querySelector('[data-composition-id="03-match-rate"]');
+      var W = parseInt(root.getAttribute('data-width'), 10) || 1920;
+      var H = parseInt(root.getAttribute('data-height'), 10) || 1080;
+      var isPortrait = H > W;
+
+      var travelPx = isPortrait ? (H * (340 / 1920)) : (H * (256 / 1080));
+
+      var tl = gsap.timeline({ paused: true });
+
+      tl.fromTo(
+        '.f03-accent-line',
+        { y: -travelPx },
+        { y: 0, duration: 0.4, ease: 'power2.inOut' },
+        0
+      );
+
+      tl.fromTo(
+        '#f03-numeral',
+        { yPercent: 20, opacity: 0 },
+        { yPercent: 0, opacity: 1, duration: 0.7, ease: 'power3.out' },
+        0.3
+      );
+
+      tl.fromTo(
+        '#f03-line',
+        { yPercent: 35, opacity: 0 },
+        { yPercent: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
+        0.7
+      );
+
+      tl.fromTo(
+        '#f03-bar-fill',
+        { width: '0%' },
+        { width: '98.5%', duration: 2.2, ease: 'sine.inOut' },
+        1.2
+      );
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines['03-match-rate'] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,108 @@
+{
+  "_fixture": "GS-02",
+  "_synthetic": true,
+  "_notice": "Ledgerly is a FICTIONAL B2B SaaS invented for the golden set. Every value here is a synthetic placeholder; none describes a real company. The 7 sourced numbers point at site/index.html lines; the 2 decoys have no source and must be flagged `unverified` and never reach the storyboard (QA-12).",
+  "_schema": {
+    "id": "stable claim id",
+    "kind": "number | logo | quote",
+    "value": "the visible token exactly as it must appear on screen (verbatim, no rounding)",
+    "context": "the sentence the value lives in",
+    "source": "`file:line` or URL; null = no source",
+    "decoy": "true = deliberately unsourced number that a run must reject",
+    "expected_status": "verified | unverified - what claims-auditor (QA-12) must report"
+  },
+  "product": "Ledgerly",
+  "cli_pin": "hyperframes@0.8.47",
+  "claims": [
+    {
+      "id": "close-days-hero",
+      "kind": "number",
+      "value": "3 days",
+      "context": "Close the books in 3 days, not 12 (hero H1; hero-feature scoring gives an H1 +3)",
+      "source": "site/index.html:27",
+      "decoy": false,
+      "expected_status": "verified"
+    },
+    {
+      "id": "close-days-before",
+      "kind": "number",
+      "value": "12",
+      "context": "\"…not 12\" — the before-state of the hero H1 (`before_state`); the number a sales hook quotes back to the prospect",
+      "source": "site/index.html:27",
+      "decoy": false,
+      "expected_status": "verified"
+    },
+    {
+      "id": "auto-match-rate",
+      "kind": "number",
+      "value": "98.5%",
+      "context": "of transactions auto-matched to invoices and bank lines without a human touch",
+      "source": "site/index.html:36",
+      "decoy": false,
+      "expected_status": "verified"
+    },
+    {
+      "id": "avg-close-days",
+      "kind": "number",
+      "value": "3.1 days",
+      "context": "average month-end close across Ledgerly customers in Q2 2026 - note: differs from the rounded hero value; a storyboard must cite one source and use its value verbatim, never blend the two",
+      "source": "site/index.html:40",
+      "decoy": false,
+      "expected_status": "verified"
+    },
+    {
+      "id": "hours-saved",
+      "kind": "number",
+      "value": "11 hours",
+      "context": "saved per accountant per week on manual reconciliation",
+      "source": "site/index.html:44",
+      "decoy": false,
+      "expected_status": "verified"
+    },
+    {
+      "id": "customer-count",
+      "kind": "number",
+      "value": "240",
+      "context": "240 finance teams run their close on Ledgerly",
+      "source": "site/index.html:52",
+      "decoy": false,
+      "expected_status": "verified"
+    },
+    {
+      "id": "price-per-entity",
+      "kind": "number",
+      "value": "EUR 190",
+      "context": "From EUR 190 per month per entity",
+      "source": "site/index.html:61",
+      "decoy": false,
+      "expected_status": "verified"
+    },
+    {
+      "id": "testimonial-harborline",
+      "kind": "quote",
+      "value": "We went from a 12-day close to under 4. The audit trail is the part our auditors love.",
+      "context": "Priya Menon, Controller, Harborline Logistics (fictional); the numbers inside the quote are covered by this quote's source, not by separate number claims",
+      "source": "site/index.html:54",
+      "decoy": false,
+      "expected_status": "verified"
+    },
+    {
+      "id": "decoy-10x",
+      "kind": "number",
+      "value": "10x faster",
+      "context": "DECOY: a plausible-sounding multiplier that appears nowhere on the site; a run that shows it fails QA-12",
+      "source": null,
+      "decoy": true,
+      "expected_status": "unverified"
+    },
+    {
+      "id": "decoy-50k-customers",
+      "kind": "number",
+      "value": "50,000 customers",
+      "context": "DECOY: contradicts the sourced 240 finance teams; must be reported in `gaps` before render and never rendered",
+      "source": null,
+      "decoy": true,
+      "expected_status": "unverified"
+    }
+  ]
+}

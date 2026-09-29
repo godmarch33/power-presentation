@@ -1,0 +1,252 @@
+{
+  "schema": "power-presentation/autozoom@0.1",
+  "plugin_version": "0.1.0",
+  "format": "16:9",
+  "inputs": {
+    "events_file": "null",
+    "events_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "manifest_file": "capture-manifest.json",
+    "footage_file": "footage.mp4",
+    "footage_sha256": "3a19be5ec0f7b0b696893a876e35ce8dc560cf39e0e7cf5a0ff6451cb2efacea",
+    "tier": "A",
+    "origin_ms": 0,
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "source": {
+      "width": 1920,
+      "height": 1080,
+      "duration_sec": 15.44,
+      "from": "ffprobe"
+    },
+    "events": {
+      "total": 0,
+      "in_timeline": 0,
+      "dropped": 0
+    }
+  },
+  "params": {
+    "defaults": {
+      "zoomInSec": 0.7,
+      "holdSec": {
+        "min": 1,
+        "max": 2
+      },
+      "zoomOutSec": 0.8,
+      "ease": "ease-out",
+      "overshootMax": 0.08,
+      "minGapSec": 3,
+      "zoomFactor": {
+        "min": 1.5,
+        "max": 2,
+        "max4k": 3
+      },
+      "deadZone": {
+        "width": 0.5,
+        "height": 0.7
+      },
+      "cursorSpring": {
+        "tension": 470,
+        "mass": 3,
+        "friction": 70
+      },
+      "neverZoom": [
+        "scroll",
+        "video"
+      ],
+      "source": "canonical numbers"
+    },
+    "research": {
+      "idleCloseSec": 1.5,
+      "holdAfterSec": 1.2,
+      "typingBurst": {
+        "keys": 3,
+        "windowSec": 1.5
+      },
+      "edgeSnap": 0.25,
+      "zoomFactor916": {
+        "min": 1.3,
+        "max": 1.5
+      },
+      "approachLeadSec": 0.5,
+      "dwellAfterEventSec": 0.15,
+      "cursorFps": 30,
+      "textFieldTags": [
+        "input",
+        "textarea",
+        "select"
+      ],
+      "source": "research (Cap, motion craft)"
+    },
+    "eases": {
+      "zoom-in": {
+        "gsap": "power3.out",
+        "css": "cubic-bezier(0.23,1,0.32,1)"
+      },
+      "reaim": {
+        "gsap": "power2.inOut",
+        "css": "cubic-bezier(0.455,0.03,0.515,0.955)"
+      },
+      "zoom-out": {
+        "gsap": "power2.out",
+        "css": "cubic-bezier(0.25,0.46,0.45,0.94)"
+      }
+    }
+  },
+  "clip": {
+    "start": 9.5,
+    "duration": 3
+  },
+  "clusters": [],
+  "segments": [],
+  "skipped_clusters": [],
+  "tracks": {
+    "16:9": {
+      "format": "16:9",
+      "canvas": {
+        "width": 1920,
+        "height": 1080
+      },
+      "wrapper": {
+        "width": 1920,
+        "height": 1080,
+        "left": 0,
+        "top": 0,
+        "visible": {
+          "width": 1,
+          "height": 1
+        }
+      },
+      "zoom_factor": {
+        "min": 1.5,
+        "max": 2
+      },
+      "peak_scale": 1,
+      "poses": [],
+      "keyframes": [
+        {
+          "t": 0,
+          "set": true,
+          "role": "home",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": 1,
+          "xPercent": 0,
+          "yPercent": 0
+        }
+      ]
+    },
+    "9:16": {
+      "format": "9:16",
+      "canvas": {
+        "width": 1080,
+        "height": 1920
+      },
+      "wrapper": {
+        "width": 3413.333,
+        "height": 1920,
+        "left": -1166.667,
+        "top": 0,
+        "visible": {
+          "width": 0.3164,
+          "height": 1
+        }
+      },
+      "zoom_factor": {
+        "min": 1.3,
+        "max": 1.5,
+        "source": "research"
+      },
+      "peak_scale": 1,
+      "poses": [],
+      "keyframes": [
+        {
+          "t": 0,
+          "set": true,
+          "role": "home",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": 1,
+          "xPercent": 0,
+          "yPercent": 0
+        }
+      ]
+    }
+  },
+  "keyframes": [
+    {
+      "t": 0,
+      "set": true,
+      "role": "home",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "scale": 1,
+      "xPercent": 0,
+      "yPercent": 0
+    }
+  ],
+  "cursor": null,
+  "checks": {
+    "video_without_events": true,
+    "no_pointer_events": true,
+    "capture_size_below_output": {
+      "16:9": {
+        "ok": true,
+        "ratio": 1,
+        "source_window_px": {
+          "width": 1920,
+          "height": 1080
+        },
+        "output_px": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "9:16": {
+        "ok": false,
+        "ratio": 0.562,
+        "source_window_px": {
+          "width": 607,
+          "height": 1080
+        },
+        "output_px": {
+          "width": 1080,
+          "height": 1920
+        }
+      }
+    },
+    "zoom_peak_upscale": {
+      "16:9": {
+        "peak_scale": 1,
+        "ratio": 1,
+        "ok": true
+      },
+      "9:16": {
+        "peak_scale": 1,
+        "ratio": 0.562,
+        "ok": false
+      }
+    }
+  },
+  "warnings": [
+    "capture_size_below_output (9:16): the base crop has 607×1080 source px for a 1080×1920 output",
+    "zoom_peak_upscale (9:16): the 1× peak upscales the capture 1.779× (3× only with 4K)",
+    "video_without_events: no events inside the footage timeline — no auto-zoom, no cursor (needs events.jsonl; tier B recordings and VHS terminal captures have none — a declared capture_drift still needs this home-pose sidecar, C3)"
+  ],
+  "stats": {
+    "events": 0,
+    "clusters": 0,
+    "zooms": 0,
+    "reaims": 0,
+    "skipped": 0,
+    "waypoints": 0,
+    "clicks": 0
+  }
+}

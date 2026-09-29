@@ -1,0 +1,38 @@
+[
+  { "name": "type/bug", "color": "d73a4a", "description": "Something does not work as documented", "aliases": ["bug"] },
+  { "name": "type/feature", "color": "a2eeef", "description": "New behaviour, flag, gate or product type", "aliases": ["enhancement"] },
+  { "name": "type/docs", "color": "0075ca", "description": "README, guides, skill references", "aliases": ["documentation"] },
+  { "name": "type/chore", "color": "cfd3d7", "description": "Refactor, cleanup, tooling" },
+  { "name": "type/question", "color": "d876e3", "description": "Usage question", "aliases": ["question"] },
+
+  { "name": "area/intake", "color": "c5def5", "description": "Flags, interview, BRIEF.md" },
+  { "name": "area/inspect", "color": "c5def5", "description": "Product type, story extraction, claims" },
+  { "name": "area/capture", "color": "c5def5", "description": "record-flow, VHS, stills, redaction" },
+  { "name": "area/story", "color": "c5def5", "description": "Story director, storyboard, script, pitch round" },
+  { "name": "area/render", "color": "c5def5", "description": "Frames, autozoom, HyperFrames render path" },
+  { "name": "area/qa-gates", "color": "c5def5", "description": "QA-01…QA-14, wowprobe, scorecard, vision critic" },
+  { "name": "area/deliver", "color": "c5def5", "description": "Poster, captions, share copy, run report" },
+  { "name": "area/hooks", "color": "c5def5", "description": "SessionStart and other Claude Code hooks" },
+  { "name": "area/toolchain", "color": "c5def5", "description": "HyperFrames pin, Chrome, Playwright, ffmpeg, TTS" },
+  { "name": "area/evals", "color": "c5def5", "description": "Golden set, baseline, plugin evals" },
+  { "name": "area/ci", "color": "c5def5", "description": "GitHub Actions workflows" },
+
+  { "name": "priority/critical", "color": "b60205", "description": "Broken for everyone or a security issue — fix first" },
+  { "name": "priority/high", "color": "d93f0b", "description": "Next up" },
+  { "name": "priority/medium", "color": "fbca04", "description": "Planned" },
+  { "name": "priority/low", "color": "0e8a16", "description": "Nice to have" },
+
+  { "name": "status/needs-triage", "color": "ededed", "description": "Waiting for the maintainer to look" },
+  { "name": "status/confirmed", "color": "5319e7", "description": "Reproduced or accepted" },
+  { "name": "status/blocked", "color": "000000", "description": "Waiting on something outside this issue" },
+  { "name": "status/duplicate", "color": "cfd3d7", "description": "Already tracked elsewhere", "aliases": ["duplicate"] },
+  { "name": "status/invalid", "color": "e4e669", "description": "Not a problem with this project", "aliases": ["invalid"] },
+  { "name": "status/wontfix", "color": "ffffff", "description": "Will not be worked on", "aliases": ["wontfix"] },
+
+  { "name": "good first issue", "color": "7057ff", "description": "Small, well-scoped — good for newcomers" },
+  { "name": "help wanted", "color": "008672", "description": "Open for a contributor to pick up" },
+  { "name": "breaking-change", "color": "b60205", "description": "Changes a flag, an output schema or a default" },
+  { "name": "security", "color": "ee0701", "description": "Security-relevant change" },
+  { "name": "accessibility", "color": "f143ab", "description": "Captions, contrast, reading floor and other access barriers" },
+  { "name": "dependencies", "color": "0366d6", "description": "GitHub Actions pin or toolchain pin update" }
+]

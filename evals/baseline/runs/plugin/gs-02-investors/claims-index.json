@@ -1,0 +1,501 @@
+{
+  "schema": "power-presentation/claims-index@0.1",
+  "version": 2,
+  "plugin_version": "0.1.0",
+  "generated_by": "scripts/extract-story.mjs",
+  "repo": "ledgerly-investors",
+  "url": null,
+  "rule": "every number, logo and quote that goes on screen or into SCRIPT.md must be listed here with a `file:line` or URL source; `status: unverified` items never reach the script and are shown in `gaps` before render (QA-12)",
+  "counts": {
+    "total": 21,
+    "verified": 21,
+    "unverified": 0,
+    "by_kind": {
+      "number": 17,
+      "quote": 1,
+      "logo": 0,
+      "text": 3
+    },
+    "by_claim_type": {
+      "sourced": 18,
+      "demonstrated": 3,
+      "declared": 0
+    }
+  },
+  "claims": [
+    {
+      "id": "c001",
+      "kind": "number",
+      "value": "3 days",
+      "number": 3,
+      "unit": "days",
+      "unit_kind": "measure",
+      "context": "Close the books in 3 days, not 12",
+      "source": "site/index.html:27",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": false,
+      "used_in": []
+    },
+    {
+      "id": "c002",
+      "kind": "number",
+      "value": "98.5%",
+      "number": 98.5,
+      "unit": "%",
+      "unit_kind": "measure",
+      "context": "What Ledgerly does — 98.5% — of transactions auto-matched to invoices and bank lines without a human touch.",
+      "source": "site/index.html:36",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": false,
+      "used_in": [
+        "STORYBOARD.md frame 04 (origin of c013)"
+      ]
+    },
+    {
+      "id": "c003",
+      "kind": "number",
+      "value": "3.1 days",
+      "number": 3.1,
+      "unit": "days",
+      "unit_kind": "measure",
+      "context": "of transactions auto-matched to invoices and bank lines without a human touch. — 3.1 days — average month-end close across Ledgerly customers in Q2 2026.",
+      "source": "site/index.html:40",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": false,
+      "used_in": [
+        "STORYBOARD.md frame 01 (origin of c012)"
+      ]
+    },
+    {
+      "id": "c004",
+      "kind": "number",
+      "value": "11 hours",
+      "number": 11,
+      "unit": "h",
+      "unit_kind": "measure",
+      "context": "average month-end close across Ledgerly customers in Q2 2026. — 11 hours — saved per accountant per week on manual reconciliation.",
+      "source": "site/index.html:44",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": false,
+      "used_in": []
+    },
+    {
+      "id": "c005",
+      "kind": "number",
+      "value": "240",
+      "number": 240,
+      "unit": "teams",
+      "unit_kind": "count",
+      "context": "240 finance teams run their close on Ledgerly.",
+      "source": "site/index.html:52",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": false,
+      "used_in": [
+        "STORYBOARD.md frame 08 (origin of c010)"
+      ]
+    },
+    {
+      "id": "c006",
+      "kind": "number",
+      "value": "EUR 190",
+      "number": 190,
+      "unit": "EUR",
+      "unit_kind": "currency",
+      "context": "From EUR 190 per month per entity. Unlimited users, unlimited bank feeds.",
+      "source": "site/index.html:61",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": false,
+      "used_in": []
+    },
+    {
+      "id": "c007",
+      "kind": "number",
+      "value": "12",
+      "number": 12,
+      "unit": null,
+      "unit_kind": "bare",
+      "context": "Close the books in 3 days, not 12",
+      "source": "site/index.html:27",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": false,
+      "used_in": [
+        "STORYBOARD.md frame 01",
+        "SCRIPT.md line 1"
+      ]
+    },
+    {
+      "id": "c008",
+      "kind": "quote",
+      "value": "We went from a 12-day close to under 4. The audit trail is the part our auditors love.",
+      "context": "Priya Menon, Controller, Harborline Logistics",
+      "attribution": {
+        "name": "Priya Menon",
+        "role": "Controller",
+        "company": "Harborline Logistics",
+        "raw": "Priya Menon, Controller, Harborline Logistics"
+      },
+      "source": "site/index.html:54",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "named": true,
+      "declared": false,
+      "used_in": [
+        "STORYBOARD.md frame 09 (first sentence, verbatim)"
+      ]
+    },
+    {
+      "id": "c009",
+      "kind": "number",
+      "value": "EUR 45,600",
+      "number": 45600,
+      "unit": "EUR",
+      "context": "MRR",
+      "source": "metrics.csv:2",
+      "source_kind": "metrics",
+      "origin": "synthetic ledger",
+      "date": "2026-08-31",
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "declared_id": null,
+      "verification": "row 2 of metrics.csv (verbatim, with date, origin: synthetic ledger)",
+      "used_in": []
+    },
+    {
+      "id": "c010",
+      "kind": "number",
+      "value": "240",
+      "number": 240,
+      "unit": "teams",
+      "context": "Active accounts",
+      "source": "metrics.csv:3",
+      "source_kind": "metrics",
+      "origin": "site/index.html:52",
+      "date": "2026-08-31",
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "declared_id": null,
+      "verification": "row 3 of metrics.csv (verbatim, with date, origin: site/index.html:52)",
+      "used_in": [
+        "STORYBOARD.md frame 08",
+        "SCRIPT.md line 8"
+      ]
+    },
+    {
+      "id": "c011",
+      "kind": "number",
+      "value": "118%",
+      "number": 118,
+      "unit": "%",
+      "context": "Net revenue retention",
+      "source": "metrics.csv:4",
+      "source_kind": "metrics",
+      "origin": "synthetic ledger",
+      "date": "2026-06-30",
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "declared_id": null,
+      "verification": "row 4 of metrics.csv (verbatim, with date, origin: synthetic ledger)",
+      "used_in": [
+        "STORYBOARD.md frame 08",
+        "SCRIPT.md line 8"
+      ]
+    },
+    {
+      "id": "c012",
+      "kind": "number",
+      "value": "3.1 days",
+      "number": 3.1,
+      "unit": "days",
+      "context": "Average month-end close",
+      "source": "metrics.csv:5",
+      "source_kind": "metrics",
+      "origin": "site/index.html:40",
+      "date": "2026-06-30",
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "declared_id": null,
+      "verification": "row 5 of metrics.csv (verbatim, with date, origin: site/index.html:40)",
+      "used_in": [
+        "STORYBOARD.md frame 01",
+        "STORYBOARD.md frame 08",
+        "SCRIPT.md line 1"
+      ]
+    },
+    {
+      "id": "c013",
+      "kind": "number",
+      "value": "98.5%",
+      "number": 98.5,
+      "unit": "%",
+      "context": "Auto-match rate",
+      "source": "metrics.csv:6",
+      "source_kind": "metrics",
+      "origin": "site/index.html:36",
+      "date": "2026-08-31",
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "declared_id": null,
+      "verification": "row 6 of metrics.csv (verbatim, with date, origin: site/index.html:36)",
+      "used_in": [
+        "STORYBOARD.md frame 04",
+        "SCRIPT.md line 4"
+      ]
+    },
+    {
+      "id": "c014",
+      "kind": "number",
+      "value": "EUR 1,500,000",
+      "number": 1500000,
+      "unit": "EUR",
+      "context": "Ask: raise",
+      "source": "metrics.csv:7",
+      "source_kind": "metrics",
+      "origin": "synthetic ask",
+      "date": "2026-09-01",
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "declared_id": null,
+      "verification": "row 7 of metrics.csv (verbatim, with date, origin: synthetic ask)",
+      "used_in": [
+        "STORYBOARD.md frame 12",
+        "STORYBOARD.md frame 13",
+        "SCRIPT.md line 11 (spoken as 'one and a half million euros')"
+      ]
+    },
+    {
+      "id": "c015",
+      "kind": "number",
+      "value": "500 active accounts",
+      "number": 500,
+      "unit": "accounts",
+      "context": "Ask: milestone",
+      "source": "metrics.csv:8",
+      "source_kind": "metrics",
+      "origin": "synthetic ask",
+      "date": "2026-09-01",
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "declared_id": null,
+      "verification": "row 8 of metrics.csv (verbatim, with date, origin: synthetic ask)",
+      "used_in": [
+        "STORYBOARD.md frame 12",
+        "SCRIPT.md line 11"
+      ]
+    },
+    {
+      "id": "c016",
+      "kind": "text",
+      "value": "2026-12-15",
+      "number": null,
+      "unit": "date",
+      "context": "Ask: deadline",
+      "source": "metrics.csv:9",
+      "source_kind": "metrics",
+      "origin": "synthetic ask",
+      "date": "2026-09-01",
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "declared_id": null,
+      "verification": "row 9 of metrics.csv (verbatim date)",
+      "used_in": [
+        "STORYBOARD.md frame 12",
+        "SCRIPT.md line 11 (spoken as 'December fifteenth')"
+      ]
+    },
+    {
+      "id": "c017",
+      "kind": "text",
+      "value": "founders@ledgerly.example",
+      "number": null,
+      "unit": "email",
+      "context": "Ask: contact",
+      "source": "metrics.csv:10",
+      "source_kind": "metrics",
+      "origin": "synthetic (reserved .example domain)",
+      "date": "2026-09-01",
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "declared_id": null,
+      "verification": "row 10 of metrics.csv (verbatim email)",
+      "used_in": [
+        "STORYBOARD.md frame 12",
+        "STORYBOARD.md frame 13",
+        "SCRIPT.md line 12 (spoken as 'founders at ledgerly dot example')"
+      ]
+    },
+    {
+      "id": "c018",
+      "kind": "number",
+      "value": "2 founders, both former finance controllers",
+      "number": 2,
+      "unit": "founders",
+      "context": "Team",
+      "source": "metrics.csv:11",
+      "source_kind": "metrics",
+      "origin": "synthetic",
+      "date": "2026-09-01",
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "declared_id": null,
+      "verification": "row 11 of metrics.csv (verbatim, with date, origin: synthetic)",
+      "used_in": [
+        "STORYBOARD.md frame 11",
+        "SCRIPT.md line 10"
+      ]
+    },
+    {
+      "id": "c101",
+      "kind": "number",
+      "value": "0 of 7 → 7 of 7 matched",
+      "number": 7,
+      "unit": "lines",
+      "context": "Nordwell Bank EUR reconciliation: one click on Auto-match turns 0 of 7 matched into 7 of 7 matched (seeded demo data)",
+      "source": ".media/capture/events.jsonl:5",
+      "source_kind": "repo-files",
+      "capture": {
+        "file": ".media/capture/footage.mp4",
+        "timecode": "1.6–5.5 s (click at 2.943 s, 7 of 7 at ~5.5 s)",
+        "tier": "A",
+        "manifest": ".media/capture/capture-manifest.json"
+      },
+      "frame": "STORYBOARD.md frame 03 (capture_window 1.7-5.9)",
+      "date": "2026-09-27",
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false,
+      "used_in": [
+        "STORYBOARD.md frame 03",
+        "SCRIPT.md line 3 (spoken as 'seven bank lines, one click, all seven matched')"
+      ]
+    },
+    {
+      "id": "c102",
+      "kind": "text",
+      "value": "September locked",
+      "number": null,
+      "unit": null,
+      "context": "Lock period → 'September locked' badge after the 5-step close checklist (seeded demo data)",
+      "source": ".media/capture/events.jsonl:10",
+      "source_kind": "repo-files",
+      "capture": {
+        "file": ".media/capture/footage.mp4",
+        "timecode": "12.81–15.3 s (click at 12.809 s, badge at ~12.85 s)",
+        "tier": "A",
+        "manifest": ".media/capture/capture-manifest.json"
+      },
+      "frame": "STORYBOARD.md frame 07 (capture_window 12.1-15.3)",
+      "date": "2026-09-27",
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false,
+      "used_in": [
+        "STORYBOARD.md frame 07",
+        "SCRIPT.md line 7"
+      ]
+    },
+    {
+      "id": "c103",
+      "kind": "number",
+      "value": "0 of 7 matched",
+      "number": 0,
+      "unit": "lines",
+      "context": "Before state of the Nordwell Bank EUR table: 'Imported this morning. Nothing is matched yet.' (seeded demo data)",
+      "source": "site/app.html:77",
+      "source_kind": "repo-files",
+      "capture": {
+        "file": ".media/capture/footage.mp4",
+        "timecode": "1.6–2.94 s (before the Auto-match click)",
+        "tier": "A",
+        "manifest": ".media/capture/capture-manifest.json"
+      },
+      "frame": "STORYBOARD.md frame 03 (capture_window 1.7-5.9)",
+      "date": "2026-09-27",
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false,
+      "used_in": [
+        "STORYBOARD.md frame 03"
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "id": "no-why-now",
+      "value": null,
+      "kind": "text",
+      "where": "repo, site/, metrics.csv",
+      "reason": "no file, metric or URL states a why-now (market timing, regulation, technology shift)",
+      "needed": "a dated, sourced why-now item (URL or file:line) — frame 10 shows the beat as intentionally blank until then"
+    },
+    {
+      "id": "mrr-growth-rate",
+      "value": "EUR 45,600",
+      "kind": "number",
+      "where": "metrics.csv:2",
+      "reason": "MRR has a date (2026-08-31) but no growth rate or window, so it cannot take the `number · rate · window` form",
+      "needed": "MRR growth rate and window (e.g. month-over-month over the last N months) in metrics.csv"
+    },
+    {
+      "id": "undated-11-hours",
+      "value": "11 hours",
+      "kind": "number",
+      "where": "site/index.html:44 (c004)",
+      "reason": "no date; traction must carry source and date — kept off screen",
+      "needed": "as_of date and measurement basis"
+    },
+    {
+      "id": "founder-names",
+      "value": null,
+      "kind": "text",
+      "where": "metrics.csv:11 (c018)",
+      "reason": "one combined team line only; no founder names, no one-credential-per-founder",
+      "needed": "founder names and one credential each"
+    },
+    {
+      "id": "nrr-window",
+      "value": "118%",
+      "kind": "number",
+      "where": "metrics.csv:4 (c011)",
+      "reason": "NRR has an as-of date but no stated measurement window (trailing 12 months?)",
+      "needed": "NRR window"
+    }
+  ],
+  "declared": null,
+  "metrics": {
+    "ref": "metrics.csv",
+    "rows": 10
+  }
+}

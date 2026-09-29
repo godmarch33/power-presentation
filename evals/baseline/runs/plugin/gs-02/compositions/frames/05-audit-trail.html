@@ -1,0 +1,116 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "Space Grotesk";
+      src: url("assets/fonts/SpaceGrotesk-latin-wght.woff2") format("woff2-variations"), url("assets/fonts/SpaceGrotesk-latin-wght.woff2") format("woff2");
+      font-weight: 300 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    #root {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      container-type: size;
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    #f05-stage {
+      position: absolute;
+      left: 14.5833cqw;
+      top: 10.9259cqh;
+      width: 70.8333cqw;
+      height: 70.8333cqh;
+      box-sizing: border-box;
+      border: 1.5px solid rgba(42, 111, 151, 0.2);
+      border-radius: 14px;
+      transform-origin: 50% 50%;
+      pointer-events: none;
+    }
+
+    #f05-band {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    #f05-accent {
+      position: absolute;
+      left: 8.3333cqw;
+      top: 4.0741cqh;
+      width: 3.125cqw;
+      height: 0.3704cqh;
+      min-height: 2px;
+      border-radius: 2px;
+      background: #2a6f97;
+      transform-origin: left center;
+    }
+
+    #f05-label {
+      position: absolute;
+      left: 8.3333cqw;
+      top: 5.3704cqh;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 600;
+      font-size: 4.8148cqh;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: #14213d;
+      white-space: nowrap;
+    }
+    .f05-label-line {
+      display: inline;
+    }
+
+    @container (aspect-ratio < 1) {
+      #f05-stage {
+        left: 0cqw;
+        top: 18.75cqh;
+        width: 100cqw;
+        height: 62.5cqh;
+      }
+      #f05-accent {
+        left: 5.9259cqw;
+        top: 3.3333cqh;
+      }
+      #f05-label {
+        left: 5.9259cqw;
+        top: 6.25cqh;
+        white-space: normal;
+        max-width: 88cqw;
+      }
+      .f05-label-line {
+        display: block;
+      }
+    }
+  </style>
+
+  <div id="root" data-composition-id="05-audit-trail" data-start="0" data-duration="6.9" data-width="1920" data-height="1080">
+    <div id="f05-stage"></div>
+
+    <div id="f05-band" class="clip" data-start="0" data-duration="6.9" data-track-index="3">
+      <div id="f05-accent"></div>
+      <div id="f05-label"><span class="f05-label-line">Audit trail on</span> <span class="f05-label-line">every match</span></div>
+    </div>
+
+  </div>
+
+  <script src="assets/vendor/gsap@3.14.2/gsap.min.js"></script>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+
+
+      tl.fromTo("#f05-label", { yPercent: 140, autoAlpha: 0 }, { yPercent: 0, autoAlpha: 1, duration: 0.45, ease: "power3.out" }, 1.4);
+
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["05-audit-trail"] = tl;
+    })();
+  </script>
+</template>

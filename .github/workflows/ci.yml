@@ -1,0 +1,114 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  HYPERFRAMES_SKIP_SKILLS: "1"
+  HYPERFRAMES_NO_TELEMETRY: "1"
+  DO_NOT_TRACK: "1"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: "22"
+
+      - name: Install Claude Code CLI
+        run: npm i -g @anthropic-ai/claude-code
+
+      - name: System tools (ffmpeg / ffprobe for the QA-gate tests)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends ffmpeg
+
+      - name: Validate plugin manifest and components (strict)
+        run: claude plugin validate --strict .
+
+      - name: Script tests (stubs exit 64; implemented scripts incl. the toolchain flow with a fake runner)
+        run: node --test "scripts/*.test.mjs"
+
+      - name: Vendored workflow integrity (vendor/product-launch-video @ v0.8.47, offline)
+        run: node scripts/vendor-workflow.mjs check
+
+      - name: Golden set, light part (classes, claims, storyboard gates on paper; offline)
+        run: node scripts/golden-set.mjs verify
+
+      - name: Compile Python scripts (syntax only)
+        run: python3 -m py_compile scripts/*.py
+
+      - name: Syntax-check workflow scripts (v1 stubs)
+        run: |
+          set -euo pipefail
+          for f in workflows/*.js; do
+            node --check "$f"
+            echo "ok: $f"
+          done
+
+      - name: Syntax-check shell hooks and scripts
+        run: |
+          set -euo pipefail
+          for f in hooks/*.sh scripts/*.sh; do
+            [ -e "$f" ] || continue
+            bash -n "$f"
+            echo "ok: $f"
+          done
+
+      - name: Guard — no lockfile, no bundled music, package under 5 MB
+        run: |
+          set -euo pipefail
+          for lock in package-lock.json npm-shrinkwrap.json bun.lock bun.lockb; do
+            if [ -e "$lock" ]; then echo "::error::$lock must not be committed (Claude Code runs npm ci on cache copy)"; exit 1; fi
+          done
+          if find . -path ./.git -prune -o \( -name '*.mp3' -o -name '*.wav' -o -name '*.ogg' -o -name '*.m4a' \) -print | grep -q .; then
+            echo "::error::audio files found — the package ships no music; media packs go to \${CLAUDE_PLUGIN_DATA}"; exit 1
+          fi
+          size_kb=$(( $(git ls-files -z -- . ':!:evals/' ':!:examples/' ':!:.github/' ':!:.claude/' | xargs -0 cat | wc -c) / 1024 ))
+          all_kb=$(( $(git ls-files -z | xargs -0 cat | wc -c) / 1024 ))
+          echo "package size: ${size_kb} KB (whole checkout with evals/ and examples/: ${all_kb} KB)"
+          if [ "$size_kb" -gt 5120 ]; then echo "::error::package exceeds 5 MB"; exit 1; fi
+
+  evals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    needs: validate
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: "22"
+      - name: Skip without a key
+        id: key
+        run: |
+          if [ -z "${ANTHROPIC_API_KEY}" ]; then echo "present=false" >> "$GITHUB_OUTPUT"; echo "no ANTHROPIC_API_KEY secret — eval tier skipped"; else echo "present=true" >> "$GITHUB_OUTPUT"; fi
+      - name: Install Claude Code CLI
+        if: steps.key.outputs.present == 'true'
+        run: npm i -g @anthropic-ai/claude-code
+      - name: Per-PR trigger / no-trigger cases (free graders, one arm, < $2)
+        if: steps.key.outputs.present == 'true'
+        run: claude plugin eval . --trust-plugin --ablation none --runs 1 --no-publish --case '*trigger-*' --max-cost-usd 2 --json evals/results/ci-smoke.json
+      - name: Storyboard case (Agent tool, ≤ 30 turns)
+        if: steps.key.outputs.present == 'true'
+        run: claude plugin eval . --trust-plugin --ablation none --runs 1 --no-publish --case 'storyboard-*' --max-cost-usd 3 --json evals/results/ci-storyboard.json
+      - name: Keep the reports
+        if: steps.key.outputs.present == 'true' && always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: eval-results
+          path: evals/results/
+          if-no-files-found: ignore

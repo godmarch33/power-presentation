@@ -1,0 +1,36 @@
+{
+  "schema": "power-presentation/vendored-skill@0.1",
+  "skill": "product-launch-video",
+  "vendored_at": "2026-09-20T07:08:20.636Z",
+  "plugin_version": "0.1.0",
+  "hyperframes_pin": "0.8.47",
+  "upstream": {
+    "repo": "heygen-com/hyperframes",
+    "tag": "v0.8.47",
+    "commit": "415967befabf9f9f389921937275c93ba417253a",
+    "committed_at": "2026-09-18T01:12:02-07:00",
+    "subject": "Merge pull request #4063 from heygen-com/release/v0.8.47",
+    "path": "skills/product-launch-video"
+  },
+  "bundle": {
+    "hash": "d87f7ae140e88403",
+    "files": 30,
+    "algorithm": "hyperframes skills-manifest (sha256 over sorted rel paths + content, text CRLF→LF, 16 hex)"
+  },
+  "manifest_entry": {
+    "hash": "d87f7ae140e88403",
+    "files": 30
+  },
+  "license": {
+    "file": "LICENSE-hyperframes",
+    "spdx": "Apache-2.0",
+    "source": "LICENSE at the same commit"
+  },
+  "upstream_notice": null,
+  "rules": [
+    "entry into the workflow only through BRIEF.md; the copy seeds ~/.claude/skills/<name>, nothing imports vendor/ directly",
+    "re-vendor at every HyperFrames bump and re-run the golden set",
+    "no media binaries in the package",
+    "keep the Apache-2.0 LICENSE/NOTICE with the copy"
+  ]
+}

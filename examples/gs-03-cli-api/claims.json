@@ -1,0 +1,36 @@
+{
+  "_fixture": "GS-03",
+  "_synthetic": true,
+  "_notice": "Acme Jobs is a FICTIONAL CLI/API invented for the golden set. No numbers are fixed for GS-03 in advance; these are the only numbers the storyboard skeleton shows, each with its file:line in this fixture (QA-12).",
+  "product": "Acme Jobs",
+  "cli_pin": "hyperframes@0.8.47",
+  "claims": [
+    {
+      "id": "status-202",
+      "kind": "number",
+      "value": "202",
+      "context": "POST /jobs answers 202 Accepted (job accepted and queued)",
+      "source": "openapi.yaml:21",
+      "decoy": false,
+      "expected_status": "verified"
+    },
+    {
+      "id": "example-job-id",
+      "kind": "quote",
+      "value": "job_7f3k2",
+      "context": "the example job id from the OpenAPI schema; shown verbatim in the terminal frames",
+      "source": "openapi.yaml:61",
+      "decoy": false,
+      "expected_status": "verified"
+    },
+    {
+      "id": "decoy-latency",
+      "kind": "number",
+      "value": "40 ms",
+      "context": "DECOY: a latency figure that appears nowhere in the fixture; the api-card scene must show a measured value from the live call (tier A) or none",
+      "source": null,
+      "decoy": true,
+      "expected_status": "unverified"
+    }
+  ]
+}

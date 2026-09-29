@@ -1,0 +1,37 @@
+schema_version: "1.1"
+name: storyboard-ledgerly
+description: A sales video request for the Ledgerly fixture with a prospect record must fire /present, keep the product name, and state the GDPR letter rule.
+tags: [storyboard, per-pr, mvp]
+expected_outcome: The present skill runs in sales mode, names Ledgerly and the prospect, outlines the storyboard / pitch step, and mentions the GDPR Art. 14 notice and Art. 21 objection line required in the outreach letter.
+execution:
+  prompt: |
+    Make a 60-second sales outreach video for Ledgerly (the synthetic B2B SaaS fixture that ships with this
+    plugin under examples/gs-02-ledgerly/). Run it as:
+
+      /present --for sales --duration 60 --prospect prospect.json --pain "manual month-end reconciliation" --yes
+
+    The prospect record (same content as prospect.json, fictional):
+      name: Dana Okafor
+      company: Northbridge Retail Group
+      role: Head of Finance
+      site: https://northbridge-retail.example
+
+    I want the storyboard plan, the pitch options, and the outreach email that goes with the video.
+    Do not render anything yet.
+  max_turns: 30
+  timeout_seconds: 900
+  allowed_tools: [Read, Glob, Grep, Skill, Agent]
+graders:
+  - name: present-skill-fired
+    type: tool_used
+    tool: Skill
+    input_match: '"skill"\s*:\s*"(?:[\w-]+:)?present"'
+  - name: keeps-product-name
+    type: regex
+    pattern: 'Ledgerly'
+    target: last_message
+  - name: states-gdpr-letter-rule
+    type: regex
+    pattern: 'GDPR|Art\. 14|Art\. 21'
+    target: last_message
+    weight: 2

@@ -1,0 +1,111 @@
+<template>
+<div id="root" data-composition-id="03-before" data-width="1920" data-height="1080">
+  <style>
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+
+    #root {
+      width: 100%;
+      height: 100%;
+      container-type: size;
+      position: relative;
+      overflow: hidden;
+      font-family: "Inter", sans-serif;
+    }
+
+    #root .clip { position: absolute; inset: 0; }
+
+    .f03-footage-layer { position: absolute; inset: 0; }
+
+    .f03-kicker-card {
+      position: absolute;
+      left: 5cqw;
+      top: 66cqh;
+      width: max-content;
+      max-width: 82cqw;
+      display: inline-flex;
+      align-items: center;
+      padding: 1.6cqh 2.6cqw;
+      box-sizing: border-box;
+      border-radius: 14px;
+      background: #FFFFFF;
+      border: 1.5px solid rgba(42, 111, 151, 0.2);
+    }
+    .f03-kicker-text {
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 600;
+      font-size: 6.1cqh;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: #14213D;
+      white-space: nowrap;
+    }
+
+    .f03-chip {
+      position: absolute;
+      left: 65.5cqw;
+      top: 4.0cqh;
+      width: 30.9cqw;
+      height: 5.2cqh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1.5px solid rgba(42, 111, 151, 0.2);
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 2.59cqh;
+      color: #5C6B7A;
+      opacity: 1;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    @container (aspect-ratio < 1) {
+      .f03-kicker-card {
+        left: 6cqw;
+        top: 72cqh;
+        max-width: 88cqw;
+      }
+      .f03-kicker-text { font-size: 3.4cqh; }
+    }
+  </style>
+
+  <div id="f03-footage-holder" class="f03-footage-layer">
+  </div>
+
+  <div id="f03-kicker-layer" class="clip" data-start="1.2" data-duration="1.795" data-track-index="1">
+    <div id="f03-kicker-card" class="f03-kicker-card">
+      <div id="f03-kicker-text" class="f03-kicker-text">7 bank lines. None matched.</div>
+    </div>
+  </div>
+
+  <div id="f03-chip-layer" class="clip" data-start="0" data-duration="2.995" data-track-index="2">
+    <div id="f03-chip" class="f03-chip">Synthetic fixture &middot; fictional numbers</div>
+  </div>
+
+  <script src="assets/vendor/gsap@3.14.2/gsap.min.js"></script>
+  <script>
+    (function () {
+      var root = document.querySelector('[data-composition-id="03-before"]');
+      var kickerCard = root.querySelector('#f03-kicker-card');
+      var chip = root.querySelector('#f03-chip');
+
+      gsap.set(kickerCard, { opacity: 0, yPercent: 30 });
+      gsap.set(chip, { opacity: 1 });
+
+      var tl = gsap.timeline({ paused: true });
+
+      tl.to(kickerCard, { opacity: 1, yPercent: 0, duration: 0.3, ease: "expo.out" }, 1.2);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["03-before"] = tl;
+    })();
+  </script>
+</div>
+</template>

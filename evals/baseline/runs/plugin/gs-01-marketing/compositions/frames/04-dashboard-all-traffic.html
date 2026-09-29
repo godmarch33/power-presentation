@@ -1,0 +1,165 @@
+<template>
+<div id="root" data-composition-id="04-dashboard-all-traffic" data-width="1920" data-height="1080" data-duration="4.2">
+  <style>
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+
+    #root {
+      width: 100%;
+      height: 100%;
+      container-type: size;
+      background: transparent;
+      position: relative;
+      overflow: hidden;
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .f04-stage {
+      position: absolute;
+      left: 18.07cqw;
+      top: 0;
+      width: 81.93cqw;
+      height: 81.94cqh;
+      border-left: 1px solid rgba(88, 80, 236, 0.2);
+      overflow: hidden;
+    }
+
+    .f04-rail {
+      position: absolute;
+      left: 2.92cqw;
+      top: 4.44cqh;
+      width: 31.67cqw;
+      height: 75.19cqh;
+      background: #FFFFFF;
+      border: 1.5px solid rgba(88, 80, 236, 0.2);
+      border-radius: 14px;
+      box-sizing: border-box;
+      padding: 4.17cqw 3.33cqw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .f04-kicker {
+      position: absolute;
+      z-index: 2;
+      left: 4.17cqw;
+      top: 6.67cqh;
+      width: 29.17cqw;
+      height: 11.11cqh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.4cqh;
+    }
+
+    .f04-eyebrow {
+      display: block;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 600;
+      font-size: max(0.8cqw, 40px);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #5850EC;
+      opacity: 0;
+      will-change: transform, opacity;
+    }
+
+    .f04-kicker-sub {
+      display: block;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: max(3.7cqmin, 40px);
+      color: #4B5563;
+      opacity: 0;
+      will-change: transform, opacity;
+    }
+
+    .f04-callout {
+      display: block;
+    }
+
+    .f04-line {
+      display: block;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      font-size: 6cqh;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: #252F3F;
+      opacity: 0;
+      will-change: transform, opacity;
+    }
+
+    @container (aspect-ratio < 1) {
+      .f04-stage {
+        left: 0;
+        top: 51.85cqh;
+        width: 100cqw;
+        height: 52.08cqh;
+        border-left: none;
+        border-top: 1px solid rgba(88, 80, 236, 0.2);
+      }
+      .f04-kicker {
+        left: 5.56cqw;
+        top: 3.75cqh;
+        width: 88.89cqw;
+        height: 5.83cqh;
+      }
+      .f04-rail {
+        left: 5.56cqw;
+        top: 10.42cqh;
+        width: 88.89cqw;
+        height: 17.71cqh;
+        justify-content: flex-start;
+      }
+      .f04-line {
+        font-size: max(3.7cqmin, 40px);
+      }
+    }
+  </style>
+
+  <div class="f04-stage" id="f04-stage"></div>
+
+  <div class="f04-kicker" id="f04-kicker">
+    <span class="f04-eyebrow" id="f04-eyebrow">LIVE DEMO</span>
+    <span class="f04-kicker-sub" id="f04-kicker-sub">plausible.io's own stats</span>
+  </div>
+
+  <div class="f04-rail" id="f04-rail">
+    <span class="f04-callout">
+      <span class="f04-line" id="f04-line1">Every source,</span>
+      <span class="f04-line" id="f04-line2">one page.</span>
+    </span>
+  </div>
+
+  <script>
+    (function () {
+      var root = document.querySelector('[data-composition-id="04-dashboard-all-traffic"]');
+      var eyebrow = root.querySelector('#f04-eyebrow');
+      var kickerSub = root.querySelector('#f04-kicker-sub');
+      var line1 = root.querySelector('#f04-line1');
+      var line2 = root.querySelector('#f04-line2');
+
+      gsap.set([eyebrow, kickerSub], { yPercent: 8, opacity: 0 });
+      gsap.set([line1, line2], { yPercent: 6, opacity: 0 });
+
+      var tl = gsap.timeline({ paused: true });
+
+      tl.fromTo(eyebrow, { yPercent: 8, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.4, ease: "expo.out" }, 0.1);
+      tl.fromTo(kickerSub, { yPercent: 8, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.4, ease: "expo.out" }, 0.18);
+
+      tl.fromTo(line1, { yPercent: 6, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.5, ease: "expo.out" }, 0.5);
+      tl.fromTo(line2, { yPercent: 6, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.5, ease: "expo.out" }, 0.62);
+
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["04-dashboard-all-traffic"] = tl;
+    })();
+  </script>
+</div>
+</template>

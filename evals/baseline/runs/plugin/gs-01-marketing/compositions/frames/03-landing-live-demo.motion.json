@@ -1,0 +1,7 @@
+{
+  "duration": 4.2,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f03-line1", "bySec": 0.5 },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 }
+  ]
+}

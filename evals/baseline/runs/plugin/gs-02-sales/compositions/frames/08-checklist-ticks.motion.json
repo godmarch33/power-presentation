@@ -1,0 +1,8 @@
+{
+  "duration": 3.692,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f08-stage-box", "bySec": 0.5 },
+    { "kind": "before", "a": "#f08-stage-box", "b": "#f08-chip" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 }
+  ]
+}

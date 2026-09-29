@@ -1,0 +1,545 @@
+{
+  "schema": "power-presentation/claims-index@0.1",
+  "version": 2,
+  "plugin_version": "0.1.0",
+  "generated_by": "scripts/extract-story.mjs",
+  "repo": "ledgerly-repo",
+  "url": null,
+  "rule": "every number, logo and quote that goes on screen or into SCRIPT.md must be listed here with a `file:line` or URL source; `status: unverified` items never reach the script and are shown in `gaps` before render (QA-12)",
+  "counts": {
+    "total": 21,
+    "verified": 19,
+    "unverified": 2,
+    "by_kind": {
+      "number": 16,
+      "quote": 1,
+      "text": 4
+    },
+    "by_claim_type": {
+      "sourced": 8,
+      "declared": 2,
+      "demonstrated": 11
+    }
+  },
+  "claims": [
+    {
+      "id": "c001",
+      "kind": "number",
+      "value": "3 days",
+      "number": 3,
+      "unit": "days",
+      "unit_kind": "measure",
+      "context": "Close the books in 3 days, not 12",
+      "source": "site/index.html:27",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "used_in": [
+        "STORYBOARD.md frame 01",
+        "STORYBOARD.md frame 11"
+      ],
+      "declared_id": "close-days-hero",
+      "declared_ids": [
+        "close-days-hero"
+      ],
+      "declared_source": "site/index.html:27",
+      "verification": "declared source site/index.html:27 states 3 days"
+    },
+    {
+      "id": "c002",
+      "kind": "number",
+      "value": "98.5%",
+      "number": 98.5,
+      "unit": "%",
+      "unit_kind": "measure",
+      "context": "What Ledgerly does — 98.5% — of transactions auto-matched to invoices and bank lines without a human touch.",
+      "source": "site/index.html:36",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "used_in": [
+        "STORYBOARD.md frame 05"
+      ],
+      "declared_id": "auto-match-rate",
+      "declared_ids": [
+        "auto-match-rate"
+      ],
+      "declared_source": "site/index.html:36",
+      "verification": "declared source site/index.html:36 states 98.5%"
+    },
+    {
+      "id": "c003",
+      "kind": "number",
+      "value": "3.1 days",
+      "number": 3.1,
+      "unit": "days",
+      "unit_kind": "measure",
+      "context": "of transactions auto-matched to invoices and bank lines without a human touch. — 3.1 days — average month-end close across Ledgerly customers in Q2 2026.",
+      "source": "site/index.html:40",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "used_in": [
+        "STORYBOARD.md frame 02"
+      ],
+      "declared_id": "avg-close-days",
+      "declared_ids": [
+        "avg-close-days"
+      ],
+      "declared_source": "site/index.html:40",
+      "verification": "declared source site/index.html:40 states 3.1 days"
+    },
+    {
+      "id": "c004",
+      "kind": "number",
+      "value": "11 hours",
+      "number": 11,
+      "unit": "h",
+      "unit_kind": "measure",
+      "context": "average month-end close across Ledgerly customers in Q2 2026. — 11 hours — saved per accountant per week on manual reconciliation.",
+      "source": "site/index.html:44",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "used_in": [
+        "STORYBOARD.md frame 09"
+      ],
+      "declared_id": "hours-saved",
+      "declared_ids": [
+        "hours-saved"
+      ],
+      "declared_source": "site/index.html:44",
+      "verification": "declared source site/index.html:44 states 11 hours"
+    },
+    {
+      "id": "c005",
+      "kind": "number",
+      "value": "240",
+      "number": 240,
+      "unit": "teams",
+      "unit_kind": "count",
+      "context": "240 finance teams run their close on Ledgerly.",
+      "source": "site/index.html:52",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "used_in": [],
+      "declared_id": "customer-count",
+      "declared_ids": [
+        "customer-count"
+      ],
+      "declared_source": "site/index.html:52",
+      "verification": "declared source site/index.html:52 states 240"
+    },
+    {
+      "id": "c006",
+      "kind": "number",
+      "value": "EUR 190",
+      "number": 190,
+      "unit": "EUR",
+      "unit_kind": "currency",
+      "context": "From EUR 190 per month per entity. Unlimited users, unlimited bank feeds.",
+      "source": "site/index.html:61",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "used_in": [],
+      "declared_id": "price-per-entity",
+      "declared_ids": [
+        "price-per-entity"
+      ],
+      "declared_source": "site/index.html:61",
+      "verification": "declared source site/index.html:61 states EUR 190"
+    },
+    {
+      "id": "c007",
+      "kind": "number",
+      "value": "12",
+      "number": 12,
+      "unit": null,
+      "unit_kind": "bare",
+      "context": "Close the books in 3 days, not 12",
+      "source": "site/index.html:27",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "used_in": [
+        "STORYBOARD.md frame 01",
+        "STORYBOARD.md frame 11"
+      ],
+      "declared_id": "close-days-before",
+      "declared_ids": [
+        "close-days-before"
+      ],
+      "declared_source": "site/index.html:27",
+      "verification": "declared source site/index.html:27 states 12"
+    },
+    {
+      "id": "c008",
+      "kind": "quote",
+      "value": "We went from a 12-day close to under 4. The audit trail is the part our auditors love.",
+      "context": "Priya Menon, Controller, Harborline Logistics",
+      "attribution": {
+        "name": "Priya Menon",
+        "role": "Controller",
+        "company": "Harborline Logistics",
+        "raw": "Priya Menon, Controller, Harborline Logistics"
+      },
+      "source": "site/index.html:54",
+      "source_kind": "hero-page",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "named": true,
+      "declared": true,
+      "used_in": [
+        "STORYBOARD.md frame 10"
+      ],
+      "declared_id": "testimonial-harborline",
+      "declared_ids": [
+        "testimonial-harborline"
+      ],
+      "declared_source": "site/index.html:54",
+      "verification": "declared source site/index.html:54 states the quote"
+    },
+    {
+      "id": "c009",
+      "kind": "number",
+      "value": "10x faster",
+      "number": 10,
+      "unit": "x",
+      "context": "how much faster the month-end close runs on Ledgerly",
+      "source": null,
+      "source_kind": "declared",
+      "date": null,
+      "claim_type": "declared",
+      "status": "unverified",
+      "declared": true,
+      "declared_id": "close-speedup",
+      "declared_ids": [
+        "close-speedup"
+      ],
+      "declared_source": null,
+      "verification": "no source line contains 10x faster",
+      "used_in": []
+    },
+    {
+      "id": "c010",
+      "kind": "number",
+      "value": "50,000 customers",
+      "number": 50000,
+      "unit": "customers",
+      "context": "customers using Ledgerly",
+      "source": null,
+      "source_kind": "declared",
+      "date": null,
+      "claim_type": "declared",
+      "status": "unverified",
+      "declared": true,
+      "declared_id": "customer-total",
+      "declared_ids": [
+        "customer-total"
+      ],
+      "declared_source": null,
+      "verification": "no source line contains 50,000 customers",
+      "used_in": []
+    },
+    {
+      "id": "c101",
+      "kind": "number",
+      "value": "7 bank lines",
+      "context": "'7 bank lines. None matched.' — the Nordwell Bank EUR feed shows 7 rows, all Unmatched, counter '0 of 7 matched'",
+      "source": "site/app.html:77",
+      "source_kind": "repo-files",
+      "date": null,
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false,
+      "evidence_tier": "A",
+      "footage": ".media/capture/footage.mp4",
+      "timecode": "2.20-3.58",
+      "frame": "03",
+      "evidence": "footage 2.20-3.45 s shows the table before Auto-match; seven rows site/app.html:83-89; counter text site/app.html:77",
+      "used_in": [
+        "STORYBOARD.md frame 03"
+      ],
+      "number": 7,
+      "unit": "bank lines",
+      "unit_kind": "count"
+    },
+    {
+      "id": "c102",
+      "kind": "number",
+      "value": "7 of 7 matched",
+      "context": "'One click. 7 of 7 matched.' — one Auto-match click flips all seven rows to Matched",
+      "source": "site/app.html:126",
+      "source_kind": "repo-files",
+      "date": null,
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false,
+      "evidence_tier": "A",
+      "footage": ".media/capture/footage.mp4",
+      "timecode": "3.584-5.81",
+      "frame": "04",
+      "evidence": "click #automatch at footage 3.584 s (power-presentation-out/ledgerly-repo-marketing/.media/capture/events.jsonl:5); last row flips and the counter reads '7 of 7 matched' at ≈5.81 s (250 ms + 6×330 ms, site/app.html:146); counter logic site/app.html:126",
+      "used_in": [
+        "STORYBOARD.md frame 04"
+      ],
+      "number": 7,
+      "unit": "of 7 matched",
+      "unit_kind": "count"
+    },
+    {
+      "id": "c103",
+      "kind": "text",
+      "value": "One click",
+      "context": "'One click. 7 of 7 matched.' — a single click on Auto-match, no key presses in the capture",
+      "source": "site/app.html:78",
+      "source_kind": "repo-files",
+      "date": null,
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false,
+      "evidence_tier": "A",
+      "footage": ".media/capture/footage.mp4",
+      "timecode": "3.584",
+      "frame": "04",
+      "evidence": "one click event on #automatch (power-presentation-out/ledgerly-repo-marketing/.media/capture/events.jsonl:5); events.jsonl holds no keyboard events",
+      "used_in": [
+        "STORYBOARD.md frame 04"
+      ]
+    },
+    {
+      "id": "c104",
+      "kind": "text",
+      "value": "Every match leaves a receipt.",
+      "context": "audit trail panel for INV-2026-0418: bank line imported → matched → posted, no manual touch → approved for close; checklist step 'Audit trail complete for every line'",
+      "source": "site/app.html:115",
+      "source_kind": "repo-files",
+      "date": null,
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false,
+      "evidence_tier": "A",
+      "footage": ".media/capture/footage.mp4",
+      "timecode": "6.821-8.60",
+      "frame": "06",
+      "evidence": "row click at footage 6.821 s (power-presentation-out/ledgerly-repo-marketing/.media/capture/events.jsonl:6); trail rendered by site/app.html:156-162; 'every line' from site/app.html:115",
+      "used_in": [
+        "STORYBOARD.md frame 06"
+      ]
+    },
+    {
+      "id": "c105",
+      "kind": "number",
+      "value": "5 checks",
+      "context": "'5 checks. All green.' — the Close September checklist ticks five steps",
+      "source": "site/app.html:111",
+      "source_kind": "repo-files",
+      "date": null,
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false,
+      "evidence_tier": "A",
+      "footage": ".media/capture/footage.mp4",
+      "timecode": "9.45-11.98",
+      "frame": "07",
+      "evidence": "click #close-period at footage 9.450 s (power-presentation-out/ledgerly-repo-marketing/.media/capture/events.jsonl:8); five steps site/app.html:111-115 tick at ≈9.90/10.42/10.94/11.46/11.98 s (450 ms + i×520 ms, site/app.html:171)",
+      "used_in": [
+        "STORYBOARD.md frame 07"
+      ],
+      "number": 5,
+      "unit": "checks",
+      "unit_kind": "count"
+    },
+    {
+      "id": "c106",
+      "kind": "text",
+      "value": "September locked",
+      "context": "STAR: Lock period → 'September locked' pill; overlay 'Closed. Locked. Audit-ready.'",
+      "source": "site/app.html:117",
+      "source_kind": "repo-files",
+      "date": null,
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false,
+      "evidence_tier": "A",
+      "footage": ".media/capture/footage.mp4",
+      "timecode": "12.769-14.95",
+      "frame": "08",
+      "evidence": "click #lock at footage 12.769 s (power-presentation-out/ledgerly-repo-marketing/.media/capture/events.jsonl:10); pill site/app.html:117 shown by site/app.html:175",
+      "used_in": [
+        "STORYBOARD.md frame 08"
+      ]
+    },
+    {
+      "id": "c107",
+      "kind": "text",
+      "value": "Audit-ready",
+      "context": "'Closed. Locked. Audit-ready.' — trail step 'Approved for close — Controller review - kept for the auditors' and checklist 'Audit trail complete for every line'",
+      "source": "site/app.html:162",
+      "source_kind": "repo-files",
+      "date": null,
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false,
+      "evidence_tier": "A",
+      "footage": ".media/capture/footage.mp4",
+      "timecode": "7.27-14.95",
+      "frame": "08",
+      "evidence": "site/app.html:162 and site/app.html:115; both visible in the tier-A footage (audit panel 7.27 s on, checklist 9.90 s on)",
+      "used_in": [
+        "STORYBOARD.md frame 08"
+      ]
+    },
+    {
+      "id": "c108",
+      "kind": "number",
+      "value": "Click 1",
+      "number": 1,
+      "unit": "click (ordinal)",
+      "unit_kind": "count",
+      "context": "kicker pill 'Click 1 · Auto-match' — the first in-app click of the tier-A capture",
+      "source": "power-presentation-out/ledgerly-repo-marketing/.media/capture/events.jsonl:5",
+      "source_kind": "capture",
+      "date": null,
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false,
+      "evidence_tier": "A",
+      "footage": ".media/capture/footage.mp4",
+      "timecode": "3.584",
+      "frame": "04",
+      "evidence": "click on #automatch at footage 3.584 s (power-presentation-out/ledgerly-repo-marketing/.media/capture/events.jsonl:5); target site/app.html:78; the landing-page click (events.jsonl:3) is outside the app and not counted",
+      "used_in": [
+        "STORYBOARD.md frame 04"
+      ]
+    },
+    {
+      "id": "c109",
+      "kind": "number",
+      "value": "Click 2",
+      "number": 2,
+      "unit": "click (ordinal)",
+      "unit_kind": "count",
+      "context": "kicker pill 'Click 2 · Audit trail' — the second in-app click of the tier-A capture",
+      "source": "power-presentation-out/ledgerly-repo-marketing/.media/capture/events.jsonl:6",
+      "source_kind": "capture",
+      "date": null,
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false,
+      "evidence_tier": "A",
+      "footage": ".media/capture/footage.mp4",
+      "timecode": "6.821",
+      "frame": "06",
+      "evidence": "click on td (Coldharbour Packaging row) at footage 6.821 s (power-presentation-out/ledgerly-repo-marketing/.media/capture/events.jsonl:6); target site/app.html:85; the landing-page click (events.jsonl:3) is outside the app and not counted",
+      "used_in": [
+        "STORYBOARD.md frame 06"
+      ]
+    },
+    {
+      "id": "c110",
+      "kind": "number",
+      "value": "Click 3",
+      "number": 3,
+      "unit": "click (ordinal)",
+      "unit_kind": "count",
+      "context": "kicker pill 'Click 3 · Close September' — the third in-app click of the tier-A capture",
+      "source": "power-presentation-out/ledgerly-repo-marketing/.media/capture/events.jsonl:8",
+      "source_kind": "capture",
+      "date": null,
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false,
+      "evidence_tier": "A",
+      "footage": ".media/capture/footage.mp4",
+      "timecode": "9.450",
+      "frame": "07",
+      "evidence": "click on #close-period at footage 9.450 s (power-presentation-out/ledgerly-repo-marketing/.media/capture/events.jsonl:8); target site/app.html:93; the landing-page click (events.jsonl:3) is outside the app and not counted",
+      "used_in": [
+        "STORYBOARD.md frame 07"
+      ]
+    },
+    {
+      "id": "c111",
+      "kind": "number",
+      "value": "Click 4",
+      "number": 4,
+      "unit": "click (ordinal)",
+      "unit_kind": "count",
+      "context": "kicker pill 'Click 4 · Lock period' — the fourth in-app click of the tier-A capture",
+      "source": "power-presentation-out/ledgerly-repo-marketing/.media/capture/events.jsonl:10",
+      "source_kind": "capture",
+      "date": null,
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false,
+      "evidence_tier": "A",
+      "footage": ".media/capture/footage.mp4",
+      "timecode": "12.769",
+      "frame": "08",
+      "evidence": "click on #lock at footage 12.769 s (power-presentation-out/ledgerly-repo-marketing/.media/capture/events.jsonl:10); target site/app.html:117; the landing-page click (events.jsonl:3) is outside the app and not counted",
+      "used_in": [
+        "STORYBOARD.md frame 08"
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "id": "unverified-claim",
+      "value": "10x faster",
+      "kind": "number",
+      "where": "claims.json",
+      "reason": "no source line contains 10x faster",
+      "needed": "a `file:line` or URL in the sources that contains this value, or drop it from the script (QA-12)"
+    },
+    {
+      "id": "unverified-claim",
+      "value": "50,000 customers",
+      "kind": "number",
+      "where": "claims.json",
+      "reason": "no source line contains 50,000 customers",
+      "needed": "a `file:line` or URL in the sources that contains this value, or drop it from the script (QA-12)"
+    },
+    {
+      "id": "no-url",
+      "value": null,
+      "kind": "text",
+      "where": "site/index.html, site/app.html",
+      "reason": "the repository names no public domain or URL (CTA href is the relative app.html)",
+      "needed": "the product's public URL for the QA-13 logo -> tagline -> URL end-card slot"
+    },
+    {
+      "id": "no-logo-file",
+      "value": null,
+      "kind": "logo",
+      "where": "repository",
+      "reason": "no brand logo file; the wordmark is text only",
+      "needed": "an SVG/PNG logo mark for the end card (the storyboard sets the wordmark in type)"
+    }
+  ],
+  "declared": {
+    "ref": "claims.json",
+    "total": 10,
+    "verified": 8,
+    "unverified": 2
+  },
+  "metrics": null,
+  "updated_by": "agents/story-director (STORYBOARD.md v1)"
+}

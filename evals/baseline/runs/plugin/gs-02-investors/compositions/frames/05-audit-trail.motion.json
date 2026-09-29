@@ -1,0 +1,8 @@
+{
+  "duration": 8.5,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f05-exhibit", "bySec": 0.5 },
+    { "kind": "before", "a": "#f05-exhibit", "b": "#f05-note" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 }
+  ]
+}

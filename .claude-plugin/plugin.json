@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "power-presentation",
+  "displayName": "Power Presentation",
+  "version": "0.3.1",
+  "description": "/present — wow-effect product presentation videos for marketing, sales and investors on top of HyperFrames: prod-first capture, non-UI products (CLI/API/SDK/data/mocks/docs), 14 QA gates, English only.",
+  "author": {
+    "name": "Dmytro Hryshchenko",
+    "email": "godmarch33@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "video",
+    "presentation",
+    "product-video",
+    "launch",
+    "hyperframes",
+    "marketing",
+    "sales",
+    "investors",
+    "demo"
+  ],
+  "userConfig": {
+    "model_mix": {
+      "type": "string",
+      "title": "Model mix",
+      "description": "Which models run the pipeline: economy (Sonnet everywhere, no critic panel, at most 2 agents at a time — for smaller subscriptions; a run that stops at a usage limit continues on the next /present), all-sonnet (~$15/run), opus-orchestrator (Opus story director + Sonnet workers, ~$22, default), all-opus (~$36).",
+      "default": "opus-orchestrator",
+      "options": [
+        "economy",
+        "all-sonnet",
+        "opus-orchestrator",
+        "all-opus"
+      ]
+    },
+    "critic": {
+      "type": "string",
+      "title": "Vision critic panel",
+      "description": "The 3-vote vision critic at the end of a run (~15 agents): auto = on, off in the economy profile; on; off. The --critic / --no-critic flags override it per run.",
+      "default": "auto",
+      "options": [
+        "auto",
+        "on",
+        "off"
+      ]
+    },
+    "privacy": {
+      "type": "string",
+      "title": "Privacy profile",
+      "description": "default, or local = the local privacy profile (no telemetry, no cloud TTS/render/vision, network manifest printed before the first external call). The --privacy local flag overrides per run.",
+      "default": "default",
+      "options": [
+        "default",
+        "local"
+      ]
+    },
+    "budget_usd": {
+      "type": "number",
+      "title": "Token budget per run (USD)",
+      "description": "Hard ceiling for one /present run in the default model mix (target: $25). The estimate is printed before dispatch; a second critic round is only taken when budget remains.",
+      "default": 25,
+      "min": 0
+    },
+    "brand_kit_dir": {
+      "type": "directory",
+      "title": "Brand kit directory",
+      "description": "Default --brand <dir>: brand.tokens.json (DTCG) + brand.md + logo light/dark SVG + fonts with licence class."
+    },
+    "heygen_api_key": {
+      "type": "string",
+      "title": "HeyGen API key (optional)",
+      "description": "Enables HeyGen cloud voice/BGM/render paths in HyperFrames. Never used under privacy=local.",
+      "sensitive": true
+    },
+    "elevenlabs_api_key": {
+      "type": "string",
+      "title": "ElevenLabs API key (optional)",
+      "description": "Premium multilingual TTS. Off by default; price shown before use. Never used under privacy=local.",
+      "sensitive": true
+    }
+  },
+  "experimental": {
+    "evals": "evals"
+  }
+}

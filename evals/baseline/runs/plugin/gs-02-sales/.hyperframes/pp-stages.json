@@ -1,0 +1,321 @@
+{
+  "schema": "power-presentation/stage-times@0.1",
+  "plugin": "0.1.0",
+  "stages_s": {
+    "intake": 22.8,
+    "inspect": 9.1,
+    "capture": 63.1,
+    "brief": 41.2,
+    "pitch": 162.3,
+    "design_spec": 4.2,
+    "audio": 45.2,
+    "storyboard": 867.5,
+    "frames": 1378.9,
+    "assemble": 36.6,
+    "verify": 449.8,
+    "review": 1132.4,
+    "render": 226.9,
+    "deliver": 88.5
+  },
+  "runs": [
+    {
+      "command": "external:intake",
+      "stage": "intake",
+      "at": "2026-09-27T12:13:24.189Z",
+      "seconds": 22.8,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T12:13:01.411Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "external:inspect",
+      "stage": "inspect",
+      "at": "2026-09-27T12:13:37.696Z",
+      "seconds": 9.1,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T12:13:28.632Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "external:capture",
+      "stage": "capture",
+      "at": "2026-09-27T12:14:57.275Z",
+      "seconds": 63.1,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T12:13:54.218Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "init",
+      "stage": "brief",
+      "at": "2026-09-27T12:15:30.975Z",
+      "seconds": 5.4,
+      "ok": true,
+      "detail": "versions: git init + .gitignore (media pinned by the ledger, not committed) | scaffolded with the pinned hyperframes 0.8.47 (toolchain): AGENTS.md, CLAUDE.md, hyperframes.json, index.html, meta.json, package.json | node_modules/hyperframes → toolchain 0.8.47 | capture copied: footage.mp4, events.jsonl, capture-manifest.json, redactions.json, autozoom.json, index.html → .media/capture/ (+ assets/)",
+      "source": "render-path"
+    },
+    {
+      "command": "external:pitch",
+      "stage": "pitch",
+      "at": "2026-09-27T12:18:25.267Z",
+      "seconds": 162.3,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T12:15:42.996Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "external:brief",
+      "stage": "brief",
+      "at": "2026-09-27T12:19:01.226Z",
+      "seconds": 35.8,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T12:18:25.423Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "external:design_spec",
+      "stage": "design_spec",
+      "at": "2026-09-27T12:19:05.585Z",
+      "seconds": 4.2,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T12:19:01.390Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "audio",
+      "stage": "audio",
+      "at": "2026-09-27T12:30:32.963Z",
+      "seconds": 45.2,
+      "ok": true,
+      "detail": "audio: synthesised (no previous synthesis) → .media/tts-cache.json | 11 voice line(s) via kokoro (am_michael) | captions locked to the script: 17 word(s) re-spelled or merged (whisper → SCRIPT) | durations: frame 5 6.8s → 7.925s (voice 7.125s + 0.8s pause); frame 6 4.4s → 5.515s (voice 4.715s + 0.8s pause) | total 61.44s vs brief 60s (+1.44s, 2.4% — QA-01 band ±3 % ok) | bgm assets/bgm/happy-beats-business-moves-vol-10-by-ende-dot-app.mp3 (volume 0.12, credit \"Music: \"Happy Beats / Business Moves Vol. 10\" by Sascha Ende / ende.app (CC BY 4.0)\") | sfx: 7 cue(s) from the CC0 pack — click@f4+0.27, success@f4+2.55, click@f5+0.22, click@f7+0.64, tick@f8+1.17, click@f9+0.16, pop@f11+2.8; densest 30 s window 6 (3–5, polished 2–3) | warning: 6 SFX cues in one 30 s window — allows 3–5 (every staggered element does not get a sound) | cuts on the beat: not applied — moving the cuts onto the beat would take the total to 61.887s, outside the QA-01 band of the 60s brief",
+      "source": "render-path"
+    },
+    {
+      "command": "audio",
+      "stage": "audio",
+      "at": "2026-09-27T12:31:27.242Z",
+      "seconds": 0,
+      "ok": true,
+      "detail": "audio: 11 line(s) cached — SCRIPT.md lines, voice and speed unchanged, wav hashes checked; no engine call | 11 voice line(s) via kokoro (am_michael) | captions locked to the script: 17 word(s) re-spelled or merged (whisper → SCRIPT) | durations: every director window already holds its voice line + the pause (STORYBOARD.md unchanged) | total 58.84s vs brief 60s (-1.16s, -1.9% — QA-01 band ±3 % ok) | bgm assets/bgm/happy-beats-business-moves-vol-10-by-ende-dot-app.mp3 (volume 0.12, credit \"Music: \"Happy Beats / Business Moves Vol. 10\" by Sascha Ende / ende.app (CC BY 4.0)\") | sfx: 5 cue(s) from the CC0 pack — click@f4+0.27, success@f4+2.55, click@f5+0.22, click@f7+0.64, click@f9+0.16; densest 30 s window 5 (3–5, polished 2–3) | cuts on the beat: 11/11 cut(s) within ±0.15s of a beat; 10 window(s) moved ≤ 0.274s, total 58.84s → 59.158s (the last frame could not absorb it)",
+      "source": "render-path"
+    },
+    {
+      "command": "audio",
+      "stage": "audio",
+      "at": "2026-09-27T12:32:36.507Z",
+      "seconds": 0,
+      "ok": true,
+      "detail": "audio: 11 line(s) cached — SCRIPT.md lines, voice and speed unchanged, wav hashes checked; no engine call | 11 voice line(s) via kokoro (am_michael) | captions locked to the script: 17 word(s) re-spelled or merged (whisper → SCRIPT) | durations: every director window already holds its voice line + the pause (STORYBOARD.md unchanged) | total 59.158s vs brief 60s (-0.842s, -1.4% — QA-01 band ±3 % ok) | bgm assets/bgm/happy-beats-business-moves-vol-10-by-ende-dot-app.mp3 (volume 0.12, credit \"Music: \"Happy Beats / Business Moves Vol. 10\" by Sascha Ende / ende.app (CC BY 4.0)\") | sfx: 5 cue(s) from the CC0 pack — click@f4+0.27, success@f4+2.55, click@f5+0.22, click@f7+0.64, click@f9+0.16; densest 30 s window 5 (3–5, polished 2–3) | cuts on the beat: 11/11 cut(s) within ±0.15s of a beat; 0 window(s) moved ≤ 0.274s, total kept",
+      "source": "render-path"
+    },
+    {
+      "command": "external:storyboard",
+      "stage": "storyboard",
+      "at": "2026-09-27T12:33:37.185Z",
+      "seconds": 867.5,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T12:19:09.676Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "audio",
+      "stage": "audio",
+      "at": "2026-09-27T12:33:41.636Z",
+      "seconds": 0,
+      "ok": true,
+      "detail": "audio: 11 line(s) cached — SCRIPT.md lines, voice and speed unchanged, wav hashes checked; no engine call | 11 voice line(s) via kokoro (am_michael) | captions locked to the script: 17 word(s) re-spelled or merged (whisper → SCRIPT) | durations: every director window already holds its voice line + the pause (STORYBOARD.md unchanged) | total 59.158s vs brief 60s (-0.842s, -1.4% — QA-01 band ±3 % ok) | bgm assets/bgm/happy-beats-business-moves-vol-10-by-ende-dot-app.mp3 (volume 0.12, credit \"Music: \"Happy Beats / Business Moves Vol. 10\" by Sascha Ende / ende.app (CC BY 4.0)\") | sfx: 5 cue(s) from the CC0 pack — click@f4+0.27, success@f4+2.55, click@f5+0.22, click@f7+0.64, click@f9+0.16; densest 30 s window 5 (3–5, polished 2–3) | cuts on the beat: 11/11 cut(s) within ±0.15s of a beat; 0 window(s) moved ≤ 0.274s, total kept",
+      "source": "render-path"
+    },
+    {
+      "command": "packets",
+      "stage": "frames",
+      "at": "2026-09-27T12:33:41.748Z",
+      "seconds": 0.1,
+      "ok": true,
+      "detail": "fonts: 2 families (Inter, Space Grotesk) → 6 @font-face rule(s) in frame.md ## Staged fonts; 6 face(s) staged into assets/fonts/ from the toolchain | 12 packet(s) → .hyperframes/frame-packets/ (+ _dispatch.json; 12 frame file(s) still to build); storyboard direction copied into each; 3 absolute skill path(s) in each header",
+      "source": "render-path"
+    },
+    {
+      "command": "external:frames",
+      "stage": "frames",
+      "at": "2026-09-27T12:56:45.690Z",
+      "seconds": 1378.8,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T12:33:46.872Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-27T12:57:02.373Z",
+      "seconds": 16.5,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 41 group(s) from 96 words → compositions/captions.html (total 59.158s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 26 cue(s) → captions/en.srt (caption_groups.json (41 word-timed groups, captions.mjs → 26 cues at ≥ 0.8 s, ≤ 20 cps)) | frame footage: 6 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 6 frame(s) on held clips in assets/clips/ (6 cut, 0 cached) — 03-before-unmatched 1.4–3 +4.135s hold drift→1.5; 04-automatch-star 3–6.3 +2.703s hold drift→1.5; 05-one-line-trail 6.3–8.3 +6.173s hold drift→1.8; 07-close-september 8.3–10.3 +2.307s hold drift→1.6; 08-checklist-ticks 10.3–12.1 +1.892s hold drift→1.5; 09-september-locked 12.1–14.2 +3.485s hold drift→1.8 | assemble: total duration:    59.158s (expected ~60s, -0.842s) | warning: footage frame(s) paint an opaque ground over their footage: 04-automatch-star.html (#root background #FFFFFF) — the footage renders under the frame; make that ground transparent (agents/frame-worker.md) | transitions:   tracks: 01-memo-hook[t0 0→3.407] 02-promise[t1 3.007→5.044] 03-before-unmatched[t0 4.644→10.379] 04-automatch-star[t1 10.379000000000001→16.382] 05-one-line-trail[t0 16.382→24.955] 06-match-rate[t1 24.555→30.47] 07-close-september[t0 30.07→34.377] 08-checklist-ticks[t1 34.377→38.069] 09-september-locked[t0 38.069→44.154] 10-proof-quote[t1 43.654→50.044] 11-question[t0 49.644000000000005→56.058] 12-end-card[t1 55.65800000000001→59.158]; ✓ transitions verify: 7 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 14 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 03-before-unmatched 1 zoom(s), 0 click(s); 04-automatch-star 3 zoom(s), 1 click(s); 05-one-line-trail 2 zoom(s), 1 click(s); 07-close-september 2 zoom(s), 1 click(s); 08-checklist-ticks 2 zoom(s), 0 click(s); 09-september-locked 1 zoom(s), 1 click(s) | bed: fade-in 0.4s, fade-out 1.5s; silence before the reveal in frame(s) 4 (0.4s) → data-automation on the bed | voiceover carve: bands  630Hz -5.18dB q1.52, 1000Hz -5.1dB q1.52, 1600Hz -7.6dB q1.52; level  199-point envelope, floor -8.4 dB; lanes  4 carve + 1 kept; wrote /home/dmytrogr/Documents/power-presentation-runs/ledgerly-sales/index.html (id=\"el-bgm\") | media ledger: 29 asset(s) — generated ×11, own-capture ×8, OFL-1.1 ×6, CC0-1.0 ×2, CC-BY-4.0 ×1, unknown ×1; 29 added / re-frozen → .media/manifest.jsonl | warning: media ledger blocks the render: licence assets/sfx/casino-card-slide-1.ogg — node scripts/media-ledger.mjs check | 9:16: portrait working copy .hyperframes/9x16 — 12 frame(s) reflowed, 31 composition file(s), 35 asset(s) linked | 9:16 captions: ✓ captions build: 41 group(s) from 96 words → compositions/captions.html (total 59.158s) · skin: preset skin (.hyperframes/caption-skin.html) (9:16 in the run → burned-in, word-timed) | 9:16 srt: 26 cue(s) → captions/en.srt (caption_groups.json (41 word-timed groups, captions.mjs → 26 cues at ≥ 0.8 s, ≤ 20 cps)) | 9:16 frame footage: 6 declaration(s) recorded in .hyperframes/frame-videos.json | 9:16 footage windows: 6 frame(s) on held clips in assets/clips/ (0 cut, 6 cached) — 03-before-unmatched 1.4–3 +4.135s hold drift→1.5; 04-automatch-star 3–6.3 +2.703s hold drift→1.5; 05-one-line-trail 6.3–8.3 +6.173s hold drift→1.8; 07-close-september 8.3–10.3 +2.307s hold drift→1.6; 08-checklist-ticks 10.3–12.1 +1.892s hold drift→1.5; 09-september-locked 12.1–14.2 +3.485s hold drift→1.8 | 9:16 assemble: total duration:    59.158s (expected ~60s, -0.842s) | 9:16 warning: footage frame(s) paint an opaque ground over their footage: 04-automatch-star.html (#root background #FFFFFF) — the footage renders under the frame; make that ground transparent (agents/frame-worker.md) | 9:16 transitions:   tracks: 01-memo-hook[t0 0→3.407] 02-promise[t1 3.007→5.044] 03-before-unmatched[t0 4.644→10.379] 04-automatch-star[t1 10.379000000000001→16.382] 05-one-line-trail[t0 16.382→24.955] 06-match-rate[t1 24.555→30.47] 07-close-september[t0 30.07→34.377] 08-checklist-ticks[t1 34.377→38.069] 09-september-locked[t0 38.069→44.154] 10-proof-quote[t1 43.654→50.044] 11-question[t0 49.644000000000005→56.058] 12-end-card[t1 55.65800000000001→59.158]; ✓ transitions verify: 7 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | 9:16 gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | 9:16 camera: 03-before-unmatched 1 zoom(s), 0 click(s); 04-automatch-star 3 zoom(s), 1 click(s); 05-one-line-trail 2 zoom(s), 1 click(s); 07-close-september 2 zoom(s), 1 click(s); 08-checklist-ticks 2 zoom(s), 0 click(s); 09-september-locked 1 zoom(s), 1 click(s) | 9:16 bed: fade-in 0.4s, fade-out 1.5s; silence before the reveal in frame(s) 4 (0.4s) → data-automation on the bed | 9:16 voiceover carve: bands  630Hz -5.18dB q1.52, 1000Hz -5.1dB q1.52, 1600Hz -7.6dB q1.52; level  199-point envelope, floor -8.4 dB; lanes  4 carve + 1 kept; wrote /home/dmytrogr/Documents/power-presentation-runs/ledgerly-sales/.hyperframes/9x16/index.html (id=\"el-bgm\")",
+      "source": "render-path"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-27T12:58:02.131Z",
+      "seconds": 2.5,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 41 group(s) from 96 words → compositions/captions.html (total 59.158s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 26 cue(s) → captions/en.srt (caption_groups.json (41 word-timed groups, captions.mjs → 26 cues at ≥ 0.8 s, ≤ 20 cps)) | frame footage re-declared for the hoist: 03-before-unmatched.html (1), 04-automatch-star.html (1), 05-one-line-trail.html (1), 07-close-september.html (1), 08-checklist-ticks.html (1), 09-september-locked.html (1) from .hyperframes/frame-videos.json | frame footage: 6 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 6 frame(s) on held clips in assets/clips/ (0 cut, 6 cached) — 03-before-unmatched 1.4–3 +4.135s hold drift→1.5; 04-automatch-star 3–6.3 +2.703s hold drift→1.5; 05-one-line-trail 6.3–8.3 +6.173s hold drift→1.8; 07-close-september 8.3–10.3 +2.307s hold drift→1.6; 08-checklist-ticks 10.3–12.1 +1.892s hold drift→1.5; 09-september-locked 12.1–14.2 +3.485s hold drift→1.8 | assemble: total duration:    59.158s (expected ~60s, -0.842s) | transitions:   tracks: 01-memo-hook[t0 0→3.407] 02-promise[t1 3.007→5.044] 03-before-unmatched[t0 4.644→10.379] 04-automatch-star[t1 10.379000000000001→16.382] 05-one-line-trail[t0 16.382→24.955] 06-match-rate[t1 24.555→30.47] 07-close-september[t0 30.07→34.377] 08-checklist-ticks[t1 34.377→38.069] 09-september-locked[t0 38.069→44.154] 10-proof-quote[t1 43.654→50.044] 11-question[t0 49.644000000000005→56.058] 12-end-card[t1 55.65800000000001→59.158]; ✓ transitions verify: 7 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 03-before-unmatched 1 zoom(s), 0 click(s); 04-automatch-star 3 zoom(s), 1 click(s); 05-one-line-trail 2 zoom(s), 1 click(s); 07-close-september 2 zoom(s), 1 click(s); 08-checklist-ticks 2 zoom(s), 0 click(s); 09-september-locked 1 zoom(s), 1 click(s) | bed: fade-in 0.4s, fade-out 1.5s; silence before the reveal in frame(s) 4 (0.4s) → data-automation on the bed | voiceover carve: bands  630Hz -5.18dB q1.52, 1000Hz -5.1dB q1.52, 1600Hz -7.6dB q1.52; level  199-point envelope, floor -8.4 dB; lanes  4 carve + 1 kept; wrote /home/dmytrogr/Documents/power-presentation-runs/ledgerly-sales/index.html (id=\"el-bgm\") | media ledger: 29 asset(s) — generated ×11, own-capture ×8, OFL-1.1 ×6, CC0-1.0 ×3, CC-BY-4.0 ×1 → .media/manifest.jsonl | 9:16: portrait working copy .hyperframes/9x16 — 12 frame(s) reflowed, 31 composition file(s), 35 asset(s) linked | 9:16 captions: ✓ captions build: 41 group(s) from 96 words → compositions/captions.html (total 59.158s) · skin: preset skin (.hyperframes/caption-skin.html) (9:16 in the run → burned-in, word-timed) | 9:16 srt: 26 cue(s) → captions/en.srt (caption_groups.json (41 word-timed groups, captions.mjs → 26 cues at ≥ 0.8 s, ≤ 20 cps)) | 9:16 frame footage: 6 declaration(s) recorded in .hyperframes/frame-videos.json | 9:16 footage windows: 6 frame(s) on held clips in assets/clips/ (0 cut, 6 cached) — 03-before-unmatched 1.4–3 +4.135s hold drift→1.5; 04-automatch-star 3–6.3 +2.703s hold drift→1.5; 05-one-line-trail 6.3–8.3 +6.173s hold drift→1.8; 07-close-september 8.3–10.3 +2.307s hold drift→1.6; 08-checklist-ticks 10.3–12.1 +1.892s hold drift→1.5; 09-september-locked 12.1–14.2 +3.485s hold drift→1.8 | 9:16 assemble: total duration:    59.158s (expected ~60s, -0.842s) | 9:16 transitions:   tracks: 01-memo-hook[t0 0→3.407] 02-promise[t1 3.007→5.044] 03-before-unmatched[t0 4.644→10.379] 04-automatch-star[t1 10.379000000000001→16.382] 05-one-line-trail[t0 16.382→24.955] 06-match-rate[t1 24.555→30.47] 07-close-september[t0 30.07→34.377] 08-checklist-ticks[t1 34.377→38.069] 09-september-locked[t0 38.069→44.154] 10-proof-quote[t1 43.654→50.044] 11-question[t0 49.644000000000005→56.058] 12-end-card[t1 55.65800000000001→59.158]; ✓ transitions verify: 7 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | 9:16 gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | 9:16 camera: 03-before-unmatched 1 zoom(s), 0 click(s); 04-automatch-star 3 zoom(s), 1 click(s); 05-one-line-trail 2 zoom(s), 1 click(s); 07-close-september 2 zoom(s), 1 click(s); 08-checklist-ticks 2 zoom(s), 0 click(s); 09-september-locked 1 zoom(s), 1 click(s) | 9:16 bed: fade-in 0.4s, fade-out 1.5s; silence before the reveal in frame(s) 4 (0.4s) → data-automation on the bed | 9:16 voiceover carve: bands  630Hz -5.18dB q1.52, 1000Hz -5.1dB q1.52, 1600Hz -7.6dB q1.52; level  199-point envelope, floor -8.4 dB; lanes  4 carve + 1 kept; wrote /home/dmytrogr/Documents/power-presentation-runs/ledgerly-sales/.hyperframes/9x16/index.html (id=\"el-bgm\")",
+      "source": "render-path"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-27T12:59:17.884Z",
+      "seconds": 75.4,
+      "ok": false,
+      "detail": "pre-render gates failed: QA-11, QA-13 (QA/wowprobe.json)",
+      "source": "render-path"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-27T13:00:17.329Z",
+      "seconds": 2.5,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 41 group(s) from 96 words → compositions/captions.html (total 59.158s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 26 cue(s) → captions/en.srt (caption_groups.json (41 word-timed groups, captions.mjs → 26 cues at ≥ 0.8 s, ≤ 20 cps)) | frame footage re-declared for the hoist: 03-before-unmatched.html (1), 04-automatch-star.html (1), 05-one-line-trail.html (1), 07-close-september.html (1), 08-checklist-ticks.html (1), 09-september-locked.html (1) from .hyperframes/frame-videos.json | frame footage: 6 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 6 frame(s) on held clips in assets/clips/ (0 cut, 6 cached) — 03-before-unmatched 1.4–3 +4.135s hold drift→1.5; 04-automatch-star 3–6.3 +2.703s hold drift→1.5; 05-one-line-trail 6.3–8.3 +6.173s hold drift→1.8; 07-close-september 8.3–10.3 +2.307s hold drift→1.6; 08-checklist-ticks 10.3–12.1 +1.892s hold drift→1.5; 09-september-locked 12.1–14.2 +3.485s hold drift→1.8 | assemble: total duration:    59.158s (expected ~60s, -0.842s) | transitions:   tracks: 01-memo-hook[t0 0→3.407] 02-promise[t1 3.007→5.044] 03-before-unmatched[t0 4.644→10.379] 04-automatch-star[t1 10.379000000000001→16.382] 05-one-line-trail[t0 16.382→24.955] 06-match-rate[t1 24.555→30.47] 07-close-september[t0 30.07→34.377] 08-checklist-ticks[t1 34.377→38.069] 09-september-locked[t0 38.069→44.154] 10-proof-quote[t1 43.654→50.044] 11-question[t0 49.644000000000005→56.058] 12-end-card[t1 55.65800000000001→59.158]; ✓ transitions verify: 7 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 03-before-unmatched 1 zoom(s), 0 click(s); 04-automatch-star 3 zoom(s), 1 click(s); 05-one-line-trail 2 zoom(s), 1 click(s); 07-close-september 2 zoom(s), 1 click(s); 08-checklist-ticks 2 zoom(s), 0 click(s); 09-september-locked 1 zoom(s), 1 click(s) | bed: fade-in 0.4s, fade-out 1.5s; silence before the reveal in frame(s) 4 (0.4s) → data-automation on the bed | voiceover carve: bands  630Hz -5.18dB q1.52, 1000Hz -5.1dB q1.52, 1600Hz -7.6dB q1.52; level  199-point envelope, floor -8.4 dB; lanes  4 carve + 1 kept; wrote /home/dmytrogr/Documents/power-presentation-runs/ledgerly-sales/index.html (id=\"el-bgm\") | media ledger: 29 asset(s) — generated ×11, own-capture ×8, OFL-1.1 ×6, CC0-1.0 ×3, CC-BY-4.0 ×1 → .media/manifest.jsonl | 9:16: portrait working copy .hyperframes/9x16 — 12 frame(s) reflowed, 31 composition file(s), 35 asset(s) linked | 9:16 captions: ✓ captions build: 41 group(s) from 96 words → compositions/captions.html (total 59.158s) · skin: preset skin (.hyperframes/caption-skin.html) (9:16 in the run → burned-in, word-timed) | 9:16 srt: 26 cue(s) → captions/en.srt (caption_groups.json (41 word-timed groups, captions.mjs → 26 cues at ≥ 0.8 s, ≤ 20 cps)) | 9:16 frame footage: 6 declaration(s) recorded in .hyperframes/frame-videos.json | 9:16 footage windows: 6 frame(s) on held clips in assets/clips/ (0 cut, 6 cached) — 03-before-unmatched 1.4–3 +4.135s hold drift→1.5; 04-automatch-star 3–6.3 +2.703s hold drift→1.5; 05-one-line-trail 6.3–8.3 +6.173s hold drift→1.8; 07-close-september 8.3–10.3 +2.307s hold drift→1.6; 08-checklist-ticks 10.3–12.1 +1.892s hold drift→1.5; 09-september-locked 12.1–14.2 +3.485s hold drift→1.8 | 9:16 assemble: total duration:    59.158s (expected ~60s, -0.842s) | 9:16 transitions:   tracks: 01-memo-hook[t0 0→3.407] 02-promise[t1 3.007→5.044] 03-before-unmatched[t0 4.644→10.379] 04-automatch-star[t1 10.379000000000001→16.382] 05-one-line-trail[t0 16.382→24.955] 06-match-rate[t1 24.555→30.47] 07-close-september[t0 30.07→34.377] 08-checklist-ticks[t1 34.377→38.069] 09-september-locked[t0 38.069→44.154] 10-proof-quote[t1 43.654→50.044] 11-question[t0 49.644000000000005→56.058] 12-end-card[t1 55.65800000000001→59.158]; ✓ transitions verify: 7 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | 9:16 gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | 9:16 camera: 03-before-unmatched 1 zoom(s), 0 click(s); 04-automatch-star 3 zoom(s), 1 click(s); 05-one-line-trail 2 zoom(s), 1 click(s); 07-close-september 2 zoom(s), 1 click(s); 08-checklist-ticks 2 zoom(s), 0 click(s); 09-september-locked 1 zoom(s), 1 click(s) | 9:16 bed: fade-in 0.4s, fade-out 1.5s; silence before the reveal in frame(s) 4 (0.4s) → data-automation on the bed | 9:16 voiceover carve: bands  630Hz -5.18dB q1.52, 1000Hz -5.1dB q1.52, 1600Hz -7.6dB q1.52; level  199-point envelope, floor -8.4 dB; lanes  4 carve + 1 kept; wrote /home/dmytrogr/Documents/power-presentation-runs/ledgerly-sales/.hyperframes/9x16/index.html (id=\"el-bgm\")",
+      "source": "render-path"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-27T13:10:57.679Z",
+      "seconds": 2.5,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 41 group(s) from 96 words → compositions/captions.html (total 59.158s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 26 cue(s) → captions/en.srt (caption_groups.json (41 word-timed groups, captions.mjs → 26 cues at ≥ 0.8 s, ≤ 20 cps)) | frame footage re-declared for the hoist: 03-before-unmatched.html (1), 04-automatch-star.html (1), 05-one-line-trail.html (1), 07-close-september.html (1), 08-checklist-ticks.html (1), 09-september-locked.html (1) from .hyperframes/frame-videos.json | frame footage: 6 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 6 frame(s) on held clips in assets/clips/ (0 cut, 6 cached) — 03-before-unmatched 1.4–3 +4.135s hold drift→1.5; 04-automatch-star 3–6.3 +2.703s hold drift→1.5; 05-one-line-trail 6.3–8.3 +6.173s hold drift→1.8; 07-close-september 8.3–10.3 +2.307s hold drift→1.6; 08-checklist-ticks 10.3–12.1 +1.892s hold drift→1.5; 09-september-locked 12.1–14.2 +3.485s hold drift→1.8 | assemble: total duration:    59.158s (expected ~60s, -0.842s) | transitions:   tracks: 01-memo-hook[t0 0→3.407] 02-promise[t1 3.007→5.044] 03-before-unmatched[t0 4.644→10.379] 04-automatch-star[t1 10.379000000000001→16.382] 05-one-line-trail[t0 16.382→24.955] 06-match-rate[t1 24.555→30.47] 07-close-september[t0 30.07→34.377] 08-checklist-ticks[t1 34.377→38.069] 09-september-locked[t0 38.069→44.154] 10-proof-quote[t1 43.654→50.044] 11-question[t0 49.644000000000005→56.058] 12-end-card[t1 55.65800000000001→59.158]; ✓ transitions verify: 7 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 03-before-unmatched 1 zoom(s), 0 click(s); 04-automatch-star 3 zoom(s), 1 click(s); 05-one-line-trail 2 zoom(s), 1 click(s); 07-close-september 2 zoom(s), 1 click(s); 08-checklist-ticks 2 zoom(s), 0 click(s); 09-september-locked 1 zoom(s), 1 click(s) | bed: fade-in 0.4s, fade-out 1.5s; silence before the reveal in frame(s) 4 (0.4s) → data-automation on the bed | voiceover carve: bands  630Hz -5.18dB q1.52, 1000Hz -5.1dB q1.52, 1600Hz -7.6dB q1.52; level  199-point envelope, floor -8.4 dB; lanes  4 carve + 1 kept; wrote /home/dmytrogr/Documents/power-presentation-runs/ledgerly-sales/index.html (id=\"el-bgm\") | media ledger: 29 asset(s) — generated ×11, own-capture ×8, OFL-1.1 ×6, CC0-1.0 ×3, CC-BY-4.0 ×1 → .media/manifest.jsonl | 9:16: portrait working copy .hyperframes/9x16 — 12 frame(s) reflowed, 31 composition file(s), 35 asset(s) linked | 9:16 captions: ✓ captions build: 41 group(s) from 96 words → compositions/captions.html (total 59.158s) · skin: preset skin (.hyperframes/caption-skin.html) (9:16 in the run → burned-in, word-timed) | 9:16 srt: 26 cue(s) → captions/en.srt (caption_groups.json (41 word-timed groups, captions.mjs → 26 cues at ≥ 0.8 s, ≤ 20 cps)) | 9:16 frame footage: 6 declaration(s) recorded in .hyperframes/frame-videos.json | 9:16 footage windows: 6 frame(s) on held clips in assets/clips/ (0 cut, 6 cached) — 03-before-unmatched 1.4–3 +4.135s hold drift→1.5; 04-automatch-star 3–6.3 +2.703s hold drift→1.5; 05-one-line-trail 6.3–8.3 +6.173s hold drift→1.8; 07-close-september 8.3–10.3 +2.307s hold drift→1.6; 08-checklist-ticks 10.3–12.1 +1.892s hold drift→1.5; 09-september-locked 12.1–14.2 +3.485s hold drift→1.8 | 9:16 assemble: total duration:    59.158s (expected ~60s, -0.842s) | 9:16 transitions:   tracks: 01-memo-hook[t0 0→3.407] 02-promise[t1 3.007→5.044] 03-before-unmatched[t0 4.644→10.379] 04-automatch-star[t1 10.379000000000001→16.382] 05-one-line-trail[t0 16.382→24.955] 06-match-rate[t1 24.555→30.47] 07-close-september[t0 30.07→34.377] 08-checklist-ticks[t1 34.377→38.069] 09-september-locked[t0 38.069→44.154] 10-proof-quote[t1 43.654→50.044] 11-question[t0 49.644000000000005→56.058] 12-end-card[t1 55.65800000000001→59.158]; ✓ transitions verify: 7 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | 9:16 gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | 9:16 camera: 03-before-unmatched 1 zoom(s), 0 click(s); 04-automatch-star 3 zoom(s), 1 click(s); 05-one-line-trail 2 zoom(s), 1 click(s); 07-close-september 2 zoom(s), 1 click(s); 08-checklist-ticks 2 zoom(s), 0 click(s); 09-september-locked 1 zoom(s), 1 click(s) | 9:16 bed: fade-in 0.4s, fade-out 1.5s; silence before the reveal in frame(s) 4 (0.4s) → data-automation on the bed | 9:16 voiceover carve: bands  630Hz -5.18dB q1.52, 1000Hz -5.1dB q1.52, 1600Hz -7.6dB q1.52; level  199-point envelope, floor -8.4 dB; lanes  4 carve + 1 kept; wrote /home/dmytrogr/Documents/power-presentation-runs/ledgerly-sales/.hyperframes/9x16/index.html (id=\"el-bgm\")",
+      "source": "render-path"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-27T13:12:16.573Z",
+      "seconds": 2.5,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 41 group(s) from 96 words → compositions/captions.html (total 59.158s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 26 cue(s) → captions/en.srt (caption_groups.json (41 word-timed groups, captions.mjs → 26 cues at ≥ 0.8 s, ≤ 20 cps)) | frame footage re-declared for the hoist: 03-before-unmatched.html (1), 04-automatch-star.html (1), 05-one-line-trail.html (1), 07-close-september.html (1), 08-checklist-ticks.html (1), 09-september-locked.html (1) from .hyperframes/frame-videos.json | frame footage: 6 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 6 frame(s) on held clips in assets/clips/ (0 cut, 6 cached) — 03-before-unmatched 1.4–3 +4.135s hold drift→1.5; 04-automatch-star 3–6.3 +2.703s hold drift→1.5; 05-one-line-trail 6.3–8.3 +6.173s hold drift→1.8; 07-close-september 8.3–10.3 +2.307s hold drift→1.6; 08-checklist-ticks 10.3–12.1 +1.892s hold drift→1.5; 09-september-locked 12.1–14.2 +3.485s hold drift→1.8 | assemble: total duration:    59.158s (expected ~60s, -0.842s) | transitions:   tracks: 01-memo-hook[t0 0→3.407] 02-promise[t1 3.007→5.044] 03-before-unmatched[t0 4.644→10.379] 04-automatch-star[t1 10.379000000000001→16.382] 05-one-line-trail[t0 16.382→24.955] 06-match-rate[t1 24.555→30.47] 07-close-september[t0 30.07→34.377] 08-checklist-ticks[t1 34.377→38.069] 09-september-locked[t0 38.069→44.154] 10-proof-quote[t1 43.654→50.044] 11-question[t0 49.644000000000005→56.058] 12-end-card[t1 55.65800000000001→59.158]; ✓ transitions verify: 7 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 03-before-unmatched 1 zoom(s), 0 click(s); 04-automatch-star 3 zoom(s), 1 click(s); 05-one-line-trail 2 zoom(s), 1 click(s); 07-close-september 2 zoom(s), 1 click(s); 08-checklist-ticks 2 zoom(s), 0 click(s); 09-september-locked 1 zoom(s), 1 click(s) | bed: fade-in 0.4s, fade-out 1.5s; silence before the reveal in frame(s) 4 (0.4s) → data-automation on the bed | voiceover carve: bands  630Hz -5.18dB q1.52, 1000Hz -5.1dB q1.52, 1600Hz -7.6dB q1.52; level  199-point envelope, floor -8.4 dB; lanes  4 carve + 1 kept; wrote /home/dmytrogr/Documents/power-presentation-runs/ledgerly-sales/index.html (id=\"el-bgm\") | media ledger: 29 asset(s) — generated ×11, own-capture ×8, OFL-1.1 ×6, CC0-1.0 ×3, CC-BY-4.0 ×1 → .media/manifest.jsonl | 9:16: portrait working copy .hyperframes/9x16 — 12 frame(s) reflowed, 31 composition file(s), 35 asset(s) linked | 9:16 captions: ✓ captions build: 41 group(s) from 96 words → compositions/captions.html (total 59.158s) · skin: preset skin (.hyperframes/caption-skin.html) (9:16 in the run → burned-in, word-timed) | 9:16 srt: 26 cue(s) → captions/en.srt (caption_groups.json (41 word-timed groups, captions.mjs → 26 cues at ≥ 0.8 s, ≤ 20 cps)) | 9:16 frame footage: 6 declaration(s) recorded in .hyperframes/frame-videos.json | 9:16 footage windows: 6 frame(s) on held clips in assets/clips/ (0 cut, 6 cached) — 03-before-unmatched 1.4–3 +4.135s hold drift→1.5; 04-automatch-star 3–6.3 +2.703s hold drift→1.5; 05-one-line-trail 6.3–8.3 +6.173s hold drift→1.8; 07-close-september 8.3–10.3 +2.307s hold drift→1.6; 08-checklist-ticks 10.3–12.1 +1.892s hold drift→1.5; 09-september-locked 12.1–14.2 +3.485s hold drift→1.8 | 9:16 assemble: total duration:    59.158s (expected ~60s, -0.842s) | 9:16 transitions:   tracks: 01-memo-hook[t0 0→3.407] 02-promise[t1 3.007→5.044] 03-before-unmatched[t0 4.644→10.379] 04-automatch-star[t1 10.379000000000001→16.382] 05-one-line-trail[t0 16.382→24.955] 06-match-rate[t1 24.555→30.47] 07-close-september[t0 30.07→34.377] 08-checklist-ticks[t1 34.377→38.069] 09-september-locked[t0 38.069→44.154] 10-proof-quote[t1 43.654→50.044] 11-question[t0 49.644000000000005→56.058] 12-end-card[t1 55.65800000000001→59.158]; ✓ transitions verify: 7 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | 9:16 gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | 9:16 camera: 03-before-unmatched 1 zoom(s), 0 click(s); 04-automatch-star 3 zoom(s), 1 click(s); 05-one-line-trail 2 zoom(s), 1 click(s); 07-close-september 2 zoom(s), 1 click(s); 08-checklist-ticks 2 zoom(s), 0 click(s); 09-september-locked 1 zoom(s), 1 click(s) | 9:16 bed: fade-in 0.4s, fade-out 1.5s; silence before the reveal in frame(s) 4 (0.4s) → data-automation on the bed | 9:16 voiceover carve: bands  630Hz -5.18dB q1.52, 1000Hz -5.1dB q1.52, 1600Hz -7.6dB q1.52; level  199-point envelope, floor -8.4 dB; lanes  4 carve + 1 kept; wrote /home/dmytrogr/Documents/power-presentation-runs/ledgerly-sales/.hyperframes/9x16/index.html (id=\"el-bgm\")",
+      "source": "render-path"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-27T13:13:54.118Z",
+      "seconds": 79.2,
+      "ok": false,
+      "detail": "pre-render gates failed: QA-02, QA-06, QA-11 (QA/wowprobe.json)",
+      "source": "render-path"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-27T13:14:41.918Z",
+      "seconds": 2.6,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 41 group(s) from 96 words → compositions/captions.html (total 59.158s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 26 cue(s) → captions/en.srt (caption_groups.json (41 word-timed groups, captions.mjs → 26 cues at ≥ 0.8 s, ≤ 20 cps)) | frame footage re-declared for the hoist: 03-before-unmatched.html (1), 04-automatch-star.html (1), 05-one-line-trail.html (1), 07-close-september.html (1), 08-checklist-ticks.html (1), 09-september-locked.html (1) from .hyperframes/frame-videos.json | frame footage: 6 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 6 frame(s) on held clips in assets/clips/ (0 cut, 6 cached) — 03-before-unmatched 1.4–3 +4.135s hold drift→1.5; 04-automatch-star 3–6.3 +2.703s hold drift→1.5; 05-one-line-trail 6.3–8.3 +6.173s hold drift→1.8; 07-close-september 8.3–10.3 +2.307s hold drift→1.6; 08-checklist-ticks 10.3–12.1 +1.892s hold drift→1.5; 09-september-locked 12.1–14.2 +3.485s hold drift→1.8 | assemble: total duration:    59.158s (expected ~60s, -0.842s) | transitions:   tracks: 01-memo-hook[t0 0→3.407] 02-promise[t1 3.007→5.044] 03-before-unmatched[t0 4.644→10.379] 04-automatch-star[t1 10.379000000000001→16.382] 05-one-line-trail[t0 16.382→24.955] 06-match-rate[t1 24.555→30.47] 07-close-september[t0 30.07→34.377] 08-checklist-ticks[t1 34.377→38.069] 09-september-locked[t0 38.069→44.154] 10-proof-quote[t1 43.654→50.044] 11-question[t0 49.644000000000005→56.058] 12-end-card[t1 55.65800000000001→59.158]; ✓ transitions verify: 7 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 03-before-unmatched 1 zoom(s), 0 click(s); 04-automatch-star 3 zoom(s), 1 click(s); 05-one-line-trail 2 zoom(s), 1 click(s); 07-close-september 2 zoom(s), 1 click(s); 08-checklist-ticks 2 zoom(s), 0 click(s); 09-september-locked 1 zoom(s), 1 click(s) | bed: fade-in 0.4s, fade-out 1.5s; silence before the reveal in frame(s) 4 (0.4s) → data-automation on the bed | voiceover carve: bands  630Hz -5.18dB q1.52, 1000Hz -5.1dB q1.52, 1600Hz -7.6dB q1.52; level  199-point envelope, floor -8.4 dB; lanes  4 carve + 1 kept; wrote /home/dmytrogr/Documents/power-presentation-runs/ledgerly-sales/index.html (id=\"el-bgm\") | media ledger: 29 asset(s) — generated ×11, own-capture ×8, OFL-1.1 ×6, CC0-1.0 ×3, CC-BY-4.0 ×1 → .media/manifest.jsonl | 9:16: portrait working copy .hyperframes/9x16 — 12 frame(s) reflowed, 31 composition file(s), 35 asset(s) linked | 9:16 captions: ✓ captions build: 41 group(s) from 96 words → compositions/captions.html (total 59.158s) · skin: preset skin (.hyperframes/caption-skin.html) (9:16 in the run → burned-in, word-timed) | 9:16 srt: 26 cue(s) → captions/en.srt (caption_groups.json (41 word-timed groups, captions.mjs → 26 cues at ≥ 0.8 s, ≤ 20 cps)) | 9:16 frame footage: 6 declaration(s) recorded in .hyperframes/frame-videos.json | 9:16 footage windows: 6 frame(s) on held clips in assets/clips/ (0 cut, 6 cached) — 03-before-unmatched 1.4–3 +4.135s hold drift→1.5; 04-automatch-star 3–6.3 +2.703s hold drift→1.5; 05-one-line-trail 6.3–8.3 +6.173s hold drift→1.8; 07-close-september 8.3–10.3 +2.307s hold drift→1.6; 08-checklist-ticks 10.3–12.1 +1.892s hold drift→1.5; 09-september-locked 12.1–14.2 +3.485s hold drift→1.8 | 9:16 assemble: total duration:    59.158s (expected ~60s, -0.842s) | 9:16 transitions:   tracks: 01-memo-hook[t0 0→3.407] 02-promise[t1 3.007→5.044] 03-before-unmatched[t0 4.644→10.379] 04-automatch-star[t1 10.379000000000001→16.382] 05-one-line-trail[t0 16.382→24.955] 06-match-rate[t1 24.555→30.47] 07-close-september[t0 30.07→34.377] 08-checklist-ticks[t1 34.377→38.069] 09-september-locked[t0 38.069→44.154] 10-proof-quote[t1 43.654→50.044] 11-question[t0 49.644000000000005→56.058] 12-end-card[t1 55.65800000000001→59.158]; ✓ transitions verify: 7 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | 9:16 gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | 9:16 camera: 03-before-unmatched 1 zoom(s), 0 click(s); 04-automatch-star 3 zoom(s), 1 click(s); 05-one-line-trail 2 zoom(s), 1 click(s); 07-close-september 2 zoom(s), 1 click(s); 08-checklist-ticks 2 zoom(s), 0 click(s); 09-september-locked 1 zoom(s), 1 click(s) | 9:16 bed: fade-in 0.4s, fade-out 1.5s; silence before the reveal in frame(s) 4 (0.4s) → data-automation on the bed | 9:16 voiceover carve: bands  630Hz -5.18dB q1.52, 1000Hz -5.1dB q1.52, 1600Hz -7.6dB q1.52; level  199-point envelope, floor -8.4 dB; lanes  4 carve + 1 kept; wrote /home/dmytrogr/Documents/power-presentation-runs/ledgerly-sales/.hyperframes/9x16/index.html (id=\"el-bgm\")",
+      "source": "render-path"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-27T13:16:24.415Z",
+      "seconds": 102.3,
+      "ok": true,
+      "detail": "egress: us.i.posthog.com → .media/egress.jsonl | motion sidecar: 28 assertion(s) → index.motion.json from 12/12 frame sidecar(s); keepsMoving dropped (QA-07 on the master) | lint: 1 finding(s), 0 error(s) | check: ok=true (68.2s, exit 0) → QA/check.json | animation-map: Animation map: 602/1811 tweens (skipped 1209 micro-tweens) → .hyperframes/anim-map/animation-map.json | wowprobe pre-render: gates_failed []; not measured QA-01, QA-03, QA-07, QA-08, QA-09; scorecard 91.1 | 9:16 lint: 1 finding(s), 0 error(s) | 9:16 check: ok=true (17.3s, exit 0) → QA/check-9x16.json",
+      "source": "render-path"
+    },
+    {
+      "command": "external:review",
+      "stage": "review",
+      "at": "2026-09-27T13:16:54.667Z",
+      "seconds": 1132.4,
+      "ok": true,
+      "detail": "stamped by render-path (time --begin 2026-09-27T12:58:02.288Z → --end)",
+      "source": "stamped"
+    },
+    {
+      "command": "render",
+      "stage": "render",
+      "at": "2026-09-27T13:18:58.376Z",
+      "seconds": 120.4,
+      "ok": true,
+      "detail": "egress: us.i.posthog.com → .media/egress.jsonl | render v1 ok: 16:9 59.167s renders/final/ledgerly-sales_16x9.mp4; wall 60.1s | render v1 ok: 9:16 59.167s renders/final/ledgerly-sales_9x16.mp4; wall 60s | hyperframes 0.8.47; formats 16:9 + 9:16",
+      "source": "render-path"
+    },
+    {
+      "command": "deliver",
+      "stage": "deliver",
+      "at": "2026-09-27T13:19:46.282Z",
+      "seconds": 44,
+      "ok": false,
+      "detail": "post-render gates failed: QA-07, QA-07 (9:16) (QA/wowprobe.json; deliverables were still written)",
+      "source": "render-path"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-27T13:25:18.594Z",
+      "seconds": 2.5,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 41 group(s) from 96 words → compositions/captions.html (total 59.158s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 26 cue(s) → captions/en.srt (caption_groups.json (41 word-timed groups, captions.mjs → 26 cues at ≥ 0.8 s, ≤ 20 cps)) | frame footage re-declared for the hoist: 03-before-unmatched.html (1), 04-automatch-star.html (1), 05-one-line-trail.html (1), 07-close-september.html (1), 08-checklist-ticks.html (1), 09-september-locked.html (1) from .hyperframes/frame-videos.json | frame footage: 6 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 6 frame(s) on held clips in assets/clips/ (0 cut, 6 cached) — 03-before-unmatched 1.4–3 +4.135s hold drift→1.5; 04-automatch-star 3–6.3 +2.703s hold drift→1.5; 05-one-line-trail 6.3–8.3 +6.173s hold drift→1.8; 07-close-september 8.3–10.3 +2.307s hold drift→1.6; 08-checklist-ticks 10.3–12.1 +1.892s hold drift→1.5; 09-september-locked 12.1–14.2 +3.485s hold drift→1.8 | assemble: total duration:    59.158s (expected ~60s, -0.842s) | transitions:   tracks: 01-memo-hook[t0 0→3.407] 02-promise[t1 3.007→5.044] 03-before-unmatched[t0 4.644→10.379] 04-automatch-star[t1 10.379000000000001→16.382] 05-one-line-trail[t0 16.382→24.955] 06-match-rate[t1 24.555→30.47] 07-close-september[t0 30.07→34.377] 08-checklist-ticks[t1 34.377→38.069] 09-september-locked[t0 38.069→44.154] 10-proof-quote[t1 43.654→50.044] 11-question[t0 49.644000000000005→56.058] 12-end-card[t1 55.65800000000001→59.158]; ✓ transitions verify: 7 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 03-before-unmatched 1 zoom(s), 0 click(s); 04-automatch-star 3 zoom(s), 1 click(s); 05-one-line-trail 2 zoom(s), 1 click(s); 07-close-september 2 zoom(s), 1 click(s); 08-checklist-ticks 2 zoom(s), 0 click(s); 09-september-locked 1 zoom(s), 1 click(s) | bed: fade-in 0.4s, fade-out 1.5s; silence before the reveal in frame(s) 4 (0.4s) → data-automation on the bed | voiceover carve: bands  630Hz -5.18dB q1.52, 1000Hz -5.1dB q1.52, 1600Hz -7.6dB q1.52; level  199-point envelope, floor -8.4 dB; lanes  4 carve + 1 kept; wrote /home/dmytrogr/Documents/power-presentation-runs/ledgerly-sales/index.html (id=\"el-bgm\") | media ledger: 29 asset(s) — generated ×11, own-capture ×8, OFL-1.1 ×6, CC0-1.0 ×3, CC-BY-4.0 ×1 → .media/manifest.jsonl | 9:16: portrait working copy .hyperframes/9x16 — 12 frame(s) reflowed, 31 composition file(s), 35 asset(s) linked | 9:16 captions: ✓ captions build: 41 group(s) from 96 words → compositions/captions.html (total 59.158s) · skin: preset skin (.hyperframes/caption-skin.html) (9:16 in the run → burned-in, word-timed) | 9:16 srt: 26 cue(s) → captions/en.srt (caption_groups.json (41 word-timed groups, captions.mjs → 26 cues at ≥ 0.8 s, ≤ 20 cps)) | 9:16 frame footage: 6 declaration(s) recorded in .hyperframes/frame-videos.json | 9:16 footage windows: 6 frame(s) on held clips in assets/clips/ (0 cut, 6 cached) — 03-before-unmatched 1.4–3 +4.135s hold drift→1.5; 04-automatch-star 3–6.3 +2.703s hold drift→1.5; 05-one-line-trail 6.3–8.3 +6.173s hold drift→1.8; 07-close-september 8.3–10.3 +2.307s hold drift→1.6; 08-checklist-ticks 10.3–12.1 +1.892s hold drift→1.5; 09-september-locked 12.1–14.2 +3.485s hold drift→1.8 | 9:16 assemble: total duration:    59.158s (expected ~60s, -0.842s) | 9:16 transitions:   tracks: 01-memo-hook[t0 0→3.407] 02-promise[t1 3.007→5.044] 03-before-unmatched[t0 4.644→10.379] 04-automatch-star[t1 10.379000000000001→16.382] 05-one-line-trail[t0 16.382→24.955] 06-match-rate[t1 24.555→30.47] 07-close-september[t0 30.07→34.377] 08-checklist-ticks[t1 34.377→38.069] 09-september-locked[t0 38.069→44.154] 10-proof-quote[t1 43.654→50.044] 11-question[t0 49.644000000000005→56.058] 12-end-card[t1 55.65800000000001→59.158]; ✓ transitions verify: 7 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | 9:16 gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | 9:16 camera: 03-before-unmatched 1 zoom(s), 0 click(s); 04-automatch-star 3 zoom(s), 1 click(s); 05-one-line-trail 2 zoom(s), 1 click(s); 07-close-september 2 zoom(s), 1 click(s); 08-checklist-ticks 2 zoom(s), 0 click(s); 09-september-locked 1 zoom(s), 1 click(s) | 9:16 bed: fade-in 0.4s, fade-out 1.5s; silence before the reveal in frame(s) 4 (0.4s) → data-automation on the bed | 9:16 voiceover carve: bands  630Hz -5.18dB q1.52, 1000Hz -5.1dB q1.52, 1600Hz -7.6dB q1.52; level  199-point envelope, floor -8.4 dB; lanes  4 carve + 1 kept; wrote /home/dmytrogr/Documents/power-presentation-runs/ledgerly-sales/.hyperframes/9x16/index.html (id=\"el-bgm\")",
+      "source": "render-path"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-27T13:26:17.151Z",
+      "seconds": 2.5,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 41 group(s) from 96 words → compositions/captions.html (total 59.158s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 26 cue(s) → captions/en.srt (caption_groups.json (41 word-timed groups, captions.mjs → 26 cues at ≥ 0.8 s, ≤ 20 cps)) | frame footage re-declared for the hoist: 03-before-unmatched.html (1), 04-automatch-star.html (1), 05-one-line-trail.html (1), 07-close-september.html (1), 08-checklist-ticks.html (1), 09-september-locked.html (1) from .hyperframes/frame-videos.json | frame footage: 6 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 6 frame(s) on held clips in assets/clips/ (0 cut, 6 cached) — 03-before-unmatched 1.4–3 +4.135s hold drift→1.5; 04-automatch-star 3–6.3 +2.703s hold drift→1.5; 05-one-line-trail 6.3–8.3 +6.173s hold drift→1.8; 07-close-september 8.3–10.3 +2.307s hold drift→1.6; 08-checklist-ticks 10.3–12.1 +1.892s hold drift→1.5; 09-september-locked 12.1–14.2 +3.485s hold drift→1.8 | assemble: total duration:    59.158s (expected ~60s, -0.842s) | transitions:   tracks: 01-memo-hook[t0 0→3.407] 02-promise[t1 3.007→5.044] 03-before-unmatched[t0 4.644→10.379] 04-automatch-star[t1 10.379000000000001→16.382] 05-one-line-trail[t0 16.382→24.955] 06-match-rate[t1 24.555→30.47] 07-close-september[t0 30.07→34.377] 08-checklist-ticks[t1 34.377→38.069] 09-september-locked[t0 38.069→44.154] 10-proof-quote[t1 43.654→50.044] 11-question[t0 49.644000000000005→56.058] 12-end-card[t1 55.65800000000001→59.158]; ✓ transitions verify: 7 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 03-before-unmatched 1 zoom(s), 0 click(s); 04-automatch-star 3 zoom(s), 1 click(s); 05-one-line-trail 2 zoom(s), 1 click(s); 07-close-september 2 zoom(s), 1 click(s); 08-checklist-ticks 2 zoom(s), 0 click(s); 09-september-locked 1 zoom(s), 1 click(s) | bed: fade-in 0.4s, fade-out 1.5s; silence before the reveal in frame(s) 4 (0.4s) → data-automation on the bed | voiceover carve: bands  630Hz -5.18dB q1.52, 1000Hz -5.1dB q1.52, 1600Hz -7.6dB q1.52; level  199-point envelope, floor -8.4 dB; lanes  4 carve + 1 kept; wrote /home/dmytrogr/Documents/power-presentation-runs/ledgerly-sales/index.html (id=\"el-bgm\") | media ledger: 29 asset(s) — generated ×11, own-capture ×8, OFL-1.1 ×6, CC0-1.0 ×3, CC-BY-4.0 ×1 → .media/manifest.jsonl | 9:16: portrait working copy .hyperframes/9x16 — 12 frame(s) reflowed, 31 composition file(s), 35 asset(s) linked | 9:16 captions: ✓ captions build: 41 group(s) from 96 words → compositions/captions.html (total 59.158s) · skin: preset skin (.hyperframes/caption-skin.html) (9:16 in the run → burned-in, word-timed) | 9:16 srt: 26 cue(s) → captions/en.srt (caption_groups.json (41 word-timed groups, captions.mjs → 26 cues at ≥ 0.8 s, ≤ 20 cps)) | 9:16 frame footage: 6 declaration(s) recorded in .hyperframes/frame-videos.json | 9:16 footage windows: 6 frame(s) on held clips in assets/clips/ (0 cut, 6 cached) — 03-before-unmatched 1.4–3 +4.135s hold drift→1.5; 04-automatch-star 3–6.3 +2.703s hold drift→1.5; 05-one-line-trail 6.3–8.3 +6.173s hold drift→1.8; 07-close-september 8.3–10.3 +2.307s hold drift→1.6; 08-checklist-ticks 10.3–12.1 +1.892s hold drift→1.5; 09-september-locked 12.1–14.2 +3.485s hold drift→1.8 | 9:16 assemble: total duration:    59.158s (expected ~60s, -0.842s) | 9:16 transitions:   tracks: 01-memo-hook[t0 0→3.407] 02-promise[t1 3.007→5.044] 03-before-unmatched[t0 4.644→10.379] 04-automatch-star[t1 10.379000000000001→16.382] 05-one-line-trail[t0 16.382→24.955] 06-match-rate[t1 24.555→30.47] 07-close-september[t0 30.07→34.377] 08-checklist-ticks[t1 34.377→38.069] 09-september-locked[t0 38.069→44.154] 10-proof-quote[t1 43.654→50.044] 11-question[t0 49.644000000000005→56.058] 12-end-card[t1 55.65800000000001→59.158]; ✓ transitions verify: 7 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | 9:16 gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | 9:16 camera: 03-before-unmatched 1 zoom(s), 0 click(s); 04-automatch-star 3 zoom(s), 1 click(s); 05-one-line-trail 2 zoom(s), 1 click(s); 07-close-september 2 zoom(s), 1 click(s); 08-checklist-ticks 2 zoom(s), 0 click(s); 09-september-locked 1 zoom(s), 1 click(s) | 9:16 bed: fade-in 0.4s, fade-out 1.5s; silence before the reveal in frame(s) 4 (0.4s) → data-automation on the bed | 9:16 voiceover carve: bands  630Hz -5.18dB q1.52, 1000Hz -5.1dB q1.52, 1600Hz -7.6dB q1.52; level  199-point envelope, floor -8.4 dB; lanes  4 carve + 1 kept; wrote /home/dmytrogr/Documents/power-presentation-runs/ledgerly-sales/.hyperframes/9x16/index.html (id=\"el-bgm\")",
+      "source": "render-path"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-27T13:28:02.197Z",
+      "seconds": 93,
+      "ok": true,
+      "detail": "egress: us.i.posthog.com → .media/egress.jsonl | motion sidecar: 28 assertion(s) → index.motion.json from 12/12 frame sidecar(s); keepsMoving dropped (QA-07 on the master) | lint: 1 finding(s), 0 error(s) | check: ok=true (64.8s, exit 0) → QA/check.json | animation-map: Animation map: 605/1814 tweens (skipped 1209 micro-tweens) → .hyperframes/anim-map/animation-map.json | wowprobe pre-render: gates_failed []; not measured QA-01, QA-03, QA-07, QA-08, QA-09; scorecard 91.1 | 9:16 lint: 1 finding(s), 0 error(s) | 9:16 check: ok=true (17.4s, exit 0) → QA/check-9x16.json",
+      "source": "render-path"
+    },
+    {
+      "command": "assemble",
+      "stage": "assemble",
+      "at": "2026-09-27T13:28:12.648Z",
+      "seconds": 2.5,
+      "ok": true,
+      "detail": "captions: ✓ captions build: 41 group(s) from 96 words → compositions/captions.html (total 59.158s) · skin: preset skin (.hyperframes/caption-skin.html) (sales → burned-in, word-timed) | srt: 26 cue(s) → captions/en.srt (caption_groups.json (41 word-timed groups, captions.mjs → 26 cues at ≥ 0.8 s, ≤ 20 cps)) | frame footage re-declared for the hoist: 03-before-unmatched.html (1), 04-automatch-star.html (1), 05-one-line-trail.html (1), 07-close-september.html (1), 08-checklist-ticks.html (1), 09-september-locked.html (1) from .hyperframes/frame-videos.json | frame footage: 6 declaration(s) recorded in .hyperframes/frame-videos.json | footage windows: 6 frame(s) on held clips in assets/clips/ (0 cut, 6 cached) — 03-before-unmatched 1.4–3 +4.135s hold drift→1.5; 04-automatch-star 3–6.3 +2.703s hold drift→1.5; 05-one-line-trail 6.3–8.3 +6.173s hold drift→1.8; 07-close-september 8.3–10.3 +2.307s hold drift→1.6; 08-checklist-ticks 10.3–12.1 +1.892s hold drift→1.5; 09-september-locked 12.1–14.2 +3.485s hold drift→1.8 | assemble: total duration:    59.158s (expected ~60s, -0.842s) | transitions:   tracks: 01-memo-hook[t0 0→3.407] 02-promise[t1 3.007→5.044] 03-before-unmatched[t0 4.644→10.379] 04-automatch-star[t1 10.379000000000001→16.382] 05-one-line-trail[t0 16.382→24.955] 06-match-rate[t1 24.555→30.47] 07-close-september[t0 30.07→34.377] 08-checklist-ticks[t1 34.377→38.069] 09-september-locked[t0 38.069→44.154] 10-proof-quote[t1 43.654→50.044] 11-question[t0 49.644000000000005→56.058] 12-end-card[t1 55.65800000000001→59.158]; ✓ transitions verify: 7 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | camera: 03-before-unmatched 1 zoom(s), 0 click(s); 04-automatch-star 3 zoom(s), 1 click(s); 05-one-line-trail 2 zoom(s), 1 click(s); 07-close-september 2 zoom(s), 1 click(s); 08-checklist-ticks 2 zoom(s), 0 click(s); 09-september-locked 1 zoom(s), 1 click(s) | bed: fade-in 0.4s, fade-out 1.5s; silence before the reveal in frame(s) 4 (0.4s) → data-automation on the bed | voiceover carve: bands  630Hz -5.18dB q1.52, 1000Hz -5.1dB q1.52, 1600Hz -7.6dB q1.52; level  199-point envelope, floor -8.4 dB; lanes  4 carve + 1 kept; wrote /home/dmytrogr/Documents/power-presentation-runs/ledgerly-sales/index.html (id=\"el-bgm\") | media ledger: 29 asset(s) — generated ×11, own-capture ×8, OFL-1.1 ×6, CC0-1.0 ×3, CC-BY-4.0 ×1 → .media/manifest.jsonl | 9:16: portrait working copy .hyperframes/9x16 — 12 frame(s) reflowed, 31 composition file(s), 35 asset(s) linked | 9:16 captions: ✓ captions build: 41 group(s) from 96 words → compositions/captions.html (total 59.158s) · skin: preset skin (.hyperframes/caption-skin.html) (9:16 in the run → burned-in, word-timed) | 9:16 srt: 26 cue(s) → captions/en.srt (caption_groups.json (41 word-timed groups, captions.mjs → 26 cues at ≥ 0.8 s, ≤ 20 cps)) | 9:16 frame footage: 6 declaration(s) recorded in .hyperframes/frame-videos.json | 9:16 footage windows: 6 frame(s) on held clips in assets/clips/ (0 cut, 6 cached) — 03-before-unmatched 1.4–3 +4.135s hold drift→1.5; 04-automatch-star 3–6.3 +2.703s hold drift→1.5; 05-one-line-trail 6.3–8.3 +6.173s hold drift→1.8; 07-close-september 8.3–10.3 +2.307s hold drift→1.6; 08-checklist-ticks 10.3–12.1 +1.892s hold drift→1.5; 09-september-locked 12.1–14.2 +3.485s hold drift→1.8 | 9:16 assemble: total duration:    59.158s (expected ~60s, -0.842s) | 9:16 transitions:   tracks: 01-memo-hook[t0 0→3.407] 02-promise[t1 3.007→5.044] 03-before-unmatched[t0 4.644→10.379] 04-automatch-star[t1 10.379000000000001→16.382] 05-one-line-trail[t0 16.382→24.955] 06-match-rate[t1 24.555→30.47] 07-close-september[t0 30.07→34.377] 08-checklist-ticks[t1 34.377→38.069] 09-september-locked[t0 38.069→44.154] 10-proof-quote[t1 43.654→50.044] 11-question[t0 49.644000000000005→56.058] 12-end-card[t1 55.65800000000001→59.158]; ✓ transitions verify: 7 transition(s) verified (cross-track, overlap>0, both ids referenced, no same-track overlap) | 9:16 gsap served from the project: 2 file(s) → assets/vendor/gsap@3.14.2/ (gsap.min.js) | 9:16 camera: 03-before-unmatched 1 zoom(s), 0 click(s); 04-automatch-star 3 zoom(s), 1 click(s); 05-one-line-trail 2 zoom(s), 1 click(s); 07-close-september 2 zoom(s), 1 click(s); 08-checklist-ticks 2 zoom(s), 0 click(s); 09-september-locked 1 zoom(s), 1 click(s) | 9:16 bed: fade-in 0.4s, fade-out 1.5s; silence before the reveal in frame(s) 4 (0.4s) → data-automation on the bed | 9:16 voiceover carve: bands  630Hz -5.18dB q1.52, 1000Hz -5.1dB q1.52, 1600Hz -7.6dB q1.52; level  199-point envelope, floor -8.4 dB; lanes  4 carve + 1 kept; wrote /home/dmytrogr/Documents/power-presentation-runs/ledgerly-sales/.hyperframes/9x16/index.html (id=\"el-bgm\")",
+      "source": "render-path"
+    },
+    {
+      "command": "verify",
+      "stage": "verify",
+      "at": "2026-09-27T13:30:01.024Z",
+      "seconds": 99.9,
+      "ok": true,
+      "detail": "egress: us.i.posthog.com → .media/egress.jsonl | motion sidecar: 28 assertion(s) → index.motion.json from 12/12 frame sidecar(s); keepsMoving dropped (QA-07 on the master) | lint: 1 finding(s), 0 error(s) | check: ok=true (68.1s, exit 0) → QA/check.json | animation-map: Animation map: 605/1814 tweens (skipped 1209 micro-tweens) → .hyperframes/anim-map/animation-map.json | wowprobe pre-render: gates_failed []; not measured QA-01, QA-03, QA-07, QA-08, QA-09; scorecard 91.1 | 9:16 lint: 1 finding(s), 0 error(s) | 9:16 check: ok=true (17.5s, exit 0) → QA/check-9x16.json",
+      "source": "render-path"
+    },
+    {
+      "command": "render",
+      "stage": "render",
+      "at": "2026-09-27T13:31:54.703Z",
+      "seconds": 106.5,
+      "ok": true,
+      "detail": "egress: us.i.posthog.com → .media/egress.jsonl | render v1 ok: 16:9 59.167s renders/final/ledgerly-sales_16x9.mp4; wall 53.5s | render v1 ok: 9:16 59.167s renders/final/ledgerly-sales_9x16.mp4; wall 52.8s | hyperframes 0.8.47; formats 16:9 + 9:16",
+      "source": "render-path"
+    },
+    {
+      "command": "deliver",
+      "stage": "deliver",
+      "at": "2026-09-27T13:32:44.330Z",
+      "seconds": 44.5,
+      "ok": true,
+      "detail": "loudness: -20.73 LUFS / TP -2.81 dBTP → -14.49 LUFS / TP -1.88 dBTP (target -14 LUFS, TP ≤ -1.5 dBTP; two-pass loudnorm + a corrective pass for the encoder overshoot, video copied) — QA-08 row: --target-lufs | wowprobe post-render: gates_failed []; not measured none; scorecard 93.7; sheet QA/contact-sheet.png | poster: renders/final/ledgerly-sales_16x9.poster.png @ 2.2s (storyboard: storyboard `poster:` key), baked into frame 0 | srt: 26 cue(s) from caption_groups.json (41 word-timed groups, captions.mjs → 26 cues at ≥ 0.8 s, ≤ 20 cps) → renders/final/ledgerly-sales_16x9.en.srt (+ captions/en.srt) | 9:16 loudness: -20.73 LUFS / TP -2.81 dBTP → -14.49 LUFS / TP -1.88 dBTP (target -14 LUFS, TP ≤ -1.5 dBTP; two-pass loudnorm + a corrective pass for the encoder overshoot, video copied) — QA-08 row: --target-lufs | 9:16 wowprobe post-render: gates_failed []; not measured QA-06; scorecard 92.7; sheet QA/contact-sheet-9x16.png | 9:16 poster: renders/final/ledgerly-sales_9x16.poster.png @ 2.2s (storyboard: storyboard `poster:` key), baked into frame 0 | 9:16 srt: 26 cue(s) from caption_groups.json (41 word-timed groups, captions.mjs → 26 cues at ≥ 0.8 s, ≤ 20 cps) → renders/final/ledgerly-sales_9x16.en.srt | share-copy lint: clean | prospect data: delete after 2026-10-27T13:19:46.147Z (stamped at the first delivery) — node scripts/prospect-retention.mjs purge; the controller's legitimate-interest assessment: references/legitimate-interest.md | run-report: run-report: /home/dmytrogr/Documents/power-presentation-runs/ledgerly-sales/run-report.json — mode sales, gates_failed [], not measured 0, scorecard 93.7, 16 inputs read, 1 missing (critic)",
+      "source": "render-path"
+    }
+  ],
+  "wall_s": 4528.5,
+  "pending": {}
+}

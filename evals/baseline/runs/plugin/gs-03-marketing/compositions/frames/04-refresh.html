@@ -1,0 +1,163 @@
+<template>
+<div id="root" data-composition-id="04-refresh" data-width="1920" data-height="1080" data-duration="2.746">
+  <style>
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+    @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+    @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+    @font-face { font-family: "EB Garamond"; src: url("assets/fonts/EBGaramond-400-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: block; }
+    @font-face { font-family: "EB Garamond"; src: url("assets/fonts/EBGaramond-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "EB Garamond"; src: url("assets/fonts/EBGaramond-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+
+    #root {
+      width: 100%;
+      height: 100%;
+      container-type: size;
+      position: relative;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    .f04-bg {
+      position: absolute;
+      inset: 0;
+      background-color: #FAF9F5;
+    }
+
+    .f04-kicker {
+      position: absolute;
+      left: 12cqw;
+      top: 12cqh;
+      width: 40cqw;
+      height: 4.5cqh;
+      display: flex;
+      align-items: center;
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 500;
+      font-size: 2.0833cqw;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #141413;
+      white-space: nowrap;
+    }
+
+    .f04-spike {
+      color: #CC785C;
+      margin-right: 0.5em;
+    }
+
+    .f04-rule {
+      position: absolute;
+      left: 12cqw;
+      top: 19cqh;
+      width: 76cqw;
+      height: 1px;
+      background-color: rgba(20, 20, 19, 0.12);
+    }
+
+    #f04-line {
+      position: absolute;
+      left: 12cqw;
+      top: 30cqh;
+      width: 68cqw;
+      opacity: 1;
+      display: block;
+    }
+
+    .f04-word {
+      display: inline-block;
+      font-family: "EB Garamond", serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 6.7cqw;
+      line-height: 1.05;
+      letter-spacing: -0.012em;
+      color: #141413;
+      opacity: 0;
+      margin-right: 0.22em;
+      transform-origin: 0% 100%;
+    }
+
+    .f04-word-heavy {
+      font-size: 8.0cqw;
+    }
+
+    @container (aspect-ratio < 1) {
+      .f04-kicker { left: 8cqw; top: 6cqh; width: 84cqw; height: 3.2cqh; font-size: 3.6cqw; }
+      .f04-rule { left: 8cqw; top: 10.5cqh; width: 84cqw; }
+      #f04-line { left: 8cqw; top: 24cqh; width: 84cqw; }
+      .f04-word { font-size: 9.5cqw; }
+      .f04-word-heavy { font-size: 11.2cqw; }
+    }
+  </style>
+
+  <div id="f04-bg" class="clip f04-bg" data-start="0" data-duration="2.746" data-track-index="0"></div>
+
+  <div id="f04-kicker" class="clip f04-kicker" data-start="0" data-duration="2.746" data-track-index="1">
+    <span class="f04-spike">&#10033;</span><span>RE: YOUR JOBS</span>
+  </div>
+
+  <div id="f04-rule" class="clip f04-rule" data-start="0" data-duration="2.746" data-track-index="2"></div>
+
+  <div id="f04-line" class="clip" data-start="0" data-duration="2.746" data-track-index="3">
+    <span class="f04-word" id="f04-word-you">You</span><span class="f04-word" id="f04-word-made">made</span><span class="f04-word" id="f04-word-me">me</span><span class="f04-word f04-word-heavy" id="f04-word-refresh">refresh</span><span class="f04-word" id="f04-word-a">a</span><span class="f04-word" id="f04-word-tab">tab.</span>
+  </div>
+
+  <script src="assets/vendor/gsap@3.14.2/gsap.min.js"></script>
+  <script>
+    (function () {
+      var root = document.querySelector('[data-composition-id="04-refresh"]');
+      var tl = gsap.timeline({ paused: true });
+      var frameDuration = parseFloat(root.getAttribute('data-duration')) || 2.496;
+      var lineEl = root.querySelector('#f04-line');
+
+      var orderedWords = [
+        root.querySelector('#f04-word-you'),
+        root.querySelector('#f04-word-made'),
+        root.querySelector('#f04-word-me'),
+        root.querySelector('#f04-word-a'),
+        root.querySelector('#f04-word-tab')
+      ];
+      var refreshWord = root.querySelector('#f04-word-refresh');
+
+      gsap.set(orderedWords, { opacity: 0, yPercent: 30 });
+      gsap.set(refreshWord, { opacity: 0, yPercent: 40, scale: 0.92 });
+
+      gsap.set(lineEl, { y: 0, scale: 1, transformOrigin: '0% 50%' });
+      tl.fromTo(
+        lineEl,
+        { y: 0, scale: 1 },
+        { y: -20, scale: 1.02, duration: frameDuration, ease: 'sine.inOut' },
+        0
+      );
+
+      var start = 0.2;
+      var stagger = 0.07;
+      var entranceDur = 0.45;
+      var ease = 'expo.out';
+
+      orderedWords.forEach(function (word, i) {
+        tl.fromTo(
+          word,
+          { opacity: 0, yPercent: 30 },
+          { opacity: 1, yPercent: 0, duration: entranceDur, ease: ease },
+          start + i * stagger
+        );
+      });
+
+      var refreshStart = start + orderedWords.length * stagger + 0.08;
+      tl.fromTo(
+        refreshWord,
+        { opacity: 0, yPercent: 40, scale: 0.92 },
+        { opacity: 1, yPercent: 0, scale: 1, duration: 0.5, ease: ease },
+        refreshStart
+      );
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["04-refresh"] = tl;
+    })();
+  </script>
+</div>
+</template>

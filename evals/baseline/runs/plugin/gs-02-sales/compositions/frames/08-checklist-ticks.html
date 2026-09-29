@@ -1,0 +1,240 @@
+<template>
+<div id="root" data-composition-id="08-checklist-ticks" data-width="1920" data-height="1080">
+  <style>
+    #root {
+      width: 100%;
+      height: 100%;
+      container-type: size;
+      position: relative;
+      overflow: hidden;
+      font-family: "Inter", sans-serif;
+      color: #14213D;
+    }
+
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: block; }
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: block; }
+
+    .f08-progress-track {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: rgba(42, 111, 151, 0.15);
+    }
+    .f08-progress-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 66.667cqw;
+      background: #2A6F97;
+    }
+
+    .f08-stage-box {
+      position: absolute;
+      left: 25cqw;
+      top: 6cqh;
+      width: 70cqw;
+      height: 70cqh;
+      border-radius: 14px;
+      border: 1.5px solid rgba(42, 111, 151, 0.2);
+      box-sizing: border-box;
+      pointer-events: none;
+    }
+
+    .f08-rail {
+      position: absolute;
+      left: 5cqw;
+      top: 20cqh;
+      width: 17cqw;
+      height: 44cqh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .f08-rail-connector,
+    .f08-rail-connector-fill {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      bottom: 10px;
+      width: 2px;
+      transform-origin: top center;
+    }
+    .f08-rail-connector { background: rgba(42, 111, 151, 0.2); }
+    .f08-rail-connector-fill { background: #2A6F97; transform: scaleY(0.75); }
+
+    .f08-rail-stop {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .f08-rail-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      flex: none;
+      background: transparent;
+      border: 2px solid rgba(42, 111, 151, 0.3);
+    }
+    .f08-rail-label {
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 600;
+      font-size: 2.78cqh;
+      color: #5C6B7A;
+      white-space: nowrap;
+    }
+
+    .f08-chip {
+      position: absolute;
+      left: 5cqw;
+      top: 69cqh;
+      height: 5cqh;
+      display: flex;
+      align-items: center;
+      padding: 0 1.6cqw;
+      border-radius: 100px;
+      background: rgba(42, 111, 151, 0.08);
+      pointer-events: none;
+    }
+    .f08-chip-label {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 2.41cqh;
+      color: #2A6F97;
+      white-space: nowrap;
+    }
+
+    @container (aspect-ratio < 1) {
+      .f08-stage-box {
+        left: 4cqw;
+        top: 15cqh;
+        width: 92cqw;
+        height: 64cqh;
+      }
+      .f08-rail {
+        left: 5cqw;
+        top: 5cqh;
+        width: 90cqw;
+        height: 7cqh;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .f08-rail-connector,
+      .f08-rail-connector-fill {
+        display: none;
+      }
+      .f08-rail-stop {
+        flex-direction: column;
+        gap: 6px;
+      }
+      .f08-rail-label {
+        display: none;
+      }
+      .f08-rail-label[data-active="true"] {
+        display: block;
+        font-size: 2.08cqh;
+      }
+      .f08-chip {
+        left: auto;
+        right: 5cqw;
+        top: 12.5cqh;
+        height: 2cqh;
+        padding: 0 1.2cqw;
+      }
+      .f08-chip-label {
+        font-size: 1.3cqh;
+      }
+    }
+  </style>
+
+  <div class="f08-stage-box clip" id="f08-stage-box" data-start="0" data-duration="3.692" data-track-index="0"></div>
+
+  <div class="f08-rail clip" id="f08-rail" data-start="0" data-duration="3.692" data-track-index="2">
+    <div class="f08-rail-stop" data-stop="0">
+      <div class="f08-rail-dot" id="f08-dot-0"></div>
+      <div class="f08-rail-label" id="f08-label-0" data-active="false">Imported</div>
+    </div>
+    <div class="f08-rail-stop" data-stop="1">
+      <div class="f08-rail-dot" id="f08-dot-1"></div>
+      <div class="f08-rail-label" id="f08-label-1" data-active="false">Matched</div>
+    </div>
+    <div class="f08-rail-stop" data-stop="2">
+      <div class="f08-rail-dot" id="f08-dot-2"></div>
+      <div class="f08-rail-label" id="f08-label-2" data-active="false">Posted</div>
+    </div>
+    <div class="f08-rail-stop" data-stop="3">
+      <div class="f08-rail-dot" id="f08-dot-3"></div>
+      <div class="f08-rail-label" id="f08-label-3" data-active="true">Closing</div>
+    </div>
+    <div class="f08-rail-stop" data-stop="4">
+      <div class="f08-rail-dot" id="f08-dot-4"></div>
+      <div class="f08-rail-label" id="f08-label-4" data-active="false">Locked</div>
+    </div>
+    <div class="f08-rail-connector"></div>
+    <div class="f08-rail-connector-fill" id="f08-rail-connector-fill"></div>
+  </div>
+
+  <div class="f08-chip clip" id="f08-chip" data-start="0" data-duration="3.692" data-track-index="3">
+    <div class="f08-chip-label">Ledgerly demo data</div>
+  </div>
+
+  <div class="f08-progress-track clip" id="f08-progress-track" data-start="0" data-duration="3.692" data-track-index="4"></div>
+  <div class="f08-progress-fill clip" id="f08-progress-fill" data-start="0" data-duration="3.692" data-track-index="5"></div>
+
+  <script src="assets/vendor/gsap@3.14.2/gsap.min.js"></script>
+  <script>
+    (function () {
+      var root = document.querySelector('[data-composition-id="08-checklist-ticks"]');
+
+      var stageBox = root.querySelector('#f08-stage-box');
+      var rail = root.querySelector('#f08-rail');
+      var chip = root.querySelector('#f08-chip');
+
+      gsap.set(root.querySelector('#f08-dot-0'), { backgroundColor: '#2A6F97', borderColor: '#2A6F97' });
+      gsap.set(root.querySelector('#f08-label-0'), { color: '#14213D' });
+      gsap.set(root.querySelector('#f08-dot-1'), { backgroundColor: '#2A6F97', borderColor: '#2A6F97' });
+      gsap.set(root.querySelector('#f08-label-1'), { color: '#14213D' });
+      gsap.set(root.querySelector('#f08-dot-2'), { backgroundColor: '#2A6F97', borderColor: '#2A6F97' });
+      gsap.set(root.querySelector('#f08-label-2'), { color: '#14213D' });
+      gsap.set(root.querySelector('#f08-dot-3'), { backgroundColor: '#2A6F97', borderColor: '#2A6F97' });
+      gsap.set(root.querySelector('#f08-label-3'), { color: '#2A6F97' });
+
+      var tl = gsap.timeline({ paused: true });
+
+      tl.fromTo(
+        [stageBox, rail],
+        { opacity: 0, y: 10 },
+        { opacity: 1, y: 0, duration: 0.3, ease: 'power3.out', stagger: 0.05 },
+        0.1
+      );
+
+      tl.fromTo(
+        chip,
+        { opacity: 0, y: 8 },
+        { opacity: 1, y: 0, duration: 0.3, ease: 'power3.out' },
+        0.5
+      );
+
+      tl.fromTo(
+        chip,
+        { scale: 1 },
+        { scale: 1.015, duration: 0.5, ease: 'sine.inOut', immediateRender: false },
+        1.0
+      );
+      tl.to(chip, { scale: 1, duration: 0.5, ease: 'sine.inOut' }, 1.5);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines['08-checklist-ticks'] = tl;
+    })();
+  </script>
+</div>
+</template>

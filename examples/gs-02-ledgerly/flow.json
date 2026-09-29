@@ -1,0 +1,17 @@
+[
+  { "action": "wait", "ms": 1400 },
+  { "action": "hover", "selector": "header a.cta" },
+  { "action": "wait", "ms": 700 },
+  { "action": "click", "selector": "header a.cta" },
+  { "action": "wait", "ms": 2600 },
+  { "action": "hover", "selector": "#automatch" },
+  { "action": "wait", "ms": 700 },
+  { "action": "click", "selector": "#automatch" },
+  { "action": "wait", "ms": 3600 },
+  { "action": "click", "selector": "tr[data-row=\"3\"]" },
+  { "action": "wait", "ms": 3200 },
+  { "action": "click", "selector": "#close-period" },
+  { "action": "wait", "ms": 3600 },
+  { "action": "click", "selector": "#lock" },
+  { "action": "wait", "ms": 2400 }
+]

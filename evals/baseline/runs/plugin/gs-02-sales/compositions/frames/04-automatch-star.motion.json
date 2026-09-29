@@ -1,0 +1,5 @@
+{ "duration": 6.003,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#f04-stage-box", "bySec": 0.5 },
+    { "kind": "before", "a": "#f04-rail-connector-fill", "b": "#f04-callout" },
+    { "kind": "keepsMoving", "maxStaticSec": 2.0 } ] }

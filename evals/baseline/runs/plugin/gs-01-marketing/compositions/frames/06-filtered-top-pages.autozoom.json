@@ -1,0 +1,823 @@
+{
+  "schema": "power-presentation/autozoom@0.1",
+  "plugin_version": "0.1.0",
+  "format": "16:9",
+  "inputs": {
+    "events_file": "events.jsonl",
+    "events_sha256": "b46b960f1dcb44c30250663a6f6e3b2793629e588d6fdc4706b9166949e341ff",
+    "manifest_file": "capture-manifest.json",
+    "footage_file": "footage.mp4",
+    "footage_sha256": "53b7e80d5e017bfe40cc3acfa0d05237ba9c2950fd9c25dfb80da651f05521ef",
+    "tier": "A",
+    "origin_ms": 1790503124573,
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "source": {
+      "width": 3840,
+      "height": 2160,
+      "duration_sec": 12.367,
+      "from": "ffprobe"
+    },
+    "events": {
+      "total": 6,
+      "in_timeline": 5,
+      "dropped": 1
+    }
+  },
+  "params": {
+    "defaults": {
+      "zoomInSec": 0.7,
+      "holdSec": {
+        "min": 1,
+        "max": 2
+      },
+      "zoomOutSec": 0.8,
+      "ease": "ease-out",
+      "overshootMax": 0.08,
+      "minGapSec": 3,
+      "zoomFactor": {
+        "min": 1.5,
+        "max": 2,
+        "max4k": 3
+      },
+      "deadZone": {
+        "width": 0.5,
+        "height": 0.7
+      },
+      "cursorSpring": {
+        "tension": 470,
+        "mass": 3,
+        "friction": 70
+      },
+      "neverZoom": [
+        "scroll",
+        "video"
+      ],
+      "source": "canonical numbers"
+    },
+    "research": {
+      "idleCloseSec": 1.5,
+      "holdAfterSec": 1.2,
+      "typingBurst": {
+        "keys": 3,
+        "windowSec": 1.5
+      },
+      "edgeSnap": 0.25,
+      "zoomFactor916": {
+        "min": 1.3,
+        "max": 1.5
+      },
+      "approachLeadSec": 0.5,
+      "dwellAfterEventSec": 0.15,
+      "cursorFps": 30,
+      "textFieldTags": [
+        "input",
+        "textarea",
+        "select"
+      ],
+      "source": "research (Cap, motion craft)"
+    },
+    "eases": {
+      "zoom-in": {
+        "gsap": "power3.out",
+        "css": "cubic-bezier(0.23,1,0.32,1)"
+      },
+      "reaim": {
+        "gsap": "power2.inOut",
+        "css": "cubic-bezier(0.455,0.03,0.515,0.955)"
+      },
+      "zoom-out": {
+        "gsap": "power2.out",
+        "css": "cubic-bezier(0.25,0.46,0.45,0.94)"
+      }
+    }
+  },
+  "clip": {
+    "start": 7.9,
+    "duration": 2
+  },
+  "clusters": [
+    {
+      "id": 1,
+      "start": 2.206,
+      "last": 2.206,
+      "kinds": [
+        "click"
+      ],
+      "events": [
+        1
+      ],
+      "bbox": {
+        "x": 0.5005,
+        "y": 0.3926,
+        "w": 0.1083,
+        "h": 0.0537
+      },
+      "fit_scale": 4.615,
+      "closed_by": "idle",
+      "closed_at": null
+    },
+    {
+      "id": 2,
+      "start": 6.804,
+      "last": 6.804,
+      "kinds": [
+        "click"
+      ],
+      "events": [
+        3
+      ],
+      "bbox": {
+        "x": 0.2438,
+        "y": 0.775,
+        "w": 0.0297,
+        "h": 0.0185
+      },
+      "fit_scale": 16.842,
+      "closed_by": "scroll",
+      "closed_at": 9.867
+    }
+  ],
+  "segments": [
+    {
+      "id": 1,
+      "t_in_start": 1.506,
+      "t_out_start": 3.406,
+      "t_out_end": 4.206,
+      "t_end": 4.206,
+      "ends_zoomed": false,
+      "poses": [
+        {
+          "pose": 1,
+          "role": "zoom-in",
+          "t_move_start": 1.506,
+          "t_arrive": 2.206,
+          "hold_until": 3.406,
+          "cluster": {
+            "id": 1,
+            "start": 2.206,
+            "last": 2.206,
+            "kinds": [
+              "click"
+            ],
+            "events": [
+              1
+            ],
+            "bbox": {
+              "x": 0.5005,
+              "y": 0.3926,
+              "w": 0.1083,
+              "h": 0.0537
+            },
+            "fit_scale": 4.615,
+            "closed_by": "idle"
+          },
+          "scale": {
+            "16:9": 2,
+            "9:16": 1.5
+          },
+          "focus": {
+            "16:9": {
+              "x": 0.5547,
+              "y": 0.4195
+            },
+            "9:16": {
+              "x": 0.5547,
+              "y": 0.4195
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "t_in_start": 6.104,
+      "t_out_start": 8.004,
+      "t_out_end": 8.804,
+      "t_end": 8.804,
+      "ends_zoomed": false,
+      "poses": [
+        {
+          "pose": 1,
+          "role": "zoom-in",
+          "t_move_start": 6.104,
+          "t_arrive": 6.804,
+          "hold_until": 8.004,
+          "cluster": {
+            "id": 2,
+            "start": 6.804,
+            "last": 6.804,
+            "kinds": [
+              "click"
+            ],
+            "events": [
+              3
+            ],
+            "bbox": {
+              "x": 0.2438,
+              "y": 0.775,
+              "w": 0.0297,
+              "h": 0.0185
+            },
+            "fit_scale": 16.842,
+            "closed_by": "scroll"
+          },
+          "scale": {
+            "16:9": 2,
+            "9:16": 1.5
+          },
+          "focus": {
+            "16:9": {
+              "x": 0.2587,
+              "y": 0.75
+            },
+            "9:16": {
+              "x": 0.2587,
+              "y": 0.6667
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "skipped_clusters": [],
+  "tracks": {
+    "16:9": {
+      "format": "16:9",
+      "canvas": {
+        "width": 1920,
+        "height": 1080
+      },
+      "wrapper": {
+        "width": 1920,
+        "height": 1080,
+        "left": 0,
+        "top": 0,
+        "visible": {
+          "width": 1,
+          "height": 1
+        }
+      },
+      "zoom_factor": {
+        "min": 1.5,
+        "max": 2
+      },
+      "peak_scale": 2,
+      "poses": [
+        {
+          "segment": 1,
+          "cluster": 1,
+          "role": "zoom-in",
+          "t": 1.506,
+          "duration": 0.7,
+          "t_arrive": 2.206,
+          "scale": 2,
+          "focus": {
+            "x": 0.5547,
+            "y": 0.4195
+          },
+          "xPercent": -10.929,
+          "yPercent": 16.11
+        },
+        {
+          "segment": 2,
+          "cluster": 2,
+          "role": "zoom-in",
+          "t": 6.104,
+          "duration": 0.7,
+          "t_arrive": 6.804,
+          "scale": 2,
+          "focus": {
+            "x": 0.2587,
+            "y": 0.75
+          },
+          "xPercent": 48.27,
+          "yPercent": -50
+        }
+      ],
+      "keyframes": [
+        {
+          "t": 0,
+          "set": true,
+          "role": "home",
+          "focus": {
+            "x": 0.2587,
+            "y": 0.75
+          },
+          "scale": 2,
+          "xPercent": 48.27,
+          "yPercent": -50
+        },
+        {
+          "t": 0.104,
+          "duration": 0.8,
+          "role": "zoom-out",
+          "segment": 2,
+          "ease": "power2.out",
+          "focus": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scale": 1,
+          "xPercent": 0,
+          "yPercent": 0
+        }
+      ]
+    },
+    "9:16": {
+      "format": "9:16",
+      "canvas": {
+        "width": 1080,
+        "height": 1920
+      },
+      "wrapper": {
+        "width": 3413.333,
+        "height": 1920,
+        "left": -1166.667,
+        "top": 0,
+        "visible": {
+          "width": 0.3164,
+          "height": 1
+        }
+      },
+      "zoom_factor": {
+        "min": 1.3,
+        "max": 1.5,
+        "source": "research"
+      },
+      "peak_scale": 1.5,
+      "poses": [
+        {
+          "segment": 1,
+          "cluster": 1,
+          "role": "zoom-in",
+          "t": 1.506,
+          "duration": 0.7,
+          "t_arrive": 2.206,
+          "scale": 1.5,
+          "focus": {
+            "x": 0.5547,
+            "y": 0.4195
+          },
+          "xPercent": -8.197,
+          "yPercent": 12.082
+        },
+        {
+          "segment": 2,
+          "cluster": 2,
+          "role": "zoom-in",
+          "t": 6.104,
+          "duration": 0.7,
+          "t_arrive": 6.804,
+          "scale": 1.5,
+          "focus": {
+            "x": 0.2587,
+            "y": 0.6667
+          },
+          "xPercent": 36.202,
+          "yPercent": -25
+        }
+      ],
+      "keyframes": [
+        {
+          "t": 0,
+          "set": true,
+          "role": "home",
+          "focus": {
+            "x": 0.2587,
+            "y": 0.6667
+          },
+          "scale": 1.5,
+          "xPercent": 36.202,
+          "yPercent": -25
+        },
+        {
+          "t": 0.104,
+          "duration": 0.8,
+          "role": "zoom-out",
+          "segment": 2,
+          "ease": "power2.out",
+          "focus": {
+            "x": 0.2587,
+            "y": 0.5
+          },
+          "scale": 1,
+          "xPercent": 24.135,
+          "yPercent": 0
+        }
+      ]
+    }
+  },
+  "keyframes": [
+    {
+      "t": 0,
+      "set": true,
+      "role": "home",
+      "focus": {
+        "x": 0.2587,
+        "y": 0.75
+      },
+      "scale": 2,
+      "xPercent": 48.27,
+      "yPercent": -50
+    },
+    {
+      "t": 0.104,
+      "duration": 0.8,
+      "role": "zoom-out",
+      "segment": 2,
+      "ease": "power2.out",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "scale": 1,
+      "xPercent": 0,
+      "yPercent": 0
+    }
+  ],
+  "cursor": {
+    "spring": {
+      "tension": 470,
+      "mass": 3,
+      "friction": 70,
+      "omega0": 12.517,
+      "zeta": 0.932,
+      "overshoot": 0.0003,
+      "source": "Cap \"Mellow\""
+    },
+    "fps": 30,
+    "approach_lead_sec": 0.5,
+    "start": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "waypoints": [],
+    "clicks": [],
+    "path": [
+      [
+        0,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.033,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.067,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.1,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.133,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.167,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.2,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.233,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.267,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.3,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.333,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.367,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.4,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.433,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.467,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.5,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.533,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.567,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.6,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.633,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.667,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.7,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.733,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.767,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.8,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.833,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.867,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.9,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.933,
+        0.2586,
+        0.7843
+      ],
+      [
+        0.967,
+        0.2586,
+        0.7843
+      ],
+      [
+        1,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.033,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.067,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.1,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.133,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.167,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.2,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.233,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.267,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.3,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.333,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.367,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.4,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.433,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.467,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.5,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.533,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.567,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.6,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.633,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.667,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.7,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.733,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.767,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.8,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.833,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.867,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.9,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.933,
+        0.2586,
+        0.7843
+      ],
+      [
+        1.967,
+        0.2586,
+        0.7843
+      ],
+      [
+        2,
+        0.2586,
+        0.7843
+      ]
+    ],
+    "units": "fractions of the source frame; place the cursor inside the zoom wrapper"
+  },
+  "checks": {
+    "video_without_events": false,
+    "no_pointer_events": false,
+    "capture_size_below_output": {
+      "16:9": {
+        "ok": true,
+        "ratio": 2,
+        "source_window_px": {
+          "width": 3840,
+          "height": 2160
+        },
+        "output_px": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "9:16": {
+        "ok": true,
+        "ratio": 1.125,
+        "source_window_px": {
+          "width": 1215,
+          "height": 2160
+        },
+        "output_px": {
+          "width": 1080,
+          "height": 1920
+        }
+      }
+    },
+    "zoom_peak_upscale": {
+      "16:9": {
+        "peak_scale": 2,
+        "ratio": 1,
+        "ok": true
+      },
+      "9:16": {
+        "peak_scale": 1.5,
+        "ratio": 0.75,
+        "ok": false
+      }
+    }
+  },
+  "warnings": [
+    "1 event(s) outside the footage timeline dropped",
+    "zoom_peak_upscale (9:16): the 1.5× peak upscales the capture 1.333× (3× only with 4K)"
+  ],
+  "stats": {
+    "events": 5,
+    "clusters": 2,
+    "zooms": 2,
+    "reaims": 0,
+    "skipped": 0,
+    "waypoints": 2,
+    "clicks": 2
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "power-presentation",
+  "version": "0.3.1",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "validate": "claude plugin validate --strict .",
+    "test": "node --test \"scripts/*.test.mjs\"",
+    "eval:smoke": "claude plugin eval . --trust-plugin --ablation none --runs 1 --no-publish --case '*trigger-*'"
+  }
+}

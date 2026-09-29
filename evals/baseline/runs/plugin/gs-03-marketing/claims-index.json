@@ -1,0 +1,388 @@
+{
+  "schema": "power-presentation/claims-index@0.1",
+  "version": 2,
+  "plugin_version": "0.1.0",
+  "generated_by": "scripts/extract-story.mjs",
+  "repo": "acmejobs",
+  "url": null,
+  "rule": "every number, logo and quote that goes on screen or into SCRIPT.md must be listed here with a `file:line` or URL source; `status: unverified` items never reach the script and are shown in `gaps` before render (QA-12)",
+  "counts": {
+    "total": 16,
+    "verified": 15,
+    "unverified": 1,
+    "by_kind": {
+      "number": 5,
+      "quote": 2,
+      "logo": 0,
+      "text": 9
+    },
+    "used_on_screen": 14
+  },
+  "claims": [
+    {
+      "id": "c001",
+      "kind": "quote",
+      "value": "Submit a file, watch it run, read the result — three commands, no dashboard.",
+      "context": "product self-description in the docs quickstart; the source of 'three commands' (hook, recap) and of the end-card tagline",
+      "attribution": {
+        "name": null,
+        "role": null,
+        "company": null,
+        "raw": null
+      },
+      "source": "docs/README.md:23",
+      "source_kind": "readme",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "named": false,
+      "declared": false,
+      "used_in": [
+        "STORYBOARD.md frame 01",
+        "STORYBOARD.md frame 11",
+        "STORYBOARD.md frame 13"
+      ]
+    },
+    {
+      "id": "c002",
+      "kind": "number",
+      "value": "202",
+      "number": 202,
+      "unit": null,
+      "context": "POST /jobs answers 202 Accepted (job accepted and queued)",
+      "source": "openapi.yaml:21",
+      "source_kind": "declared",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "declared_id": "status-202",
+      "declared_ids": [
+        "status-202"
+      ],
+      "declared_source": "openapi.yaml:21",
+      "verification": "declared source openapi.yaml:21 states 202",
+      "used_in": [
+        "STORYBOARD.md frame 09"
+      ]
+    },
+    {
+      "id": "c003",
+      "kind": "quote",
+      "value": "job_7f3k2",
+      "number": null,
+      "unit": null,
+      "context": "the example job id from the OpenAPI schema",
+      "source": "openapi.yaml:61",
+      "source_kind": "declared",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": true,
+      "declared_id": "example-job-id",
+      "declared_ids": [
+        "example-job-id"
+      ],
+      "declared_source": "openapi.yaml:61",
+      "verification": "declared source openapi.yaml:61 states the quote",
+      "used_in": [
+        "STORYBOARD.md frame 09",
+        "STORYBOARD.md frame 10"
+      ]
+    },
+    {
+      "id": "c004",
+      "kind": "number",
+      "value": "40 ms",
+      "number": 40,
+      "unit": "ms",
+      "context": "POST /jobs latency",
+      "source": null,
+      "source_kind": "declared",
+      "date": null,
+      "claim_type": "declared",
+      "status": "unverified",
+      "declared": true,
+      "declared_id": "post-jobs-latency",
+      "declared_ids": [
+        "post-jobs-latency"
+      ],
+      "declared_source": null,
+      "verification": "no source line contains 40 ms",
+      "used_in": []
+    },
+    {
+      "id": "c101",
+      "kind": "text",
+      "value": "Submit your first job",
+      "context": "README section heading; the first-person CTA 'Submit my first job' is its rewrite",
+      "source": "docs/README.md:9",
+      "source_kind": "readme",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": false,
+      "used_in": [
+        "STORYBOARD.md frame 13"
+      ]
+    },
+    {
+      "id": "c102",
+      "kind": "number",
+      "value": "200",
+      "number": 200,
+      "unit": null,
+      "context": "GET /jobs/{jobId} answers 200 'The job'",
+      "source": "openapi.yaml:38",
+      "source_kind": "repo-files",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": false,
+      "used_in": [
+        "STORYBOARD.md frame 10"
+      ]
+    },
+    {
+      "id": "c103",
+      "kind": "text",
+      "value": "POST /jobs",
+      "context": "submitJob endpoint; request body field `file` (openapi.yaml:52); response 202 'Job accepted and queued' (openapi.yaml:21-26); shown on the tier-B spec card, no host, no latency",
+      "source": "openapi.yaml:10",
+      "source_kind": "repo-files",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": false,
+      "used_in": [
+        "STORYBOARD.md frame 09"
+      ]
+    },
+    {
+      "id": "c104",
+      "kind": "text",
+      "value": "GET /jobs/{jobId}",
+      "context": "getJob endpoint, path parameter jobId; shown on the tier-B spec card",
+      "source": "openapi.yaml:27",
+      "source_kind": "repo-files",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": false,
+      "used_in": [
+        "STORYBOARD.md frame 10"
+      ]
+    },
+    {
+      "id": "c105",
+      "kind": "text",
+      "value": "queued | running | done",
+      "context": "Job.status enum; the spec-card bodies show status queued (frame 09) and done (frame 10)",
+      "source": "openapi.yaml:64",
+      "source_kind": "repo-files",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": false,
+      "used_in": [
+        "STORYBOARD.md frame 09",
+        "STORYBOARD.md frame 10"
+      ]
+    },
+    {
+      "id": "c106",
+      "kind": "text",
+      "value": "acmejobs submit --file report.csv",
+      "context": "the README's first command; on screen as the end card's URL slot (no URL exists) and typed in the tier-A footage",
+      "source": "docs/README.md:13",
+      "source_kind": "readme",
+      "date": null,
+      "claim_type": "sourced",
+      "status": "verified",
+      "declared": false,
+      "used_in": [
+        "STORYBOARD.md frame 13",
+        "STORYBOARD.md frame 03"
+      ]
+    },
+    {
+      "id": "c110",
+      "kind": "text",
+      "value": "job_7f3k2 queued",
+      "context": "demonstrated by the tier-A VHS footage: printed after `acmejobs submit` (STORYBOARD frame 03 at 2.6 s, footage 2.6 s)",
+      "source": "bin/acmejobs:8",
+      "source_kind": "repo-files",
+      "footage": {
+        "file": "assets/footage.mp4",
+        "t_sec": 2.6,
+        "tape": "demo.tape:29"
+      },
+      "date": null,
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false,
+      "used_in": [
+        "STORYBOARD.md frame 03"
+      ]
+    },
+    {
+      "id": "c111",
+      "kind": "text",
+      "value": "status: running",
+      "context": "demonstrated by the tier-A VHS footage (STORYBOARD frame 05 at 2.9 s, footage 6.4 s); labelled 'running' in frame 06",
+      "source": "bin/acmejobs:14",
+      "source_kind": "repo-files",
+      "footage": {
+        "file": "assets/footage.mp4",
+        "t_sec": 6.4,
+        "tape": "demo.tape:35"
+      },
+      "date": null,
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false,
+      "used_in": [
+        "STORYBOARD.md frame 05",
+        "STORYBOARD.md frame 06"
+      ]
+    },
+    {
+      "id": "c112",
+      "kind": "text",
+      "value": "status: done",
+      "context": "STAR: demonstrated by the tier-A VHS footage (STORYBOARD frame 06 at 1.5 s, footage 8.5 s); the overlay 'done.' names it",
+      "source": "bin/acmejobs:15",
+      "source_kind": "repo-files",
+      "footage": {
+        "file": "assets/footage.mp4",
+        "t_sec": 8.5,
+        "tape": "demo.tape:37"
+      },
+      "date": null,
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false,
+      "used_in": [
+        "STORYBOARD.md frame 06"
+      ]
+    },
+    {
+      "id": "c113",
+      "kind": "text",
+      "value": "\"status\": \"done\" (result --last --json)",
+      "context": "the finished job printed as JSON, demonstrated by the tier-A VHS footage (STORYBOARD frame 08 at 0.0 s, footage 12.5 s)",
+      "source": "bin/acmejobs:21",
+      "source_kind": "repo-files",
+      "footage": {
+        "file": "assets/footage.mp4",
+        "t_sec": 12.5,
+        "tape": "demo.tape:43"
+      },
+      "date": null,
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false,
+      "used_in": [
+        "STORYBOARD.md frame 08"
+      ]
+    },
+    {
+      "id": "c114",
+      "kind": "number",
+      "value": "three commands",
+      "number": 3,
+      "unit": "commands",
+      "context": "submit, watch, result — the whole recorded flow is three typed commands (demo.tape:26, 32, 40); also stated in docs/README.md:23",
+      "source": "demo.tape:26",
+      "source_kind": "repo-files",
+      "footage": {
+        "file": "assets/footage.mp4",
+        "t_sec": [
+          0.05,
+          4.05,
+          10.0
+        ],
+        "tape": "demo.tape:26,32,40"
+      },
+      "date": null,
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false,
+      "used_in": [
+        "STORYBOARD.md frame 01",
+        "STORYBOARD.md frame 11",
+        "STORYBOARD.md frame 13"
+      ]
+    },
+    {
+      "id": "c120",
+      "kind": "number",
+      "value": "12480 rows · duration_ms 3120 · worker eu-west-1a",
+      "context": "fixture sample output hard-coded in bin/acmejobs (its --version prints 'fixture mock', bin/acmejobs:32); visible only inside the tier-A footage of frame 08, never lifted into copy, never a performance claim",
+      "source": "bin/acmejobs:22",
+      "source_kind": "repo-files",
+      "date": null,
+      "claim_type": "demonstrated",
+      "status": "verified",
+      "declared": false,
+      "on_screen": "inside footage only",
+      "used_in": []
+    }
+  ],
+  "gaps": [
+    {
+      "id": "no-numbers",
+      "where": "all sources",
+      "reason": "no quantified outcome in sources (a number needs a source)",
+      "needed": "a sourced number on the hero page, README or testimonials — or `--metrics` (investors)"
+    },
+    {
+      "id": "unverified-claim",
+      "value": "40 ms",
+      "kind": "number",
+      "where": "claims.json",
+      "reason": "no source line contains 40 ms",
+      "needed": "a `file:line` or URL in the sources that contains this value, or drop it from the script (QA-12)"
+    },
+    {
+      "id": "no-cta-url",
+      "value": null,
+      "kind": "text",
+      "where": "docs/README.md:6",
+      "reason": "no URL, domain or published package in any source; the README install line `npm install -g acmejobs` is marked a placeholder (the package does not exist)",
+      "needed": "a real product URL or install command; until then the end card's URL slot carries the README's own first command (docs/README.md:13)"
+    },
+    {
+      "id": "no-brand-logo",
+      "value": null,
+      "kind": "logo",
+      "where": "brand kit / repository",
+      "reason": "no brand kit (userConfig brand_kit_dir unset) and no logo file; the end card sets the wordmark 'Acme Jobs' (docs/README.md:1) in type",
+      "needed": "a logo file or brand kit"
+    },
+    {
+      "id": "no-design-exports",
+      "value": null,
+      "kind": "text",
+      "where": "design/README.md",
+      "reason": "the Figma link is a placeholder (all-zero key) and no PNG export exists; no design-frames scene planned",
+      "needed": "static exports next to design/README.md"
+    },
+    {
+      "id": "no-social-proof",
+      "value": null,
+      "kind": "quote",
+      "where": "all sources",
+      "reason": "no named quote, no customer logo, no sourced outcome number; the storyboard has no social_proof beat",
+      "needed": "a named testimonial, customer logos or a sourced number"
+    }
+  ],
+  "declared": {
+    "ref": "claims.json",
+    "total": 3,
+    "verified": 2,
+    "unverified": 1
+  },
+  "metrics": null,
+  "updated_by": "agents/story-director (STORYBOARD.md v1)"
+}

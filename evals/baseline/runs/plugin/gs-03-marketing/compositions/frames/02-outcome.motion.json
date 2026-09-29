@@ -1,0 +1,19 @@
+{
+  "duration": 2.028,
+  "assertions": [
+    {
+      "kind": "appearsBy",
+      "selector": "#f02-l1-word-1",
+      "bySec": 0.5
+    },
+    {
+      "kind": "before",
+      "a": "#f02-l1-word-1",
+      "b": "#f02-l2-word-1"
+    },
+    {
+      "kind": "keepsMoving",
+      "maxStaticSec": 2.0
+    }
+  ]
+}
